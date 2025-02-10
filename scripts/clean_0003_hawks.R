@@ -22,9 +22,24 @@ col_presence <- sapply(col_names_list, function(cols) unique_cols %in% cols)
 rownames(col_presence) <- unique_cols
 print(col_presence)
 
-# then decide on using the df with most observations
-# DS_medianRTc
-df <- df_list$data[[4]]
+
+# rename value columns for each dataframe
+df_list$data_new <- map2(df_list$key, df_list$data, function(k, d) {
+  d |>
+    rename(!!k := value)  # Rename value column based on key
+})
+
+# attach them to the longest dataframe
+df <- df_list$data_new[[4]] |>
+  full_join(df_list$data_new[[3]], by = c("user_id", "study_days", "study_time"), suffix=c("",".y")) |>
+              select(-ends_with(".y")) |>
+  full_join(df_list$data_new[[2]], by = c("user_id", "study_days", "study_time"), suffix=c("",".y")) |>
+  select(-ends_with(".y")) |>
+  full_join(df_list$data_new[[1]], by = c("user_id", "study_days", "study_time"), suffix=c("",".y")) |>
+  select(-ends_with(".y"))
+
+
+
 
 # Cleaning ----------------------------------------------------------------
 
@@ -34,7 +49,6 @@ df <- janitor::clean_names(df)
 # rename columns
 df <- df |>
   rename(id = user_id) |>
-  rename(ds_median_rtc = value) |>
   rename(day = study_days)
 
 
