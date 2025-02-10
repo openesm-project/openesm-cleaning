@@ -44,6 +44,10 @@ df_demographics <- df |>
 # save demographic data
 write_tsv(df_demographics, here("data", "clean", "0002_nestler_static.tsv"))
 
+# remove demographic columns from main data
+df <- df |>
+  select(-c(no_meas, age, sex, pa, na, swls, pow, ach, aff, int, fear))
+
 # Check requirements ------------------------------------------------------
 # if check_data runs without messages, the data are clean
 # and should be saved as a .tsv file
@@ -65,7 +69,6 @@ sheet_url <- meta_data |>
   pull("Coding File URL")
 
 variable_data <- read_sheet(sheet_url)
-
 
 meta_json <- create_metadata_json("0002") |>
   toJSON(pretty = TRUE, auto_unbox = TRUE)
