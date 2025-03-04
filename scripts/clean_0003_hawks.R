@@ -49,9 +49,19 @@ df <- janitor::clean_names(df)
 # rename columns
 df <- df |>
   rename(id = user_id) |>
-  rename(day = study_days)
+  rename(day = study_days) |>
+  rename(interruptions = interruptions_interruptions)
 
+# remove long column prefixes
+prefixes_to_remove <- c("na_emotions_",
+                        "pa_emotions_",
+                        "anx_dep_emotions_",
+                        "stress_",
+                        "context_",
+                        "attention_")
 
+df <- df |>
+  rename_all(~ str_remove_all(., str_c("^(", str_c(prefixes_to_remove, collapse = "|"), ")")))
 
 
 #* Misc -------------------------------------------------------------------
