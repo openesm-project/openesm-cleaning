@@ -1,0 +1,108 @@
+{
+  "first_author": "Rowland",
+  "dataset": "0006",
+  "year": 2020,
+  "paper_doi": "https://doi.org/10.1007/s12671-020-01335-4",
+  "link_to_data": "https://osf.io/jmz2n/",
+  "link_to_code": "https://osf.io/jmz2n/",
+  "n_participants": 125,
+  "n_time_points": 240,
+  "n_beeps_per_day": 6,
+  "passive_data_available": "no",
+  "cross_sectional_available": "yes",
+  "topics": "mindfulness, affect, network",
+  "implicit_missingness": "no",
+  "raw_time_stamp": "no",
+  "sampling_scheme": "6x/day",
+  "participants": "undergraduate students",
+  "coding_file": "0006_rowland_variables",
+  "additional_comments": null,
+  "coder_data": "Björn Siepe",
+  "coder_metadata": "Björn Siepe",
+  "features": [
+    {
+      "name": "id",
+      "description": "Participant ID",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "day",
+      "description": "Day of study",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "beep",
+      "description": "Beep of the day",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "group",
+      "description": "Condition allocation",
+      "type": "binary",
+      "coding": "0 = control, \n1 = training",
+      "answer_categories": "2"
+    },
+    {
+      "name": "happy",
+      "description": "",
+      "type": "VAS",
+      "coding": "0 (not at all) to 100 (very much)",
+      "answer_categories": "101"
+    },
+    {
+      "name": "excited",
+      "description": "",
+      "type": "VAS",
+      "coding": "0 (not at all) to 100 (very much)",
+      "answer_categories": "101"
+    },
+    {
+      "name": "relaxed",
+      "description": "",
+      "type": "VAS",
+      "coding": "0 (not at all) to 100 (very much)",
+      "answer_categories": "101"
+    },
+    {
+      "name": "satisfied",
+      "description": "",
+      "type": "VAS",
+      "coding": "0 (not at all) to 100 (very much)",
+      "answer_categories": "101"
+    },
+    {
+      "name": "angry",
+      "description": "",
+      "type": "VAS",
+      "coding": "0 (not at all) to 100 (very much)",
+      "answer_categories": "101"
+    },
+    {
+      "name": "anxious",
+      "description": "",
+      "type": "VAS",
+      "coding": "0 (not at all) to 100 (very much)",
+      "answer_categories": "101"
+    },
+    {
+      "name": "depressed",
+      "description": "",
+      "type": "VAS",
+      "coding": "0 (not at all) to 100 (very much)",
+      "answer_categories": "101"
+    },
+    {
+      "name": "sad",
+      "description": "",
+      "type": "VAS",
+      "coding": "0 (not at all) to 100 (very much)",
+      "answer_categories": "101"
+    }
+  ]
+}
