@@ -1,26 +1,216 @@
 {
-  "first_author": [],
-  "dataset": [],
-  "year": [],
-  "reference_a": [],
-  "reference_b": [],
-  "paper_doi": [],
-  "link_to_data": [],
-  "link_to_codebook": [],
-  "link_to_code": [],
-  "n_participants": [],
-  "n_time_points": [],
-  "n_beeps_per_day": [],
-  "passive_data_available": [],
-  "cross_sectional_available": [],
-  "topics": [],
-  "implicit_missingness": [],
-  "raw_time_stamp": [],
-  "sampling_scheme": [],
-  "participants": [],
-  "coding_file": [],
-  "additional_comments": [],
-  "coder_data": [],
-  "coder_metadata": [],
-  "features": []
+  "first_author": "Söderberg",
+  "dataset": "0019",
+  "year": 2024,
+  "reference_a": "@online{molsa2024,\n  title = {A 10-day experience sampling dataset on subjective experiences of middle and upper secondary school students in 2022},\n  author = {Mölsä, Martina and Forsman, Anna K. and Söderberg, Patrik},\n  date = {2024-12-16},\n  number = {13:1522},\n  eprint = {13:1522},\n  eprinttype = {F1000Research},\n  doi = {10.12688/f1000research.157148.1}\n  pubstate = {prepublished}\n}",
+  "reference_b": null,
+  "paper_doi": "https://doi.org/10.12688/f1000research.157148.1",
+  "link_to_data": "https://doi.org/10.5281/zenodo.13332148",
+  "link_to_codebook": null,
+  "link_to_code": null,
+  "n_participants": 302,
+  "n_time_points": 40,
+  "n_beeps_per_day": 4,
+  "passive_data_available": "no",
+  "cross_sectional_available": "yes",
+  "topics": "schooling, relationships, self-efficacy, emotions, sleep",
+  "implicit_missingness": "no",
+  "raw_time_stamp": "yes",
+  "sampling_scheme": "4x/day fixed and random sampling",
+  "participants": "middle and secondary school students",
+  "coding_file": "0019_söderberg_variablen",
+  "additional_comments": "inconsistency between notification times and the beep ordering by the authors; contains multiple sampling frequencies; hostile item is coded as \"I feel stupid\" in the data",
+  "coder_data": "Björn Siepe",
+  "coder_metadata": "Björn Siepe",
+  "features": [
+    {
+      "name": "id",
+      "description": "Participant ID",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "day",
+      "description": "Day of study",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "beep",
+      "description": "Beep of the day",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "notification_time",
+      "description": "Time of notification",
+      "type": "PosixCt",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "notification_no",
+      "description": "Notification number",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "reminder",
+      "description": "Reminder",
+      "type": "binary",
+      "coding": "0 = no\n1 = yes",
+      "answer_categories": "2"
+    },
+    {
+      "name": "session_instance_response_lapse",
+      "description": "Response lapse",
+      "type": "other",
+      "coding": "Response lapse in minutes:second",
+      "answer_categories": ""
+    },
+    {
+      "name": "session_length",
+      "description": "Session length",
+      "type": "other",
+      "coding": "Session length in minutes:seconds",
+      "answer_categories": ""
+    },
+    {
+      "name": "morning_sleep",
+      "description": "Sleep quality",
+      "type": "ordinal",
+      "coding": "Good morning. Did you sleep well last night?\n1 = Not at all\n5 = Yes, absolutely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "morning_breakfast",
+      "description": "Breakfast eaten",
+      "type": "binary",
+      "coding": "Have you eaten (or will you eat) breakfast this morning? (Recoded)\n0 = no\n1 = yes",
+      "answer_categories": "2"
+    },
+    {
+      "name": "morning_ok",
+      "description": "Feeling okay about school",
+      "type": "ordinal",
+      "coding": "Do you feel okay about going to school today?\n1 = No, not at all\n5 = Yes, absolutely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "enjoy_all",
+      "description": "Enjoying school",
+      "type": "ordinal",
+      "coding": "How do you feel right now?: I enjoy being at school\n1 = No, not at all\n5 = Yes, absolutely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "stress_all",
+      "description": "Stress",
+      "type": "ordinal",
+      "coding": "How do you feel right now?: I feel stressed\n1 = No, not at all\n5 = Yes, absolutely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "motivated_all",
+      "description": "Motivated",
+      "type": "ordinal",
+      "coding": "How do you feel right now?: I feel motivated\n1 = No, not at all\n5 = Yes, absolutely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "angy_all",
+      "description": "Angry",
+      "type": "ordinal",
+      "coding": "How do you feel right now?: I feel angry\n1 = No, not at all\n5 = Yes, absolutely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "liked_all",
+      "description": "Liked",
+      "type": "ordinal",
+      "coding": "How do you feel right now?:  I feel liked\n1 = No, not at all\n5 = Yes, absolutely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "lonely_all",
+      "description": "Lonely",
+      "type": "ordinal",
+      "coding": "How do you feel right now?: I feel lonely\n1 = No, not at all\n5 = Yes, absolutely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "alert_all",
+      "description": "Alert",
+      "type": "ordinal",
+      "coding": "How do you feel right now?: I feel alert\n1 = No, not at all\n5 = Yes, absolutely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "hostile_all",
+      "description": "Hostile",
+      "type": "ordinal",
+      "coding": "How do you feel right now?: I feel stupid\n1 = No, not at all\n5 = Yes, absolutely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "le_enjoy_all",
+      "description": "Enjoyable lecture",
+      "type": "ordinal",
+      "coding": "The most recent lecture: The lesson was enjoyable\n1 = No, not at all\n5 = Yes, absolutely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "le_diff_all",
+      "description": "Lecture difficulty",
+      "type": "ordinal",
+      "coding": "The most recent lecture: The content was difficult\n1 = No, not at all\n5 = Yes, absolutely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "le_intr_all",
+      "description": "Lecture interest",
+      "type": "ordinal",
+      "coding": "The most recent lecture: The content was interesting\n1 = No, not at all\n5 = Yes, absolutely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "te_str_all",
+      "description": "Teacher strictness",
+      "type": "ordinal",
+      "coding": "The most recent lecture: The teacher was strict\n1 = No, not at all\n5 = Yes, absolutely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "te_fair_all",
+      "description": "Teacher fairness",
+      "type": "ordinal",
+      "coding": "The most recent lecture: The teacher was fair\n1 = No, not at all\n5 = Yes, absolutely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "te_enc_all",
+      "description": "Teacher encouraging",
+      "type": "ordinal",
+      "coding": "The most recent lecture: The teacher was encouraging\n1 = No, not at all\n5 = Yes, absolutely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "peer_rel_all",
+      "description": "Peer relationships",
+      "type": "ordinal",
+      "coding": "Did you have a good time with your classmates during the morning/the afternoon?\n1 = No, not at all\n5 = Yes, absolutely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "schoolday_satisfaction",
+      "description": "Schoolday satisfaction",
+      "type": "Likert",
+      "coding": "What rating would you give for the overall school day? (Scale 1-10)",
+      "answer_categories": "10"
+    }
+  ]
 }
