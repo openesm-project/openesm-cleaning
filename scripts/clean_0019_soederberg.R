@@ -62,6 +62,9 @@ df <- df |>
     TRUE ~ NA_real_
   )))
 
+# rename hostile to stupid
+df <- df |>
+  rename(stupid = hostile)
 
 
 # Check requirements ------------------------------------------------------
@@ -88,7 +91,7 @@ sheet_url <- meta_data |>
 
 variable_data <- read_sheet(sheet_url)
 
-meta_json <- create_metadata_json("000X") |>
+meta_json <- create_metadata_json("0019") |>
   toJSON(pretty = TRUE, auto_unbox = TRUE)
 
 write(meta_json, here("data", "metadata", "0019_soederberg_metadata.json"))

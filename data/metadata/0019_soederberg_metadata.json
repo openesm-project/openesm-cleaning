@@ -19,7 +19,7 @@
   "sampling_scheme": "4x/day fixed and random sampling",
   "participants": "middle and secondary school students",
   "coding_file": "0019_söderberg_variablen",
-  "additional_comments": "inconsistency between notification times and the beep ordering by the authors; contains multiple sampling frequencies; hostile item is coded as \"I feel stupid\" in the data",
+  "additional_comments": "inconsistency between notification times and the beep ordering by the authors; contains multiple sampling frequencies; the \"stupid\" item could also be interpreted as \"hostile\" in Swedish",
   "coder_data": "Björn Siepe",
   "coder_metadata": "Björn Siepe",
   "features": [
@@ -150,10 +150,10 @@
       "answer_categories": "5"
     },
     {
-      "name": "hostile_all",
-      "description": "Hostile",
+      "name": "stupid_all",
+      "description": "Stupid",
       "type": "ordinal",
-      "coding": "How do you feel right now?: I feel stupid\n1 = No, not at all\n5 = Yes, absolutely",
+      "coding": "How do you feel right now?: I feel stupid\n1 = No, not at all\n5 = Yes, absolutely\n\nNote: In Swedish, this item was \"jag känner mig dum\", which could also be interpreted as \"hostility\". However, it was intended to ask about stupidity",
       "answer_categories": "5"
     },
     {
