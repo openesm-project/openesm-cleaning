@@ -1,0 +1,104 @@
+{
+  "first_author": "Contreras",
+  "dataset": "0028",
+  "year": 2020,
+  "reference_a": "@article{contreras2020,\n  title = {A temporal network approach to paranoia: {{A}} pilot study},\n  shorttitle = {A temporal network approach to paranoia},\n  author = {Contreras, Alba and Valiente, Carmen and Heeren, Alexandre and Bentall, Richard},\n  date = {2020-09-18},\n  journaltitle = {Frontiers in Psychology},\n  shortjournal = {Front. Psychol.},\n  volume = {11},\n  publisher = {Frontiers},\n  issn = {1664-1078},\n  doi = {10.3389/fpsyg.2020.544565}\n}",
+  "reference_b": null,
+  "paper_doi": "https://doi.org/10.3389/fpsyg.2020.544565",
+  "link_to_data": "https://osf.io/7tk4b/",
+  "link_to_codebook": "https://osf.io/bkn3y",
+  "link_to_code": "https://osf.io/mezgw",
+  "n_participants": 23,
+  "n_time_points": 70,
+  "n_beeps_per_day": 10,
+  "passive_data_available": "no",
+  "cross_sectional_available": "no",
+  "topics": "paranoia, sadness, closeness to others, avoidance",
+  "implicit_missingness": "no",
+  "raw_time_stamp": "no",
+  "sampling_scheme": "10x/day stratified sampling",
+  "participants": "participants with above-average paranoid ideation and/or interpersonal sensitivity",
+  "coding_file": "0028_contreras_variables",
+  "additional_comments": null,
+  "coder_data": "Björn Siepe",
+  "coder_metadata": "Björn Siepe",
+  "features": [
+    {
+      "name": "id",
+      "description": "Participant ID",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "day",
+      "description": "Day of study",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "beep",
+      "description": "Beep of the day",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "sadness",
+      "description": "Sadness",
+      "type": "Likert",
+      "coding": "At this moment, I feel sad",
+      "answer_categories": "9"
+    },
+    {
+      "name": "useless",
+      "description": "Useless",
+      "type": "Likert",
+      "coding": "At this moment, I feel useless (Self-Esteem 1)",
+      "answer_categories": "9"
+    },
+    {
+      "name": "manage_well",
+      "description": "Manage issues well",
+      "type": "Likert",
+      "coding": "At this moment, I feel I can manage issues well (Self-Esteem 1)",
+      "answer_categories": "9"
+    },
+    {
+      "name": "no_trust",
+      "description": "Cannot trust people",
+      "type": "Likert",
+      "coding": "Since the last “beep”, I have had the \nimpression that I cannot trust peopl (Paranoia 1)",
+      "answer_categories": "9"
+    },
+    {
+      "name": "harm",
+      "description": "Perceived harm intention",
+      "type": "Likert",
+      "coding": "Since the last “beep”, I have had the \nimpression that people have tried to harm \nme",
+      "answer_categories": "9"
+    },
+    {
+      "name": "criticism",
+      "description": "Was criticized",
+      "type": "Likert",
+      "coding": "Since the last “beep”, I have had the \nimpression that people have criticized me",
+      "answer_categories": "9"
+    },
+    {
+      "name": "others",
+      "description": "Close to others",
+      "type": "Likert",
+      "coding": "At this moment, I feel close to others",
+      "answer_categories": "9"
+    },
+    {
+      "name": "avoid",
+      "description": "Experiential avoidance",
+      "type": "Likert",
+      "coding": "Since the last “beep”, I have tried to \navoid negative thoughts and feelings",
+      "answer_categories": "9"
+    }
+  ]
+}
