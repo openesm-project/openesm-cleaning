@@ -1,0 +1,237 @@
+{
+  "first_author": "Hasselhorn",
+  "dataset": "0024",
+  "year": 2021,
+  "reference_a": "@article{hasselhorn2022,\n  title = {The effects of assessment intensity on participant burden, compliance, within-person variance, and within-person relationships in ambulatory assessment},\n  author = {Hasselhorn, Kilian and Ottenstein, Charlotte and Lischetzke, Tanja},\n  date = {2022-08-01},\n  journaltitle = {Behavior Research Methods},\n  shortjournal = {Behav Res},\n  volume = {54},\n  number = {4},\n  pages = {1541--1558},\n  issn = {1554-3528},\n  doi = {10.3758/s13428-021-01683-6}\n}",
+  "reference_b": null,
+  "paper_doi": "https://doi.org/10.3758/s13428-021-01683-6",
+  "link_to_data": "https://osf.io/vw3gf/?view_only=b6f9f08a6b5941eb9c17a4951d1d0cd2;",
+  "link_to_codebook": "https://osf.io/ze9wn",
+  "link_to_code": "https://osf.io/vw3gf/?view_only=b6f9f08a6b5941eb9c17a4951d1d0cd2;",
+  "n_participants": 313,
+  "n_time_points": 63,
+  "n_beeps_per_day": 9,
+  "passive_data_available": "no",
+  "cross_sectional_available": "yes",
+  "topics": "sampling frequency, affect, compliance, extraversion, perceived burden",
+  "implicit_missingness": "unclear",
+  "raw_time_stamp": "no",
+  "sampling_scheme": "9x/day or 3x/day subject-specific schedule",
+  "participants": "university students",
+  "coding_file": "0024_hasselhorn_variables",
+  "additional_comments": "no beep information available",
+  "coder_data": "Björn Siepe",
+  "coder_metadata": "Björn Siepe",
+  "features": [
+    {
+      "name": "id",
+      "description": "Participant ID",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "day",
+      "description": "Day of study",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "beep",
+      "description": "Beep of the day",
+      "type": "other",
+      "coding": "NA",
+      "answer_categories": ""
+    },
+    {
+      "name": "treatment",
+      "description": "Beep treatment",
+      "type": "categorical",
+      "coding": "Which beep schedule participtans received\n3-9: 3 beeps for 1 week, then 9 beeps for 1 week\n9-3: 9 beeps for 1 week, then 3 beeps for 1 week",
+      "answer_categories": "2"
+    },
+    {
+      "name": "week",
+      "description": "Week of the study",
+      "type": "numeric",
+      "coding": "1 or 2",
+      "answer_categories": "2"
+    },
+    {
+      "name": "burden_high",
+      "description": "High burden",
+      "type": "binary",
+      "coding": "unclear",
+      "answer_categories": "2"
+    },
+    {
+      "name": "compliance",
+      "description": "Compliance",
+      "type": "binary",
+      "coding": "Did participant comply with the survey?\n0 = no\n1 = yes",
+      "answer_categories": "2"
+    },
+    {
+      "name": "form",
+      "description": "Questionnaire type",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "missing",
+      "description": "Missingness reason",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "well",
+      "description": "Well",
+      "type": "Likert",
+      "coding": "MDBF1: How do you feel at this moment? I feel...\n1 = very unwell\n7 = very well",
+      "answer_categories": "7"
+    },
+    {
+      "name": "awake",
+      "description": "Awake",
+      "type": "Likert",
+      "coding": "MDBF2: How do you feel at this moment? I feel...\n1 = very tired\n7 = very awake",
+      "answer_categories": "7"
+    },
+    {
+      "name": "relaxed",
+      "description": "Relaxed",
+      "type": "Likert",
+      "coding": "MDBF3: How do you feel at this moment? I feel...\n1 = very tense\n7 = very relaxed",
+      "answer_categories": "7"
+    },
+    {
+      "name": "good",
+      "description": "Good",
+      "type": "Likert",
+      "coding": "MDBF4: How do you feel at this moment? I feel...\n1 = very bad\n7 = very good\n\n(originally reverse-coded)",
+      "answer_categories": "7"
+    },
+    {
+      "name": "rested",
+      "description": "Rested",
+      "type": "Likert",
+      "coding": "MDBF5: How do you feel at this moment? I feel...\n1 = very sleepy\n7 = very rested\n\n(originally reverse-coded)",
+      "answer_categories": "7"
+    },
+    {
+      "name": "pleased",
+      "description": "Pleased",
+      "type": "Likert",
+      "coding": "MDBF6: How do you feel at this moment? I feel...\n1 = very unpleased\n7 = very pleased",
+      "answer_categories": "7"
+    },
+    {
+      "name": "calm",
+      "description": "Calm",
+      "type": "Likert",
+      "coding": "MDBF7: How do you feel at this moment? I feel...\n1 = very restless\n7 = very calm\n\n(originally reverse-coded)",
+      "answer_categories": "7"
+    },
+    {
+      "name": "happy",
+      "description": "Happy",
+      "type": "Likert",
+      "coding": "MDBF8: How do you feel at this moment? I feel...\n1 = very unhappy\n7 = very happy\n\n(originally reverse-coded)",
+      "answer_categories": "7"
+    },
+    {
+      "name": "organized",
+      "description": "Organized",
+      "type": "Likert",
+      "coding": "How did you behave in the last 30 minutes? If the listed behaviours do not apply choose the \"not applicable\" option\n1 = Very disorganized/unsystematic\n7 = Very organized/systematic",
+      "answer_categories": "7"
+    },
+    {
+      "name": "talkative",
+      "description": "Talkative",
+      "type": "Likert",
+      "coding": "How did you behave in the last 30 minutes? If the listed behaviours do not apply choose the \"not applicable\" option\n1 = Very quiet\n7 = Very talkative\n\n(originally reverse-coded)",
+      "answer_categories": "7"
+    },
+    {
+      "name": "persistent",
+      "description": "Persistent",
+      "type": "Likert",
+      "coding": "How did you behave in the last 30 minutes? If the listed behaviours do not apply choose the \"not applicable\" option\n1 = Very lazy\n7 = Very persistent/purposeful",
+      "answer_categories": "7"
+    },
+    {
+      "name": "outgoing",
+      "description": "Outgoing",
+      "type": "Likert",
+      "coding": "How did you behave in the last 30 minutes? If the listed behaviours do not apply choose the \"not applicable\" option\n1 = Very unsociable\n7 = Very outgoing\n\n(originally reverse-coded)",
+      "answer_categories": "7"
+    },
+    {
+      "name": "assertive",
+      "description": "Assertive",
+      "type": "Likert",
+      "coding": "\"How did you behave in the last 30 minutes? If the listed behaviours do not apply choose the \"\"not applicable\"\" option\n1 = Very unassertive\n7 = Very assertive\"",
+      "answer_categories": "7"
+    },
+    {
+      "name": "study_burden",
+      "description": "Perceived study burden",
+      "type": "ordinal",
+      "coding": "How much of a burden was it to participate in the study today?\n1 = not at all\n5 = very much",
+      "answer_categories": "5"
+    },
+    {
+      "name": "study_interfere",
+      "description": "Study interference",
+      "type": "ordinal",
+      "coding": "How much did participating in the study interfere with your usual activities?\n1 = not at all\n5 = very much",
+      "answer_categories": "5"
+    },
+    {
+      "name": "study_annoy",
+      "description": "Study annoyance",
+      "type": "ordinal",
+      "coding": "How much were you annoyed with the number of times beeped per day?\n1 = not at all\n5 = very much",
+      "answer_categories": "5"
+    },
+    {
+      "name": "report_easy",
+      "description": "Easiness of mood reporting",
+      "type": "Likert",
+      "coding": "KLA1: How easy or difficult was it for you to report your momentary mood?\n1 = very difficult\n7 = very easy",
+      "answer_categories": "7"
+    },
+    {
+      "name": "report_sure",
+      "description": "Certainty of mood reporting",
+      "type": "Likert",
+      "coding": "KLA2: How sure or unsure were you regading your reports of your momentary mood?\n1 = very unsure\n7 = very sure\n\n(originally reverse-coded)",
+      "answer_categories": "7"
+    },
+    {
+      "name": "rt_mdbf5_8",
+      "description": "Reaction time last four mood items",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "rt_pers1_3",
+      "description": "Reaction time first three personality items",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "rt_pers4_5",
+      "description": "Reaction time last two personality items",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    }
+  ]
+}
