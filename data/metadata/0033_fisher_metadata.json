@@ -1,0 +1,244 @@
+{
+  "first_author": "Fisher",
+  "dataset": "0033",
+  "year": 2017,
+  "reference_a": "@article{fisher2017,\n  title = {Exploring the idiographic dynamics of mood and anxiety via network analysis},\n  author = {Fisher, Aaron J. and Reeves, Jonathan W and Lawyer, Glenn and Medaglia, John D and Rubel, Julian A},\n  date = {2017},\n  journaltitle = {Journal of abnormal psychology},\n  shortjournal = {Journal of abnormal psychology},\n  volume = {126},\n  number = {8},\n  pages = {1044},\n  publisher = {American Psychological Association},\n  issn = {1939-1846},\n  doi = {10.1037/abn0000311}\n}",
+  "reference_b": null,
+  "paper_doi": "https://doi.org/10.1037/abn0000311",
+  "link_to_data": "https://osf.io/5ybxt/",
+  "link_to_codebook": "https://osf.io/h93f4",
+  "link_to_code": "https://osf.io/m63ks",
+  "n_participants": 40,
+  "n_time_points": 212,
+  "n_beeps_per_day": 4,
+  "passive_data_available": "no",
+  "cross_sectional_available": "no",
+  "topics": "mood, anxiety, procrastination, depression",
+  "implicit_missingness": "unclear",
+  "raw_time_stamp": "yes",
+  "sampling_scheme": "4x/day fixed schedule",
+  "participants": "participants with a diagnosis of MDD and/or GAD",
+  "coding_file": "0033_fisher_variables",
+  "additional_comments": "item order was randomized; partially implicit missingness; no beep information",
+  "coder_data": "Björn Siepe",
+  "coder_metadata": "Björn Siepe",
+  "features": [
+    {
+      "name": "id",
+      "description": "Participant ID",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "day",
+      "description": "Day of study",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "beep",
+      "description": "Beep of the day",
+      "type": "other",
+      "coding": "NA",
+      "answer_categories": ""
+    },
+    {
+      "name": "start",
+      "description": "Start time survey",
+      "type": "PosixCt",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "finish",
+      "description": "Finish time survey",
+      "type": "PosixCt",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "energetic",
+      "description": "Energetic",
+      "type": "VAS",
+      "coding": "To what degree have you felt energetic?\n0 = none at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "enthusiastic",
+      "description": "Enthusiastic",
+      "type": "VAS",
+      "coding": "To what degree have you felt enthusiastic?\n0 = none at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "content",
+      "description": "Content",
+      "type": "VAS",
+      "coding": "To what degree have you felt content?\n0 = none at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "irritable",
+      "description": "Irritable",
+      "type": "VAS",
+      "coding": "To what degree have you felt irritable?\n0 = none at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "restless",
+      "description": "Restless",
+      "type": "VAS",
+      "coding": "To what degree have you felt restless?\n0 = none at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "worried",
+      "description": "Worried",
+      "type": "VAS",
+      "coding": "To what degree have you felt worried?\n0 = none at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "guilty",
+      "description": "Guilty/Worthless",
+      "type": "VAS",
+      "coding": "To what degree have you felt worthless or guilty?\n0 = none at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "afraid",
+      "description": "Afraid",
+      "type": "VAS",
+      "coding": "To what degree have you felt frightened or afraid?\n0 = none at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "anhedonia",
+      "description": "Anhedonia",
+      "type": "VAS",
+      "coding": "To what degree have you experience loss of interest or pleasure?\n0 = none at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "angry",
+      "description": "Angry",
+      "type": "VAS",
+      "coding": "To what degree have you felt angry?\n0 = none at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "hopeless",
+      "description": "Hopeless",
+      "type": "VAS",
+      "coding": "To what degree have you felt hopeless?\n0 = none at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "down",
+      "description": "Down/Depressed",
+      "type": "VAS",
+      "coding": "To what degree have you felt down or depressed?\n0 = none at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "positive",
+      "description": "Positive",
+      "type": "VAS",
+      "coding": "To what degree have you felt positive?\n0 = none at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "fatigue",
+      "description": "Fatigue",
+      "type": "VAS",
+      "coding": "To what degree have you felt fatigued?\n0 = none at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "tension",
+      "description": "Muscle tension",
+      "type": "VAS",
+      "coding": "To what degree have you experienced muscle tension?\n0 = none at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "concentrate",
+      "description": "Concentration problems",
+      "type": "VAS",
+      "coding": "To what degree did you have difficulty concentrating?\n0 = none at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "accepted",
+      "description": "Accepted",
+      "type": "VAS",
+      "coding": "unclear",
+      "answer_categories": "101"
+    },
+    {
+      "name": "threatened",
+      "description": "Threatened",
+      "type": "VAS",
+      "coding": "unclear",
+      "answer_categories": "101"
+    },
+    {
+      "name": "ruminate",
+      "description": "Ruminate",
+      "type": "VAS",
+      "coding": "unclear",
+      "answer_categories": "101"
+    },
+    {
+      "name": "avoid_act",
+      "description": "Avoided activities",
+      "type": "VAS",
+      "coding": "To what degree did you avoid activities?\n0 = none at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "reassure",
+      "description": "Sought reassurance",
+      "type": "VAS",
+      "coding": "To what degree did you seek reassurance?\n0 = none at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "procrast",
+      "description": "Procrastinated",
+      "type": "VAS",
+      "coding": "To what degree did you procrastinate?\n0 = none at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "hours",
+      "description": "unclear",
+      "type": "numeric",
+      "coding": "unclear",
+      "answer_categories": ""
+    },
+    {
+      "name": "difficult",
+      "description": "unclear",
+      "type": "VAS",
+      "coding": "unclear",
+      "answer_categories": "101"
+    },
+    {
+      "name": "unsatisfy",
+      "description": "unclear",
+      "type": "VAS",
+      "coding": "unclear",
+      "answer_categories": "101"
+    },
+    {
+      "name": "avoid_people",
+      "description": "Avoided people",
+      "type": "VAS",
+      "coding": "To what degree did you avoid people?\n0 = none at all\n100 = as much as possible",
+      "answer_categories": "101"
+    }
+  ]
+}
