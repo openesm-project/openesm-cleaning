@@ -1,0 +1,307 @@
+{
+  "first_author": "Reeves",
+  "dataset": "0034",
+  "year": 2020,
+  "reference_a": "@article{reeves2020,\n  title = {An examination of idiographic networks of posttraumatic stress disorder symptoms},\n  author = {Reeves, Jonathan W. and Fisher, Aaron J.},\n  date = {2020},\n  journaltitle = {Journal of Traumatic Stress},\n  volume = {33},\n  number = {1},\n  pages = {84--95},\n  issn = {1573-6598},\n  doi = {10.1002/jts.22491}\n}",
+  "reference_b": null,
+  "paper_doi": "https://doi.org/10.1002/jts.22491",
+  "link_to_data": "https://osf.io/6vxhf/",
+  "link_to_codebook": "https://osf.io/juksb",
+  "link_to_code": "https://osf.io/gv37j",
+  "n_participants": 20,
+  "n_time_points": 120,
+  "n_beeps_per_day": 4,
+  "passive_data_available": "no",
+  "cross_sectional_available": "no",
+  "topics": "PTSD, emotions, sleep, physical symptoms",
+  "implicit_missingness": "unclear",
+  "raw_time_stamp": "yes",
+  "sampling_scheme": "4x/day fixed schedule",
+  "participants": "participants with PTSD",
+  "coding_file": "0034_reeves_variables",
+  "additional_comments": "no beep information available",
+  "coder_data": "Björn Siepe",
+  "coder_metadata": "Björn Siepe",
+  "features": [
+    {
+      "name": "id",
+      "description": "Participant ID",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "day",
+      "description": "Day of study",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "beep",
+      "description": "Beep of the day",
+      "type": "other",
+      "coding": "NA",
+      "answer_categories": ""
+    },
+    {
+      "name": "felt_enthusiastic",
+      "description": "Enthusiastic",
+      "type": "VAS",
+      "coding": "Felt enthusiastic\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "hypervigilant",
+      "description": "Hypervigilant",
+      "type": "VAS",
+      "coding": "Felt extremely alert, watchful, or on guard\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "aggressive",
+      "description": "Aggressive",
+      "type": "VAS",
+      "coding": "Felt irritable, had angry outbursts, or acted aggressively\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "afraid",
+      "description": "Afraid",
+      "type": "VAS",
+      "coding": "Felt afraid\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "neg_thoughts_self",
+      "description": "Negative thoughts about self",
+      "type": "VAS",
+      "coding": "Had strong negative thoughts about yourself\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "avoidance",
+      "description": "Avoidance",
+      "type": "VAS",
+      "coding": "Avoided thoughts and/or feelings related to the traumatic event\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "reliving",
+      "description": "Reliving",
+      "type": "VAS",
+      "coding": "Felt like you were reliving the traumatic event\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "unpleasant_dreams",
+      "description": "Unpleasant dreams",
+      "type": "VAS",
+      "coding": "Had unpleasant dreams about the trauamtic event\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "intrusions",
+      "description": "Intrusions",
+      "type": "VAS",
+      "coding": "Had stressful, unwanted memories of the traumatic event\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "hours_sleep",
+      "description": "Sleep duration",
+      "type": "numeric",
+      "coding": "Total sleep time from previous night in hours",
+      "answer_categories": ""
+    },
+    {
+      "name": "restless_sleep",
+      "description": "Restless sleep",
+      "type": "VAS",
+      "coding": "Experienced restless or unsatisfying sleep\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "sleep_troubles",
+      "description": "Sleep troubles",
+      "type": "VAS",
+      "coding": "Had trouble falling or staying asleep\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "horrified",
+      "description": "Horrified",
+      "type": "VAS",
+      "coding": "Felt horrified\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "angry",
+      "description": "Angry",
+      "type": "VAS",
+      "coding": "Felt angry\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "guilty",
+      "description": "Guilty",
+      "type": "VAS",
+      "coding": "Felt guilty\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "ashamed",
+      "description": "Ashamed",
+      "type": "VAS",
+      "coding": "Felt ashamed\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "neg_thoughts_others",
+      "description": "Negative thoughts about others",
+      "type": "VAS",
+      "coding": "Had strong negative thoughts about others\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "neg_thoughts_world",
+      "description": "Negative thoughts about world",
+      "type": "VAS",
+      "coding": "Had strong negative thoughts about the world\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "self_blame",
+      "description": "Blame self",
+      "type": "VAS",
+      "coding": "Blamed yourself for the traumatic event or its consequences\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "others_blame",
+      "description": "Blame others",
+      "type": "VAS",
+      "coding": "Blamed others for the traumatic event or its consequences\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "avoid_places",
+      "description": "Avoid places",
+      "type": "VAS",
+      "coding": "Avoided places related to the traumatic event\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "upset",
+      "description": "Upset",
+      "type": "VAS",
+      "coding": "Felt upset when reminded of the traumatic event\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "physical_reactions",
+      "description": "Physical reactions",
+      "type": "VAS",
+      "coding": "Had physical reactions when reminded of the traumatic event\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "amnesia",
+      "description": "Amnesia",
+      "type": "VAS",
+      "coding": "Had difficulty remembering the details of the traumatic event\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "anhedonia",
+      "description": "Anhedonia",
+      "type": "VAS",
+      "coding": "Felt less interested or participated less in your usual activities\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "distant",
+      "description": "Distant",
+      "type": "VAS",
+      "coding": "Felt distant or cut off from others\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "difficulty_positive",
+      "description": "Difficulty feeling positive",
+      "type": "VAS",
+      "coding": "Had difficulty feeling positive\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "reckless",
+      "description": "Reckless",
+      "type": "VAS",
+      "coding": "Acted reckless or self-destructive\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "startled",
+      "description": "Easily startled",
+      "type": "VAS",
+      "coding": "Felt jumpy or easily startled\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "difficulty_concent",
+      "description": "Concentration difficulties",
+      "type": "VAS",
+      "coding": "Had difficulty concentrating\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "sleepy",
+      "description": "Sleepy",
+      "type": "VAS",
+      "coding": "Felt sleepy\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "positive",
+      "description": "Positive",
+      "type": "VAS",
+      "coding": "Felt positive\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "happy",
+      "description": "Happy",
+      "type": "VAS",
+      "coding": "Felt happy\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "content",
+      "description": "Content",
+      "type": "VAS",
+      "coding": "Felt content\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "calm",
+      "description": "Calm",
+      "type": "VAS",
+      "coding": "Felt calm\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "fatigued",
+      "description": "Fatigued",
+      "type": "VAS",
+      "coding": "Felt fatigued\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "muscle_tension",
+      "description": "Muscle tension",
+      "type": "VAS",
+      "coding": "0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    }
+  ]
+}
