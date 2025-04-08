@@ -1,0 +1,202 @@
+{
+  "first_author": "Soyster",
+  "dataset": "0035",
+  "year": 2022,
+  "reference_a": "@article{soyster2022,\n  title = {Pooled and person-specific machine learning models for predicting future alcohol consumption, craving, and wanting to drink: {{A}} demonstration of parallel utility.},\n  shorttitle = {Pooled and person-specific machine learning models for predicting future alcohol consumption, craving, and wanting to drink},\n  author = {Soyster, Peter D. and Ashlock, Leighann and Fisher, Aaron J.},\n  date = {2022-05},\n  journaltitle = {Psychology of Addictive Behaviors},\n  shortjournal = {Psychology of Addictive Behaviors},\n  volume = {36},\n  number = {3},\n  pages = {296--306},\n  issn = {1939-1501, 0893-164X},\n  doi = {10.1037/adb0000666}\n}",
+  "reference_b": null,
+  "paper_doi": "https://doi.org/10.1037/adb0000666",
+  "link_to_data": "https://osf.io/q7upd/",
+  "link_to_codebook": "-",
+  "link_to_code": "https://osf.io/bwkjq",
+  "n_participants": 33,
+  "n_time_points": 129,
+  "n_beeps_per_day": 8,
+  "passive_data_available": "no",
+  "cross_sectional_available": "no",
+  "topics": "alcohol consumption, craving, affect, context",
+  "implicit_missingness": "unclear",
+  "raw_time_stamp": "yes",
+  "sampling_scheme": "8x/day semi-random schedule",
+  "participants": "adult alcohol consumers",
+  "coding_file": "0035_soyster_variables",
+  "additional_comments": "no beep information available, but there may be information in the original code that can be used to create it",
+  "coder_data": "Björn Siepe",
+  "coder_metadata": "Björn Siepe",
+  "features": [
+    {
+      "name": "id",
+      "description": "Participant ID",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "day",
+      "description": "Day of study",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "beep",
+      "description": "Beep of the day",
+      "type": "other",
+      "coding": "NA",
+      "answer_categories": ""
+    },
+    {
+      "name": "creation_time",
+      "description": "Creation time",
+      "type": "PosixCt",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "completion_time",
+      "description": "Completion time",
+      "type": "PosixCt",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "drink_number",
+      "description": "Number of drinks",
+      "type": "numeric",
+      "coding": "Since your last survey; how many alcoholic drinks have you had?\n0 = not at all\n100 = as much as possible",
+      "answer_categories": ""
+    },
+    {
+      "name": "comfortable",
+      "description": "Comfortable",
+      "type": "VAS",
+      "coding": "I feel comfortable in my current location\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "stressed",
+      "description": "Stressed",
+      "type": "VAS",
+      "coding": "I feel stressed\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "depressed",
+      "description": "Depressed",
+      "type": "VAS",
+      "coding": "I feel down/depressed\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "calm",
+      "description": "Calm",
+      "type": "VAS",
+      "coding": "I feel calm/relaxed\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "pressure_to_drink",
+      "description": "Pressure to drink",
+      "type": "VAS",
+      "coding": "I currently feel pressure to drink\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "enthusiastic",
+      "description": "Enthusiastic",
+      "type": "VAS",
+      "coding": "I feel enthusiastic\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "happy",
+      "description": "Happy",
+      "type": "VAS",
+      "coding": "I feel happy\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "conflict",
+      "description": "Conflict",
+      "type": "VAS",
+      "coding": "I am having conflict/fighting with others\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "craving",
+      "description": "Craving alcohol",
+      "type": "VAS",
+      "coding": "I am craving alcohol\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "impulsive",
+      "description": "Impulsive",
+      "type": "VAS",
+      "coding": "I am feeling impulsive\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "drink_feel_better",
+      "description": "Drink would make feelings better",
+      "type": "VAS",
+      "coding": "A drink would make me feel better right now\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "perceived_peer_drinking",
+      "description": "Perceived peer drinking",
+      "type": "VAS",
+      "coding": "What % of [university] students do you think are drinking alcohol right now?",
+      "answer_categories": "101"
+    },
+    {
+      "name": "want_to_drink",
+      "description": "Wanting to drink",
+      "type": "VAS",
+      "coding": "I would like to drink\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "delay_gratification",
+      "description": "Delayed gratification",
+      "type": "VAS",
+      "coding": "I feel able to delay gratification\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "angry",
+      "description": "Angry",
+      "type": "VAS",
+      "coding": "I feel angry\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "drinks_today_estimate",
+      "description": "Drinks today",
+      "type": "numeric",
+      "coding": "How many drinks do you think you'll consume today?",
+      "answer_categories": ""
+    },
+    {
+      "name": "restless_sleep",
+      "description": "Restless sleep",
+      "type": "VAS",
+      "coding": "Last night, my sleep was restless or unsatisfying\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "sleep_difficulty",
+      "description": "Sleep difficulty",
+      "type": "VAS",
+      "coding": "Last night, I had difficulty falling or staying asleep\n0 = not at all\n100 = as much as possible",
+      "answer_categories": "101"
+    },
+    {
+      "name": "sleep_hours",
+      "description": "Hours of sleep",
+      "type": "numeric",
+      "coding": "How many hours did you sleep last night?",
+      "answer_categories": ""
+    }
+  ]
+}
