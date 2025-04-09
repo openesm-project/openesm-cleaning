@@ -1,0 +1,244 @@
+{
+  "first_author": "Bosley",
+  "dataset": "0036",
+  "year": 2019,
+  "reference_a": "@article{bosley2020,\n  title = {Idiographic dynamics of positive affect in {{GAD}}},\n  author = {Bosley, Hannah G. and Sandel, Devon B. and Fisher, Aaron J.},\n  date = {2020-05},\n  journaltitle = {European Journal of Psychological Assessment},\n  volume = {36},\n  number = {3},\n  pages = {500--509},\n  publisher = {Hogrefe Publishing},\n  issn = {1015-5759},\n  doi = {10.1027/1015-5759/a000580}\n}",
+  "reference_b": null,
+  "paper_doi": "https://doi.org/10.31234/osf.io/bhn7y",
+  "link_to_data": "https://osf.io/4x8jd/",
+  "link_to_codebook": "-",
+  "link_to_code": "https://osf.io/8t46j",
+  "n_participants": 96,
+  "n_time_points": 45,
+  "n_beeps_per_day": 4,
+  "passive_data_available": "no",
+  "cross_sectional_available": "no",
+  "topics": "GAD, affect, dampening",
+  "implicit_missingness": "yes",
+  "raw_time_stamp": "yes",
+  "sampling_scheme": "4x/day 30-minute interval",
+  "participants": "undergraduates with elevated GAD symptoms",
+  "coding_file": "0036_bosley_variables",
+  "additional_comments": "item order was randomized; wording of items not fully clear, but inferred from article+data; no beep information available",
+  "coder_data": "Björn Siepe",
+  "coder_metadata": "Björn Siepe",
+  "features": [
+    {
+      "name": "id",
+      "description": "Participant ID",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "day",
+      "description": "Day of study",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "beep",
+      "description": "Beep of the day",
+      "type": "other",
+      "coding": "NA",
+      "answer_categories": ""
+    },
+    {
+      "name": "creation_time",
+      "description": "Creation time",
+      "type": "PosixCt",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "completion_time",
+      "description": "Completion time",
+      "type": "PosixCt",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "bragging_thought",
+      "description": "Happiness as bragging",
+      "type": "VAS",
+      "coding": "Since the last survey, when you felt happy, how often did you think \"People will think I'm bragging\"?",
+      "answer_categories": "101"
+    },
+    {
+      "name": "too_good_to_be_true",
+      "description": "Too good to be true",
+      "type": "VAS",
+      "coding": "Since the last survey, when you felt happy, how often did you think this is too good to be true?",
+      "answer_categories": "101"
+    },
+    {
+      "name": "ruminate_negatives",
+      "description": "Ruminate about negatives",
+      "type": "VAS",
+      "coding": "Since the last survey, when you felt happy, how often did you things that have not gone well?",
+      "answer_categories": "101"
+    },
+    {
+      "name": "feelings_wont_last",
+      "description": "Feelings perceived as transient",
+      "type": "VAS",
+      "coding": "Since the last survey, when you felt happy, how often did you remind yourself that these feelings won't last?",
+      "answer_categories": "101"
+    },
+    {
+      "name": "hard_to_concentrate",
+      "description": "Hard to concentrate when happy",
+      "type": "VAS",
+      "coding": "Since the last survey, when you felt happy, how often did you think about how hard it is to concentrate?",
+      "answer_categories": "101"
+    },
+    {
+      "name": "think_of_risks",
+      "description": "Thinking of risks",
+      "type": "VAS",
+      "coding": "Since the last survey, when you felt happy, how often did you think about things that could go wrong?",
+      "answer_categories": "101"
+    },
+    {
+      "name": "undeserving",
+      "description": "Feeling undeserving",
+      "type": "VAS",
+      "coding": "Since the last survey, when you felt happy, how often did you think \"I don't deserve this\"?",
+      "answer_categories": "101"
+    },
+    {
+      "name": "luck_will_end",
+      "description": "Thinking luck will end",
+      "type": "VAS",
+      "coding": "Since the last survey, when you felt happy, how often did you think \"My streak of luck is going to end soon\"?",
+      "answer_categories": "101"
+    },
+    {
+      "name": "happy",
+      "description": "Happy",
+      "type": "VAS",
+      "coding": "Felt happy",
+      "answer_categories": "101"
+    },
+    {
+      "name": "content",
+      "description": "Content",
+      "type": "VAS",
+      "coding": "Felt content",
+      "answer_categories": "101"
+    },
+    {
+      "name": "excited",
+      "description": "Excited",
+      "type": "VAS",
+      "coding": "Felt excited",
+      "answer_categories": "101"
+    },
+    {
+      "name": "sad",
+      "description": "Sad",
+      "type": "VAS",
+      "coding": "Felt sad",
+      "answer_categories": "101"
+    },
+    {
+      "name": "depressed",
+      "description": "Depressed",
+      "type": "VAS",
+      "coding": "Felt depressed",
+      "answer_categories": "101"
+    },
+    {
+      "name": "nervous",
+      "description": "Nervous",
+      "type": "VAS",
+      "coding": "Felt nervous",
+      "answer_categories": "101"
+    },
+    {
+      "name": "determined",
+      "description": "Determined",
+      "type": "VAS",
+      "coding": "Felt determined",
+      "answer_categories": "101"
+    },
+    {
+      "name": "attentive",
+      "description": "Attentive",
+      "type": "VAS",
+      "coding": "Felt attentive",
+      "answer_categories": "101"
+    },
+    {
+      "name": "alert",
+      "description": "Alert",
+      "type": "VAS",
+      "coding": "Felt alert",
+      "answer_categories": "101"
+    },
+    {
+      "name": "inspired",
+      "description": "Inspired",
+      "type": "VAS",
+      "coding": "Felt inspired",
+      "answer_categories": "101"
+    },
+    {
+      "name": "active",
+      "description": "Active",
+      "type": "VAS",
+      "coding": "Felt active",
+      "answer_categories": "101"
+    },
+    {
+      "name": "afraid",
+      "description": "Afraid",
+      "type": "VAS",
+      "coding": "Felt afraid",
+      "answer_categories": "101"
+    },
+    {
+      "name": "upset",
+      "description": "Upset",
+      "type": "VAS",
+      "coding": "Felt upset",
+      "answer_categories": "101"
+    },
+    {
+      "name": "ashamed",
+      "description": "Ashamed",
+      "type": "VAS",
+      "coding": "Felt ashamed",
+      "answer_categories": "101"
+    },
+    {
+      "name": "hostile",
+      "description": "Hostile",
+      "type": "VAS",
+      "coding": "Felt hostile",
+      "answer_categories": "101"
+    },
+    {
+      "name": "worry_frequent",
+      "description": "Frequent worrying",
+      "type": "VAS",
+      "coding": "Felt worried frequently",
+      "answer_categories": "101"
+    },
+    {
+      "name": "worry_hard_to_control",
+      "description": "Worry hard to control",
+      "type": "VAS",
+      "coding": "Felt that worry is difficult to stop or control",
+      "answer_categories": "101"
+    },
+    {
+      "name": "worry_interferes",
+      "description": "Worry interferes with life",
+      "type": "VAS",
+      "coding": "Felt that worry is interfering with your life",
+      "answer_categories": "101"
+    }
+  ]
+}
