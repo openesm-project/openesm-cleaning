@@ -1,0 +1,139 @@
+{
+  "first_author": "Dora",
+  "dataset": "0023",
+  "year": 2024,
+  "reference_a": "@article{dora2024,\n  title = {A tutorial on analyzing ecological momentary assessment data in psychological research with {{Bayesian}} (generalized) mixed-effects models},\n  author = {Dora, Jonas and McCabe, Connor J. and family=Lissa, given=Caspar J., prefix=van, useprefix=true and Witkiewitz, Katie and King, Kevin M.},\n  date = {2024-01-01},\n  journaltitle = {Advances in Methods and Practices in Psychological Science},\n  volume = {7},\n  number = {1},\n  pages = {25152459241235875},\n  publisher = {SAGE Publications Inc},\n  issn = {2515-2459},\n  doi = {10.1177/25152459241235875}\n}",
+  "reference_b": null,
+  "paper_doi": "https://doi.org/10.31234/osf.io/jc938",
+  "link_to_data": "https://osf.io/rh2sw/",
+  "link_to_codebook": "https://osf.io/zy639",
+  "link_to_code": "https://osf.io/zy639",
+  "n_participants": 213,
+  "n_time_points": 63,
+  "n_beeps_per_day": 5,
+  "passive_data_available": "no",
+  "cross_sectional_available": "yes",
+  "topics": "alcohol, self-control demands, intoxication, substance use",
+  "implicit_missingness": "yes",
+  "raw_time_stamp": "yes",
+  "sampling_scheme": "3x/day or 5x/day unclear schedule",
+  "participants": "undergraduates",
+  "coding_file": "0023_dora_variables",
+  "additional_comments": "data from two studies; item coding based on private codebook; some items assessed daily",
+  "coder_data": "Björn Siepe",
+  "coder_metadata": "Björn Siepe",
+  "features": [
+    {
+      "name": "id",
+      "description": "Participant ID",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "day",
+      "description": "Day of study",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "beep",
+      "description": "Beep of the day",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "study",
+      "description": "Study number",
+      "type": "categorical",
+      "coding": "Study 1 = King, \nStudy 2 = Witkiewitz",
+      "answer_categories": "2"
+    },
+    {
+      "name": "hour",
+      "description": "Hour of the day",
+      "type": "numeric",
+      "coding": "Hour during which EMA survey was completed (rounded down)",
+      "answer_categories": "24"
+    },
+    {
+      "name": "control_fixmood",
+      "description": "Self-control mood",
+      "type": "VAS",
+      "coding": "Have you needed to control/fix your mood?\n0 =  Not at all\n100 = Very much",
+      "answer_categories": "101"
+    },
+    {
+      "name": "control_fixthought",
+      "description": "Self-control thought",
+      "type": "VAS",
+      "coding": "Have you needed to control/fix your thoughts?\n0 =  Not at all\n100 = Very much",
+      "answer_categories": "101"
+    },
+    {
+      "name": "dealt_stress",
+      "description": "Dealt with stress",
+      "type": "VAS",
+      "coding": "Have you dealt with anything stressful?\n0 =  Not at all\n100 = Very much",
+      "answer_categories": "101"
+    },
+    {
+      "name": "felt_overwhelm",
+      "description": "Felt overwhelmed",
+      "type": "VAS",
+      "coding": "Have you felt overwhelmed?\n0 =  Not at all\n100 = Very much",
+      "answer_categories": "101"
+    },
+    {
+      "name": "alc_drinks",
+      "description": "Number of standard drinks",
+      "type": "numeric",
+      "coding": "How many alcoholic drinks did you have yesterday? Please remember that a drink refers to a “standard” drink size: 12 oz. beer, 8-9 oz. malt liquor, 5 oz. wine, 1.5 oz. hard liquor. (0-30)",
+      "answer_categories": "31"
+    },
+    {
+      "name": "alc_intox",
+      "description": "How drunk",
+      "type": "Likert",
+      "coding": "If you drank alcohol yesterday, how drunk or intoxicated did you get? (0-6)",
+      "answer_categories": "7"
+    },
+    {
+      "name": "alc_hangover",
+      "description": "Had hangover",
+      "type": "binary",
+      "coding": "I had a hangover\n0 = No\n1 = Yes",
+      "answer_categories": "2"
+    },
+    {
+      "name": "alc_vomit",
+      "description": "Did vomit",
+      "type": "binary",
+      "coding": "I felt nauseated or vomited\n0 = No\n1 = Yes",
+      "answer_categories": "2"
+    },
+    {
+      "name": "alc_blackout",
+      "description": "Had blackout",
+      "type": "binary",
+      "coding": "I couldn’t remember what I did while drinking\n0 = No\n1 = Yes",
+      "answer_categories": "2"
+    },
+    {
+      "name": "alc_hurt",
+      "description": "Did injure self",
+      "type": "binary",
+      "coding": "I hurt or injured myself by accident\n0 = No\n1 = Yes",
+      "answer_categories": "2"
+    },
+    {
+      "name": "alc_onset",
+      "description": "Onset of drinking",
+      "type": "numeric",
+      "coding": "About what time did you begin drinking? (Corresponding to Version)",
+      "answer_categories": "24"
+    }
+  ]
+}

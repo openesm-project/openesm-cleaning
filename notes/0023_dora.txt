@@ -1,0 +1,5 @@
+# Load  Data
+
+- Two csv files existed, I only loaded the one used in their analyses
+	- bayes.ema.tutorial.data.csv (used in the analyses)
+	- data.intox.csv (NOT used in the analyses)
