@@ -90,14 +90,14 @@
       "name": "alc_drinks",
       "description": "Number of standard drinks",
       "type": "numeric",
-      "coding": "How many alcoholic drinks did you have yesterday? Please remember that a drink refers to a “standard” drink size: 12 oz. beer, 8-9 oz. malt liquor, 5 oz. wine, 1.5 oz. hard liquor. (0-30)",
+      "coding": "How many alcoholic drinks did you have yesterday? Please remember that a drink refers to a “standard” drink size: 12 oz. beer, 8-9 oz. malt liquor, 5 oz. wine, 1.5 oz. hard liquor. (0-30 or more)",
       "answer_categories": "31"
     },
     {
       "name": "alc_intox",
       "description": "How drunk",
       "type": "Likert",
-      "coding": "If you drank alcohol yesterday, how drunk or intoxicated did you get? (0-6)",
+      "coding": "If you drank alcohol yesterday, how drunk or intoxicated did you get?\n0 = Not at all\n6 = Very much",
       "answer_categories": "7"
     },
     {
@@ -132,7 +132,7 @@
       "name": "alc_onset",
       "description": "Onset of drinking",
       "type": "numeric",
-      "coding": "About what time did you begin drinking? (Corresponding to Version)",
+      "coding": "About what time did you begin drinking? (Corresponding to beep)",
       "answer_categories": "24"
     }
   ]
