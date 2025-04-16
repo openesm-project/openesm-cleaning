@@ -1,0 +1,516 @@
+PID,gender_3cat,age,race,parent,income,incomeN,livingcontext,relstat_3cat,mhdx_anyanx_lifetime,mhdx_mdd_lifetime
+1088,Cisgender woman,43,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1049,Cisgender woman,28,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Single,0,0
+1054,Cisgender woman,31,White/European American,No,"$80,000 – $99,999",90000,Yes (friends/roommates),Partnered,0,0
+1067,Cisgender woman,29,White/European American,No,"$40,000 – $59,999",50000,Yes (family/romantic partner),Partnered,1,1
+1068,Transgender/Non-binary/Other Gender,24,White/European American,No,"$20,000 - $39,999",30000,No (I live alone),Single,0,0
+1078,Cisgender woman,52,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,1,0
+1046,Cisgender man,19,Black/African American,No,"Less than $9,999",5000,Yes (family/romantic partner),Single,0,0
+1001,Cisgender woman,49,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1013,Cisgender woman,53,White/European American,"Yes, and none of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Partnered,0,0
+1044,Cisgender woman,23,Asian/Asian American,No,"$10,000 - $19,999",15000,Yes (friends/roommates),Partnered,1,1
+1058,Cisgender woman,22,White/European American,No,"$40,000 – $59,999",50000,Yes (family/romantic partner),Partnered,0,0
+1082,Cisgender woman,57,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,NA,Married,0,0
+1051,Cisgender woman,23,White/European American,No,"Less than $9,999",5000,Yes (family/romantic partner),Partnered,1,1
+1096,Cisgender woman,32,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1073,Cisgender man,23,White/European American,No,"$10,000 - $19,999",15000,Yes (friends/roommates),Partnered,0,0
+1038,Cisgender woman,18,Hispanic/Latino,No,"Less than $9,999",5000,Yes (family/romantic partner),Single,0,0
+1008,Cisgender woman,32,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Married,1,0
+1095,Cisgender woman,27,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,1,0
+1059,Cisgender woman,49,White/European American,"Yes, and some/all of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Married,0,0
+1094,Cisgender woman,25,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Partnered,0,0
+1029,Cisgender man,18,White/European American,No,"$10,000 - $19,999",15000,Yes (family/romantic partner),Single,1,1
+1004,Cisgender woman,26,White/European American,No,"$60,000 – $79,000",70000,Yes (friends/roommates),Partnered,1,0
+1017,Cisgender woman,52,Asian/Asian American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1092,Cisgender man,22,White/European American,No,"$40,000 – $59,999",50000,NA,Single,1,0
+1045,Transgender/Non-binary/Other Gender,19,White/European American,No,NA,NA,Yes (family/romantic partner),Single,1,1
+1070,Cisgender woman,63,White/European American,"Yes, and some/all of my children live with me",NA,NA,Yes (family/romantic partner),Married,0,0
+1014,Cisgender woman,32,Asian/Asian American,No,"$60,000 – $79,000",70000,No (I live alone),Single,1,0
+1033,Cisgender woman,18,Asian/Asian American,No,"Less than $9,999",5000,Yes (family/romantic partner),Single,0,0
+1062,Cisgender woman,31,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,0,1
+1026,Cisgender woman,23,White/European American,No,"$40,000 – $59,999",50000,Yes (family/romantic partner),Partnered,0,0
+1047,Cisgender woman,21,Asian/Asian American,No,"Less than $9,999",5000,Yes (family/romantic partner),Partnered,0,0
+1007,Cisgender woman,20,Hispanic/Latino,No,"Less than $9,999",5000,Yes (family/romantic partner),Single,1,0
+1097,Cisgender woman,32,Asian/Asian American,No,"$20,000 - $39,999",30000,Yes (family/romantic partner),Partnered,0,0
+1102,Cisgender woman,52,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1085,Cisgender woman,22,Mixed Race/Ethnicity,No,"Less than $9,999",5000,No (I live alone),Partnered,0,0
+1020,Cisgender woman,27,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1048,Cisgender woman,23,White/European American,No,"Less than $9,999",5000,Yes (friends/roommates),Single,0,0
+1009,Cisgender woman,40,Hispanic/Latino,"Yes, and some/all of my children live with me","Less than $9,999",5000,Yes (family/romantic partner),Married,0,1
+1016,Cisgender woman,25,Asian/Asian American,No,"$80,000 – $99,999",90000,Yes (family/romantic partner),Partnered,0,0
+1065,Cisgender woman,28,Asian/Asian American,No,"$80,000 – $99,999",90000,Yes (family/romantic partner),Partnered,1,0
+1006,Cisgender woman,47,Mixed Race/Ethnicity,"Yes, and some/all of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Married,0,0
+1011,Cisgender woman,42,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1024,Cisgender man,19,Hispanic/Latino,No,"Less than $9,999",5000,Yes (family/romantic partner),Single,0,0
+1022,Cisgender man,20,White/European American,No,"$10,000 - $19,999",15000,Yes (family/romantic partner),Single,0,0
+1083,Cisgender woman,19,White/European American,No,"Less than $9,999",5000,No (I live alone),Single,1,1
+1034,Cisgender man,39,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1030,Cisgender woman,22,Hispanic/Latino,No,"$40,000 – $59,999",50000,Yes (friends/roommates),Partnered,0,0
+1015,Cisgender woman,30,Asian/Asian American,No,"$40,000 – $59,999",50000,Yes (family/romantic partner),Partnered,0,0
+1031,Cisgender man,18,Hispanic/Latino,No,"$20,000 - $39,999",30000,Yes (family/romantic partner),Single,1,0
+1090,Cisgender woman,28,White/European American,No,"$20,000 - $39,999",30000,No (I live alone),Partnered,1,1
+1136,Cisgender woman,27,White/European American,No,"Less than $9,999",5000,Yes (friends/roommates),Single,0,0
+1112,Cisgender woman,22,White/European American,No,"$10,000 - $19,999",15000,Yes (friends/roommates),Partnered,0,0
+1100,Cisgender man,46,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1103,Cisgender man,22,Asian/Asian American,No,"Less than $9,999",5000,Yes (family/romantic partner),Partnered,0,0
+1117,Cisgender woman,21,Mixed Race/Ethnicity,No,"$20,000 - $39,999",30000,NA,Partnered,0,0
+1105,Cisgender woman,27,White/European American,No,"$60,000 – $79,000",70000,Yes (friends/roommates),Partnered,0,0
+1113,Cisgender woman,44,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,1,0
+1116,Cisgender woman,53,White/European American,"Yes, and none of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1121,Cisgender woman,27,Asian/Asian American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Partnered,0,0
+1134,Cisgender woman,27,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Partnered,0,0
+1129,Cisgender woman,25,Asian/Asian American,No,"Less than $9,999",5000,No (I live alone),Partnered,0,0
+1124,Cisgender woman,21,White/European American,No,"Less than $9,999",5000,NA,Single,0,0
+1108,Cisgender woman,22,Asian/Asian American,No,"Less than $9,999",5000,Yes (family/romantic partner),Partnered,0,0
+1101,Cisgender woman,24,White/European American,No,"$10,000 - $19,999",15000,Yes (family/romantic partner),Partnered,1,0
+1109,Cisgender woman,34,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1119,Cisgender woman,20,White/European American,No,"$10,000 - $19,999",15000,Yes (family/romantic partner),Single,1,0
+1122,Cisgender woman,52,White/European American,"Yes, and none of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Married,0,0
+1110,Cisgender woman,21,White/European American,No,"Less than $9,999",5000,Yes (family/romantic partner),Single,0,0
+1111,Cisgender woman,25,White/European American,No,"$40,000 – $59,999",50000,No (I live alone),Partnered,0,0
+1125,Cisgender man,21,White/European American,No,"$10,000 - $19,999",15000,Yes (family/romantic partner),Partnered,1,1
+1106,Cisgender woman,29,White/European American,No,"$20,000 - $39,999",30000,NA,Married,0,0
+1107,Cisgender man,29,Mixed Race/Ethnicity,No,"$20,000 - $39,999",30000,Yes (family/romantic partner),Partnered,1,0
+1126,Cisgender woman,21,White/European American,No,"Less than $9,999",5000,Yes (family/romantic partner),Single,0,0
+1133,Cisgender man,35,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1114,Cisgender woman,47,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1123,Cisgender woman,51,Asian/Asian American,"Yes, and some/all of my children live with me",NA,NA,Yes (family/romantic partner),Married,1,0
+1131,Cisgender woman,57,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1128,Cisgender woman,22,Asian/Asian American,No,"Less than $9,999",5000,No (I live alone),Partnered,0,0
+1104,Cisgender woman,34,White/European American,No,"$60,000 – $79,000",70000,No (I live alone),Single,1,0
+1127,NA,51,Mixed Race/Ethnicity,No,"$20,000 - $39,999",30000,Yes (family/romantic partner),Married,0,0
+1130,Cisgender woman,25,Asian/Asian American,No,"$80,000 – $99,999",90000,Yes (family/romantic partner),Partnered,0,0
+1118,Cisgender woman,34,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Married,0,0
+1135,Cisgender man,30,White/European American,No,"$80,000 – $99,999",90000,Yes (family/romantic partner),Partnered,0,0
+1115,Cisgender woman,49,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Partnered,0,0
+1143,Cisgender woman,28,White/European American,No,"$20,000 - $39,999",30000,Yes (family/romantic partner),Married,1,1
+1155,Cisgender woman,35,White/European American,No,"$60,000 – $79,000",70000,Yes (friends/roommates),Partnered,1,0
+1141,Transgender/Non-binary/Other Gender,48,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1156,Transgender/Non-binary/Other Gender,27,White/European American,No,"$10,000 - $19,999",15000,Yes (friends/roommates),Single,1,1
+1168,Cisgender woman,32,White/European American,No,"Less than $9,999",5000,Yes (family/romantic partner),Single,1,1
+1153,Transgender/Non-binary/Other Gender,29,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Married,1,1
+1161,Cisgender man,41,Asian/Asian American,No,"$40,000 – $59,999",50000,NA,Single,1,1
+1146,Cisgender woman,24,White/European American,No,"$20,000 - $39,999",30000,Yes (family/romantic partner),Partnered,0,0
+1152,Transgender/Non-binary/Other Gender,29,White/European American,No,"$20,000 - $39,999",30000,Yes (family/romantic partner),Partnered,1,1
+1151,Transgender/Non-binary/Other Gender,25,White/European American,No,"$10,000 - $19,999",15000,Yes (friends/roommates),Single,1,1
+1147,Cisgender woman,38,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Partnered,1,0
+1149,Cisgender woman,50,White/European American,"Yes, and some/all of my children live with me","$40,000 – $59,999",50000,Yes (family/romantic partner),Single,0,0
+1164,Transgender/Non-binary/Other Gender,23,White/European American,No,"$10,000 - $19,999",15000,Yes (friends/roommates),Partnered,1,1
+1167,Cisgender woman,57,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1140,Cisgender woman,51,White/European American,No,"$20,000 - $39,999",30000,Yes (friends/roommates),Single,1,1
+1144,Transgender/Non-binary/Other Gender,22,White/European American,No,"$20,000 - $39,999",30000,Yes (friends/roommates),Single,1,1
+1166,Cisgender woman,34,White/European American,No,"Less than $9,999",5000,Yes (friends/roommates),Partnered,1,1
+1159,Transgender/Non-binary/Other Gender,25,White/European American,No,"$20,000 - $39,999",30000,Yes (friends/roommates),Partnered,0,0
+1137,Cisgender man,24,Asian/Asian American,No,"More than $100,000",110000,Yes (family/romantic partner),Partnered,0,0
+1150,Cisgender woman,45,White/European American,"Yes, and some/all of my children live with me","$20,000 - $39,999",30000,Yes (family/romantic partner),Partnered,0,0
+1158,Cisgender woman,63,White/European American,"Yes, and none of my children live with me","$20,000 - $39,999",30000,No (I live alone),Single,0,0
+1160,Cisgender woman,51,White/European American,"Yes, and none of my children live with me","$40,000 – $59,999",50000,No (I live alone),Single,0,1
+1154,Transgender/Non-binary/Other Gender,26,White/European American,No,"$10,000 - $19,999",15000,Yes (friends/roommates),Partnered,1,0
+1138,Cisgender woman,51,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,NA,Married,0,1
+1162,Cisgender woman,68,Mixed Race/Ethnicity,"Yes, and none of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Married,0,0
+1157,Cisgender woman,27,White/European American,No,"$10,000 - $19,999",15000,No (I live alone),Single,1,1
+1163,Cisgender woman,23,White/European American,No,"$10,000 - $19,999",15000,Yes (friends/roommates),Single,0,0
+1165,Cisgender woman,53,White/European American,"Yes, and some/all of my children live with me","$20,000 - $39,999",30000,Yes (family/romantic partner),Married,1,1
+1145,Transgender/Non-binary/Other Gender,25,White/European American,No,"Less than $9,999",5000,Yes (friends/roommates),Partnered,1,1
+1139,Cisgender man,24,Asian/Asian American,No,"$80,000 – $99,999",90000,Yes (family/romantic partner),Single,1,1
+1148,Cisgender woman,26,Asian/Asian American,No,"$60,000 – $79,000",70000,Yes (friends/roommates),Single,0,0
+1093,Cisgender woman,20,White/European American,No,"$10,000 - $19,999",15000,Yes (friends/roommates),Partnered,1,0
+1025,Cisgender woman,27,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Married,1,0
+1018,Cisgender woman,35,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Partnered,0,0
+1081,Cisgender woman,22,White/European American,No,"$10,000 - $19,999",15000,Yes (friends/roommates),Single,0,0
+1057,Cisgender woman,38,White/European American,No,"$80,000 – $99,999",90000,Yes (family/romantic partner),Married,0,0
+1028,Cisgender woman,28,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Partnered,0,0
+1055,Cisgender man,20,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Single,0,0
+1056,Cisgender woman,27,White/European American,No,"$40,000 – $59,999",50000,Yes (friends/roommates),Partnered,1,0
+1035,Cisgender woman,21,White/European American,No,"Less than $9,999",5000,Yes (family/romantic partner),Partnered,0,0
+1087,Cisgender woman,20,Mixed Race/Ethnicity,No,"Less than $9,999",5000,NA,Single,1,1
+1098,Cisgender woman,25,White/European American,No,"Less than $9,999",5000,Yes (family/romantic partner),Partnered,0,0
+1075,Cisgender woman,26,White/European American,No,"$60,000 – $79,000",70000,No (I live alone),Single,0,1
+1089,Cisgender woman,26,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Partnered,1,0
+1012,Cisgender woman,30,White/European American,No,"$20,000 - $39,999",30000,Yes (family/romantic partner),Partnered,0,0
+1043,Cisgender woman,29,White/European American,No,"$80,000 – $99,999",90000,Yes (family/romantic partner),Partnered,1,0
+1091,Cisgender woman,42,Asian/Asian American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,1
+1003,Cisgender man,54,White/European American,"Yes, and some/all of my children live with me","$40,000 – $59,999",50000,Yes (family/romantic partner),Single,0,0
+1069,Cisgender man,29,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Partnered,0,0
+1032,Cisgender man,21,White/European American,No,"Less than $9,999",5000,Yes (friends/roommates),Single,0,0
+1060,Cisgender woman,23,White/European American,No,"$80,000 – $99,999",90000,Yes (family/romantic partner),Partnered,0,0
+1084,Cisgender woman,28,Asian/Asian American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,0,1
+1050,Cisgender woman,19,White/European American,No,"Less than $9,999",5000,NA,Single,0,0
+1052,Cisgender woman,30,White/European American,No,"$20,000 - $39,999",30000,Yes (family/romantic partner),Partnered,0,0
+1077,Transgender/Non-binary/Other Gender,20,Mixed Race/Ethnicity,No,"Less than $9,999",5000,NA,Single,0,0
+1005,Cisgender woman,25,Mixed Race/Ethnicity,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Married,0,0
+1019,Cisgender woman,51,White/European American,"Yes, and some/all of my children live with me","Less than $9,999",5000,Yes (family/romantic partner),Married,0,0
+1010,Cisgender woman,32,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Partnered,0,0
+1076,Cisgender woman,19,Hispanic/Latino,No,"Less than $9,999",5000,No (I live alone),Partnered,1,1
+1002,Cisgender man,36,White/European American,"Yes, and some/all of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Married,0,0
+1041,Cisgender woman,26,White/European American,No,"Less than $9,999",5000,Yes (friends/roommates),Single,0,0
+1061,Cisgender woman,30,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,1,0
+1099,Cisgender woman,35,White/European American,No,"$40,000 – $59,999",50000,No (I live alone),Partnered,0,0
+1053,Transgender/Non-binary/Other Gender,23,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Partnered,0,0
+1080,Cisgender woman,18,Asian/Asian American,No,"Less than $9,999",5000,NA,Partnered,0,0
+1063,Cisgender woman,37,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Partnered,0,0
+1071,Cisgender woman,20,Mixed Race/Ethnicity,No,"$10,000 - $19,999",15000,Yes (family/romantic partner),Partnered,0,0
+1040,Cisgender woman,18,White/European American,No,"Less than $9,999",5000,Yes (family/romantic partner),Single,0,0
+1036,Cisgender woman,31,White/European American,No,NA,NA,Yes (family/romantic partner),Married,0,0
+1074,Cisgender woman,30,White/European American,No,"$20,000 - $39,999",30000,Yes (family/romantic partner),Married,0,0
+1171,Cisgender woman,46,Asian/Asian American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,1,0
+1021,Cisgender woman,34,Mixed Race/Ethnicity,"Yes, and some/all of my children live with me","$40,000 – $59,999",50000,Yes (family/romantic partner),Married,1,1
+1170,Cisgender man,37,Asian/Asian American,"Yes, and some/all of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Married,0,0
+1169,Cisgender woman,18,White/European American,No,"Less than $9,999",5000,Yes (family/romantic partner),Single,0,1
+1180,Cisgender woman,32,Mixed Race/Ethnicity,"Yes, and some/all of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Partnered,0,0
+1182,Cisgender man,32,White/European American,No,"$40,000 – $59,999",50000,No (I live alone),Single,0,0
+1173,Cisgender woman,51,White/European American,No,"More than $100,000",110000,No (I live alone),Single,1,0
+1181,Cisgender woman,32,Mixed Race/Ethnicity,"Yes, and some/all of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Married,0,0
+1178,Cisgender woman,33,White/European American,"Yes, and some/all of my children live with me","$20,000 - $39,999",30000,Yes (family/romantic partner),Partnered,1,0
+1187,Cisgender man,49,White/European American,"Yes, and some/all of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Married,0,0
+1184,Cisgender woman,36,White/European American,No,"$60,000 – $79,000",70000,No (I live alone),Single,0,0
+1174,Cisgender woman,24,White/European American,No,"$20,000 - $39,999",30000,Yes (family/romantic partner),Partnered,1,1
+1185,Cisgender woman,47,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1177,Cisgender man,70,White/European American,No,"$10,000 - $19,999",15000,Yes (family/romantic partner),Married,0,0
+1079,Transgender/Non-binary/Other Gender,27,White/European American,No,"$20,000 - $39,999",30000,Yes (friends/roommates),Single,0,1
+1203,Cisgender woman,39,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,1,0
+1042,Cisgender woman,19,White/European American,No,"Less than $9,999",5000,Yes (friends/roommates),Single,1,1
+1194,Cisgender woman,32,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Married,0,0
+1176,Cisgender man,30,Mixed Race/Ethnicity,"Yes, and some/all of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Married,0,0
+1183,Cisgender man,38,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1120,Cisgender woman,35,White/European American,No,"$60,000 – $79,000",70000,No (I live alone),Single,0,0
+1358,Cisgender man,23,White/European American,No,"$40,000 – $59,999",50000,Yes (friends/roommates),Partnered,0,0
+1241,Cisgender man,38,White/European American,No,"$20,000 - $39,999",30000,Yes (family/romantic partner),Married,0,0
+1198,Cisgender man,42,Mixed Race/Ethnicity,No,"$20,000 - $39,999",30000,Yes (family/romantic partner),Partnered,0,0
+1338,Cisgender woman,26,Mixed Race/Ethnicity,No,"$60,000 – $79,000",70000,No (I live alone),Partnered,0,0
+1254,Transgender/Non-binary/Other Gender,34,Mixed Race/Ethnicity,"Yes, and some/all of my children live with me","$20,000 - $39,999",30000,Yes (family/romantic partner),Partnered,1,0
+1273,Cisgender woman,35,White/European American,"Yes, and some/all of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Married,1,0
+1239,Cisgender woman,46,White/European American,"Yes, and some/all of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Married,1,0
+1321,Cisgender woman,40,Mixed Race/Ethnicity,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1307,Cisgender woman,47,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,0,1
+1064,Cisgender woman,27,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Partnered,1,0
+1225,Cisgender woman,28,White/European American,No,"$60,000 – $79,000",70000,No (I live alone),Single,0,1
+1350,Cisgender woman,26,White/European American,No,"$10,000 - $19,999",15000,Yes (friends/roommates),Single,0,0
+1370,Cisgender woman,26,White/European American,No,"$20,000 - $39,999",30000,Yes (family/romantic partner),Single,1,1
+1329,Cisgender woman,25,White/European American,No,"$20,000 - $39,999",30000,Yes (friends/roommates),Partnered,0,0
+1271,Cisgender woman,37,Mixed Race/Ethnicity,"Yes, and some/all of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Married,0,0
+1245,Cisgender woman,31,White/European American,No,"$60,000 – $79,000",70000,No (I live alone),Partnered,0,0
+1226,Cisgender woman,36,Mixed Race/Ethnicity,"Yes, and some/all of my children live with me","$40,000 – $59,999",50000,Yes (family/romantic partner),Partnered,0,0
+1214,Cisgender woman,44,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1249,Cisgender woman,28,White/European American,No,"$20,000 - $39,999",30000,Yes (friends/roommates),Single,1,0
+1230,Cisgender woman,30,White/European American,No,"$60,000 – $79,000",70000,No (I live alone),Partnered,0,0
+1300,Cisgender woman,51,Mixed Race/Ethnicity,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Married,1,0
+1205,Cisgender woman,37,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1315,Cisgender woman,65,White/European American,No,"$20,000 - $39,999",30000,No (I live alone),Single,1,1
+1352,Cisgender woman,38,Hispanic/Latino,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1325,Cisgender woman,30,Mixed Race/Ethnicity,No,"Less than $9,999",5000,Yes (family/romantic partner),Partnered,0,0
+1255,Cisgender woman,29,White/European American,No,"$20,000 - $39,999",30000,Yes (family/romantic partner),Married,0,0
+1336,Cisgender man,39,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,1,0
+1351,Cisgender woman,35,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,1
+1333,Cisgender woman,41,White/European American,No,"More than $100,000",110000,No (I live alone),Partnered,0,0
+1286,Cisgender woman,46,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1319,Transgender/Non-binary/Other Gender,31,White/European American,No,"$20,000 - $39,999",30000,No (I live alone),Single,1,1
+1285,Cisgender woman,60,White/European American,"Yes, and some/all of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Married,0,0
+1224,Cisgender woman,32,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Married,1,0
+1247,Cisgender man,37,Black/African American,"Yes, and some/all of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Partnered,0,0
+1356,Cisgender woman,47,White/European American,"Yes, and some/all of my children live with me","Less than $9,999",5000,Yes (family/romantic partner),Married,0,0
+1326,Cisgender woman,70,White/European American,"Yes, and none of my children live with me","$40,000 – $59,999",50000,No (I live alone),Single,0,1
+1200,Cisgender woman,50,White/European American,No,"$80,000 – $99,999",90000,No (I live alone),Single,1,1
+1253,Cisgender woman,45,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1229,Cisgender man,30,White/European American,No,"$40,000 – $59,999",50000,Yes (friends/roommates),Partnered,0,0
+1381,Cisgender man,41,White/European American,No,"$20,000 - $39,999",30000,No (I live alone),Single,0,0
+1278,Cisgender woman,36,White/European American,"Yes, and some/all of my children live with me","Less than $9,999",5000,Yes (family/romantic partner),Married,0,0
+1299,Cisgender woman,56,White/European American,"Yes, and some/all of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Married,0,0
+1389,Cisgender woman,38,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1293,Cisgender woman,70,White/European American,No,"$60,000 – $79,000",70000,No (I live alone),Single,0,0
+1335,Cisgender woman,62,Asian/Asian American,"Yes, and some/all of my children live with me","$20,000 - $39,999",30000,Yes (family/romantic partner),Married,0,0
+1066,Cisgender woman,20,Hispanic/Latino,No,"Less than $9,999",5000,Yes (family/romantic partner),Partnered,0,0
+1376,Cisgender man,40,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1231,Cisgender woman,63,White/European American,No,"$60,000 – $79,000",70000,No (I live alone),Single,0,0
+1355,Cisgender man,26,White/European American,No,"$40,000 – $59,999",50000,No (I live alone),Single,0,0
+1374,Cisgender woman,33,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Partnered,0,1
+1292,Cisgender woman,71,White/European American,"Yes, and none of my children live with me",NA,NA,Yes (family/romantic partner),Married,0,0
+1368,Cisgender woman,34,White/European American,No,"$40,000 – $59,999",50000,Yes (family/romantic partner),Married,1,1
+1312,Cisgender woman,81,White/European American,"Yes, and none of my children live with me","$60,000 – $79,000",70000,No (I live alone),Single,0,0
+1383,Cisgender woman,42,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,1,1
+1341,Cisgender woman,27,White/European American,No,"$80,000 – $99,999",90000,Yes (family/romantic partner),Partnered,0,0
+1384,Cisgender man,25,White/European American,No,"$20,000 - $39,999",30000,Yes (family/romantic partner),Partnered,0,0
+1206,Cisgender woman,37,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1267,Cisgender woman,67,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1213,Cisgender woman,40,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1348,Cisgender man,53,White/European American,No,"More than $100,000",110000,No (I live alone),Partnered,0,0
+1308,Cisgender woman,53,Asian/Asian American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1306,Cisgender man,68,White/European American,"Yes, and none of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1256,Cisgender woman,51,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,1,0
+1365,Cisgender woman,44,Asian/Asian American,"Yes, and some/all of my children live with me","$10,000 - $19,999",15000,Yes (family/romantic partner),Married,0,0
+1279,Cisgender woman,38,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,1
+1204,Cisgender woman,78,White/European American,"Yes, and some/all of my children live with me","$40,000 – $59,999",50000,Yes (family/romantic partner),Single,0,0
+1322,Cisgender woman,54,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Married,0,0
+1388,Cisgender woman,26,Hispanic/Latino,No,"More than $100,000",110000,Yes (family/romantic partner),Married,1,1
+1369,Cisgender woman,27,Mixed Race/Ethnicity,No,"$40,000 – $59,999",50000,Yes (family/romantic partner),Married,1,1
+1362,Cisgender woman,64,White/European American,"Yes, and none of my children live with me","$40,000 – $59,999",50000,Yes (family/romantic partner),Married,0,0
+1212,Cisgender man,31,White/European American,No,"$40,000 – $59,999",50000,Yes (family/romantic partner),Married,1,0
+1320,Cisgender woman,44,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1284,Cisgender woman,26,White/European American,No,"$20,000 - $39,999",30000,Yes (family/romantic partner),Partnered,0,0
+1268,Cisgender woman,43,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Married,0,0
+1313,Cisgender woman,39,Mixed Race/Ethnicity,No,"More than $100,000",110000,Yes (family/romantic partner),Married,1,0
+1270,Cisgender woman,45,White/European American,"Yes, and some/all of my children live with me","$20,000 - $39,999",30000,Yes (family/romantic partner),Married,0,0
+1186,Cisgender woman,31,White/European American,No,"$80,000 – $99,999",90000,Yes (family/romantic partner),Married,1,0
+1072,Cisgender woman,38,Mixed Race/Ethnicity,No,"More than $100,000",110000,Yes (friends/roommates),Single,1,0
+1179,Cisgender woman,71,White/European American,No,"$80,000 – $99,999",90000,No (I live alone),Married,0,0
+1314,Cisgender woman,32,White/European American,No,"More than $100,000",110000,No (I live alone),Single,1,1
+1332,Cisgender woman,37,White/European American,No,"More than $100,000",110000,No (I live alone),Partnered,0,1
+1281,Cisgender woman,36,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1343,Cisgender man,64,White/European American,"Yes, and some/all of my children live with me","Less than $9,999",5000,Yes (family/romantic partner),Married,0,0
+1235,Transgender/Non-binary/Other Gender,39,White/European American,"Yes, and none of my children live with me","$20,000 - $39,999",30000,Yes (family/romantic partner),Married,1,0
+1272,Cisgender woman,50,Hispanic/Latino,"Yes, and some/all of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Married,1,0
+1199,Cisgender woman,31,White/European American,No,"$60,000 – $79,000",70000,Yes (friends/roommates),Partnered,0,0
+1340,Transgender/Non-binary/Other Gender,30,White/European American,No,"Less than $9,999",5000,No (I live alone),Single,0,0
+1372,Cisgender woman,64,White/European American,No,"Less than $9,999",5000,No (I live alone),Single,1,0
+1252,Cisgender woman,49,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,1,0
+1261,Cisgender man,31,Black/African American,No,"$10,000 - $19,999",15000,Yes (friends/roommates),Single,1,0
+1345,Cisgender woman,37,White/European American,No,"Less than $9,999",5000,Yes (friends/roommates),Single,0,0
+1023,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+1334,Cisgender woman,62,White/European American,"Yes, and none of my children live with me","$60,000 – $79,000",70000,No (I live alone),Single,0,1
+1248,Transgender/Non-binary/Other Gender,44,Mixed Race/Ethnicity,"Yes, and none of my children live with me","Less than $9,999",5000,Yes (friends/roommates),Single,1,1
+1244,Cisgender woman,43,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1222,Cisgender man,30,Asian/Asian American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,1
+1328,Cisgender woman,60,White/European American,No,"$80,000 – $99,999",90000,No (I live alone),Single,1,1
+1196,Cisgender woman,59,White/European American,"Yes, and none of my children live with me","More than $100,000",110000,No (I live alone),Single,0,1
+1172,Cisgender man,29,White/European American,No,"$40,000 – $59,999",50000,Yes (family/romantic partner),Partnered,1,1
+1234,Cisgender woman,27,White/European American,No,"$20,000 - $39,999",30000,Yes (friends/roommates),Partnered,1,1
+1327,Cisgender woman,70,Asian/Asian American,"Yes, and none of my children live with me","$40,000 – $59,999",50000,No (I live alone),Single,0,0
+1276,Cisgender woman,53,White/European American,"Yes, and some/all of my children live with me","$40,000 – $59,999",50000,Yes (family/romantic partner),Married,0,0
+1289,Cisgender woman,44,White/European American,"Yes, and some/all of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Married,1,0
+1209,Cisgender woman,34,White/European American,"Yes, and some/all of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Married,0,0
+1323,Cisgender woman,24,White/European American,No,"$40,000 – $59,999",50000,Yes (friends/roommates),Partnered,1,0
+1330,Cisgender woman,55,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Partnered,0,1
+1274,Cisgender woman,60,White/European American,"Yes, and none of my children live with me","$40,000 – $59,999",50000,Yes (family/romantic partner),Married,1,1
+1188,Cisgender man,35,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1191,Cisgender woman,33,White/European American,No,"$40,000 – $59,999",50000,Yes (family/romantic partner),Married,0,0
+1243,Transgender/Non-binary/Other Gender,29,White/European American,No,"$10,000 - $19,999",15000,Yes (friends/roommates),Partnered,1,1
+1309,Cisgender woman,67,White/European American,"Yes, and none of my children live with me","$40,000 – $59,999",50000,Yes (family/romantic partner),Married,0,1
+1246,Cisgender woman,35,White/European American,"Yes, and some/all of my children live with me","$20,000 - $39,999",30000,Yes (family/romantic partner),Partnered,0,0
+1228,Transgender/Non-binary/Other Gender,48,White/European American,No,"$10,000 - $19,999",15000,No (I live alone),Single,1,1
+1298,Transgender/Non-binary/Other Gender,19,White/European American,No,"$10,000 - $19,999",15000,Yes (family/romantic partner),Partnered,1,1
+1349,Cisgender man,34,White/European American,No,"$40,000 – $59,999",50000,No (I live alone),Single,1,1
+1217,Cisgender man,39,Hispanic/Latino,No,"$20,000 - $39,999",30000,Yes (family/romantic partner),Single,0,0
+1211,Cisgender woman,52,Mixed Race/Ethnicity,"Yes, and none of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Married,1,0
+1193,Cisgender man,46,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Partnered,1,0
+1337,Cisgender woman,50,Asian/Asian American,No,"Less than $9,999",5000,Yes (family/romantic partner),Married,0,0
+1316,Cisgender man,32,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1210,Cisgender woman,60,White/European American,"Yes, and none of my children live with me","$20,000 - $39,999",30000,Yes (family/romantic partner),Married,0,0
+1346,Cisgender man,38,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1296,Cisgender man,68,White/European American,"Yes, and none of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1086,Cisgender man,21,White/European American,No,"$10,000 - $19,999",15000,Yes (friends/roommates),Single,1,0
+1295,Cisgender woman,68,White/European American,"Yes, and none of my children live with me","$20,000 - $39,999",30000,Yes (family/romantic partner),Married,0,1
+1220,Cisgender woman,50,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,1
+1192,Transgender/Non-binary/Other Gender,51,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Partnered,1,1
+1371,Cisgender woman,31,Asian/Asian American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Married,0,0
+1259,Cisgender woman,41,White/European American,No,"$40,000 – $59,999",50000,Yes (friends/roommates),Single,0,0
+1251,Cisgender woman,67,White/European American,"Yes, and none of my children live with me","$40,000 – $59,999",50000,Yes (family/romantic partner),Married,0,0
+1264,Cisgender woman,51,White/European American,"Yes, and none of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1361,Cisgender woman,33,White/European American,No,"More than $100,000",110000,No (I live alone),Single,1,1
+1237,Cisgender woman,38,Asian/Asian American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Single,0,0
+1291,Cisgender woman,70,White/European American,"Yes, and none of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,1,0
+1207,Cisgender woman,32,White/European American,No,"$10,000 - $19,999",15000,No (I live alone),Single,0,0
+1240,Cisgender man,56,White/European American,No,"$20,000 - $39,999",30000,No (I live alone),Partnered,0,0
+1283,Cisgender man,30,White/European American,"Yes, and none of my children live with me","$20,000 - $39,999",30000,Yes (family/romantic partner),Partnered,0,0
+1202,Cisgender woman,44,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Partnered,0,0
+1294,Cisgender woman,69,White/European American,"Yes, and none of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Married,0,0
+1262,Cisgender woman,67,White/European American,"Yes, and none of my children live with me","$60,000 – $79,000",70000,No (I live alone),Single,0,0
+1242,Cisgender woman,40,Mixed Race/Ethnicity,"Yes, and some/all of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Married,0,0
+1027,Cisgender woman,47,White/European American,"Yes, and some/all of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Married,1,0
+1221,Cisgender woman,36,White/European American,"Yes, and some/all of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Married,0,0
+1238,Cisgender woman,26,White/European American,No,"$60,000 – $79,000",70000,Yes (friends/roommates),Single,0,0
+1233,Cisgender woman,68,White/European American,"Yes, and none of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Married,0,0
+1407,Cisgender man,28,Mixed Race/Ethnicity,No,"$60,000 – $79,000",70000,Yes (friends/roommates),Single,0,0
+1392,Cisgender woman,39,Mixed Race/Ethnicity,No,"$20,000 - $39,999",30000,No (I live alone),Married,0,0
+1395,Cisgender woman,65,White/European American,No,"More than $100,000",110000,No (I live alone),Single,0,0
+1391,Cisgender woman,55,Asian/Asian American,"Yes, and some/all of my children live with me","$40,000 – $59,999",50000,Yes (family/romantic partner),Married,0,0
+1039,Cisgender woman,18,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Single,0,0
+1190,Cisgender woman,30,White/European American,"Yes, and some/all of my children live with me","$40,000 – $59,999",50000,Yes (family/romantic partner),Married,1,1
+1301,Cisgender woman,33,Mixed Race/Ethnicity,No,"More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1195,Cisgender woman,44,White/European American,"Yes, and some/all of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Married,0,1
+1411,Cisgender woman,66,White/European American,"Yes, and none of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Married,0,0
+1208,Cisgender woman,35,White/European American,"Yes, and some/all of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Married,0,0
+1353,Cisgender woman,32,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,0,1
+1132,Cisgender woman,34,White/European American,No,"$80,000 – $99,999",90000,Yes (family/romantic partner),Married,1,1
+1414,Cisgender woman,23,White/European American,No,"$10,000 - $19,999",15000,Yes (friends/roommates),Partnered,1,0
+1331,Cisgender woman,48,Hispanic/Latino,"Yes, and some/all of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Married,0,1
+1393,Cisgender woman,24,White/European American,No,"Less than $9,999",5000,Yes (family/romantic partner),Partnered,1,0
+1413,Cisgender man,45,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Partnered,1,1
+1416,Transgender/Non-binary/Other Gender,24,White/European American,No,"Less than $9,999",5000,Yes (friends/roommates),Single,1,0
+1397,Cisgender woman,29,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,1,1
+1402,Cisgender woman,57,White/European American,No,"$60,000 – $79,000",70000,Yes (friends/roommates),Single,0,0
+1412,Cisgender woman,27,White/European American,No,"$20,000 - $39,999",30000,Yes (friends/roommates),Single,0,0
+1280,Cisgender woman,50,White/European American,"Yes, and some/all of my children live with me","$40,000 – $59,999",50000,Yes (family/romantic partner),Married,0,0
+1394,Cisgender woman,37,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Partnered,1,1
+1399,Cisgender woman,57,White/European American,No,"$20,000 - $39,999",30000,No (I live alone),Single,1,1
+1410,Cisgender woman,71,White/European American,"Yes, and some/all of my children live with me","$20,000 - $39,999",30000,Yes (family/romantic partner),Single,0,0
+1275,Cisgender man,39,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Partnered,0,0
+1409,Cisgender woman,22,White/European American,No,"$10,000 - $19,999",15000,Yes (friends/roommates),Single,1,1
+1403,Cisgender man,29,White/European American,No,"More than $100,000",110000,No (I live alone),Partnered,1,0
+1398,Cisgender man,25,White/European American,No,"$20,000 - $39,999",30000,Yes (friends/roommates),Partnered,1,0
+1265,Cisgender woman,49,White/European American,No,"$20,000 - $39,999",30000,Yes (family/romantic partner),Married,0,0
+1408,Transgender/Non-binary/Other Gender,39,White/European American,No,"$10,000 - $19,999",15000,Yes (family/romantic partner),Married,1,1
+1415,Cisgender woman,29,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Married,1,1
+1396,Cisgender woman,20,Asian/Asian American,No,"Less than $9,999",5000,Yes (family/romantic partner),Single,0,0
+1405,Cisgender woman,65,White/European American,"Yes, and none of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Married,0,0
+1406,Cisgender man,25,White/European American,No,"$10,000 - $19,999",15000,Yes (family/romantic partner),Partnered,0,0
+1401,Cisgender woman,30,Asian/Asian American,No,"$40,000 – $59,999",50000,Yes (family/romantic partner),Married,1,1
+1142,Transgender/Non-binary/Other Gender,48,White/European American,"Yes, and some/all of my children live with me","Less than $9,999",5000,Yes (family/romantic partner),Single,1,1
+1354,Cisgender woman,27,White/European American,No,"$80,000 – $99,999",90000,Yes (family/romantic partner),Married,1,1
+1360,Cisgender man,73,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1250,Cisgender woman,39,Asian/Asian American,No,"$40,000 – $59,999",50000,No (I live alone),Single,0,0
+1380,Cisgender man,51,White/European American,"Yes, and none of my children live with me","More than $100,000",110000,No (I live alone),Single,1,1
+1339,Cisgender woman,39,White/European American,No,"$10,000 - $19,999",15000,No (I live alone),Single,0,0
+1232,Transgender/Non-binary/Other Gender,25,White/European American,No,"$20,000 - $39,999",30000,Yes (friends/roommates),Single,1,1
+1342,Transgender/Non-binary/Other Gender,26,White/European American,No,"$60,000 – $79,000",70000,Yes (friends/roommates),Single,1,1
+1310,Cisgender woman,34,Mixed Race/Ethnicity,No,"$40,000 – $59,999",50000,Yes (family/romantic partner),Partnered,1,0
+1227,Cisgender woman,38,White/European American,No,"$80,000 – $99,999",90000,Yes (friends/roommates),Partnered,1,0
+1390,Cisgender woman,48,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,No (I live alone),Single,0,0
+1375,Cisgender woman,42,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1344,Transgender/Non-binary/Other Gender,39,White/European American,No,"$10,000 - $19,999",15000,No (I live alone),Single,1,1
+1236,Cisgender woman,52,White/European American,No,"$80,000 – $99,999",90000,Yes (friends/roommates),Single,1,1
+1432,Cisgender man,32,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1421,Cisgender man,32,White/European American,No,"$80,000 – $99,999",90000,Yes (family/romantic partner),Married,0,0
+1431,Cisgender man,30,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1425,Cisgender man,36,White/European American,No,"$80,000 – $99,999",90000,No (I live alone),Partnered,1,0
+1428,Cisgender woman,32,Asian/Asian American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1427,Cisgender man,64,White/European American,"Yes, and none of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1423,Transgender/Non-binary/Other Gender,30,White/European American,No,"$40,000 – $59,999",50000,Yes (family/romantic partner),Married,1,1
+1417,Cisgender woman,57,Mixed Race/Ethnicity,"Yes, and none of my children live with me","More than $100,000",110000,No (I live alone),Single,1,1
+1373,Cisgender woman,46,Asian/Asian American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1223,Cisgender woman,38,White/European American,No,"$40,000 – $59,999",50000,Yes (family/romantic partner),Partnered,1,0
+1429,Cisgender woman,34,White/European American,No,"$60,000 – $79,000",70000,No (I live alone),Partnered,1,0
+1418,Cisgender man,36,Asian/Asian American,No,"$20,000 - $39,999",30000,Yes (friends/roommates),Partnered,1,0
+1420,Cisgender man,37,White/European American,"Yes, and some/all of my children live with me","$40,000 – $59,999",50000,No (I live alone),Single,0,0
+1426,Cisgender man,41,White/European American,"Yes, and none of my children live with me","$40,000 – $59,999",50000,Yes (family/romantic partner),Partnered,0,0
+1422,Cisgender woman,54,White/European American,No,"$60,000 – $79,000",70000,No (I live alone),Single,0,0
+1424,Transgender/Non-binary/Other Gender,34,White/European American,"Yes, and some/all of my children live with me","Less than $9,999",5000,Yes (family/romantic partner),Married,1,0
+1434,Cisgender man,67,Black/African American,"Yes, and none of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1450,Cisgender woman,30,White/European American,No,"$60,000 – $79,000",70000,Yes (friends/roommates),Partnered,1,1
+1437,Cisgender man,34,White/European American,"Yes, and some/all of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Married,0,0
+1430,Cisgender woman,65,White/European American,"Yes, and none of my children live with me","More than $100,000",110000,No (I live alone),Single,0,0
+1445,Cisgender woman,67,White/European American,"Yes, and none of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1444,Cisgender woman,37,White/European American,"Yes, and none of my children live with me","More than $100,000",110000,No (I live alone),Partnered,0,0
+1436,Cisgender man,44,White/European American,No,"$80,000 – $99,999",90000,No (I live alone),Single,0,0
+1439,Cisgender man,41,Mixed Race/Ethnicity,"Yes, and some/all of my children live with me","$40,000 – $59,999",50000,Yes (family/romantic partner),Married,0,0
+1438,Cisgender man,36,White/European American,No,"$80,000 – $99,999",90000,No (I live alone),Single,1,0
+1452,Cisgender woman,33,White/European American,No,"More than $100,000",110000,No (I live alone),Single,1,0
+1385,Cisgender woman,50,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Partnered,0,0
+1443,Cisgender woman,29,Asian/Asian American,No,"$80,000 – $99,999",90000,Yes (family/romantic partner),Married,0,0
+1453,Cisgender man,67,White/European American,"Yes, and none of my children live with me","$60,000 – $79,000",70000,No (I live alone),Single,0,0
+1441,Cisgender man,62,White/European American,"Yes, and none of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Married,0,0
+1442,Cisgender woman,41,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,1,1
+1433,Cisgender man,33,White/European American,No,"$20,000 - $39,999",30000,No (I live alone),Single,1,1
+1448,Cisgender woman,37,Asian/Asian American,No,"$80,000 – $99,999",90000,No (I live alone),Partnered,1,1
+1451,Cisgender man,62,White/European American,No,"$60,000 – $79,000",70000,No (I live alone),Single,1,1
+1440,Cisgender woman,65,White/European American,"Yes, and none of my children live with me","$20,000 - $39,999",30000,Yes (family/romantic partner),Married,0,0
+1447,Cisgender man,64,Black/African American,"Yes, and none of my children live with me","$80,000 – $99,999",90000,No (I live alone),Single,0,0
+1324,Cisgender man,67,White/European American,No,"$60,000 – $79,000",70000,No (I live alone),Single,1,0
+1462,Cisgender woman,25,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1460,Cisgender woman,20,White/European American,No,"Less than $9,999",5000,Yes (family/romantic partner),Partnered,0,0
+1459,Cisgender man,30,White/European American,No,"$10,000 - $19,999",15000,Yes (friends/roommates),Single,0,0
+1455,Cisgender woman,60,White/European American,"Yes, and none of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1456,Cisgender woman,60,Black/African American,"Yes, and none of my children live with me","$60,000 – $79,000",70000,No (I live alone),Partnered,0,0
+1461,Cisgender man,30,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Partnered,1,0
+1458,Cisgender woman,52,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1287,Transgender/Non-binary/Other Gender,33,White/European American,No,"$40,000 – $59,999",50000,No (I live alone),Single,0,0
+1464,Cisgender man,30,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1305,Cisgender woman,59,White/European American,"Yes, and some/all of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Partnered,0,0
+1260,Cisgender woman,79,White/European American,"Yes, and none of my children live with me","Less than $9,999",5000,No (I live alone),Single,0,0
+1472,Cisgender woman,50,White/European American,"Yes, and none of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,1,0
+1471,Cisgender woman,62,White/European American,No,"$40,000 – $59,999",50000,No (I live alone),Single,1,1
+1473,Cisgender woman,38,White/European American,No,"$40,000 – $59,999",50000,No (I live alone),Single,1,1
+1469,Cisgender woman,52,White/European American,"Yes, and some/all of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Partnered,0,0
+1468,Cisgender woman,50,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1476,Cisgender woman,38,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,1,0
+1466,Cisgender woman,71,White/European American,"Yes, and none of my children live with me","$20,000 - $39,999",30000,Yes (family/romantic partner),Married,0,0
+1303,Cisgender man,47,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1470,Cisgender woman,53,White/European American,"Yes, and some/all of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Married,0,0
+1467,Cisgender man,37,Asian/Asian American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1475,Cisgender woman,45,White/European American,"Yes, and some/all of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Married,0,0
+1477,Cisgender woman,44,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Single,1,1
+1478,Cisgender woman,45,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1479,Cisgender man,59,White/European American,No,"$60,000 – $79,000",70000,No (I live alone),Single,0,0
+1404,Cisgender woman,25,White/European American,No,"$40,000 – $59,999",50000,No (I live alone),Single,1,0
+1457,Cisgender man,47,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1266,Cisgender woman,40,White/European American,"Yes, and some/all of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Married,0,0
+1454,Cisgender man,48,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,1,0
+1378,Cisgender woman,35,White/European American,No,"$60,000 – $79,000",70000,No (I live alone),Partnered,1,0
+1263,Cisgender woman,50,White/European American,"Yes, and some/all of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Single,0,0
+1364,Cisgender man,33,White/European American,"Yes, and none of my children live with me","Less than $9,999",5000,No (I live alone),Married,0,0
+1215,Cisgender woman,39,White/European American,"Yes, and none of my children live with me","More than $100,000",110000,No (I live alone),Single,0,0
+1311,Cisgender woman,69,White/European American,"Yes, and none of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1474,Cisgender woman,55,White/European American,"Yes, and none of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1219,Cisgender man,31,White/European American,No,"Less than $9,999",5000,Yes (friends/roommates),Partnered,1,0
+1379,Cisgender woman,56,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1446,Cisgender man,67,White/European American,"Yes, and none of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1317,Cisgender woman,61,White/European American,"Yes, and none of my children live with me","$10,000 - $19,999",15000,Yes (family/romantic partner),Married,0,1
+1482,Cisgender man,43,Asian/Asian American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1387,Cisgender woman,63,White/European American,"Yes, and none of my children live with me","$10,000 - $19,999",15000,No (I live alone),Single,1,1
+1480,Cisgender man,30,White/European American,No,"$20,000 - $39,999",30000,Yes (family/romantic partner),Partnered,0,0
+1386,Cisgender man,36,Asian/Asian American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1318,Cisgender woman,62,White/European American,"Yes, and none of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Partnered,1,0
+1377,Cisgender woman,21,White/European American,No,"Less than $9,999",5000,Yes (family/romantic partner),Partnered,0,0
+1288,Cisgender woman,31,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,1,0
+1465,Cisgender woman,33,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Partnered,1,0
+1481,Cisgender man,36,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,1,0
+1257,Cisgender woman,25,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Single,1,1
+1277,Cisgender woman,51,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,1,1
+1400,Cisgender woman,73,White/European American,"Yes, and none of my children live with me","$40,000 – $59,999",50000,Yes (family/romantic partner),Married,0,0
+1216,Cisgender woman,53,Asian/Asian American,"Yes, and some/all of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Married,0,0
+1449,Cisgender woman,25,White/European American,No,"Less than $9,999",5000,Yes (family/romantic partner),Partnered,0,0
+1175,Cisgender woman,34,White/European American,No,"$80,000 – $99,999",90000,No (I live alone),Single,1,0
+1347,Cisgender man,53,White/European American,No,"$60,000 – $79,000",70000,Yes (friends/roommates),Single,1,1
+1486,Cisgender man,34,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Married,0,0
+1483,Cisgender man,70,White/European American,"Yes, and none of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1290,Cisgender woman,62,White/European American,"Yes, and none of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1485,Cisgender man,30,Asian/Asian American,No,"$40,000 – $59,999",50000,No (I live alone),Partnered,0,0
+1484,Cisgender man,80,White/European American,"Yes, and none of my children live with me","$40,000 – $59,999",50000,Yes (family/romantic partner),Married,0,0
+1357,Cisgender woman,29,White/European American,No,"$10,000 - $19,999",15000,No (I live alone),Single,1,1
+1491,Cisgender man,43,Mixed Race/Ethnicity,"Yes, and some/all of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Married,1,1
+1258,Cisgender woman,30,White/European American,No,"$80,000 – $99,999",90000,Yes (family/romantic partner),Partnered,1,0
+1490,Cisgender woman,26,Asian/Asian American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Partnered,0,0
+1189,Cisgender woman,35,Asian/Asian American,"Yes, and some/all of my children live with me","Less than $9,999",5000,Yes (family/romantic partner),Married,0,0
+1487,Cisgender man,56,White/European American,"Yes, and none of my children live with me","$40,000 – $59,999",50000,Yes (friends/roommates),Partnered,0,0
+1489,Cisgender man,65,White/European American,No,"$20,000 - $39,999",30000,No (I live alone),Single,0,0
+1488,Cisgender man,64,White/European American,No,"$20,000 - $39,999",30000,No (I live alone),Single,1,1
+1492,Cisgender man,33,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Partnered,1,1
+1494,Cisgender man,32,White/European American,No,"$60,000 – $79,000",70000,No (I live alone),Single,1,0
+1496,Cisgender man,38,White/European American,"Yes, and some/all of my children live with me","$60,000 – $79,000",70000,Yes (friends/roommates),Single,0,0
+1495,Cisgender woman,68,White/European American,"Yes, and none of my children live with me","$40,000 – $59,999",50000,Yes (family/romantic partner),Married,0,0
+1497,Cisgender woman,61,White/European American,"Yes, and none of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Partnered,0,0
+1501,Cisgender woman,48,White/European American,"Yes, and some/all of my children live with me","Less than $9,999",5000,Yes (family/romantic partner),Married,1,0
+1499,Cisgender man,62,White/European American,No,"$20,000 - $39,999",30000,No (I live alone),Single,0,0
+1504,Cisgender woman,55,White/European American,"Yes, and some/all of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Married,0,0
+1507,Cisgender woman,70,White/European American,"Yes, and none of my children live with me","$40,000 – $59,999",50000,Yes (family/romantic partner),Married,0,0
+1498,Cisgender woman,60,White/European American,"Yes, and none of my children live with me","$20,000 - $39,999",30000,No (I live alone),Single,1,1
+1506,Cisgender woman,54,White/European American,"Yes, and none of my children live with me","$20,000 - $39,999",30000,Yes (family/romantic partner),Married,1,0
+1505,Cisgender woman,28,White/European American,No,"$60,000 – $79,000",70000,No (I live alone),Partnered,1,0
+1502,Cisgender man,40,Black/African American,No,"$20,000 - $39,999",30000,No (I live alone),Single,1,1
+1508,Cisgender woman,62,White/European American,No,"$60,000 – $79,000",70000,No (I live alone),Single,1,0
+1037,Cisgender woman,20,White/European American,No,"Less than $9,999",5000,Yes (family/romantic partner),Single,0,0
+1302,Cisgender woman,29,White/European American,No,"More than $100,000",110000,No (I live alone),Single,1,1
+1435,Cisgender man,49,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,1
+1503,Cisgender woman,28,Hispanic/Latino,No,"$40,000 – $59,999",50000,Yes (friends/roommates),Single,0,0
+1367,Cisgender woman,71,White/European American,No,"$80,000 – $99,999",90000,Yes (family/romantic partner),Married,0,0
+1419,Cisgender man,30,White/European American,No,"$20,000 - $39,999",30000,No (I live alone),Single,1,0
+1463,Cisgender man,60,White/European American,"Yes, and none of my children live with me","$40,000 – $59,999",50000,Yes (family/romantic partner),Married,0,0
+1201,Cisgender woman,38,Black/African American,No,"$40,000 – $59,999",50000,No (I live alone),Single,1,1
+1500,Cisgender woman,28,Asian/Asian American,No,"$20,000 - $39,999",30000,No (I live alone),Single,0,0
+1493,Cisgender woman,58,White/European American,"Yes, and some/all of my children live with me","$60,000 – $79,000",70000,Yes (family/romantic partner),Married,0,1
+1197,Cisgender woman,31,Hispanic/Latino,"Yes, and some/all of my children live with me","$20,000 - $39,999",30000,Yes (family/romantic partner),Single,1,0
+1509,Cisgender woman,25,Asian/Asian American,No,"$10,000 - $19,999",15000,Yes (friends/roommates),Partnered,0,0
+1304,Cisgender woman,46,White/European American,"Yes, and some/all of my children live with me","More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1366,Cisgender woman,35,White/European American,No,"$40,000 – $59,999",50000,Yes (family/romantic partner),Married,0,1
+1510,Cisgender man,31,White/European American,No,"$20,000 - $39,999",30000,Yes (friends/roommates),Single,1,0
+1218,Cisgender woman,34,White/European American,"Yes, and some/all of my children live with me","Less than $9,999",5000,Yes (family/romantic partner),Partnered,0,0
+1511,Cisgender woman,56,White/European American,No,"$20,000 - $39,999",30000,Yes (family/romantic partner),Partnered,1,1
+1297,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+1513,Transgender/Non-binary/Other Gender,68,White/European American,No,"More than $100,000",110000,Yes (family/romantic partner),Married,0,0
+1512,Cisgender man,72,White/European American,No,NA,NA,No (I live alone),Single,0,1
+1514,Transgender/Non-binary/Other Gender,41,White/European American,No,"$40,000 – $59,999",50000,No (I live alone),Single,0,0
+1515,Cisgender woman,32,White/European American,"Yes, and some/all of my children live with me","$80,000 – $99,999",90000,Yes (family/romantic partner),Married,1,1
+1269,Cisgender woman,31,White/European American,"Yes, and some/all of my children live with me","Less than $9,999",5000,Yes (family/romantic partner),Married,0,0
+1359,Cisgender woman,78,White/European American,No,"$60,000 – $79,000",70000,No (I live alone),Single,0,0
+1363,Cisgender woman,27,White/European American,No,"$60,000 – $79,000",70000,Yes (family/romantic partner),Partnered,0,1
+1282,Transgender/Non-binary/Other Gender,31,White/European American,No,"Less than $9,999",5000,Yes (family/romantic partner),Single,1,1
+1382,Cisgender woman,51,White/European American,"Yes, and none of my children live with me","$20,000 - $39,999",30000,No (I live alone),Married,1,0
