@@ -1,0 +1,97 @@
+{
+  "first_author": "Bailon",
+  "dataset": "0018",
+  "year": 2020,
+  "reference_a": "@article{bailon2020,\n  title = {{{CoVidAffect}}, real-time monitoring of mood variations following the {{COVID-19}} outbreak in {{Spain}}},\n  author = {Bailon, Carlos and Goicoechea, Carmen and Banos, Oresti and Damas, Miguel and Pomares, Hector and Correa, Angel and Sanabria, Daniel and Perakakis, Pandelis},\n  date = {2020-10-20},\n  journaltitle = {Scientific Data},\n  shortjournal = {Sci Data},\n  volume = {7},\n  number = {1},\n  pages = {365},\n  publisher = {Nature Publishing Group},\n  doi = {10.1038/s41597-020-00700-1}\n}",
+  "reference_b": null,
+  "paper_doi": "https://doi.org/10.1038/s41597-020-00700-1",
+  "link_to_data": "http://doi.org/10.5281/zenodo.3774526",
+  "link_to_codebook": "https://zenodo.org/records/4024141",
+  "link_to_code": null,
+  "n_participants": 999,
+  "n_time_points": 444,
+  "n_beeps_per_day": 6,
+  "passive_data_available": "no",
+  "cross_sectional_available": "yes",
+  "topics": "COVID, affect, pandemic, valence, arousal, context",
+  "implicit_missingness": "yes",
+  "raw_time_stamp": "yes",
+  "sampling_scheme": "6x/day pseudo-random one-hour intervals",
+  "participants": "community sample",
+  "coding_file": "0018_bailon_variables",
+  "additional_comments": null,
+  "coder_data": "Björn Siepe",
+  "coder_metadata": "Björn Siepe",
+  "features": [
+    {
+      "name": "id",
+      "description": "Participant ID",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "day",
+      "description": "Day of study",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "beep",
+      "description": "Beep of the day",
+      "type": "other",
+      "coding": "NA",
+      "answer_categories": ""
+    },
+    {
+      "name": "timestamp_issued",
+      "description": "Timestamp survey issued",
+      "type": "PosixCt",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "timestamp_answer",
+      "description": "Timestamp survey answered",
+      "type": "PosixCt",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "valence",
+      "description": "Valence",
+      "type": "VAS",
+      "coding": "How do you feel right now?\n-50 = Very bad\n50 = Very good",
+      "answer_categories": "101"
+    },
+    {
+      "name": "arousal",
+      "description": "Arousal",
+      "type": "VAS",
+      "coding": "How physically active do you feel right now?\n0 = Not active\n100 = Active",
+      "answer_categories": "101"
+    },
+    {
+      "name": "valence_slider_initial",
+      "description": "Slider initialisation valence",
+      "type": "VAS",
+      "coding": "Starting position of valence input slider",
+      "answer_categories": "101"
+    },
+    {
+      "name": "arousal_slider_initial",
+      "description": "Slider initialisation arousal",
+      "type": "VAS",
+      "coding": "Starting position of arousal input slider",
+      "answer_categories": "101"
+    },
+    {
+      "name": "input_method",
+      "description": "Survey input method",
+      "type": "categorical",
+      "coding": "Method used by the participant to report the mood record\nPossible answer: App, Web, Both",
+      "answer_categories": "3"
+    }
+  ]
+}
