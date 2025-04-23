@@ -54,44 +54,44 @@
     {
       "name": "timestamp",
       "description": "Timestamp",
-      "type": "Likert",
-      "coding": "",
-      "answer_categories": "7"
+      "type": "other",
+      "coding": "Timestamp in unix time",
+      "answer_categories": ""
     },
     {
       "name": "extraversion",
       "description": "Extraversion",
       "type": "Likert",
       "coding": "Average score of the items ‘extraverted, enthusiastic’ and ‘reserved, quiet’ (reversed) (Ten-Item Personality Inventory)\nDuring the last half hour, how ... have you been? \n1 = Strongly disagree\n7 = Strongly agree",
-      "answer_categories": "7"
+      "answer_categories": ""
     },
     {
       "name": "agreeableness",
       "description": "Agreeableness",
       "type": "Likert",
       "coding": "Average score of the items ‘sympathetic, warm’ and ‘critical, quarrelsome’ (reversed) (Ten-Item Personality Inventory)\nDuring the last half hour, how ... have you been? \n1 = Strongly disagree\n7 = Strongly agree",
-      "answer_categories": "7"
+      "answer_categories": ""
     },
     {
       "name": "conscientiousness",
       "description": "Conscientiousness",
       "type": "Likert",
       "coding": "Average score of the items ‘dependable, self-disciplined’ and ‘disorganized, careless’ (reversed) (Ten-Item Personality Inventory)\nDuring the last half hour, how ... have you been? \n1 = Strongly disagree\n7 = Strongly agree",
-      "answer_categories": "7"
+      "answer_categories": ""
     },
     {
       "name": "emotional_stability",
       "description": "Emotional stability",
       "type": "Likert",
       "coding": "Average score of the items ‘calm, emotionally stable’ and ‘anxious, easily upset’ (reversed) (Ten-Item Personality Inventory)\nDuring the last half hour, how ... have you been? \n1 = Strongly disagree\n7 = Strongly agree",
-      "answer_categories": "7"
+      "answer_categories": ""
     },
     {
       "name": "openness",
       "description": "Openness to experience",
       "type": "Likert",
       "coding": "\"Average score of the items ‘open to new experiences, complex’ and ‘conventional, uncreative’ (reversed) (Ten-Item Personality Inventory)\nDuring the last half hour, how ... have you been? \n1 = Strongly disagree\n7 = Strongly agree\"",
-      "answer_categories": "7"
+      "answer_categories": ""
     }
   ]
 }
