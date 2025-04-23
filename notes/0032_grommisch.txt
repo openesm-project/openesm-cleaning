@@ -1,0 +1,5 @@
+# Variables
+
+- The variable dist (Distraction) described in the codebook is missing in the dataset
+
+- No Beep available
