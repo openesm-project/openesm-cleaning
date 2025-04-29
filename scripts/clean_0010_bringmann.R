@@ -79,18 +79,18 @@ if(check_results == "Data are clean."){
 
 
 # Create metadata ---------------------------------------------------------
-metadata_url <- "https://docs.google.com/spreadsheets/d/1-K05SKhnBzzLb-hLdTa5A99-JGtZcRULMU7q1LmkmGc/edit?gid=0#gid=0"
+metadata_url <- "https://docs.google.com/spreadsheets/d/1ALGCq_jN6I4dcjWYQ_LQe9o52DGJItwdu9fCkwOh6fg/edit?gid=0#gid=0"
 meta_data <- read_sheet(metadata_url)
 
 
 # Enter dataset ID here
 sheet_url <- meta_data |>
-  filter(id == "0032") |>
+  filter(id == "0010") |>
   pull("Coding File URL")
 
 variable_data <- read_sheet(sheet_url)
 
-meta_json <- create_metadata_json("0032") |>
+meta_json <- create_metadata_json("0010") |>
   toJSON(pretty = TRUE, auto_unbox = TRUE)
 
 write(meta_json, here("data", "metadata", "0010_bringmann_metadata.json"))

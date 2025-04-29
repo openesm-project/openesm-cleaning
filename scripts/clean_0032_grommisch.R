@@ -98,7 +98,7 @@ if(check_results == "Data are clean."){
 
 
 # Create metadata ---------------------------------------------------------
-metadata_url <- "https://docs.google.com/spreadsheets/d/1-K05SKhnBzzLb-hLdTa5A99-JGtZcRULMU7q1LmkmGc/edit?gid=0#gid=0"
+metadata_url <- "https://docs.google.com/spreadsheets/d/1ALGCq_jN6I4dcjWYQ_LQe9o52DGJItwdu9fCkwOh6fg/edit?gid=0#gid=0"
 meta_data <- read_sheet(metadata_url)
 
 

@@ -1,0 +1,153 @@
+{
+  "first_author": "Grommisch",
+  "dataset": "0032",
+  "year": 2021,
+  "reference_a": "@article{grommisch2020,\n  title = {Modeling individual differences in emotion regulation repertoire in daily life with multilevel latent profile analysis.},\n  author = {Grommisch, Gloria and Koval, Peter and Hinton, Jordan D. X. and Gleeson, John and Hollenstein, Tom and Kuppens, Peter and Lischetzke, Tanja},\n  date = {2020-12},\n  journaltitle = {Emotion},\n  shortjournal = {Emotion},\n  volume = {20},\n  number = {8},\n  pages = {1462--1474},\n  issn = {1931-1516, 1528-3542},\n  doi = {10.1037/emo0000669}\n}",
+  "reference_b": null,
+  "paper_doi": "https://doi.org/10.1037/emo0000669",
+  "link_to_data": "https://osf.io/r7jw6/",
+  "link_to_codebook": "https://osf.io/b5s97",
+  "link_to_code": "https://osf.io/r7jw6/",
+  "n_participants": 179,
+  "n_time_points": 189,
+  "n_beeps_per_day": 9,
+  "passive_data_available": "no",
+  "cross_sectional_available": "yes",
+  "topics": "emotion regulation, rumination, well-being",
+  "implicit_missingness": "yes",
+  "raw_time_stamp": "no",
+  "sampling_scheme": "9x/day semi-fixed intervals",
+  "participants": "adults",
+  "coding_file": "0032_grommisch_variables",
+  "additional_comments": "no beep information available, variable distraction is missing",
+  "coder_data": "Björn Siepe",
+  "coder_metadata": "Björn Siepe",
+  "features": [
+    {
+      "name": "id",
+      "description": "Participant ID",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "day",
+      "description": "Day of study",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "beep",
+      "description": "Beep of the day",
+      "type": "other",
+      "coding": "Not available",
+      "answer_categories": ""
+    },
+    {
+      "name": "occasion",
+      "description": "Measurement occasion per id",
+      "type": "other",
+      "coding": "Running number of measurement occasion per id",
+      "answer_categories": "101"
+    },
+    {
+      "name": "happy",
+      "description": "Happy",
+      "type": "VAS",
+      "coding": "Feeling happy at moment of prompt\n0 = not at all\n100 = very much",
+      "answer_categories": "101"
+    },
+    {
+      "name": "relaxed",
+      "description": "Relaxed",
+      "type": "VAS",
+      "coding": "Feeling relaxed at moment of prompt\n0 = not at all\n100 = very much",
+      "answer_categories": "101"
+    },
+    {
+      "name": "confident",
+      "description": "Confident",
+      "type": "VAS",
+      "coding": "Feeling confident at moment of prompt\n0 = not at all\n100 = very much",
+      "answer_categories": "101"
+    },
+    {
+      "name": "sad",
+      "description": "Sad",
+      "type": "VAS",
+      "coding": "Feeling sad at moment of prompt\n0 = not at all\n100 = very much",
+      "answer_categories": "101"
+    },
+    {
+      "name": "stressed",
+      "description": "Stressed",
+      "type": "VAS",
+      "coding": "Feeling stressed at moment of prompt\n0 = not at all\n100 = very much",
+      "answer_categories": "101"
+    },
+    {
+      "name": "angry",
+      "description": "Angry",
+      "type": "VAS",
+      "coding": "Feeling angry at moment of prompt\n0 = not at all\n100 = very much",
+      "answer_categories": "101"
+    },
+    {
+      "name": "situation_selection",
+      "description": "Situation Selection",
+      "type": "VAS",
+      "coding": "Since last survey, I chose which situation to put myself in\n0 = not at all\n100 = very much",
+      "answer_categories": "101"
+    },
+    {
+      "name": "situation_modification",
+      "description": "Situation Modification",
+      "type": "VAS",
+      "coding": "Since last survey, I actively changed something in the situation\n0 = not at all\n100 = very much",
+      "answer_categories": "101"
+    },
+    {
+      "name": "reappraisal",
+      "description": "Reappraisal",
+      "type": "VAS",
+      "coding": "Since last survey, I changed the way I was thinking about the situation\nSince last survey, I took a step back and looked at things from a different perspective.\n0 = not at all\n100 = very much",
+      "answer_categories": "101"
+    },
+    {
+      "name": "acceptance",
+      "description": "Acceptance",
+      "type": "VAS",
+      "coding": "Since last survey, I accepted my emotions as valid and important\n0 = not at all\n100 = very much",
+      "answer_categories": "101"
+    },
+    {
+      "name": "rumination",
+      "description": "Rumination",
+      "type": "VAS",
+      "coding": "Since last survey, I thought over and over again about my emotions\n0 = not at all\n100 = very much",
+      "answer_categories": "101"
+    },
+    {
+      "name": "social_sharing",
+      "description": "Social Sharing",
+      "type": "VAS",
+      "coding": "Since last survey, I talked with someone about my emotions\n0 = not at all\n100 = very much",
+      "answer_categories": "101"
+    },
+    {
+      "name": "ignoring",
+      "description": "Ignoring",
+      "type": "VAS",
+      "coding": "Since last survey, I ignored my emotions\n0 = not at all\n100 = very much",
+      "answer_categories": "101"
+    },
+    {
+      "name": "suppression",
+      "description": "Suppression",
+      "type": "VAS",
+      "coding": "Since last survey, I was careful not to express my emotions to others\n100 = very much",
+      "answer_categories": "101"
+    }
+  ]
+}
