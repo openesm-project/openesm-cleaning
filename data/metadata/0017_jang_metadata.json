@@ -1,0 +1,342 @@
+{
+  "first_author": "Jang",
+  "dataset": "0017",
+  "year": 2024,
+  "reference_a": "@article{jang2024,\n  title = {A digital phenotyping dataset for impending panic symptoms: {{A}} prospective longitudinal study},\n  shorttitle = {A digital phenotyping dataset for impending panic symptoms},\n  author = {Jang, Sooyoung and family=Sun, given=Tai, prefix=hui, useprefix=false and Shin, Seunghyun and Lee, Heon-Jeong and Shin, Yu-Bin and Yeom, Ji Won and Park, Yu Rang and Cho, Chul-Hyun},\n  date = {2024-11-21},\n  journaltitle = {Scientific Data},\n  shortjournal = {Sci Data},\n  volume = {11},\n  number = {1},\n  pages = {1264},\n  publisher = {Nature Publishing Group},\n  doi = {10.1038/s41597-024-04147-6}\n}",
+  "reference_b": null,
+  "paper_doi": "https://doi.org/10.1038/s41597-024-04147-6",
+  "link_to_data": "https://zenodo.org/records/14190139",
+  "link_to_codebook": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41597-024-04147-6/MediaObjects/41597_2024_4147_MOESM1_ESM.pdf",
+  "link_to_code": "https://github.com/DigitalHealthcareLab/24PanicPrediction",
+  "n_participants": 43,
+  "n_time_points": 402,
+  "n_beeps_per_day": 1,
+  "passive_data_available": "yes",
+  "cross_sectional_available": "yes",
+  "topics": "panic symptoms, digital phenotyping, behavior",
+  "implicit_missingness": "yes",
+  "raw_time_stamp": "unclear",
+  "sampling_scheme": "1x/day in the evening",
+  "participants": "patients diagnosed with mood disorders, anxiety disorders, trauma and stressor-related disorders, and obsessive-compulsive and related disorder",
+  "coding_file": "0017_ jang_variables",
+  "additional_comments": "some item coding unclear, large amount of additional data available on Zenodo",
+  "coder_data": "Björn Siepe",
+  "coder_metadata": "Björn Siepe",
+  "features": [
+    {
+      "name": "id",
+      "description": "Participant ID",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "day",
+      "description": "Day of study",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "beep",
+      "description": "Beep of the day",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "date",
+      "description": "Date",
+      "type": "Date",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "hr_var",
+      "description": "Heart rate variance",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "hr_max",
+      "description": "Heart rate maximum",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "hr_mean",
+      "description": "Heart rate mean",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "hr_hvar_mean",
+      "description": "Daily average of the variance of\nthe heart rate calculated every hour",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "alcohol",
+      "description": "Alcohol consumption",
+      "type": "binary",
+      "coding": "Wording unclear",
+      "answer_categories": "2"
+    },
+    {
+      "name": "cofffee",
+      "description": "Coffee consumption",
+      "type": "binary",
+      "coding": "Wording unclear",
+      "answer_categories": "2"
+    },
+    {
+      "name": "smoking",
+      "description": "Smoking",
+      "type": "binary",
+      "coding": "Wording unclear",
+      "answer_categories": "2"
+    },
+    {
+      "name": "menstruation",
+      "description": "Menstruation",
+      "type": "binary",
+      "coding": "Wording unclear",
+      "answer_categories": "2"
+    },
+    {
+      "name": "exercise",
+      "description": "Exercise",
+      "type": "binary",
+      "coding": "Wording unclear",
+      "answer_categories": "2"
+    },
+    {
+      "name": "panic",
+      "description": "Panic",
+      "type": "binary",
+      "coding": "Wording unclear",
+      "answer_categories": "2"
+    },
+    {
+      "name": "positive_feeling",
+      "description": "Positive feeling",
+      "type": "ordinal",
+      "coding": "Wording and answer categories unclear",
+      "answer_categories": "4"
+    },
+    {
+      "name": "negative_feeling",
+      "description": "Negative feeling",
+      "type": "ordinal",
+      "coding": "Wording and answer categories unclear",
+      "answer_categories": "4"
+    },
+    {
+      "name": "positive_energy",
+      "description": "Positive energy",
+      "type": "ordinal",
+      "coding": "Wording and answer categories unclear",
+      "answer_categories": "4"
+    },
+    {
+      "name": "negative_energy",
+      "description": "Negative energy",
+      "type": "ordinal",
+      "coding": "Wording and answer categories unclear",
+      "answer_categories": "4"
+    },
+    {
+      "name": "anxiety",
+      "description": "Anxiety",
+      "type": "ordinal",
+      "coding": "Wording and answer categories unclear",
+      "answer_categories": "4"
+    },
+    {
+      "name": "annoying",
+      "description": "Annoying",
+      "type": "ordinal",
+      "coding": "Wording and answer categories unclear",
+      "answer_categories": "4"
+    },
+    {
+      "name": "acq",
+      "description": "Anxiety control questionnaire",
+      "type": "numeric",
+      "coding": "Irregular time interval\nSum score",
+      "answer_categories": ""
+    },
+    {
+      "name": "appq_1",
+      "description": "Agoraphobia",
+      "type": "numeric",
+      "coding": "Albany Panic and Phobia\nQuestionnaire score – Agoraphobia\nsection\nIrregular time interval\nSum score",
+      "answer_categories": ""
+    },
+    {
+      "name": "appq_2",
+      "description": "Social phobia",
+      "type": "numeric",
+      "coding": "Albany Panic and Phobia\nQuestionnaire score – Social Phobia\nsection\nIrregular time interval\nSum score",
+      "answer_categories": ""
+    },
+    {
+      "name": "appq_3",
+      "description": "Interoceptive fear",
+      "type": "numeric",
+      "coding": "Albany Panic and Phobia\nQuestionnaire score – Interoceptive\nFear section\nIrregular time interval\nSum score",
+      "answer_categories": ""
+    },
+    {
+      "name": "bsq",
+      "description": "Body shape questionnaire",
+      "type": "numeric",
+      "coding": "Irregular time interval\nSum score",
+      "answer_categories": ""
+    },
+    {
+      "name": "bfne",
+      "description": "Fear of negative evaluation",
+      "type": "numeric",
+      "coding": "Brief Fear of Negative Evaluation\nIrregular time interval\nSum score",
+      "answer_categories": ""
+    },
+    {
+      "name": "ces_d",
+      "description": "CES-Depression",
+      "type": "numeric",
+      "coding": "Center for Epidemiologic Studies\nDepression Scale\nIrregular time interval\nSum score",
+      "answer_categories": ""
+    },
+    {
+      "name": "gad_7",
+      "description": "Generalixed anxiety",
+      "type": "numeric",
+      "coding": "Generalized Anxiety Disorder-7 scale\nIrregular time interval\nSum score",
+      "answer_categories": ""
+    },
+    {
+      "name": "kosssf",
+      "description": "Occupational stress",
+      "type": "numeric",
+      "coding": "Korean Occupational Stress Scale-\nShort Form scale\nIrregular time interval\nSum score",
+      "answer_categories": ""
+    },
+    {
+      "name": "phq_9",
+      "description": "PHQ-Depression",
+      "type": "numeric",
+      "coding": "Patient Health Questionnaire-9 Scale\nIrregular time interval\nSum score",
+      "answer_categories": ""
+    },
+    {
+      "name": "sads",
+      "description": "Social avoidance and distress",
+      "type": "numeric",
+      "coding": "Social Avoidance and Distress Scale\nIrregular time interval\nSum score",
+      "answer_categories": ""
+    },
+    {
+      "name": "stai_x1",
+      "description": "State anxiety",
+      "type": "numeric",
+      "coding": "State-Trait Anxiety Inventory score\n– State Anxiety section\n\nIrregular time interval",
+      "answer_categories": ""
+    },
+    {
+      "name": "steps_maximum",
+      "description": "Maximum steps per minute",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "steps_mean",
+      "description": "Mean steps per minute",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "steps_hvar_mean",
+      "description": "Daily average of step count variance calculated every hour",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "hr_acrophase",
+      "description": "Heart rate acrophase",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "hr_amplitude",
+      "description": "Heart rate amplitude",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "hr_mesor",
+      "description": "Heart rate mesor",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "bandpower_0_001_0_0005hz",
+      "description": "Heart rate bandpower of 0.001-\n0.0005Hz",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "bandpower_0_0005_0_0001hz",
+      "description": "Heart rate bandpower of 0.0005-\n0.0001Hz",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "bandpower_0_0001_0_00005hz",
+      "description": "Heart rate bandpower of 0.0001-\n0.00005Hz",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "bandpower_0_00005_0_00001hz",
+      "description": "Heart rate bandpower of 0.00005-\n0.00001Hz",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "sleep_duration",
+      "description": "Sleep duration",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "sleep_onset_time",
+      "description": "Sleep onset time",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "sleep_out_time",
+      "description": "Sleep out time",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    }
+  ]
+}
