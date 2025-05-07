@@ -1,0 +1,125 @@
+{
+  "first_author": "Bringmann",
+  "dataset": "0010",
+  "year": 2013,
+  "reference_a": "@article{bringmann2013,\n  title = {A network approach to psychopathology: {{New}} insights into clinical longitudinal data},\n  shorttitle = {A {{Network Approach}} to {{Psychopathology}}},\n  author = {Bringmann, Laura F. and Vissers, Nathalie and Wichers, Marieke and Geschwind, Nicole and Kuppens, Peter and Peeters, Frenk and Borsboom, Denny and Tuerlinckx, Francis},\n  date = {2013-04-04},\n  journaltitle = {PLoS ONE},\n  shortjournal = {PLoS One},\n  volume = {8},\n  number = {4},\n  eprint = {23593171},\n  doi = {10.1371/journal.pone.0060188}\n}",
+  "reference_b": "@article{geschwind2011,\n  title={Mindfulness training increases momentary positive emotions and reward experience in adults vulnerable to depression: {A} randomized controlled trial.},\n  author={Geschwind, Nicole and Peeters, Frenk and Drukker, Marjan and van Os, Jim and Wichers, Marieke},\n  journal={Journal of consulting and clinical psychology},\n  volume={79},\n  number={5},\n  pages={618},\n  year={2011},\n  publisher={American Psychological Association},\n  doi={10.1037/a0024595}\n}",
+  "paper_doi": "https://doi.org/10.1371/journal.pone.0060188",
+  "link_to_data": "https://doi.org/10.1371/journal.pone.0060188.s004",
+  "link_to_codebook": "-",
+  "link_to_code": "https://doi.org/10.1371/journal.pone.0060188.s001",
+  "n_participants": 129,
+  "n_time_points": 60,
+  "n_beeps_per_day": 6,
+  "passive_data_available": "no",
+  "cross_sectional_available": "yes",
+  "topics": "depression, neuroticism, mood",
+  "implicit_missingness": "no",
+  "raw_time_stamp": "no",
+  "sampling_scheme": "6x/day 90-minute interval",
+  "participants": "individuals with residual depressive symptoms",
+  "coding_file": "0010_bringmann_variables",
+  "additional_comments": "contains a group variable of therapy vs. control; pleasantness is on adifferent scale and it is unclear what the theoretical scale limits are",
+  "coder_data": "Björn Siepe",
+  "coder_metadata": "Björn Siepe",
+  "features": [
+    {
+      "name": "id",
+      "description": "Participant ID",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "day",
+      "description": "Day of study",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "beep",
+      "description": "Beep of the day",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "study_period",
+      "description": "Study period",
+      "type": "binary",
+      "coding": "0 = six-day baseline period before mindfulness therapy (therapy group only)\n1 = six-day post-baseline period after mindfulness therapy (therapy group only)",
+      "answer_categories": "2"
+    },
+    {
+      "name": "cheerful",
+      "description": "Cheerful",
+      "type": "Likert",
+      "coding": "I feel cheerful (1 - 6)",
+      "answer_categories": "7"
+    },
+    {
+      "name": "pleasantness",
+      "description": "Pleasantness of event",
+      "type": "Likert",
+      "coding": "Pleasantness of the most important event that happened between the current and the previous response (-4 - 3)",
+      "answer_categories": "8"
+    },
+    {
+      "name": "worry",
+      "description": "Worry",
+      "type": "Likert",
+      "coding": "Worry (1 - 6)",
+      "answer_categories": "7"
+    },
+    {
+      "name": "fearful",
+      "description": "Fearful",
+      "type": "Likert",
+      "coding": "I feel fearful (1 - 6)",
+      "answer_categories": "7"
+    },
+    {
+      "name": "sad",
+      "description": "Sad",
+      "type": "Likert",
+      "coding": "I feel sad (1 - 6)",
+      "answer_categories": "7"
+    },
+    {
+      "name": "relaxed",
+      "description": "Relaxed",
+      "type": "Likert",
+      "coding": "I feel relaxed (1 - 6)",
+      "answer_categories": "7"
+    },
+    {
+      "name": "",
+      "description": "",
+      "type": "",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "",
+      "description": "",
+      "type": "",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "",
+      "description": "",
+      "type": "",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "",
+      "description": "",
+      "type": "",
+      "coding": "",
+      "answer_categories": ""
+    }
+  ]
+}
