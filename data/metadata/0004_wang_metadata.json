@@ -1,0 +1,559 @@
+{
+  "first_author": "Wang",
+  "dataset": "0004",
+  "year": 2014,
+  "reference_a": "@inproceedings{wang2014,\n  title = {{{StudentLife}}: assessing mental health, academic performance and behavioral trends of college students using smartphones},\n  shorttitle = {{{StudentLife}}},\n  booktitle = {Proceedings of the 2014 {{ACM International Joint Conference}} on {{Pervasive}} and {{Ubiquitous Computing}}},\n  author = {Wang, Rui and Chen, Fanglin and Chen, Zhenyu and Li, Tianxing and Harari, Gabriella and Tignor, Stefanie and Zhou, Xia and Ben-Zeev, Dror and Campbell, Andrew T.},\n  date = {2014-09-13},\n  series = {{{UbiComp}} '14},\n  pages = {3--14},\n  publisher = {Association for Computing Machinery},\n  location = {New York, NY, USA},\n  doi = {10.1145/2632048.2632054}\n}",
+  "reference_b": "@article{adler2022,\n  title = {Machine learning for passive mental health symptom prediction: {{Generalization}} across different longitudinal mobile sensing studies},\n  shorttitle = {Machine learning for passive mental health symptom prediction},\n  author = {Adler, Daniel A. and Wang, Fei and Mohr, David C. and Choudhury, Tanzeem},\n  date = {2022-04-27},\n  journaltitle = {PLOS ONE},\n  shortjournal = {PLOS ONE},\n  volume = {17},\n  number = {4},\n  pages = {e0266516},\n  publisher = {Public Library of Science},\n  issn = {1932-6203},\n  doi = {10.1371/journal.pone.0266516}\n}",
+  "paper_doi": "https://doi.org/10.1371/journal.pone.0266516",
+  "link_to_data": "https://pbh.tech.cornell.edu/data.html",
+  "link_to_codebook": "https://studentlife.cs.dartmouth.edu/dataset.html",
+  "link_to_code": "https://github.com/CornellPACLab/data_heterogeneity",
+  "n_participants": 49,
+  "n_time_points": 64,
+  "n_beeps_per_day": 1,
+  "passive_data_available": "yes",
+  "cross_sectional_available": "yes",
+  "topics": "students, mental health, academic performance, stress, activity",
+  "implicit_missingness": "yes",
+  "raw_time_stamp": "yes",
+  "sampling_scheme": "irregular",
+  "participants": "undergraduate students",
+  "coding_file": "0004_wang_variables",
+  "additional_comments": "More raw unaggregated data available, some item coding unclear, data preaggregated by Adler et al.",
+  "coder_data": "Björn Siepe",
+  "coder_metadata": "Björn Siepe",
+  "features": [
+    {
+      "name": "id",
+      "description": "Participant ID",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "day",
+      "description": "Day of study",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "date",
+      "description": "Date",
+      "type": "Date",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "beep",
+      "description": "Beep of the day",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "happy",
+      "description": "Happy",
+      "type": "ordinal",
+      "coding": "If you answered yes to the happiness question, how happy do you feel?\n1 = A little bit\n2 = Somewhat\n3 = Very much\n4 = Extremely",
+      "answer_categories": "4"
+    },
+    {
+      "name": "happyornot",
+      "description": "Happiness (binary)",
+      "type": "binary",
+      "coding": "Do you feel AT ALL happy right now?",
+      "answer_categories": "2"
+    },
+    {
+      "name": "sad",
+      "description": "Sadness",
+      "type": "ordinal",
+      "coding": "If you answered yes to the sadness question, how sad do you feel?\n1 = A little bit\n2 = Somewhat\n3 = Very much\n4 = Extremely",
+      "answer_categories": "4"
+    },
+    {
+      "name": "sadornot",
+      "description": "Sad (binary)",
+      "type": "binary",
+      "coding": "Do you feel AT all sad right now?",
+      "answer_categories": "2"
+    },
+    {
+      "name": "social_number",
+      "description": "Number of social interactions",
+      "type": "Likert",
+      "coding": "How many people did you have contact with yesterday, including anyone you said hello to, chatted, talked or discussed matters with, whether you did it face-to-face, by telephone, by mail or on the internet, and whether you personally knew the person or not? Please select one of the following categories that best matches your estimate:\n\n1 = 0-4 persons\n2 = 5-9 persons\n3 = 10-19 persons\n4 = 20-49 persons\n5 = 50-99 persons \n6 = over 100 persons",
+      "answer_categories": "6"
+    },
+    {
+      "name": "stress_level",
+      "description": "Stress",
+      "type": "categorical",
+      "coding": "Right now, I am ...\n1 = A little stressed\n2 = Definitely Stressed\n3 = Stressed out\n4 = Feeling good\n5 = Feeling great\n\nRecoded to be ordinal",
+      "answer_categories": "5"
+    },
+    {
+      "name": "sleep_hour",
+      "description": "Hours of sleep",
+      "type": "numeric",
+      "coding": "How many hours did you sleep last night?\nUnclear coding: Could either be raw numeric, or coded as indicated in the codebook: \n1 = <3  \n2 = 3.5  \n3 = 4  \n4 = 4.5  \n5 = 5  \n6 = 5.5  \n7 = 6  \n8 = 6.5  \n9 = 7  \n10 = 7.5  \n11 = 8  \n12 = 8.5  \n13 = 9  \n14 = 9.5  \n15 = 10  \n16 = 10.5  \n17 = 11  \n18 = 11.5  \n19 = 12",
+      "answer_categories": "19"
+    },
+    {
+      "name": "sleep_quality",
+      "description": "Sleep quality",
+      "type": "ordinal",
+      "coding": "How would you rate your overall sleep last night?\n1 = Very good\n2 = Fairly good\n3 = Fairly bad\n4 = Very bad",
+      "answer_categories": "4"
+    },
+    {
+      "name": "difficult_stay_awake",
+      "description": "Difficulties staying awake",
+      "type": "ordinal",
+      "coding": "How often did you have trouble staying awake yesterday while in class, eating meals or engaging in social activity?\n1 = None\n2 = Once\n3 = Twice\n4 = Three or more times",
+      "answer_categories": "4"
+    },
+    {
+      "name": "anxious",
+      "description": "Anxious",
+      "type": "ordinal",
+      "coding": "In the past 15 minutes, I was anxious, easily upset.\n1 = Not at all\n2 = A little\n3 = Somewhat\n4 = Very\n5 = Extremely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "calm",
+      "description": "Calm",
+      "type": "ordinal",
+      "coding": "In the past 15 minutes, I was calm, emotionally stable.\n1 = Not at all\n2 = A little\n3 = Somewhat\n4 = Very\n5 = Extremely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "conventional",
+      "description": "Conventional",
+      "type": "ordinal",
+      "coding": "In the past 15 minutes, I was conventional, uncreative.\n1 = Not at all\n2 = A little\n3 = Somewhat\n4 = Very\n5 = Extremely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "critical",
+      "description": "Critical",
+      "type": "ordinal",
+      "coding": "In the past 15 minutes, I was critical, quarrelsome.\n1 = Not at all\n2 = A little\n3 = Somewhat\n4 = Very\n5 = Extremely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "dependable",
+      "description": "Dependable",
+      "type": "ordinal",
+      "coding": "In the past 15 minutes, I was dependable, self-disciplined.\n1 = Not at all\n2 = A little\n3 = Somewhat\n4 = Very\n5 = Extremely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "disorganized",
+      "description": "Disorganized",
+      "type": "ordinal",
+      "coding": "In the past 15 minutes, I was disorganized, careless.\n1 = Not at all\n2 = A little\n3 = Somewhat\n4 = Very\n5 = Extremely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "enthusiastic",
+      "description": "Enthusiastic",
+      "type": "ordinal",
+      "coding": "In the past 15 minutes, I was extraverted, enthusiastic.\n1 = Not at all\n2 = A little\n3 = Somewhat\n4 = Very\n5 = Extremely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "open_to_experiences",
+      "description": "Openness to experiences",
+      "type": "ordinal",
+      "coding": "In the past 15 minutes, I was open to new experiences, complex.\n1 = Not at all\n2 = A little\n3 = Somewhat\n4 = Very\n5 = Extremely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "reserved",
+      "description": "Reserved",
+      "type": "ordinal",
+      "coding": "In the past 15 minutes, I was reserved, quiet.\n1 = Not at all\n2 = A little\n3 = Somewhat\n4 = Very\n5 = Extremely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "sympathetic",
+      "description": "Sympathetic",
+      "type": "ordinal",
+      "coding": "In the past 15 minutes, I was sympathetic, warm.\n1 = Not at all\n2 = A little\n3 = Somewhat\n4 = Very\n5 = Extremely",
+      "answer_categories": "5"
+    },
+    {
+      "name": "act_running_ep_0",
+      "description": "Running (epoch 0)",
+      "type": "numeric",
+      "coding": "Running (in seconds) of the whole day\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_running_ep_1",
+      "description": "Running (epoch 1)",
+      "type": "numeric",
+      "coding": "Running (in seconds) between 12am and 6am\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_running_ep_2",
+      "description": "Running (epoch 2)",
+      "type": "numeric",
+      "coding": "Running (in seconds) between 6am and 12pm\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_running_ep_3",
+      "description": "Running (epoch 3)",
+      "type": "numeric",
+      "coding": "Running (in seconds) between 12pm and 6pm\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_running_ep_4",
+      "description": "Running (epoch 4)",
+      "type": "numeric",
+      "coding": "Running (in seconds) between 6pm and 12am\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_still_ep_0",
+      "description": "Still activity (epoch 0)",
+      "type": "numeric",
+      "coding": "Still activity (in seconds) of the whole day\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_still_ep_1",
+      "description": "Still activity (epoch 1)",
+      "type": "numeric",
+      "coding": "Still activity (in seconds) between 12am and 6am\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_still_ep_2",
+      "description": "Still activity (epoch 2)",
+      "type": "numeric",
+      "coding": "Still activity (in seconds) between 6am and 12pm\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_still_ep_3",
+      "description": "Still activity (epoch 3)",
+      "type": "numeric",
+      "coding": "Still activity (in seconds) between 12pm and 6pm\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_still_ep_4",
+      "description": "Still activity (epoch 4)",
+      "type": "numeric",
+      "coding": "Still activity (in seconds) between 6pm and 12am\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_unknown_ep_0",
+      "description": "Unknown activity (epoch 0)",
+      "type": "numeric",
+      "coding": "Unknown activity (in seconds) of the whole day\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_unknown_ep_1",
+      "description": "Unknown activity (epoch 1)",
+      "type": "numeric",
+      "coding": "Unknown activity (in seconds) between 12am and 6am\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_unknown_ep_2",
+      "description": "Unknown activity (epoch 2)",
+      "type": "numeric",
+      "coding": "Unknown activity (in seconds) between 6am and 12pm\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_unknown_ep_3",
+      "description": "Unknown activity (epoch 3)",
+      "type": "numeric",
+      "coding": "Unknown activity (in seconds) between 12pm and 6pm\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_unknown_ep_4",
+      "description": "Unknown activity (epoch 4)",
+      "type": "numeric",
+      "coding": "Unknown activity (in seconds) between 6pm and 12am\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_walking_ep_0",
+      "description": "Walking (epoch 0)",
+      "type": "numeric",
+      "coding": "Walking (in seconds) of the whole day\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_walking_ep_1",
+      "description": "Walking (epoch 1)",
+      "type": "numeric",
+      "coding": "Walking (in seconds) between 12am and 6am\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_walking_ep_2",
+      "description": "Walking (epoch 2)",
+      "type": "numeric",
+      "coding": "Walking (in seconds) between 6am and 12pm\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_walking_ep_3",
+      "description": "Walking (epoch 3)",
+      "type": "numeric",
+      "coding": "Walking (in seconds) between 12pm and 6pm\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_walking_ep_4",
+      "description": "Walking (epoch 4)",
+      "type": "numeric",
+      "coding": "Walking (in seconds) between 6pm and 12am\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_on_foot_ep_0",
+      "description": "On Foot (epoch 0)",
+      "type": "numeric",
+      "coding": "On foot (in seconds) of the whole day\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_on_foot_ep_1",
+      "description": "On Foot (epoch 1)",
+      "type": "numeric",
+      "coding": "On foot (in seconds) between 12am and 6am\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_on_foot_ep_2",
+      "description": "On Foot (epoch 2)",
+      "type": "numeric",
+      "coding": "On foot (in seconds) between 6am and 12pm\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_on_foot_ep_3",
+      "description": "On Foot (epoch 3)",
+      "type": "numeric",
+      "coding": "On foot (in seconds) between 12pm and 6pm\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "act_on_foot_ep_4",
+      "description": "On Foot (epoch 4)",
+      "type": "numeric",
+      "coding": "On foot (in seconds) between 6pm and 12am\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "audio_convo_duration_ep_0",
+      "description": "Audio conversation duration (epoch 0)",
+      "type": "numeric",
+      "coding": "Duration of audio conversations (in seconds) of the whole day\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "audio_convo_duration_ep_1",
+      "description": "Audio conversation duration (epoch 1)",
+      "type": "numeric",
+      "coding": "Duration of audio conversations (in seconds) between 12am and 6am\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "audio_convo_duration_ep_2",
+      "description": "Audio conversation duration (epoch 2)",
+      "type": "numeric",
+      "coding": "Duration of audio conversations (in seconds) between 6am and 12pm\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "audio_convo_duration_ep_3",
+      "description": "Audio conversation duration (epoch 3)",
+      "type": "numeric",
+      "coding": "Duration of audio conversations (in seconds) between 12pm and 6pm\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "audio_convo_duration_ep_4",
+      "description": "Audio conversation duration (epoch 4)",
+      "type": "numeric",
+      "coding": "Duration of audio conversations (in seconds) between 6pm and 12am\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "audio_convo_num_ep_0",
+      "description": "Number of audio conversations (epoch 0)",
+      "type": "numeric",
+      "coding": "Number of audio conversations (in seconds) of the whole day\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "audio_convo_num_ep_1",
+      "description": "Number of audio conversations (epoch 1)",
+      "type": "numeric",
+      "coding": "Number of audio conversations (in seconds) between 12am and 6am\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "audio_convo_num_ep_2",
+      "description": "Number of audio conversations (epoch 2)",
+      "type": "numeric",
+      "coding": "Number of audio conversations (in seconds) between 6am and 12pm\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "audio_convo_num_ep_3",
+      "description": "Number of audio conversations (epoch 3)",
+      "type": "numeric",
+      "coding": "Number of audio conversations (in seconds) between 12pm and 6pm\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "audio_convo_num_ep_4",
+      "description": "Number of audio conversations (epoch 4)",
+      "type": "numeric",
+      "coding": "Number of audio conversations (in seconds) between 6pm and 12am\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "loc_dist_ep_0",
+      "description": "Location distance (epoch 0)",
+      "type": "numeric",
+      "coding": "Location distance of the whole day\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "loc_dist_ep_1",
+      "description": "Location distance (epoch 1)",
+      "type": "numeric",
+      "coding": "Location distance between 12am and 6am\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "loc_dist_ep_2",
+      "description": "Location distance (epoch 2)",
+      "type": "numeric",
+      "coding": "Location distance between 6am and 12pm\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "loc_dist_ep_3",
+      "description": "Location distance (epoch 3)",
+      "type": "numeric",
+      "coding": "Location distance between 12pm and 6pm\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "loc_dist_ep_4",
+      "description": "Location distance (epoch 4)",
+      "type": "numeric",
+      "coding": "Location distance between 6pm and 12am\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "loc_visit_num_ep_0",
+      "description": "Number of unique locations (epoch 0)",
+      "type": "numeric",
+      "coding": "Number of locations visited of the whole day\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "loc_visit_num_ep_1",
+      "description": "Number of unique locations (epoch 1)",
+      "type": "numeric",
+      "coding": "Number of locations visited between 12am and 6am\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "loc_visit_num_ep_2",
+      "description": "Number of unique locations (epoch 2)",
+      "type": "numeric",
+      "coding": "Number of locations visited between 6am and 12pm\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "loc_visit_num_ep_3",
+      "description": "Number of unique locations (epoch 3)",
+      "type": "numeric",
+      "coding": "Number of locations visited between 12pm and 6pm\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "loc_visit_num_ep_4",
+      "description": "Number of unique locations (epoch 4)",
+      "type": "numeric",
+      "coding": "Number of locations visited between 6pm and 12am\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "sleep_start",
+      "description": "Start of sleep",
+      "type": "numeric",
+      "coding": "Start of sleep, encoded in units of 7.5-minute epochs from 8 PM\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "sleep_end",
+      "description": "End of sleep",
+      "type": "numeric",
+      "coding": "End of sleep, encoded in units of 7.5-minute epochs from 8 PM\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "sleep_duration",
+      "description": "Sleep duration",
+      "type": "numeric",
+      "coding": "Sleep duration in hours\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "unlock_duration_ep_0",
+      "description": "Phone unlock duration (epoch 0)",
+      "type": "numeric",
+      "coding": "Duration of phone unlocked (in seconds) of the whole day\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "unlock_duration_ep_1",
+      "description": "Phone unlock duration (epoch 1)",
+      "type": "numeric",
+      "coding": "Duration of phone unlocked (in seconds) between 12am and 6am\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "unlock_duration_ep_2",
+      "description": "Phone unlock duration (epoch 2)",
+      "type": "numeric",
+      "coding": "Duration of phone unlocked (in seconds) between 6am and 12pm\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "unlock_duration_ep_3",
+      "description": "Phone unlock duration (epoch 3)",
+      "type": "numeric",
+      "coding": "Duration of phone unlocked (in seconds) between 12pm and 6pm\nExtracted from sensor data",
+      "answer_categories": ""
+    },
+    {
+      "name": "unlock_duration_ep_4",
+      "description": "Phone unlock duration (epoch 4)",
+      "type": "numeric",
+      "coding": "Duration of phone unlocked (in seconds) between 6pm and 12am\nExtracted from sensor data",
+      "answer_categories": ""
+    }
+  ]
+}

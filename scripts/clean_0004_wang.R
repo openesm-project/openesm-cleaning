@@ -23,18 +23,35 @@ df <- df_raw |>
 
 # some renaming
 df <- df |>
-  rename(
-    id = study_id,
-    sleep_quality = sleep_rate
-  ) |>
   # remove some redundant column name parts
   rename_with(~str_remove_all(., "_mood|_behavior"), everything()) |>
-  rename_with(~str_remove_all(., "ema_"), everything())
+  rename_with(~str_remove_all(., "ema_"), everything()) |>
+  rename(
+    id = study_id,
+    sleep_quality = sleep_rate,
+    open_to_experiences = experiences,
+    difficult_stay_awake = sleep_social
+  )
+
 
 
 
 #* Misc -------------------------------------------------------------------
+# remove unclear columns
+df <- df |>
+  select(!c(pam_picture_idx, missing_days))
 
+
+# clean day column
+df <- df |>
+  mutate(day = gsub(day, pattern = " 00:00:00-04:00", replacement = "")) |>
+  mutate(date = as.Date(day, format = "%Y-%m-%d")) |>
+  # personal day variable
+  group_by(id) |>
+  mutate(
+    day = as.integer(date - min(date)) + 1
+  ) |>
+  ungroup()
 
 
 # add beep
