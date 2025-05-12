@@ -431,37 +431,37 @@
     },
     {
       "name": "loc_dist_ep_0",
-      "description": "Location distance (epoch 0)",
+      "description": "Location distance travelled (epoch 0)",
       "type": "numeric",
-      "coding": "Location distance of the whole day\nExtracted from sensor data",
+      "coding": "Location distance travelled of the whole day\nExtracted from sensor data",
       "answer_categories": ""
     },
     {
       "name": "loc_dist_ep_1",
-      "description": "Location distance (epoch 1)",
+      "description": "Location distance travelled (epoch 1)",
       "type": "numeric",
-      "coding": "Location distance between 12am and 6am\nExtracted from sensor data",
+      "coding": "Location distance travelled between 12am and 6am\nExtracted from sensor data",
       "answer_categories": ""
     },
     {
       "name": "loc_dist_ep_2",
-      "description": "Location distance (epoch 2)",
+      "description": "Location distance travelled (epoch 2)",
       "type": "numeric",
-      "coding": "Location distance between 6am and 12pm\nExtracted from sensor data",
+      "coding": "Location distance travelled between 6am and 12pm\nExtracted from sensor data",
       "answer_categories": ""
     },
     {
       "name": "loc_dist_ep_3",
-      "description": "Location distance (epoch 3)",
+      "description": "Location distance travelled (epoch 3)",
       "type": "numeric",
-      "coding": "Location distance between 12pm and 6pm\nExtracted from sensor data",
+      "coding": "Location distance travelled between 12pm and 6pm\nExtracted from sensor data",
       "answer_categories": ""
     },
     {
       "name": "loc_dist_ep_4",
-      "description": "Location distance (epoch 4)",
+      "description": "Location distance travelled (epoch 4)",
       "type": "numeric",
-      "coding": "Location distance between 6pm and 12am\nExtracted from sensor data",
+      "coding": "Location distance travelled between 6pm and 12am\nExtracted from sensor data",
       "answer_categories": ""
     },
     {
