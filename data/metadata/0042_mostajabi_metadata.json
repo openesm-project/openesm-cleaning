@@ -1,0 +1,246 @@
+{
+  "first_author": "Mostajabi",
+  "dataset": "0042",
+  "year": 2024,
+  "reference_a": "@online{mostajabi2024,\n  title = {An exploratory study on disinhibition and interpersonal outcomes in daily life},\n  author = {Mostajabi, Janan and Wright, Aidan},\n  date = {2024-07-09},\n  eprinttype = {PsyArXiv},\n  doi = {10.31219/osf.io/3szng},\n  pubstate = {prepublished}\n}",
+  "reference_b": "@online{vize2023,\n  title = {Socio-affective dynamics of psychopathy in daily life},\n  author = {Vize, Colin and Scott, Lori and Wright, Aidan and Kamarck, Thomas},\n  date = {2023-02-15},\n  eprinttype = {PsyArXiv},\n  doi = {10.31234/osf.io/m9nxz},\n  pubstate = {prepublished}\n}",
+  "paper_doi": "https://doi.org/10.31219/osf.io/3szng",
+  "link_to_data": "https://osf.io/dcfb5/files/osfstorage",
+  "link_to_codebook": "https://osf.io/dcfb5/files/osfstorage",
+  "link_to_code": "https://osf.io/dcfb5/files/osfstorage",
+  "n_participants": 342,
+  "n_time_points": 70,
+  "n_beeps_per_day": [
+    7
+  ],
+  "passive_data_available": "no",
+  "cross_sectional_available": "yes",
+  "topics": "personality, affect, personality disorder, interpersonal",
+  "implicit_missingness": "yes",
+  "raw_time_stamp": "yes",
+  "sampling_scheme": "random momentary prompt and scheduled daily diary",
+  "participants": "community participants (excluding undergraduates)",
+  "coding_file": "0042_mostajabi_variables",
+  "additional_comments": "S1 in the paper, no beep information available, some timestamp coding unclear",
+  "coder_data": "Björn Siepe",
+  "coder_metadata": "Björn Siepe",
+  "features": [
+    {
+      "name": "id",
+      "description": "Participant ID",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "day",
+      "description": "Day of study",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "beep",
+      "description": "Beep of the day",
+      "type": "other",
+      "coding": "NA",
+      "answer_categories": ""
+    },
+    {
+      "name": "begin_day_ema",
+      "description": "Day of prompt beginning",
+      "type": "PosixCt",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "begin_time_ema",
+      "description": "Time of Prompt beginning",
+      "type": "PosixCt",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "finish_day_ema",
+      "description": "Day of EMA finishing",
+      "type": "PosixCt",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "finish_time_ema",
+      "description": "Time of EMA finishing",
+      "type": "PosixCt",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "begin_day_eod",
+      "description": "unclear",
+      "type": "PosixCt",
+      "coding": "unclear",
+      "answer_categories": ""
+    },
+    {
+      "name": "begin_time_eod",
+      "description": "unclear",
+      "type": "PosixCt",
+      "coding": "unclear",
+      "answer_categories": ""
+    },
+    {
+      "name": "finish_day_eod",
+      "description": "unclear",
+      "type": "PosixCt",
+      "coding": "unclear",
+      "answer_categories": ""
+    },
+    {
+      "name": "finish_time_eod",
+      "description": "unclear",
+      "type": "PosixCt",
+      "coding": "unclear",
+      "answer_categories": ""
+    },
+    {
+      "name": "duration_ema",
+      "description": "Duration of EMA",
+      "type": "numeric",
+      "coding": "in seconds",
+      "answer_categories": ""
+    },
+    {
+      "name": "happy",
+      "description": "Happy",
+      "type": "VAS",
+      "coding": "How happy do you feel right now?\n0 = Not at all\n100 = Extremely",
+      "answer_categories": "101"
+    },
+    {
+      "name": "ashamed",
+      "description": "Ashamed",
+      "type": "VAS",
+      "coding": "How ashamed do you feel right now?\n0 = Not at all\n100 = Extremely",
+      "answer_categories": "101"
+    },
+    {
+      "name": "proud",
+      "description": "Proud",
+      "type": "VAS",
+      "coding": "How proud do you feel right now?\n0 = Not at all\n100 = Extremely",
+      "answer_categories": "101"
+    },
+    {
+      "name": "nervous",
+      "description": "Nervous",
+      "type": "VAS",
+      "coding": "How nervous do you feel right now?\n0 = Not at all\n100 = Extremely",
+      "answer_categories": "101"
+    },
+    {
+      "name": "confident",
+      "description": "Confident",
+      "type": "VAS",
+      "coding": "How confident do you feel right now?\n0 = Not at all\n100 = Extremely",
+      "answer_categories": "101"
+    },
+    {
+      "name": "hostile",
+      "description": "Hostile",
+      "type": "VAS",
+      "coding": "How hostile do you feel right now?\n0 = Not at all\n100 = Extremely",
+      "answer_categories": "101"
+    },
+    {
+      "name": "sad",
+      "description": "Sad",
+      "type": "VAS",
+      "coding": "How sad do you feel right now?\n0 = Not at all\n100 = Extremely",
+      "answer_categories": "101"
+    },
+    {
+      "name": "excited",
+      "description": "Excited",
+      "type": "VAS",
+      "coding": "How excited do you feel right now?\n0 = Not at all\n100 = Extremely",
+      "answer_categories": "101"
+    },
+    {
+      "name": "angry",
+      "description": "Angry",
+      "type": "VAS",
+      "coding": "How angry do you feel right now?\n0 = Not at all\n100 = Extremely",
+      "answer_categories": "101"
+    },
+    {
+      "name": "relaxed",
+      "description": "Relaxed",
+      "type": "VAS",
+      "coding": "How relaxed do you feel right now?\n0 = Not at all\n100 = Extremely",
+      "answer_categories": "101"
+    },
+    {
+      "name": "interaction",
+      "description": "Interaction occurence",
+      "type": "binary",
+      "coding": "unclear coding, but likely: Did an interaction occur?",
+      "answer_categories": "2"
+    },
+    {
+      "name": "dom_sub_you",
+      "description": "Dominance of interaction behavior",
+      "type": "VAS",
+      "coding": "Please rate your behavior toward the other person during this interaction.\n-50 = Accomodating/Submissive/Timid\n50 = Assertive/Dominant/Controlling",
+      "answer_categories": "101"
+    },
+    {
+      "name": "warm_cold_you",
+      "description": "Warmth of interaction behavior",
+      "type": "VAS",
+      "coding": "Please rate your behavior toward the other person during this interaction.\n-50 = Cold/Distant/Hostile\n50 = Warm/Friendly/Caring",
+      "answer_categories": "101"
+    },
+    {
+      "name": "happy_interaction",
+      "description": "Happy during interaction",
+      "type": "VAS",
+      "coding": "How happy did you feel during the interaction?\n0 = Not at all\n100 = Extremely",
+      "answer_categories": "101"
+    },
+    {
+      "name": "nervous_interaction",
+      "description": "Nervous during interaction",
+      "type": "VAS",
+      "coding": "How nervous did you feel during the interaction?\n0 = Not at all\n100 = Extremely",
+      "answer_categories": "101"
+    },
+    {
+      "name": "sad_interaction",
+      "description": "Sad during interaction",
+      "type": "VAS",
+      "coding": "How sad did you feel during the interaction?\n0 = Not at all\n100 = Extremely",
+      "answer_categories": "101"
+    },
+    {
+      "name": "excited_interaction",
+      "description": "Excited during interaction",
+      "type": "VAS",
+      "coding": "How excited did you feel during the interaction?\n0 = Not at all\n100 = Extremely",
+      "answer_categories": "101"
+    },
+    {
+      "name": "angry_interaction",
+      "description": "Angry during interaction",
+      "type": "VAS",
+      "coding": "How angry did you feel during the interaction?\n0 = Not at all\n100 = Extremely",
+      "answer_categories": "101"
+    },
+    {
+      "name": "relaxed_interaction",
+      "description": "Relaxed during interaction",
+      "type": "VAS",
+      "coding": "How relaxed did you feel during the interaction?\n0 = Not at all\n100 = Extremely",
+      "answer_categories": "101"
+    }
+  ]
+}
