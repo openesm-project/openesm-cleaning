@@ -33,7 +33,7 @@ df <- df_raw |>
 
 #* Misc -------------------------------------------------------------------
 # change some columns to PosixCt
-df |>
+df <- df |>
   mutate(across(all_of(c(contains("begin"), contains("finish"))),
          ~ as.POSIXct(.x, format = "%Y-%m-%dT%H:%M:%SZ", tz = "UTC")))
 
