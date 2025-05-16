@@ -1,0 +1,127 @@
+{
+  "first_author": "Kullar",
+  "dataset": "0045",
+  "year": 2023,
+  "reference_a": "@article{kullar2024,\n  title = {Patterns of emotion-network dynamics are orthogonal to mood disorder status: {{An}} experience sampling investigation},\n  shorttitle = {Patterns of emotion-network dynamics are orthogonal to mood disorder status},\n  author = {Kullar, Monica and Carter, Scott and Hitchcock, Caitlin and Whittaker, Steve and Wright, Aidan G. C. and Dalgleish, Tim},\n  date = {2024},\n  journaltitle = {Emotion},\n  volume = {24},\n  pages = {116--129},\n  doi = {10.1037/emo0001245}\n}",
+  "reference_b": null,
+  "paper_doi": "https://doi.org/10.1037/emo0001245",
+  "link_to_data": "https://github.com/mkullar/DataDrivenEmotionDynamics",
+  "link_to_codebook": "-",
+  "link_to_code": "https://github.com/mkullar/DataDrivenEmotionDynamics",
+  "n_participants": 105,
+  "n_time_points": 70,
+  "n_beeps_per_day": [
+    5
+  ],
+  "passive_data_available": "no",
+  "cross_sectional_available": "yes",
+  "topics": "affect, affective chronometry, mood disorders, mind wandering",
+  "implicit_missingness": "no",
+  "raw_time_stamp": "unclear",
+  "sampling_scheme": "5x/day fixed 30-minute interval",
+  "participants": "participants with and without mood disorders",
+  "coding_file": "0045_kullar_variables",
+  "additional_comments": "exact item wording unclear",
+  "coder_data": "Björn Siepe",
+  "coder_metadata": "Björn Siepe",
+  "features": [
+    {
+      "name": "id",
+      "description": "Participant ID",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "day",
+      "description": "Day of study",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "beep",
+      "description": "Beep of the day",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "angry",
+      "description": "Angry",
+      "type": "Likert",
+      "coding": "Wording unclear, but rating of present intensity of emotion\n1 = not at all\n7 = extremely",
+      "answer_categories": "7"
+    },
+    {
+      "name": "emotion_chronometry",
+      "description": "Emotion duration",
+      "type": "numeric",
+      "coding": "Estimate of how long current emotional state lasted in minutes",
+      "answer_categories": ""
+    },
+    {
+      "name": "enthusiastic",
+      "description": "Enthusiastic",
+      "type": "Likert",
+      "coding": "Wording unclear, but rating of present intensity of emotion\n1 = not at all\n7 = extremely",
+      "answer_categories": "7"
+    },
+    {
+      "name": "happy",
+      "description": "Happy",
+      "type": "Likert",
+      "coding": "Wording unclear, but rating of present intensity of emotion\n1 = not at all\n7 = extremely",
+      "answer_categories": "7"
+    },
+    {
+      "name": "irritated",
+      "description": "Irritated",
+      "type": "Likert",
+      "coding": "Wording unclear, but rating of present intensity of emotion\n1 = not at all\n7 = extremely",
+      "answer_categories": "7"
+    },
+    {
+      "name": "mind_wandering",
+      "description": "Mind wandering",
+      "type": "binary",
+      "coding": "wording unclear, but roughly: Are you thinking about anything else other than what you are currently doing?\n0 = no\n1 = yes",
+      "answer_categories": "2"
+    },
+    {
+      "name": "nervous",
+      "description": "Nervous",
+      "type": "Likert",
+      "coding": "Wording unclear, but rating of present intensity of emotion\n1 = not at all\n7 = extremely",
+      "answer_categories": "7"
+    },
+    {
+      "name": "pleased",
+      "description": "Pleased",
+      "type": "Likert",
+      "coding": "Wording unclear, but rating of present intensity of emotion\n1 = not at all\n7 = extremely",
+      "answer_categories": "7"
+    },
+    {
+      "name": "relaxed",
+      "description": "Relaxed",
+      "type": "Likert",
+      "coding": "Wording unclear, but rating of present intensity of emotion\n1 = not at all\n7 = extremely",
+      "answer_categories": "7"
+    },
+    {
+      "name": "sad",
+      "description": "Sad",
+      "type": "Likert",
+      "coding": "Wording unclear, but rating of present intensity of emotion\n1 = not at all\n7 = extremely",
+      "answer_categories": "7"
+    },
+    {
+      "name": "stressed",
+      "description": "Stressed",
+      "type": "Likert",
+      "coding": "Wording unclear, but rating of present intensity of emotion\n1 = not at all\n7 = extremely",
+      "answer_categories": "7"
+    }
+  ]
+}
