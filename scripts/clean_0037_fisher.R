@@ -133,11 +133,14 @@ df <- df |>
 # give each day for each individual an id, indicating left out days
 # do this based on "start_time"
 df <- df |>
+  mutate(date = as.Date(start_time)) |>
+  # add day number
   group_by(id) |>
   mutate(
-    day = as.numeric(as.factor(as.Date(start_time))),
+    day = as.integer(date - min(date, na.rm = TRUE)) + 1
   ) |>
-  ungroup()
+  ungroup() |>
+  select(!date)
 
 
 

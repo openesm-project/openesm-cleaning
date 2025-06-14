@@ -10,7 +10,7 @@
   "link_to_code": "https://osf.io/m63ks",
   "n_participants": 40,
   "n_time_points": 212,
-  "n_beeps_per_day": 4,
+  "n_beeps_per_day": "4",
   "passive_data_available": "no",
   "cross_sectional_available": "no",
   "topics": "mood, anxiety, procrastination, depression",

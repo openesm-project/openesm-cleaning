@@ -59,10 +59,12 @@ df <- df |>
 
 # for each person, create a numerical day indicator from the first to the last day of the study
 df <- df |>
-  mutate(date = as.Date(start)) |>
   # add day number
+  mutate(date = as.Date(start)) |>
   group_by(id) |>
-  mutate(day = dense_rank(date)) |>
+  mutate(
+    day = as.integer(date - min(date)) + 1
+  ) |>
   ungroup() |>
   select(!date)
 

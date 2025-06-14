@@ -119,7 +119,9 @@ df <- df |>
   mutate(date = as.Date(creation_time)) |>
   # add day number
   group_by(id) |>
-  mutate(day = dense_rank(date)) |>
+  mutate(
+    day = as.integer(date - min(date)) + 1
+  ) |>
   ungroup() |>
   select(!date)
 

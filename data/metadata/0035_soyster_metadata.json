@@ -10,7 +10,7 @@
   "link_to_code": "https://osf.io/bwkjq",
   "n_participants": 33,
   "n_time_points": 129,
-  "n_beeps_per_day": 8,
+  "n_beeps_per_day": "8",
   "passive_data_available": "no",
   "cross_sectional_available": "no",
   "topics": "alcohol consumption, craving, affect, context",

@@ -10,7 +10,7 @@
   "link_to_code": "https://osf.io/gv37j",
   "n_participants": 20,
   "n_time_points": 120,
-  "n_beeps_per_day": 4,
+  "n_beeps_per_day": "4",
   "passive_data_available": "no",
   "cross_sectional_available": "no",
   "topics": "PTSD, emotions, sleep, physical symptoms",
