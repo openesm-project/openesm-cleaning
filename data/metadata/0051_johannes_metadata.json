@@ -1,0 +1,307 @@
+{
+  "first_author": "Johannes",
+  "dataset": "0051",
+  "year": 2021,
+  "reference_a": "@article{johannes2021,\n  title = {The relationship between online vigilance and affective well-being in everyday life: {{Combining}} smartphone logging with experience sampling},\n  shorttitle = {The relationship between online vigilance and affective well-being in everyday life},\n  author = {Johannes, Niklas and Meier, Adrian and Reinecke, Leonard and Ehlert, Saara and Setiawan, Dinda Nuranissa and Walasek, Nicole and Dienlin, Tobias and Buijzen, Moniek and Veling, Harm},\n  date = {2021-09-03},\n  journaltitle = {Media Psychology},\n  volume = {24},\n  number = {5},\n  pages = {581--605},\n  publisher = {Routledge},\n  issn = {1521-3269},\n  doi = {10.1080/15213269.2020.1768122}\n}",
+  "reference_b": null,
+  "paper_doi": "https://doi.org/10.1080/15213269.2020.1768122",
+  "link_to_data": "https://osf.io/ps3rk/files",
+  "link_to_codebook": "https://osf.io/xf2pq/",
+  "link_to_code": "https://osf.io/ps3rk/files",
+  "n_participants": 75,
+  "n_time_points": 40,
+  "n_beeps_per_day": "8",
+  "passive_data_available": "yes",
+  "cross_sectional_available": "yes",
+  "topics": "online vigilance, affect, wellbeing, smartphone, social interactions",
+  "implicit_missingness": "no",
+  "raw_time_stamp": "yes",
+  "sampling_scheme": "8x semi-random with at least 45 minutes between surveys",
+  "participants": "Dutch undergraduate students using social media",
+  "coding_file": "0051_johannes_variables",
+  "additional_comments": "some participants pre-excluded due to compliance by authors",
+  "coder_data": "Björn Siepe",
+  "coder_metadata": "Björn Siepe",
+  "features": [
+    {
+      "name": "id",
+      "description": "Participant ID",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "day",
+      "description": "Day of study",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "beep",
+      "description": "Beep of the day",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "date",
+      "description": "Date",
+      "type": "Date",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "time_prompt",
+      "description": "Time of the prompt",
+      "type": "PosixCt",
+      "coding": "Time when the prompt was received",
+      "answer_categories": ""
+    },
+    {
+      "name": "survey_taken",
+      "description": "Survey taken",
+      "type": "binary",
+      "coding": "0 = No\n1 = Yes",
+      "answer_categories": "2"
+    },
+    {
+      "name": "time_survey",
+      "description": "Time of the survey",
+      "type": "PosixCt",
+      "coding": "Likely (not clear): Time when survey was filled in",
+      "answer_categories": ""
+    },
+    {
+      "name": "counter",
+      "description": "Counter",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "number_days_total",
+      "description": "Total number of days",
+      "type": "numeric",
+      "coding": "On how many days did participant receive probes",
+      "answer_categories": ""
+    },
+    {
+      "name": "prompt_id",
+      "description": "Identifier variable for the prompt",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "fraction_of_days_with_notification",
+      "description": "Fraction of days with notification",
+      "type": "numeric",
+      "coding": "What proportion of the total days participants received probes did the app log at least one notification",
+      "answer_categories": ""
+    },
+    {
+      "name": "prompt_duration",
+      "description": "Duration of filling in prompt",
+      "type": "numeric",
+      "coding": "How long participants took to fill out a probe (in seconds)",
+      "answer_categories": ""
+    },
+    {
+      "name": "phone_use",
+      "description": "Phone use duration",
+      "type": "numeric",
+      "coding": "The total time the phone was used in the 30 minutes before the probe was opened (in seconds)",
+      "answer_categories": ""
+    },
+    {
+      "name": "social_media_use",
+      "description": "Social media use duration",
+      "type": "numeric",
+      "coding": "The total time social apps were used in the 30 minutes before the survey was opened, regardless of whether the social app use was preceded by a notification (in seconds)",
+      "answer_categories": ""
+    },
+    {
+      "name": "social_media_use_no_notification",
+      "description": "Social media use without notification duration",
+      "type": "numeric",
+      "coding": "The total time social apps were used in the 30 minutes before the survey was opened. Social app use only counted when it was not preceded by a notification from that same social app (in seconds)",
+      "answer_categories": ""
+    },
+    {
+      "name": "reactibility_survey",
+      "description": "Survey time reactibility",
+      "type": "numeric",
+      "coding": "The time between receiving the survey and opening the survey (in seconds)",
+      "answer_categories": ""
+    },
+    {
+      "name": "reactibility_notification_avg",
+      "description": "Average notification reactibility",
+      "type": "numeric",
+      "coding": "The average time between receiving a notification and unlocking the screen in the 30 minutes before the survey was opened (in seconds). Receiving a notification while the screen was unlocked does not count.",
+      "answer_categories": ""
+    },
+    {
+      "name": "reactibility_notification_sd",
+      "description": "Variability notifcation reactibility",
+      "type": "numeric",
+      "coding": "The standard deviation of the time between receiving a notification and unlocking the screen in the 30 minutes before the survey was opened (in seconds). Receiving a notification while the screen was unlocked does not count.",
+      "answer_categories": ""
+    },
+    {
+      "name": "reactibility_social_notification_avg",
+      "description": "Average social media notification reactibility",
+      "type": "numeric",
+      "coding": "The average time between receiving a notification from a social app and opening that social app in the 30 minutes before the survey was opened (in seconds)",
+      "answer_categories": ""
+    },
+    {
+      "name": "reactibility_social_notification_sd",
+      "description": "Variability social media notification reactibility",
+      "type": "numeric",
+      "coding": "The standard deviation of the time between receiving a notification from a social app and opening that social app in the 30 minutes before the survey was opened (in seconds)",
+      "answer_categories": ""
+    },
+    {
+      "name": "awake",
+      "description": "Awake",
+      "type": "Likert",
+      "coding": "At this moment, I feel: \n1 = Tired\n7 = Awake",
+      "answer_categories": "7"
+    },
+    {
+      "name": "discontent",
+      "description": "Discontent",
+      "type": "Likert",
+      "coding": "At this moment, I feel: \n1 = Content\n7 = Discontent",
+      "answer_categories": "7"
+    },
+    {
+      "name": "calm",
+      "description": "Calm",
+      "type": "Likert",
+      "coding": "At this moment, I feel: \n1 = Agitated\n7 = Calm",
+      "answer_categories": "7"
+    },
+    {
+      "name": "without_energy",
+      "description": "Without energy",
+      "type": "Likert",
+      "coding": "At this moment, I feel: \n1 = Full of energy\n7 = Without energy",
+      "answer_categories": "7"
+    },
+    {
+      "name": "well",
+      "description": "Well",
+      "type": "Likert",
+      "coding": "At this moment, I feel: \n1 = Unwell\n7 = Well",
+      "answer_categories": "7"
+    },
+    {
+      "name": "tense",
+      "description": "Tense",
+      "type": "Likert",
+      "coding": "At this moment, I feel: \n1 = Relaxed\n7 = Tense",
+      "answer_categories": "7"
+    },
+    {
+      "name": "happy",
+      "description": "Happy",
+      "type": "Likert",
+      "coding": "At this moment, I feel: \n1 = Depressed\n7 = Happy",
+      "answer_categories": "7"
+    },
+    {
+      "name": "stress",
+      "description": "Stress",
+      "type": "Likert",
+      "coding": "How much stress are you experiencing right now?\n1 = Not at all\n7 = Very stressed",
+      "answer_categories": "7"
+    },
+    {
+      "name": "vigilance_salience_mediated",
+      "description": "Situational salience mediated interactions",
+      "type": "Likert",
+      "coding": "In the last half an hour, how much were you thinking about mediated interactions (e.g., phone calls, WhatsApp messages, Facebook likes, Instagram posts etc.)?\n1 = Not at all\n7 = A lot",
+      "answer_categories": "7"
+    },
+    {
+      "name": "salience_ft_f",
+      "description": "Salience face-to-face interactions",
+      "type": "Likert",
+      "coding": "In the last half an hour, how much were you thinking about face-to-face interactions?\n1 = Not at all\n7 = A lot",
+      "answer_categories": "7"
+    },
+    {
+      "name": "valence_mediated",
+      "description": "Valence of thoughts on mediated interactions",
+      "type": "Likert",
+      "coding": "How pleasant were those thoughts about mediated interactions?\n1 = Unpleasant\n7 = Pleasant",
+      "answer_categories": "7"
+    },
+    {
+      "name": "valence_ft_f",
+      "description": "Valence of thoughts on face-to-face interactions",
+      "type": "Likert",
+      "coding": "How pleasant were those thoughts about face-to-face interactions?\n1 = Unpleasant\n7 = Pleasant",
+      "answer_categories": "7"
+    },
+    {
+      "name": "valence_activity",
+      "description": "Valence current activity",
+      "type": "Likert",
+      "coding": "How pleasant was what you were doing in the last half an hour?\n1 = Unpleasant\n7 = Pleasant",
+      "answer_categories": "7"
+    },
+    {
+      "name": "concentrated_activity_binary",
+      "description": "Engagement in activity that required concentration",
+      "type": "binary",
+      "coding": "In the last half an hour, I was engaged in a performance-related activity (e.g., an activity for which I had to concentrate).\n0 = No\n1 = Yes",
+      "answer_categories": "2"
+    },
+    {
+      "name": "concentration_extent",
+      "description": "Extent of concentration during activity",
+      "type": "Likert",
+      "coding": "The activity required all my mental capacities.\n1 = Strongly disagree\n7 = Strongly agree",
+      "answer_categories": "7"
+    },
+    {
+      "name": "concentrated_activity_alone",
+      "description": "Concentrated activity company",
+      "type": "categorical",
+      "coding": "Did you engage in the activity alone or with others?\nAlone, With others",
+      "answer_categories": "2"
+    },
+    {
+      "name": "vigilance_reactibility",
+      "description": "Vigilance reactibility",
+      "type": "Likert",
+      "coding": "In the last half an hour, when I received an online message, I immediately gave it my full attention.\n1 = Strongly disagree\n7 = Strongly agree",
+      "answer_categories": "7"
+    },
+    {
+      "name": "vigilance_monitoring",
+      "description": "Vigilance monitoring",
+      "type": "Likert",
+      "coding": "In the last half an hour, I was constantly monitoring what was happening online.\n1 = Strongly disagree\n7 = Strongly agree",
+      "answer_categories": "7"
+    },
+    {
+      "name": "social_pressure_phone",
+      "description": "Social pressure to be available via phone",
+      "type": "Likert",
+      "coding": "In the last half an hour, I felt a social obligation to be available for mediated interactions.\n1 = Strongly disagree\n7 = Strongly agree",
+      "answer_categories": "7"
+    },
+    {
+      "name": "extracted_scheduled_times",
+      "description": "Time the prompt was scheduled",
+      "type": "PosixCt",
+      "coding": "",
+      "answer_categories": ""
+    }
+  ]
+}
