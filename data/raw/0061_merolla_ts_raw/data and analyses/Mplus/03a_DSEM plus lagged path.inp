@@ -1,0 +1,91 @@
+DATA: FILE = data Spring 2020.dat;
+VARIABLE: 
+NAMES = id age gender race1 race2 race3 race4 race5 race6 race7 timestamp local_date
+     SurveyNumber Day_Number has_data t0 t_cen t_hr cond_tail cond_basic phone video
+     text interact relat caredfor respected supported resp conn LS1_pre LS2_pre
+     LS3_pre LS4_pre LS5_pre LS_pre LS1_post LS2_post LS3_post LS4_post LS5_post
+     LS_post Path1_pre Agen1_pre Path2_pre Path3_pre Path4_pre Agen2_pre Agen3_pre
+     Agen4_pre Agency_pre Pathways_pre Hope_pre Path1_post Agen1_post Path2_post
+     Path3_post Path4_post Agen2_post Agen3_post Agen4_post Agency_post
+     Pathways_post Hope_post female;
+MISSING=.;
+
+USEVAR =    resp conn relat phone video text cond_tail cond_basic
+            Hope_post LS_post
+            Hope_pre LS_pre female;
+
+BETWEEN =   Hope_post LS_post Hope_pre LS_pre cond_tail cond_basic female;
+
+CLUSTER = id;
+
+USEOBSERVATIONS = interact==1;
+CATEGORICAL = phone video text;
+
+LAGGED = resp (1) conn (1);
+TINTERVAL = t_hr(2);
+
+
+
+ANALYSIS:
+TYPE = TWOLEVEL RANDOM;
+ESTIMATOR = BAYES;
+FBITERATIONS = 3000;
+THIN = 20;
+
+MODEL:
+
+%WITHIN%
+arc | conn ON conn&1;
+arr | resp ON resp&1;
+
+conrl | conn ON resp&1;
+conr | conn ON resp;
+ronc | resp ON conn&1;
+
+lvcon | conn;
+lvres | resp;
+
+! covariates
+conn ON relat phone video text;
+resp ON relat phone video text;
+
+
+%BETWEEN%
+
+Hope_post ON conn (b1)
+    resp (c11); 
+LS_post ON conn (b2)
+    resp (c21);
+
+conn ON resp (a1)
+    Hope_pre LS_pre;
+
+resp WITH Hope_pre LS_pre;
+Hope_pre WITH LS_pre;
+
+
+! covariates
+Hope_post ON Hope_pre relat phone video text cond_tail cond_basic female;
+LS_post ON LS_pre relat phone video text cond_tail cond_basic female;
+conn ON relat phone video text cond_tail cond_basic female;
+
+
+! Residual covariance
+Hope_post WITH LS_post;
+
+MODEL constraint:
+NEW (i_ho_m i_ls_m);
+
+i_ho_m = b1*a1;
+
+i_ls_m = b2*a1;
+
+OUTPUT: TECH1 TECH8 STDYX;
+PLOT: TYPE = PLOT3;
+FACTORS = ALL;
+
+
+
+
+
+

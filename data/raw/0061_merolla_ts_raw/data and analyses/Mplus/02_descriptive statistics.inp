@@ -1,0 +1,31 @@
+
+DATA: FILE = data Spring 2020.dat;
+VARIABLE: 
+NAMES = id age gender race1 race2 race3 race4 race5 race6 race7 timestamp local_date
+     SurveyNumber Day_Number has_data t0 t_cen t_hr cond_tail cond_basic phone video
+     text interact relat caredfor respected supported resp conn LS1_pre LS2_pre
+     LS3_pre LS4_pre LS5_pre LS_pre LS1_post LS2_post LS3_post LS4_post LS5_post
+     LS_post Path1_pre Agen1_pre Path2_pre Path3_pre Path4_pre Agen2_pre Agen3_pre
+     Agen4_pre Agency_pre Pathways_pre Hope_pre Path1_post Agen1_post Path2_post
+     Path3_post Path4_post Agen2_post Agen3_post Agen4_post Agency_post
+     Pathways_post Hope_post female;
+MISSING=.;
+
+USEVAR = resp conn relat Hope_pre LS_pre Hope_post LS_post;
+
+CLUSTER = id;
+
+BETWEEN = Hope_pre LS_pre Hope_post LS_post;
+
+ANALYSIS: 
+TYPE = TWOLEVEL;
+ESTIMATOR = MLR;
+
+MODEL:
+%WITHIN%
+resp - relat WITH resp - relat;
+
+%BETWEEN%
+resp - LS_post WITH resp - LS_post;
+
+OUTPUT: STDYX SAMPSTAT;

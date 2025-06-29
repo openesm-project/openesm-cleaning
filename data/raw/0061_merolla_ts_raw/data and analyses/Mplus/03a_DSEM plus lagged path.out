@@ -1,0 +1,2007 @@
+Mplus VERSION 8.6 (Linux)
+MUTHEN & MUTHEN
+09/18/2023  11:45 AM
+
+INPUT INSTRUCTIONS
+
+  DATA: FILE = data Spring 2020.dat;
+  VARIABLE:
+  NAMES = id age gender race1 race2 race3 race4 race5 race6 race7 timestamp local_date
+       SurveyNumber Day_Number has_data t0 t_cen t_hr cond_tail cond_basic phone video
+       text interact relat caredfor respected supported resp conn LS1_pre LS2_pre
+       LS3_pre LS4_pre LS5_pre LS_pre LS1_post LS2_post LS3_post LS4_post LS5_post
+       LS_post Path1_pre Agen1_pre Path2_pre Path3_pre Path4_pre Agen2_pre Agen3_pre
+       Agen4_pre Agency_pre Pathways_pre Hope_pre Path1_post Agen1_post Path2_post
+       Path3_post Path4_post Agen2_post Agen3_post Agen4_post Agency_post
+       Pathways_post Hope_post female;
+  MISSING=.;
+
+  USEVAR =    resp conn relat phone video text cond_tail cond_basic
+              Hope_post LS_post
+              Hope_pre LS_pre female;
+
+  BETWEEN =   Hope_post LS_post Hope_pre LS_pre cond_tail cond_basic female;
+
+  CLUSTER = id;
+
+  USEOBSERVATIONS = interact==1;
+  CATEGORICAL = phone video text;
+
+  LAGGED = resp (1) conn (1);
+  TINTERVAL = t_hr(2);
+
+
+
+  ANALYSIS:
+  TYPE = TWOLEVEL RANDOM;
+  ESTIMATOR = BAYES;
+  FBITERATIONS = 3000;
+  THIN = 20;
+
+  MODEL:
+
+  %WITHIN%
+  arc | conn ON conn&1;
+  arr | resp ON resp&1;
+
+  conrl | conn ON resp&1;
+  conr | conn ON resp;
+  ronc | resp ON conn&1;
+
+  lvcon | conn;
+  lvres | resp;
+
+  ! covariates
+  conn ON relat phone video text;
+  resp ON relat phone video text;
+
+
+  %BETWEEN%
+
+  Hope_post ON conn (b1)
+      resp (c11);
+  LS_post ON conn (b2)
+      resp (c21);
+
+  conn ON resp (a1)
+      Hope_pre LS_pre;
+
+  resp WITH Hope_pre LS_pre;
+  Hope_pre WITH LS_pre;
+
+
+  ! covariates
+  Hope_post ON Hope_pre relat phone video text cond_tail cond_basic female;
+  LS_post ON LS_pre relat phone video text cond_tail cond_basic female;
+  conn ON relat phone video text cond_tail cond_basic female;
+
+
+  ! Residual covariance
+  Hope_post WITH LS_post;
+
+  MODEL constraint:
+  NEW (i_ho_m i_ls_m);
+
+  i_ho_m = b1*a1;
+
+  i_ls_m = b2*a1;
+
+  OUTPUT: TECH1 TECH8 STDYX;
+  PLOT: TYPE = PLOT3;
+  FACTORS = ALL;
+
+
+
+
+
+
+
+
+
+*** WARNING in VARIABLE command
+  Note that only the first 8 characters of variable names are used in the output.
+  Shorten variable names to avoid any confusion.
+*** WARNING in MODEL command
+  In the MODEL command, the following variable is an x-variable on the BETWEEN
+  level and a y-variable on the WITHIN level.  This variable will be treated
+  as a y-variable on both levels:  RESP
+*** WARNING in PLOT command
+  Note that only the first 8 characters of variable names are used in plots.
+  If variable names are not unique within the first 8 characters, problems
+  may occur.
+*** WARNING
+  One or more individual-level variables have no variation within a
+  cluster for the following clusters.
+
+     Variable   Cluster IDs with no within-cluster variation
+
+      PHONE       19305 19759 19532 19872 19387 19519 19306 19375 19860 19868 19199 19221 19755
+                  19224 19773 19858 19508 19511 19521 19882 19762 19302 19383 19525 19529 19295
+                  19296 19509 19758 19888 19381 19304 19520 19769 19875 19877 19881 19885 19889
+                  19297 19767 19309 19374 19229 19863 19377 19239 19524 19219 19303 19182 19876
+                  19294 19534 19183 19887 19228 19760 19862 19756 19865 19242 19300 19507 19879
+                  19772 19234 19373
+      VIDEO       19305 19759 19532 19387 19868 19871 19755 19224 19302 19529 19295 19307 19878
+                  19888 19531 19889 19524 19294 19884 19228 19857
+      TEXT        19305 19759 19532 19870 19871 19224 19773 19858 19866 19246 19301 19517 19302
+                  19383 19529 19509 19878 19888 19381 19216 19506 19875 19298 19881 19885 19309
+                  19514 19229 19239 19294 19503 19228 19235 19865 19504 19770 19530
+      RESP        19305 19532 19878 19881
+      CONN        19532 19309
+      RELAT       19305 19759 19532 19224 19295 19307 19878 19297 19309 19219 19294 19228 19760
+                  19379 19857
+      RESP&1      19305 19878 19881
+      CONN&1      19309
+
+   4 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                       12812
+
+Number of dependent variables                                    4
+Number of independent variables                                 11
+Number of continuous latent variables                            7
+
+Observed dependent variables
+
+  Continuous
+   HOPE_POST   LS_POST     RESP        CONN
+
+  Binary and ordered categorical (ordinal)
+   PHONE       VIDEO       TEXT
+
+Observed independent variables
+   RELAT       PHONE       VIDEO       TEXT        COND_TAI    COND_BAS
+   HOPE_PRE    LS_PRE      FEMALE      RESP&1      CONN&1
+
+Continuous latent variables
+   ARC         ARR         CONRL       CONR        RONC        LVCON
+   LVRES
+
+Variables with special functions
+
+  Cluster variable      ID
+
+  Within variables
+   RESP&1      CONN&1
+
+  Between variables
+   COND_TAI    COND_BAS    HOPE_POS    LS_POST     HOPE_PRE    LS_PRE
+   FEMALE
+
+
+Estimator                                                    BAYES
+Specifications for Bayesian Estimation
+  Point estimate                                            MEDIAN
+  Number of Markov chain Monte Carlo (MCMC) chains               2
+  Random seed for the first chain                                0
+  Starting value information                           UNPERTURBED
+  Algorithm used for Markov chain Monte Carlo           GIBBS(PX1)
+  Fixed number of iterations                                  3000
+  K-th iteration used for thinning                              20
+Link                                                        PROBIT
+Specifications for Bayes Factor Score Estimation
+  Number of imputed data sets                                   50
+  Iteration intervals for thinning                               1
+
+Input data file(s)
+  data Spring 2020.dat
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of clusters                        119
+
+       Size (s)    Cluster ID with Size s
+
+          4        19305
+         48        19759
+         49        19245
+         60        19532
+         75        19533
+         89        19870 19872
+         96        19387
+         99        19519 19306
+        100        19428
+        107        19375 19860
+        108        19189 19868 19199 19871 19378
+        109        19221 19753 19755 19224 19773 19858 19859 19508 19866
+                   19511 19186 19521 19246 19882
+        110        19301 19762 19517 19302 19383 19525 19529 19295 19296
+                   19307 19509 19873 19878 19758 19888
+        111        19381 19864 19304 19308 19520 19216 19506 19769 19875
+                   19877 19298 19881 19531 19885 19380 19889
+        112        19297 19765 19766 19767 19309 19771 19374 19775 19514
+                   19229 19376 19863 19377 19239 19524 19219 19526 19303
+                   19182 19385 19876 19294 19534 19419 19183 19884 19503
+                   19887 19228 19760
+        113        19512 19235 19862 19187 19756 19865 19518 19242 19225
+                   19761 19502 19300 19874 19504 19379 19768 19507 19879
+                   19770 19530 19883 19772 19231 19234 19857 19373
+
+
+
+SUMMARY OF MISSING DATA PATTERNS
+
+     Number of missing data patterns            61
+
+
+     MISSING DATA PATTERNS (x = not missing)
+
+           1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+ PHONE     x  x  x     x  x              x              x        x  x
+ VIDEO     x  x  x     x  x              x              x        x  x
+ TEXT      x  x  x     x  x              x              x        x  x
+ HOPE_POS  x  x                    x  x           x  x              x
+ LS_POST   x  x                    x  x           x  x  x  x  x  x  x
+ HOPE_PRE  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ LS_PRE    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ RESP      x  x  x     x  x                             x        x  x
+ CONN      x  x  x  x  x  x              x     x  x     x        x
+ RELAT     x  x  x  x  x  x              x     x  x     x        x  x
+ RESP&1    x        x     x  x     x              x        x     x  x
+ CONN&1    x        x  x  x  x     x        x     x  x     x     x  x
+ COND_TAI  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ COND_BAS  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ FEMALE    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+
+          21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40
+ PHONE        x  x     x     x     x  x  x  x  x        x     x     x
+ VIDEO        x  x     x     x     x  x  x  x  x        x     x     x
+ TEXT         x  x     x     x     x  x  x  x  x        x     x     x
+ HOPE_POS  x  x                    x  x  x  x  x  x  x  x  x  x  x
+ LS_POST   x  x                    x  x  x  x  x  x  x  x  x  x  x
+ HOPE_PRE  x  x                    x  x  x  x  x  x  x  x  x  x  x
+ LS_PRE    x  x                    x  x  x  x                    x
+ RESP            x     x           x     x  x  x              x
+ CONN         x  x     x     x     x  x     x  x        x     x  x  x
+ RELAT        x  x     x     x     x  x  x  x  x        x     x     x
+ RESP&1    x  x     x  x                    x     x           x  x  x
+ CONN&1       x     x  x        x  x              x        x  x  x  x
+ COND_TAI  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ COND_BAS  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ FEMALE    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+
+          41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60
+ PHONE     x        x  x  x  x        x     x  x              x     x
+ VIDEO     x        x  x  x  x        x     x  x              x     x
+ TEXT      x        x  x  x  x        x     x  x              x     x
+ HOPE_POS  x  x  x  x  x                    x  x  x  x  x  x     x  x
+ LS_POST   x  x  x  x  x  x  x  x  x                    x  x     x  x
+ HOPE_PRE              x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ LS_PRE                x              x  x  x  x  x  x  x  x  x
+ RESP      x        x  x  x  x        x     x  x                    x
+ CONN      x        x     x  x              x  x        x  x  x  x  x
+ RELAT     x        x  x  x  x        x     x  x        x     x  x  x
+ RESP&1       x     x        x  x     x  x     x  x           x  x
+ CONN&1       x     x  x     x  x     x        x  x           x  x  x
+ COND_TAI  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ COND_BAS  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ FEMALE    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+
+          61
+ PHONE     x
+ VIDEO     x
+ TEXT      x
+ HOPE_POS  x
+ LS_POST   x
+ HOPE_PRE  x
+ LS_PRE
+ RESP
+ CONN      x
+ RELAT     x
+ RESP&1    x
+ CONN&1    x
+ COND_TAI  x
+ COND_BAS  x
+ FEMALE    x
+
+
+     MISSING DATA PATTERN FREQUENCIES
+
+    Pattern   Frequency     Pattern   Frequency     Pattern   Frequency
+          1        1360          22           5          43         212
+          2        1264          23          22          44          36
+          3          96          24          19          45           1
+          4           1          25          17          46          34
+          5           2          26         157          47          17
+          6          96          27           1          48          32
+          7          86          28           2          49         139
+          8         608          29           7          50           1
+          9        1165          30           8          51           1
+         10        6608          31          10          52          10
+         11           3          32           6          53          21
+         12           5          33          30          54           9
+         13           2          34          28          55          72
+         14           1          35         124          56           2
+         15          12          36           1          57           1
+         16          35          37           1          58           1
+         17          32          38          34          59           1
+         18         246          39           4          60           2
+         19          17          40           1          61           1
+         20           7          41          44
+         21          11          42          41
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              PHONE         VIDEO         TEXT          HOPE_POS      LS_POST
+              ________      ________      ________      ________      ________
+ PHONE          0.249
+ VIDEO          0.249         0.249
+ TEXT           0.249         0.249         0.249
+ HOPE_POS       0.222         0.222         0.222         0.869
+ LS_POST        0.228         0.228         0.228         0.861         0.904
+ HOPE_PRE       0.240         0.240         0.240         0.843         0.878
+ LS_PRE         0.230         0.230         0.230         0.826         0.843
+ RESP           0.247         0.247         0.247         0.221         0.227
+ CONN           0.248         0.248         0.248         0.222         0.227
+ RELAT          0.249         0.249         0.249         0.223         0.228
+ COND_TAI       0.249         0.249         0.249         0.869         0.904
+ COND_BAS       0.249         0.249         0.249         0.869         0.904
+ FEMALE         0.249         0.249         0.249         0.869         0.904
+
+
+           Covariance Coverage
+              HOPE_PRE      LS_PRE        RESP          CONN          RELAT
+              ________      ________      ________      ________      ________
+ HOPE_PRE       0.957
+ LS_PRE         0.922         0.922
+ RESP           0.238         0.229         0.247
+ CONN           0.239         0.230         0.246         0.248
+ RELAT          0.240         0.231         0.247         0.248         0.250
+ COND_TAI       0.957         0.922         0.247         0.248         0.250
+ COND_BAS       0.957         0.922         0.247         0.248         0.250
+ FEMALE         0.957         0.922         0.247         0.248         0.250
+
+
+           Covariance Coverage
+              COND_TAI      COND_BAS      FEMALE
+              ________      ________      ________
+ COND_TAI       1.000
+ COND_BAS       1.000         1.000
+ FEMALE         1.000         1.000         1.000
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    PHONE
+      Category 1    0.955         3048.000
+      Category 2    0.045          142.000
+    VIDEO
+      Category 1    0.864         2757.000
+      Category 2    0.136          433.000
+    TEXT
+      Category 1    0.861         2746.000
+      Category 2    0.139          444.000
+
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     HOPE_POST             3.767       0.130       2.750    1.94%       3.375      3.625      3.875
+             103.000       0.187       0.599       5.000    1.94%       3.875      4.000
+     LS_POST               3.495      -0.277       1.600    0.93%       2.800      3.400      3.600
+             107.000       0.611      -0.546       5.000    4.67%       3.800      4.200
+     HOPE_PRE              3.868       0.141       3.000    1.75%       3.500      3.750      3.875
+             114.000       0.157       0.212       5.000    1.75%       4.000      4.250
+     LS_PRE                3.455      -0.381       1.000    0.91%       2.800      3.200      3.600
+             110.000       0.619       0.054       5.000    3.64%       3.600      4.200
+     RESP                  3.681      -0.466       1.000    2.37%       3.000      3.333      4.000
+            3169.000       1.019      -0.255       5.000   22.59%       4.000      5.000
+     CONN                  4.847      -0.125       1.000    1.82%       4.000      4.000      5.000
+            3183.000       2.267      -0.597       7.000   20.64%       5.000      7.000
+     RELAT                 6.492      -2.770       1.000    2.10%       7.000      7.000      7.000
+            3197.000       1.724       6.981       7.000   83.20%       7.000      7.000
+     COND_TAIL             0.361       0.577       0.000   63.87%       0.000      0.000      0.000
+             119.000       0.231      -1.667       1.000   36.13%       0.000      1.000
+     COND_BASIC            0.286       0.949       0.000   71.43%       0.000      0.000      0.000
+             119.000       0.204      -1.100       1.000   28.57%       0.000      1.000
+     FEMALE                0.807      -1.554       0.000   19.33%       1.000      1.000      1.000
+             119.000       0.156       0.413       1.000   80.67%       1.000      1.000
+
+
+     WARNING: PROBLEMS OCCURRED IN SEVERAL ITERATIONS IN THE COMPUTATION OF THE STANDARDIZED ESTIMATES FOR SEVERAL
+     CLUSTERS. THIS IS MOST LIKELY DUE TO AR COEFFICIENTS GREATER THAN 1 OR PARAMETERS GIVING NON-STATIONARY MODELS.
+     SUCH POSTERIOR DRAWS ARE REMOVED. THE FOLLOWING CLUSTERS HAD SUCH PROBLEMS:
+          19305 19532 19872 19860 19224 19383 19531 19380
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+     USE THE FBITERATIONS OPTION TO INCREASE THE NUMBER OF ITERATIONS BY A FACTOR
+     OF AT LEAST TWO TO CHECK CONVERGENCE AND THAT THE PSR VALUE DOES NOT INCREASE.
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                              74
+
+
+
+MODEL RESULTS
+
+                                Posterior  One-Tailed         95% C.I.
+                    Estimate       S.D.      P-Value   Lower 2.5%  Upper 2.5%  Significance
+
+Within Level
+
+ CONN       ON
+    RELAT             -0.022       0.014      0.057      -0.049       0.005
+    PHONE              0.000       0.007      0.476      -0.014       0.012
+    VIDEO             -0.001       0.007      0.467      -0.014       0.012
+    TEXT              -0.012       0.007      0.046      -0.026       0.002
+
+ RESP       ON
+    RELAT              0.162       0.012      0.000       0.138       0.187      *
+    PHONE              0.022       0.017      0.094      -0.010       0.055
+    VIDEO              0.032       0.016      0.020       0.001       0.064      *
+    TEXT               0.006       0.015      0.338      -0.024       0.035
+
+ Variances
+    RELAT              1.553       0.039      0.000       1.475       1.630      *
+
+Between Level
+
+ HOPE_POST  ON
+    CONN               0.174       0.058      0.002       0.065       0.288      *
+    RESP              -0.021       0.070      0.383      -0.163       0.116
+    HOPE_PRE           0.589       0.087      0.000       0.412       0.758      *
+    RELAT             -0.057       0.111      0.296      -0.282       0.158
+    PHONE              0.033       0.046      0.233      -0.058       0.125
+    VIDEO              0.043       0.060      0.241      -0.079       0.158
+    TEXT               0.131       0.046      0.002       0.043       0.223      *
+    COND_TAIL          0.030       0.076      0.346      -0.119       0.180
+    COND_BASIC         0.095       0.086      0.136      -0.075       0.263
+    FEMALE            -0.124       0.091      0.089      -0.294       0.054
+
+ LS_POST    ON
+    CONN               0.141       0.095      0.070      -0.054       0.326
+    RESP              -0.126       0.119      0.145      -0.357       0.110
+    LS_PRE             0.745       0.078      0.000       0.592       0.900      *
+    RELAT              0.006       0.189      0.489      -0.375       0.386
+    PHONE              0.013       0.075      0.436      -0.134       0.157
+    VIDEO              0.006       0.096      0.474      -0.182       0.195
+    TEXT               0.175       0.080      0.018       0.013       0.330      *
+    COND_TAIL          0.128       0.124      0.155      -0.124       0.362
+    COND_BASIC         0.123       0.141      0.193      -0.158       0.394
+    FEMALE            -0.004       0.147      0.485      -0.306       0.276
+
+ CONN       ON
+    RESP               0.648       0.139      0.000       0.384       0.917      *
+    HOPE_PRE           0.405       0.211      0.032      -0.032       0.816
+    LS_PRE             0.003       0.111      0.491      -0.209       0.217
+    RELAT              0.189       0.209      0.171      -0.226       0.610
+    PHONE             -0.051       0.099      0.289      -0.246       0.135
+    VIDEO             -0.083       0.123      0.253      -0.331       0.146
+    TEXT              -0.138       0.094      0.074      -0.317       0.049
+    COND_TAIL         -0.172       0.163      0.143      -0.494       0.158
+    COND_BASIC        -0.069       0.175      0.351      -0.401       0.274
+    FEMALE            -0.190       0.180      0.143      -0.542       0.164
+
+ RESP     WITH
+    HOPE_PRE           0.079       0.027      0.000       0.030       0.138      *
+    LS_PRE             0.213       0.057      0.000       0.115       0.334      *
+
+ HOPE_PRE WITH
+    LS_PRE             0.174       0.037      0.000       0.112       0.257      *
+
+ HOPE_POS WITH
+    LS_POST            0.022       0.021      0.140      -0.018       0.064
+
+ Means
+    HOPE_PRE           3.865       0.039      0.000       3.789       3.943      *
+    LS_PRE             3.454       0.077      0.000       3.303       3.606      *
+    RESP               3.685       0.061      0.000       3.567       3.802      *
+    RELAT              6.474       0.047      0.000       6.380       6.566      *
+    ARC                0.259       0.030      0.000       0.197       0.317      *
+    ARR                0.135       0.032      0.000       0.072       0.197      *
+    CONRL             -0.028       0.038      0.223      -0.104       0.043
+    CONR               0.498       0.037      0.000       0.423       0.569      *
+    RONC               0.058       0.018      0.001       0.022       0.093      *
+    LVCON             -0.010       0.090      0.453      -0.193       0.168
+    LVRES             -0.688       0.071      0.000      -0.830      -0.550      *
+
+ Intercepts
+    HOPE_POST          1.188       0.733      0.053      -0.266       2.629
+    LS_POST            0.612       1.163      0.300      -1.665       3.000
+    CONN              -0.122       1.494      0.464      -3.091       2.710
+
+ Thresholds
+    PHONE$1            2.289       0.121      0.000       2.058       2.532      *
+    VIDEO$1            1.320       0.103      0.000       1.120       1.521      *
+    TEXT$1             1.443       0.101      0.000       1.239       1.639      *
+
+ Variances
+    HOPE_PRE           0.168       0.024      0.000       0.130       0.221      *
+    LS_PRE             0.671       0.097      0.000       0.520       0.898      *
+    RESP               0.379       0.058      0.000       0.283       0.512      *
+    RELAT              0.190       0.035      0.000       0.133       0.269      *
+    ARC                0.030       0.011      0.000       0.013       0.055      *
+    ARR                0.027       0.012      0.000       0.008       0.056      *
+    CONRL              0.019       0.017      0.000       0.002       0.064      *
+    CONR               0.066       0.018      0.000       0.039       0.109      *
+    RONC               0.005       0.003      0.000       0.001       0.014      *
+    LVCON              0.824       0.121      0.000       0.634       1.111      *
+    LVRES              0.447       0.081      0.000       0.317       0.630      *
+
+ Residual Variances
+    HOPE_POST          0.094       0.016      0.000       0.067       0.130      *
+    LS_POST            0.265       0.044      0.000       0.195       0.368      *
+    CONN               0.428       0.075      0.000       0.310       0.597      *
+
+New/Additional Parameters
+    I_HO_M             0.109       0.045      0.002       0.038       0.212      *
+    I_LS_M             0.089       0.067      0.070      -0.036       0.234
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                Posterior  One-Tailed         95% C.I.
+                    Estimate       S.D.      P-Value   Lower 2.5%  Upper 2.5%  Significance
+
+Within-Level Standardized Estimates Averaged Over Clusters
+
+ ARC | CONN ON
+    CONN&1             0.259       0.025      0.000       0.207       0.306      *
+
+ CONRL | CONN ON
+    RESP&1            -0.021       0.024      0.211      -0.066       0.024
+
+ CONR | CONN ON
+    RESP               0.322       0.017      0.000       0.288       0.356      *
+
+ ARR | RESP ON
+    RESP&1             0.134       0.028      0.000       0.080       0.189      *
+
+ RONC | RESP ON
+    CONN&1             0.093       0.026      0.000       0.041       0.142      *
+
+ CONN       ON
+    RELAT             -0.028       0.017      0.054      -0.059       0.007
+    PHONE             -0.001       0.007      0.471      -0.015       0.012
+    VIDEO              0.000       0.007      0.472      -0.014       0.013
+    TEXT              -0.012       0.007      0.045      -0.025       0.002
+
+ RESP       ON
+    RELAT              0.271       0.019      0.000       0.233       0.309      *
+    PHONE              0.030       0.022      0.094      -0.012       0.073
+    VIDEO              0.043       0.022      0.022       0.001       0.085      *
+    TEXT               0.009       0.020      0.331      -0.032       0.046
+
+ LVCON |
+    CONN               0.740       0.017      0.000       0.704       0.774      *
+
+ LVRES |
+    RESP               0.836       0.019      0.000       0.797       0.871      *
+
+ Variances
+    RELAT              1.000       0.000      0.000       1.000       1.000
+
+Between Level
+
+ HOPE_POST  ON
+    CONN               0.321       0.105      0.002       0.119       0.526      *
+    RESP              -0.028       0.091      0.383      -0.209       0.142
+    HOPE_PRE           0.511       0.072      0.000       0.356       0.639      *
+    RELAT             -0.053       0.100      0.296      -0.249       0.140
+    PHONE              0.070       0.096      0.233      -0.118       0.260
+    VIDEO              0.090       0.124      0.241      -0.160       0.327
+    TEXT               0.276       0.092      0.002       0.093       0.456      *
+    COND_TAIL          0.022       0.054      0.346      -0.083       0.127
+    COND_BASIC         0.064       0.057      0.136      -0.051       0.170
+    FEMALE            -0.072       0.053      0.089      -0.175       0.031
+
+ LS_POST    ON
+    CONN               0.145       0.097      0.070      -0.058       0.326
+    RESP              -0.091       0.086      0.145      -0.257       0.079
+    LS_PRE             0.723       0.061      0.000       0.591       0.825      *
+    RELAT              0.003       0.096      0.489      -0.182       0.198
+    PHONE              0.016       0.087      0.436      -0.160       0.180
+    VIDEO              0.007       0.111      0.474      -0.203       0.229
+    TEXT               0.206       0.091      0.018       0.016       0.376      *
+    COND_TAIL          0.051       0.049      0.155      -0.049       0.143
+    COND_BASIC         0.046       0.052      0.193      -0.059       0.144
+    FEMALE            -0.001       0.048      0.485      -0.099       0.087
+
+ CONN       ON
+    RESP               0.459       0.091      0.000       0.267       0.623      *
+    HOPE_PRE           0.190       0.097      0.032      -0.014       0.365
+    LS_PRE             0.003       0.104      0.491      -0.198       0.201
+    RELAT              0.095       0.103      0.171      -0.105       0.301
+    PHONE             -0.059       0.112      0.289      -0.276       0.156
+    VIDEO             -0.095       0.138      0.253      -0.365       0.165
+    TEXT              -0.158       0.106      0.074      -0.355       0.056
+    COND_TAIL         -0.067       0.062      0.143      -0.187       0.059
+    COND_BASIC        -0.025       0.063      0.351      -0.143       0.098
+    FEMALE            -0.060       0.057      0.143      -0.174       0.051
+
+ RESP     WITH
+    HOPE_PRE           0.319       0.090      0.000       0.126       0.480      *
+    LS_PRE             0.427       0.083      0.000       0.248       0.573      *
+
+ HOPE_PRE WITH
+    LS_PRE             0.522       0.070      0.000       0.371       0.645      *
+
+ HOPE_POS WITH
+    LS_POST            0.139       0.124      0.140      -0.122       0.363
+
+ Means
+    HOPE_PRE           9.440       0.649      0.000       8.212      10.711      *
+    LS_PRE             4.223       0.307      0.000       3.608       4.836      *
+    RESP               5.992       0.458      0.000       5.125       6.935      *
+    RELAT             14.861       1.360      0.000      12.436      17.776      *
+    ARC                1.494       0.392      0.000       0.943       2.480      *
+    ARR                0.815       0.345      0.000       0.379       1.641      *
+    CONRL             -0.213       0.350      0.223      -1.059       0.374
+    CONR               1.929       0.283      0.000       1.443       2.564      *
+    RONC               0.867       0.436      0.001       0.280       1.946      *
+    LVCON             -0.011       0.099      0.453      -0.209       0.181
+    LVRES             -1.029       0.131      0.000      -1.292      -0.789      *
+
+ Intercepts
+    HOPE_POST          2.488       1.578      0.053      -0.508       5.715
+    LS_POST            0.731       1.359      0.300      -1.892       3.521
+    CONN              -0.137       1.680      0.464      -3.370       3.102
+
+ Variances
+    HOPE_PRE           1.000       0.000      0.000       1.000       1.000
+    LS_PRE             1.000       0.000      0.000       1.000       1.000
+    RESP               1.000       0.000      0.000       1.000       1.000
+    RELAT              1.000       0.000      0.000       1.000       1.000
+    ARC                1.000       0.000      0.000       1.000       1.000
+    ARR                1.000       0.000      0.000       1.000       1.000
+    CONRL              1.000       0.000      0.000       1.000       1.000
+    CONR               1.000       0.000      0.000       1.000       1.000
+    RONC               1.000       0.000      0.000       1.000       1.000
+    LVCON              1.000       0.000      0.000       1.000       1.000
+    LVRES              1.000       0.000      0.000       1.000       1.000
+
+ Residual Variances
+    HOPE_POST          0.423       0.071      0.000       0.290       0.570      *
+    LS_POST            0.367       0.067      0.000       0.257       0.512      *
+    CONN               0.562       0.075      0.000       0.415       0.715      *
+
+
+R-SQUARE
+
+Within-Level R-Square Averaged Across Clusters
+
+                                Posterior  One-Tailed         95% C.I.
+    Variable        Estimate       S.D.      P-Value   Lower 2.5%  Upper 2.5%
+
+    RESP               0.164       0.019      0.000       0.128       0.203
+    CONN               0.260       0.017      0.000       0.226       0.296
+
+Between Level
+
+                                Posterior  One-Tailed         95% C.I.
+    Variable        Estimate       S.D.      P-Value   Lower 2.5%  Upper 2.5%
+
+    HOPE_POST          0.577       0.071      0.000       0.430       0.709
+    LS_POST            0.633       0.067      0.000       0.487       0.743
+    CONN               0.438       0.075      0.000       0.285       0.585
+
+
+TECHNICAL 1 OUTPUT
+
+
+     PARAMETER SPECIFICATION FOR WITHIN
+
+
+           TAU
+              PHONE$1       VIDEO$1       TEXT$1
+              ________      ________      ________
+                    0             0             0
+
+
+           NU
+              PHONE         VIDEO         TEXT          RESP          CONN
+              ________      ________      ________      ________      ________
+                    0             0             0             0             0
+
+
+           NU
+              RELAT         RESP&1        CONN&1
+              ________      ________      ________
+                    0             0             0
+
+
+           LAMBDA
+              PHONE         VIDEO         TEXT          RESP          CONN
+              ________      ________      ________      ________      ________
+ PHONE              0             0             0             0             0
+ VIDEO              0             0             0             0             0
+ TEXT               0             0             0             0             0
+ RESP               0             0             0             0             0
+ CONN               0             0             0             0             0
+ RELAT              0             0             0             0             0
+ RESP&1             0             0             0             0             0
+ CONN&1             0             0             0             0             0
+
+
+           LAMBDA
+              RELAT         RESP&1        CONN&1
+              ________      ________      ________
+ PHONE              0             0             0
+ VIDEO              0             0             0
+ TEXT               0             0             0
+ RESP               0             0             0
+ CONN               0             0             0
+ RELAT              0             0             0
+ RESP&1             0             0             0
+ CONN&1             0             0             0
+
+
+           THETA
+              PHONE         VIDEO         TEXT          RESP          CONN
+              ________      ________      ________      ________      ________
+ PHONE              0
+ VIDEO              0             0
+ TEXT               0             0             0
+ RESP               0             0             0             0
+ CONN               0             0             0             0             0
+ RELAT              0             0             0             0             0
+ RESP&1             0             0             0             0             0
+ CONN&1             0             0             0             0             0
+
+
+           THETA
+              RELAT         RESP&1        CONN&1
+              ________      ________      ________
+ RELAT              0
+ RESP&1             0             0
+ CONN&1             0             0             0
+
+
+           ALPHA
+              PHONE         VIDEO         TEXT          RESP          CONN
+              ________      ________      ________      ________      ________
+                    0             0             0             0             0
+
+
+           ALPHA
+              RELAT         RESP&1        CONN&1
+              ________      ________      ________
+                    0             0             0
+
+
+           BETA
+              PHONE         VIDEO         TEXT          RESP          CONN
+              ________      ________      ________      ________      ________
+ PHONE              0             0             0             0             0
+ VIDEO              0             0             0             0             0
+ TEXT               0             0             0             0             0
+ RESP               1             2             3             0             0
+ CONN               5             6             7             0             0
+ RELAT              0             0             0             0             0
+ RESP&1             0             0             0             0             0
+ CONN&1             0             0             0             0             0
+
+
+           BETA
+              RELAT         RESP&1        CONN&1
+              ________      ________      ________
+ PHONE              0             0             0
+ VIDEO              0             0             0
+ TEXT               0             0             0
+ RESP               4             0             0
+ CONN               8             0             0
+ RELAT              0             0             0
+ RESP&1             0             0             0
+ CONN&1             0             0             0
+
+
+           PSI
+              PHONE         VIDEO         TEXT          RESP          CONN
+              ________      ________      ________      ________      ________
+ PHONE              0
+ VIDEO              0             0
+ TEXT               0             0             0
+ RESP               0             0             0             0
+ CONN               0             0             0             0             0
+ RELAT              0             0             0             0             0
+ RESP&1             0             0             0             0             0
+ CONN&1             0             0             0             0             0
+
+
+           PSI
+              RELAT         RESP&1        CONN&1
+              ________      ________      ________
+ RELAT              9
+ RESP&1             0             0
+ CONN&1             0             0             0
+
+
+     PARAMETER SPECIFICATION FOR BETWEEN
+
+
+           TAU
+              PHONE$1       VIDEO$1       TEXT$1
+              ________      ________      ________
+                   72            73            74
+
+
+           NU
+              PHONE         VIDEO         TEXT          HOPE_POS      LS_POST
+              ________      ________      ________      ________      ________
+                    0             0             0             0             0
+
+
+           NU
+              HOPE_PRE      LS_PRE        RESP          CONN          RELAT
+              ________      ________      ________      ________      ________
+                    0             0             0             0             0
+
+
+           NU
+              COND_TAI      COND_BAS      FEMALE
+              ________      ________      ________
+                    0             0             0
+
+
+           LAMBDA
+              ARC           ARR           CONRL         CONR          RONC
+              ________      ________      ________      ________      ________
+ PHONE              0             0             0             0             0
+ VIDEO              0             0             0             0             0
+ TEXT               0             0             0             0             0
+ HOPE_POS           0             0             0             0             0
+ LS_POST            0             0             0             0             0
+ HOPE_PRE           0             0             0             0             0
+ LS_PRE             0             0             0             0             0
+ RESP               0             0             0             0             0
+ CONN               0             0             0             0             0
+ RELAT              0             0             0             0             0
+ COND_TAI           0             0             0             0             0
+ COND_BAS           0             0             0             0             0
+ FEMALE             0             0             0             0             0
+
+
+           LAMBDA
+              LVCON         LVRES         PHONE         VIDEO         TEXT
+              ________      ________      ________      ________      ________
+ PHONE              0             0             0             0             0
+ VIDEO              0             0             0             0             0
+ TEXT               0             0             0             0             0
+ HOPE_POS           0             0             0             0             0
+ LS_POST            0             0             0             0             0
+ HOPE_PRE           0             0             0             0             0
+ LS_PRE             0             0             0             0             0
+ RESP               0             0             0             0             0
+ CONN               0             0             0             0             0
+ RELAT              0             0             0             0             0
+ COND_TAI           0             0             0             0             0
+ COND_BAS           0             0             0             0             0
+ FEMALE             0             0             0             0             0
+
+
+           LAMBDA
+              HOPE_POS      LS_POST       HOPE_PRE      LS_PRE        RESP
+              ________      ________      ________      ________      ________
+ PHONE              0             0             0             0             0
+ VIDEO              0             0             0             0             0
+ TEXT               0             0             0             0             0
+ HOPE_POS           0             0             0             0             0
+ LS_POST            0             0             0             0             0
+ HOPE_PRE           0             0             0             0             0
+ LS_PRE             0             0             0             0             0
+ RESP               0             0             0             0             0
+ CONN               0             0             0             0             0
+ RELAT              0             0             0             0             0
+ COND_TAI           0             0             0             0             0
+ COND_BAS           0             0             0             0             0
+ FEMALE             0             0             0             0             0
+
+
+           LAMBDA
+              CONN          RELAT         COND_TAI      COND_BAS      FEMALE
+              ________      ________      ________      ________      ________
+ PHONE              0             0             0             0             0
+ VIDEO              0             0             0             0             0
+ TEXT               0             0             0             0             0
+ HOPE_POS           0             0             0             0             0
+ LS_POST            0             0             0             0             0
+ HOPE_PRE           0             0             0             0             0
+ LS_PRE             0             0             0             0             0
+ RESP               0             0             0             0             0
+ CONN               0             0             0             0             0
+ RELAT              0             0             0             0             0
+ COND_TAI           0             0             0             0             0
+ COND_BAS           0             0             0             0             0
+ FEMALE             0             0             0             0             0
+
+
+           THETA
+              PHONE         VIDEO         TEXT          HOPE_POS      LS_POST
+              ________      ________      ________      ________      ________
+ PHONE              0
+ VIDEO              0             0
+ TEXT               0             0             0
+ HOPE_POS           0             0             0             0
+ LS_POST            0             0             0             0             0
+ HOPE_PRE           0             0             0             0             0
+ LS_PRE             0             0             0             0             0
+ RESP               0             0             0             0             0
+ CONN               0             0             0             0             0
+ RELAT              0             0             0             0             0
+ COND_TAI           0             0             0             0             0
+ COND_BAS           0             0             0             0             0
+ FEMALE             0             0             0             0             0
+
+
+           THETA
+              HOPE_PRE      LS_PRE        RESP          CONN          RELAT
+              ________      ________      ________      ________      ________
+ HOPE_PRE           0
+ LS_PRE             0             0
+ RESP               0             0             0
+ CONN               0             0             0             0
+ RELAT              0             0             0             0             0
+ COND_TAI           0             0             0             0             0
+ COND_BAS           0             0             0             0             0
+ FEMALE             0             0             0             0             0
+
+
+           THETA
+              COND_TAI      COND_BAS      FEMALE
+              ________      ________      ________
+ COND_TAI           0
+ COND_BAS           0             0
+ FEMALE             0             0             0
+
+
+           ALPHA
+              ARC           ARR           CONRL         CONR          RONC
+              ________      ________      ________      ________      ________
+                   10            11            12            13            14
+
+
+           ALPHA
+              LVCON         LVRES         PHONE         VIDEO         TEXT
+              ________      ________      ________      ________      ________
+                   15            16             0             0             0
+
+
+           ALPHA
+              HOPE_POS      LS_POST       HOPE_PRE      LS_PRE        RESP
+              ________      ________      ________      ________      ________
+                   17            18            19            20            21
+
+
+           ALPHA
+              CONN          RELAT         COND_TAI      COND_BAS      FEMALE
+              ________      ________      ________      ________      ________
+                   22            23             0             0             0
+
+
+           BETA
+              ARC           ARR           CONRL         CONR          RONC
+              ________      ________      ________      ________      ________
+ ARC                0             0             0             0             0
+ ARR                0             0             0             0             0
+ CONRL              0             0             0             0             0
+ CONR               0             0             0             0             0
+ RONC               0             0             0             0             0
+ LVCON              0             0             0             0             0
+ LVRES              0             0             0             0             0
+ PHONE              0             0             0             0             0
+ VIDEO              0             0             0             0             0
+ TEXT               0             0             0             0             0
+ HOPE_POS           0             0             0             0             0
+ LS_POST            0             0             0             0             0
+ HOPE_PRE           0             0             0             0             0
+ LS_PRE             0             0             0             0             0
+ RESP               0             0             0             0             0
+ CONN               0             0             0             0             0
+ RELAT              0             0             0             0             0
+ COND_TAI           0             0             0             0             0
+ COND_BAS           0             0             0             0             0
+ FEMALE             0             0             0             0             0
+
+
+           BETA
+              LVCON         LVRES         PHONE         VIDEO         TEXT
+              ________      ________      ________      ________      ________
+ ARC                0             0             0             0             0
+ ARR                0             0             0             0             0
+ CONRL              0             0             0             0             0
+ CONR               0             0             0             0             0
+ RONC               0             0             0             0             0
+ LVCON              0             0             0             0             0
+ LVRES              0             0             0             0             0
+ PHONE              0             0             0             0             0
+ VIDEO              0             0             0             0             0
+ TEXT               0             0             0             0             0
+ HOPE_POS           0             0            24            25            26
+ LS_POST            0             0            34            35            36
+ HOPE_PRE           0             0             0             0             0
+ LS_PRE             0             0             0             0             0
+ RESP               0             0             0             0             0
+ CONN               0             0            44            45            46
+ RELAT              0             0             0             0             0
+ COND_TAI           0             0             0             0             0
+ COND_BAS           0             0             0             0             0
+ FEMALE             0             0             0             0             0
+
+
+           BETA
+              HOPE_POS      LS_POST       HOPE_PRE      LS_PRE        RESP
+              ________      ________      ________      ________      ________
+ ARC                0             0             0             0             0
+ ARR                0             0             0             0             0
+ CONRL              0             0             0             0             0
+ CONR               0             0             0             0             0
+ RONC               0             0             0             0             0
+ LVCON              0             0             0             0             0
+ LVRES              0             0             0             0             0
+ PHONE              0             0             0             0             0
+ VIDEO              0             0             0             0             0
+ TEXT               0             0             0             0             0
+ HOPE_POS           0             0            27             0            28
+ LS_POST            0             0             0            37            38
+ HOPE_PRE           0             0             0             0             0
+ LS_PRE             0             0             0             0             0
+ RESP               0             0             0             0             0
+ CONN               0             0            47            48            49
+ RELAT              0             0             0             0             0
+ COND_TAI           0             0             0             0             0
+ COND_BAS           0             0             0             0             0
+ FEMALE             0             0             0             0             0
+
+
+           BETA
+              CONN          RELAT         COND_TAI      COND_BAS      FEMALE
+              ________      ________      ________      ________      ________
+ ARC                0             0             0             0             0
+ ARR                0             0             0             0             0
+ CONRL              0             0             0             0             0
+ CONR               0             0             0             0             0
+ RONC               0             0             0             0             0
+ LVCON              0             0             0             0             0
+ LVRES              0             0             0             0             0
+ PHONE              0             0             0             0             0
+ VIDEO              0             0             0             0             0
+ TEXT               0             0             0             0             0
+ HOPE_POS          29            30            31            32            33
+ LS_POST           39            40            41            42            43
+ HOPE_PRE           0             0             0             0             0
+ LS_PRE             0             0             0             0             0
+ RESP               0             0             0             0             0
+ CONN               0            50            51            52            53
+ RELAT              0             0             0             0             0
+ COND_TAI           0             0             0             0             0
+ COND_BAS           0             0             0             0             0
+ FEMALE             0             0             0             0             0
+
+
+           PSI
+              ARC           ARR           CONRL         CONR          RONC
+              ________      ________      ________      ________      ________
+ ARC               54
+ ARR                0            55
+ CONRL              0             0            56
+ CONR               0             0             0            57
+ RONC               0             0             0             0            58
+ LVCON              0             0             0             0             0
+ LVRES              0             0             0             0             0
+ PHONE              0             0             0             0             0
+ VIDEO              0             0             0             0             0
+ TEXT               0             0             0             0             0
+ HOPE_POS           0             0             0             0             0
+ LS_POST            0             0             0             0             0
+ HOPE_PRE           0             0             0             0             0
+ LS_PRE             0             0             0             0             0
+ RESP               0             0             0             0             0
+ CONN               0             0             0             0             0
+ RELAT              0             0             0             0             0
+ COND_TAI           0             0             0             0             0
+ COND_BAS           0             0             0             0             0
+ FEMALE             0             0             0             0             0
+
+
+           PSI
+              LVCON         LVRES         PHONE         VIDEO         TEXT
+              ________      ________      ________      ________      ________
+ LVCON             59
+ LVRES              0            60
+ PHONE              0             0             0
+ VIDEO              0             0             0             0
+ TEXT               0             0             0             0             0
+ HOPE_POS           0             0             0             0             0
+ LS_POST            0             0             0             0             0
+ HOPE_PRE           0             0             0             0             0
+ LS_PRE             0             0             0             0             0
+ RESP               0             0             0             0             0
+ CONN               0             0             0             0             0
+ RELAT              0             0             0             0             0
+ COND_TAI           0             0             0             0             0
+ COND_BAS           0             0             0             0             0
+ FEMALE             0             0             0             0             0
+
+
+           PSI
+              HOPE_POS      LS_POST       HOPE_PRE      LS_PRE        RESP
+              ________      ________      ________      ________      ________
+ HOPE_POS          61
+ LS_POST           62            63
+ HOPE_PRE           0             0            64
+ LS_PRE             0             0            65            66
+ RESP               0             0            67            68            69
+ CONN               0             0             0             0             0
+ RELAT              0             0             0             0             0
+ COND_TAI           0             0             0             0             0
+ COND_BAS           0             0             0             0             0
+ FEMALE             0             0             0             0             0
+
+
+           PSI
+              CONN          RELAT         COND_TAI      COND_BAS      FEMALE
+              ________      ________      ________      ________      ________
+ CONN              70
+ RELAT              0            71
+ COND_TAI           0             0             0
+ COND_BAS           0             0             0             0
+ FEMALE             0             0             0             0             0
+
+
+     PARAMETER SPECIFICATION FOR THE ADDITIONAL PARAMETERS
+
+
+           NEW/ADDITIONAL PARAMETERS
+              I_HO_M        I_LS_M
+              ________      ________
+                   75            76
+
+
+     STARTING VALUES FOR WITHIN
+
+
+           TAU
+              PHONE$1       VIDEO$1       TEXT$1
+              ________      ________      ________
+                0.000         0.000         0.000
+
+
+           NU
+              PHONE         VIDEO         TEXT          RESP          CONN
+              ________      ________      ________      ________      ________
+                0.000         0.000         0.000         0.000         0.000
+
+
+           NU
+              RELAT         RESP&1        CONN&1
+              ________      ________      ________
+                0.000         0.000         0.000
+
+
+           LAMBDA
+              PHONE         VIDEO         TEXT          RESP          CONN
+              ________      ________      ________      ________      ________
+ PHONE          1.000         0.000         0.000         0.000         0.000
+ VIDEO          0.000         1.000         0.000         0.000         0.000
+ TEXT           0.000         0.000         1.000         0.000         0.000
+ RESP           0.000         0.000         0.000         1.000         0.000
+ CONN           0.000         0.000         0.000         0.000         1.000
+ RELAT          0.000         0.000         0.000         0.000         0.000
+ RESP&1         0.000         0.000         0.000         0.000         0.000
+ CONN&1         0.000         0.000         0.000         0.000         0.000
+
+
+           LAMBDA
+              RELAT         RESP&1        CONN&1
+              ________      ________      ________
+ PHONE          0.000         0.000         0.000
+ VIDEO          0.000         0.000         0.000
+ TEXT           0.000         0.000         0.000
+ RESP           0.000         0.000         0.000
+ CONN           0.000         0.000         0.000
+ RELAT          1.000         0.000         0.000
+ RESP&1         0.000         1.000         0.000
+ CONN&1         0.000         0.000         1.000
+
+
+           THETA
+              PHONE         VIDEO         TEXT          RESP          CONN
+              ________      ________      ________      ________      ________
+ PHONE          0.000
+ VIDEO          0.000         0.000
+ TEXT           0.000         0.000         0.000
+ RESP           0.000         0.000         0.000         0.000
+ CONN           0.000         0.000         0.000         0.000         0.000
+ RELAT          0.000         0.000         0.000         0.000         0.000
+ RESP&1         0.000         0.000         0.000         0.000         0.000
+ CONN&1         0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              RELAT         RESP&1        CONN&1
+              ________      ________      ________
+ RELAT          0.000
+ RESP&1         0.000         0.000
+ CONN&1         0.000         0.000         0.000
+
+
+           ALPHA
+              PHONE         VIDEO         TEXT          RESP          CONN
+              ________      ________      ________      ________      ________
+                0.000         0.000         0.000         0.000         0.000
+
+
+           ALPHA
+              RELAT         RESP&1        CONN&1
+              ________      ________      ________
+                0.000         0.000         0.000
+
+
+           BETA
+              PHONE         VIDEO         TEXT          RESP          CONN
+              ________      ________      ________      ________      ________
+ PHONE          0.000         0.000         0.000         0.000         0.000
+ VIDEO          0.000         0.000         0.000         0.000         0.000
+ TEXT           0.000         0.000         0.000         0.000         0.000
+ RESP           0.000         0.000         0.000         0.000         0.000
+ CONN           0.000         0.000         0.000         0.000         0.000
+ RELAT          0.000         0.000         0.000         0.000         0.000
+ RESP&1         0.000         0.000         0.000         0.000         0.000
+ CONN&1         0.000         0.000         0.000         0.000         0.000
+
+
+           BETA
+              RELAT         RESP&1        CONN&1
+              ________      ________      ________
+ PHONE          0.000         0.000         0.000
+ VIDEO          0.000         0.000         0.000
+ TEXT           0.000         0.000         0.000
+ RESP           0.000         0.000         0.000
+ CONN           0.000         0.000         0.000
+ RELAT          0.000         0.000         0.000
+ RESP&1         0.000         0.000         0.000
+ CONN&1         0.000         0.000         0.000
+
+
+           PSI
+              PHONE         VIDEO         TEXT          RESP          CONN
+              ________      ________      ________      ________      ________
+ PHONE          1.000
+ VIDEO          0.000         1.000
+ TEXT           0.000         0.000         1.000
+ RESP           0.000         0.000         0.000         0.000
+ CONN           0.000         0.000         0.000         0.000         0.000
+ RELAT          0.000         0.000         0.000         0.000         0.000
+ RESP&1         0.000         0.000         0.000         0.000         0.000
+ CONN&1         0.000         0.000         0.000         0.000         0.000
+
+
+           PSI
+              RELAT         RESP&1        CONN&1
+              ________      ________      ________
+ RELAT          0.862
+ RESP&1         0.000         0.509
+ CONN&1         0.000         0.000         1.125
+
+
+     STARTING VALUES FOR BETWEEN
+
+
+           TAU
+              PHONE$1       VIDEO$1       TEXT$1
+              ________      ________      ________
+                1.704         1.028         1.012
+
+
+           NU
+              PHONE         VIDEO         TEXT          HOPE_POS      LS_POST
+              ________      ________      ________      ________      ________
+                0.000         0.000         0.000         0.000         0.000
+
+
+           NU
+              HOPE_PRE      LS_PRE        RESP          CONN          RELAT
+              ________      ________      ________      ________      ________
+                0.000         0.000         0.000         0.000         0.000
+
+
+           NU
+              COND_TAI      COND_BAS      FEMALE
+              ________      ________      ________
+                0.000         0.000         0.000
+
+
+           LAMBDA
+              ARC           ARR           CONRL         CONR          RONC
+              ________      ________      ________      ________      ________
+ PHONE          0.000         0.000         0.000         0.000         0.000
+ VIDEO          0.000         0.000         0.000         0.000         0.000
+ TEXT           0.000         0.000         0.000         0.000         0.000
+ HOPE_POS       0.000         0.000         0.000         0.000         0.000
+ LS_POST        0.000         0.000         0.000         0.000         0.000
+ HOPE_PRE       0.000         0.000         0.000         0.000         0.000
+ LS_PRE         0.000         0.000         0.000         0.000         0.000
+ RESP           0.000         0.000         0.000         0.000         0.000
+ CONN           0.000         0.000         0.000         0.000         0.000
+ RELAT          0.000         0.000         0.000         0.000         0.000
+ COND_TAI       0.000         0.000         0.000         0.000         0.000
+ COND_BAS       0.000         0.000         0.000         0.000         0.000
+ FEMALE         0.000         0.000         0.000         0.000         0.000
+
+
+           LAMBDA
+              LVCON         LVRES         PHONE         VIDEO         TEXT
+              ________      ________      ________      ________      ________
+ PHONE          0.000         0.000         1.000         0.000         0.000
+ VIDEO          0.000         0.000         0.000         1.000         0.000
+ TEXT           0.000         0.000         0.000         0.000         1.000
+ HOPE_POS       0.000         0.000         0.000         0.000         0.000
+ LS_POST        0.000         0.000         0.000         0.000         0.000
+ HOPE_PRE       0.000         0.000         0.000         0.000         0.000
+ LS_PRE         0.000         0.000         0.000         0.000         0.000
+ RESP           0.000         0.000         0.000         0.000         0.000
+ CONN           0.000         0.000         0.000         0.000         0.000
+ RELAT          0.000         0.000         0.000         0.000         0.000
+ COND_TAI       0.000         0.000         0.000         0.000         0.000
+ COND_BAS       0.000         0.000         0.000         0.000         0.000
+ FEMALE         0.000         0.000         0.000         0.000         0.000
+
+
+           LAMBDA
+              HOPE_POS      LS_POST       HOPE_PRE      LS_PRE        RESP
+              ________      ________      ________      ________      ________
+ PHONE          0.000         0.000         0.000         0.000         0.000
+ VIDEO          0.000         0.000         0.000         0.000         0.000
+ TEXT           0.000         0.000         0.000         0.000         0.000
+ HOPE_POS       1.000         0.000         0.000         0.000         0.000
+ LS_POST        0.000         1.000         0.000         0.000         0.000
+ HOPE_PRE       0.000         0.000         1.000         0.000         0.000
+ LS_PRE         0.000         0.000         0.000         1.000         0.000
+ RESP           0.000         0.000         0.000         0.000         1.000
+ CONN           0.000         0.000         0.000         0.000         0.000
+ RELAT          0.000         0.000         0.000         0.000         0.000
+ COND_TAI       0.000         0.000         0.000         0.000         0.000
+ COND_BAS       0.000         0.000         0.000         0.000         0.000
+ FEMALE         0.000         0.000         0.000         0.000         0.000
+
+
+           LAMBDA
+              CONN          RELAT         COND_TAI      COND_BAS      FEMALE
+              ________      ________      ________      ________      ________
+ PHONE          0.000         0.000         0.000         0.000         0.000
+ VIDEO          0.000         0.000         0.000         0.000         0.000
+ TEXT           0.000         0.000         0.000         0.000         0.000
+ HOPE_POS       0.000         0.000         0.000         0.000         0.000
+ LS_POST        0.000         0.000         0.000         0.000         0.000
+ HOPE_PRE       0.000         0.000         0.000         0.000         0.000
+ LS_PRE         0.000         0.000         0.000         0.000         0.000
+ RESP           0.000         0.000         0.000         0.000         0.000
+ CONN           1.000         0.000         0.000         0.000         0.000
+ RELAT          0.000         1.000         0.000         0.000         0.000
+ COND_TAI       0.000         0.000         1.000         0.000         0.000
+ COND_BAS       0.000         0.000         0.000         1.000         0.000
+ FEMALE         0.000         0.000         0.000         0.000         1.000
+
+
+           THETA
+              PHONE         VIDEO         TEXT          HOPE_POS      LS_POST
+              ________      ________      ________      ________      ________
+ PHONE          0.000
+ VIDEO          0.000         0.000
+ TEXT           0.000         0.000         0.000
+ HOPE_POS       0.000         0.000         0.000         0.000
+ LS_POST        0.000         0.000         0.000         0.000         0.000
+ HOPE_PRE       0.000         0.000         0.000         0.000         0.000
+ LS_PRE         0.000         0.000         0.000         0.000         0.000
+ RESP           0.000         0.000         0.000         0.000         0.000
+ CONN           0.000         0.000         0.000         0.000         0.000
+ RELAT          0.000         0.000         0.000         0.000         0.000
+ COND_TAI       0.000         0.000         0.000         0.000         0.000
+ COND_BAS       0.000         0.000         0.000         0.000         0.000
+ FEMALE         0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              HOPE_PRE      LS_PRE        RESP          CONN          RELAT
+              ________      ________      ________      ________      ________
+ HOPE_PRE       0.000
+ LS_PRE         0.000         0.000
+ RESP           0.000         0.000         0.000
+ CONN           0.000         0.000         0.000         0.000
+ RELAT          0.000         0.000         0.000         0.000         0.000
+ COND_TAI       0.000         0.000         0.000         0.000         0.000
+ COND_BAS       0.000         0.000         0.000         0.000         0.000
+ FEMALE         0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              COND_TAI      COND_BAS      FEMALE
+              ________      ________      ________
+ COND_TAI       0.000
+ COND_BAS       0.000         0.000
+ FEMALE         0.000         0.000         0.000
+
+
+           ALPHA
+              ARC           ARR           CONRL         CONR          RONC
+              ________      ________      ________      ________      ________
+                0.000         0.000         0.000         0.000         0.000
+
+
+           ALPHA
+              LVCON         LVRES         PHONE         VIDEO         TEXT
+              ________      ________      ________      ________      ________
+                0.000         0.000         0.000         0.000         0.000
+
+
+           ALPHA
+              HOPE_POS      LS_POST       HOPE_PRE      LS_PRE        RESP
+              ________      ________      ________      ________      ________
+                3.760         3.492         3.863         3.443         3.681
+
+
+           ALPHA
+              CONN          RELAT         COND_TAI      COND_BAS      FEMALE
+              ________      ________      ________      ________      ________
+                4.847         6.492         0.000         0.000         0.000
+
+
+           BETA
+              ARC           ARR           CONRL         CONR          RONC
+              ________      ________      ________      ________      ________
+ ARC            0.000         0.000         0.000         0.000         0.000
+ ARR            0.000         0.000         0.000         0.000         0.000
+ CONRL          0.000         0.000         0.000         0.000         0.000
+ CONR           0.000         0.000         0.000         0.000         0.000
+ RONC           0.000         0.000         0.000         0.000         0.000
+ LVCON          0.000         0.000         0.000         0.000         0.000
+ LVRES          0.000         0.000         0.000         0.000         0.000
+ PHONE          0.000         0.000         0.000         0.000         0.000
+ VIDEO          0.000         0.000         0.000         0.000         0.000
+ TEXT           0.000         0.000         0.000         0.000         0.000
+ HOPE_POS       0.000         0.000         0.000         0.000         0.000
+ LS_POST        0.000         0.000         0.000         0.000         0.000
+ HOPE_PRE       0.000         0.000         0.000         0.000         0.000
+ LS_PRE         0.000         0.000         0.000         0.000         0.000
+ RESP           0.000         0.000         0.000         0.000         0.000
+ CONN           0.000         0.000         0.000         0.000         0.000
+ RELAT          0.000         0.000         0.000         0.000         0.000
+ COND_TAI       0.000         0.000         0.000         0.000         0.000
+ COND_BAS       0.000         0.000         0.000         0.000         0.000
+ FEMALE         0.000         0.000         0.000         0.000         0.000
+
+
+           BETA
+              LVCON         LVRES         PHONE         VIDEO         TEXT
+              ________      ________      ________      ________      ________
+ ARC            0.000         0.000         0.000         0.000         0.000
+ ARR            0.000         0.000         0.000         0.000         0.000
+ CONRL          0.000         0.000         0.000         0.000         0.000
+ CONR           0.000         0.000         0.000         0.000         0.000
+ RONC           0.000         0.000         0.000         0.000         0.000
+ LVCON          0.000         0.000         0.000         0.000         0.000
+ LVRES          0.000         0.000         0.000         0.000         0.000
+ PHONE          0.000         0.000         0.000         0.000         0.000
+ VIDEO          0.000         0.000         0.000         0.000         0.000
+ TEXT           0.000         0.000         0.000         0.000         0.000
+ HOPE_POS       0.000         0.000         0.000         0.000         0.000
+ LS_POST        0.000         0.000         0.000         0.000         0.000
+ HOPE_PRE       0.000         0.000         0.000         0.000         0.000
+ LS_PRE         0.000         0.000         0.000         0.000         0.000
+ RESP           0.000         0.000         0.000         0.000         0.000
+ CONN           0.000         0.000         0.000         0.000         0.000
+ RELAT          0.000         0.000         0.000         0.000         0.000
+ COND_TAI       0.000         0.000         0.000         0.000         0.000
+ COND_BAS       0.000         0.000         0.000         0.000         0.000
+ FEMALE         0.000         0.000         0.000         0.000         0.000
+
+
+           BETA
+              HOPE_POS      LS_POST       HOPE_PRE      LS_PRE        RESP
+              ________      ________      ________      ________      ________
+ ARC            0.000         0.000         0.000         0.000         0.000
+ ARR            0.000         0.000         0.000         0.000         0.000
+ CONRL          0.000         0.000         0.000         0.000         0.000
+ CONR           0.000         0.000         0.000         0.000         0.000
+ RONC           0.000         0.000         0.000         0.000         0.000
+ LVCON          0.000         0.000         0.000         0.000         0.000
+ LVRES          0.000         0.000         0.000         0.000         0.000
+ PHONE          0.000         0.000         0.000         0.000         0.000
+ VIDEO          0.000         0.000         0.000         0.000         0.000
+ TEXT           0.000         0.000         0.000         0.000         0.000
+ HOPE_POS       0.000         0.000         0.000         0.000         0.000
+ LS_POST        0.000         0.000         0.000         0.000         0.000
+ HOPE_PRE       0.000         0.000         0.000         0.000         0.000
+ LS_PRE         0.000         0.000         0.000         0.000         0.000
+ RESP           0.000         0.000         0.000         0.000         0.000
+ CONN           0.000         0.000         0.000         0.000         0.000
+ RELAT          0.000         0.000         0.000         0.000         0.000
+ COND_TAI       0.000         0.000         0.000         0.000         0.000
+ COND_BAS       0.000         0.000         0.000         0.000         0.000
+ FEMALE         0.000         0.000         0.000         0.000         0.000
+
+
+           BETA
+              CONN          RELAT         COND_TAI      COND_BAS      FEMALE
+              ________      ________      ________      ________      ________
+ ARC            0.000         0.000         0.000         0.000         0.000
+ ARR            0.000         0.000         0.000         0.000         0.000
+ CONRL          0.000         0.000         0.000         0.000         0.000
+ CONR           0.000         0.000         0.000         0.000         0.000
+ RONC           0.000         0.000         0.000         0.000         0.000
+ LVCON          0.000         0.000         0.000         0.000         0.000
+ LVRES          0.000         0.000         0.000         0.000         0.000
+ PHONE          0.000         0.000         0.000         0.000         0.000
+ VIDEO          0.000         0.000         0.000         0.000         0.000
+ TEXT           0.000         0.000         0.000         0.000         0.000
+ HOPE_POS       0.000         0.000         0.000         0.000         0.000
+ LS_POST        0.000         0.000         0.000         0.000         0.000
+ HOPE_PRE       0.000         0.000         0.000         0.000         0.000
+ LS_PRE         0.000         0.000         0.000         0.000         0.000
+ RESP           0.000         0.000         0.000         0.000         0.000
+ CONN           0.000         0.000         0.000         0.000         0.000
+ RELAT          0.000         0.000         0.000         0.000         0.000
+ COND_TAI       0.000         0.000         0.000         0.000         0.000
+ COND_BAS       0.000         0.000         0.000         0.000         0.000
+ FEMALE         0.000         0.000         0.000         0.000         0.000
+
+
+           PSI
+              ARC           ARR           CONRL         CONR          RONC
+              ________      ________      ________      ________      ________
+ ARC            1.000
+ ARR            0.000         1.000
+ CONRL          0.000         0.000         1.000
+ CONR           0.000         0.000         0.000         1.000
+ RONC           0.000         0.000         0.000         0.000         1.000
+ LVCON          0.000         0.000         0.000         0.000         0.000
+ LVRES          0.000         0.000         0.000         0.000         0.000
+ PHONE          0.000         0.000         0.000         0.000         0.000
+ VIDEO          0.000         0.000         0.000         0.000         0.000
+ TEXT           0.000         0.000         0.000         0.000         0.000
+ HOPE_POS       0.000         0.000         0.000         0.000         0.000
+ LS_POST        0.000         0.000         0.000         0.000         0.000
+ HOPE_PRE       0.000         0.000         0.000         0.000         0.000
+ LS_PRE         0.000         0.000         0.000         0.000         0.000
+ RESP           0.000         0.000         0.000         0.000         0.000
+ CONN           0.000         0.000         0.000         0.000         0.000
+ RELAT          0.000         0.000         0.000         0.000         0.000
+ COND_TAI       0.000         0.000         0.000         0.000         0.000
+ COND_BAS       0.000         0.000         0.000         0.000         0.000
+ FEMALE         0.000         0.000         0.000         0.000         0.000
+
+
+           PSI
+              LVCON         LVRES         PHONE         VIDEO         TEXT
+              ________      ________      ________      ________      ________
+ LVCON          1.000
+ LVRES          0.000         1.000
+ PHONE          0.000         0.000         1.000
+ VIDEO          0.000         0.000         0.000         1.000
+ TEXT           0.000         0.000         0.000         0.000         1.000
+ HOPE_POS       0.000         0.000         0.000         0.000         0.000
+ LS_POST        0.000         0.000         0.000         0.000         0.000
+ HOPE_PRE       0.000         0.000         0.000         0.000         0.000
+ LS_PRE         0.000         0.000         0.000         0.000         0.000
+ RESP           0.000         0.000         0.000         0.000         0.000
+ CONN           0.000         0.000         0.000         0.000         0.000
+ RELAT          0.000         0.000         0.000         0.000         0.000
+ COND_TAI       0.000         0.000         0.000         0.000         0.000
+ COND_BAS       0.000         0.000         0.000         0.000         0.000
+ FEMALE         0.000         0.000         0.000         0.000         0.000
+
+
+           PSI
+              HOPE_POS      LS_POST       HOPE_PRE      LS_PRE        RESP
+              ________      ________      ________      ________      ________
+ HOPE_POS       0.092
+ LS_POST        0.000         0.299
+ HOPE_PRE       0.000         0.000         0.077
+ LS_PRE         0.000         0.000         0.000         0.308
+ RESP           0.000         0.000         0.000         0.000         0.510
+ CONN           0.000         0.000         0.000         0.000         0.000
+ RELAT          0.000         0.000         0.000         0.000         0.000
+ COND_TAI       0.000         0.000         0.000         0.000         0.000
+ COND_BAS       0.000         0.000         0.000         0.000         0.000
+ FEMALE         0.000         0.000         0.000         0.000         0.000
+
+
+           PSI
+              CONN          RELAT         COND_TAI      COND_BAS      FEMALE
+              ________      ________      ________      ________      ________
+ CONN           1.134
+ RELAT          0.000         0.862
+ COND_TAI       0.000         0.000         0.116
+ COND_BAS       0.000         0.000         0.000         0.101
+ FEMALE         0.000         0.000         0.000         0.000         0.077
+
+
+     STARTING VALUES FOR THE ADDITIONAL PARAMETERS
+
+
+           NEW/ADDITIONAL PARAMETERS
+              I_HO_M        I_LS_M
+              ________      ________
+                0.500         0.500
+
+
+
+     PRIORS FOR ALL PARAMETERS            PRIOR MEAN      PRIOR VARIANCE     PRIOR STD. DEV.
+
+     Parameter 1~N(0.000,infinity)           0.0000            infinity            infinity
+     Parameter 2~N(0.000,infinity)           0.0000            infinity            infinity
+     Parameter 3~N(0.000,infinity)           0.0000            infinity            infinity
+     Parameter 4~N(0.000,infinity)           0.0000            infinity            infinity
+     Parameter 5~N(0.000,infinity)           0.0000            infinity            infinity
+     Parameter 6~N(0.000,infinity)           0.0000            infinity            infinity
+     Parameter 7~N(0.000,infinity)           0.0000            infinity            infinity
+     Parameter 8~N(0.000,infinity)           0.0000            infinity            infinity
+     Parameter 9~IG(-1.000,0.000)          infinity            infinity            infinity
+     Parameter 10~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 11~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 12~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 13~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 14~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 15~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 16~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 17~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 18~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 19~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 20~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 21~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 22~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 23~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 24~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 25~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 26~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 27~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 28~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 29~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 30~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 31~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 32~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 33~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 34~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 35~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 36~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 37~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 38~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 39~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 40~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 41~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 42~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 43~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 44~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 45~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 46~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 47~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 48~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 49~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 50~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 51~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 52~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 53~N(0.000,infinity)          0.0000            infinity            infinity
+     Parameter 54~IG(-1.000,0.000)         infinity            infinity            infinity
+     Parameter 55~IG(-1.000,0.000)         infinity            infinity            infinity
+     Parameter 56~IG(-1.000,0.000)         infinity            infinity            infinity
+     Parameter 57~IG(-1.000,0.000)         infinity            infinity            infinity
+     Parameter 58~IG(-1.000,0.000)         infinity            infinity            infinity
+     Parameter 59~IG(-1.000,0.000)         infinity            infinity            infinity
+     Parameter 60~IG(-1.000,0.000)         infinity            infinity            infinity
+     Parameter 61~IW(0.000,-3)             infinity            infinity            infinity
+     Parameter 62~IW(0.000,-3)             infinity            infinity            infinity
+     Parameter 63~IW(0.000,-3)             infinity            infinity            infinity
+     Parameter 64~IW(0.000,-4)             infinity            infinity            infinity
+     Parameter 65~IW(0.000,-4)             infinity            infinity            infinity
+     Parameter 66~IW(0.000,-4)             infinity            infinity            infinity
+     Parameter 67~IW(0.000,-4)             infinity            infinity            infinity
+     Parameter 68~IW(0.000,-4)             infinity            infinity            infinity
+     Parameter 69~IW(0.000,-4)             infinity            infinity            infinity
+     Parameter 70~IG(-1.000,0.000)         infinity            infinity            infinity
+     Parameter 71~IG(-1.000,0.000)         infinity            infinity            infinity
+     Parameter 72~N(0.000,5.000)             0.0000              5.0000              2.2361
+     Parameter 73~N(0.000,5.000)             0.0000              5.0000              2.2361
+     Parameter 74~N(0.000,5.000)             0.0000              5.0000              2.2361
+
+
+TECHNICAL 8 OUTPUT
+
+
+   TECHNICAL 8 OUTPUT FOR BAYES ESTIMATION
+
+     CHAIN    BSEED
+     1        0
+     2        285380
+
+                     POTENTIAL       PARAMETER WITH
+     ITERATION    SCALE REDUCTION      HIGHEST PSR
+     100              1.250               55
+     200              1.173               74
+     300              1.086               74
+     400              1.034               10
+     500              1.034               54
+     600              1.035               46
+     700              1.012               46
+     800              1.018               24
+     900              1.021               55
+     1000             1.026               74
+     1100             1.026               34
+     1200             1.020               34
+     1300             1.023               34
+     1400             1.029               34
+     1500             1.022               34
+     1600             1.023               34
+     1700             1.015               34
+     1800             1.016               34
+     1900             1.022               34
+     2000             1.015               34
+     2100             1.012               34
+     2200             1.013               34
+     2300             1.009               34
+     2400             1.007               34
+     2500             1.006               16
+     2600             1.006               60
+     2700             1.007               34
+     2800             1.005               55
+     2900             1.005               55
+     3000             1.006               73
+
+
+SUMMARIES OF PLAUSIBLE VALUES (N = NUMBER OF OBSERVATIONS * NUMBER OF IMPUTATIONS)
+
+
+     SAMPLE STATISTICS
+
+
+           Means
+              ARC           ARR           CONRL         CONR          RONC
+              ________      ________      ________      ________      ________
+                0.260         0.139        -0.018         0.492         0.059
+
+
+           Means
+              LVCON         LVRES         B_PHONE       B_VIDEO       B_TEXT
+              ________      ________      ________      ________      ________
+               -0.021        -0.679        -0.040        -0.008        -0.039
+
+
+           Means
+              B_RESP        B_CONN        B_RELAT
+              ________      ________      ________
+                3.675         4.799         6.476
+
+
+           Covariances
+              ARC           ARR           CONRL         CONR          RONC
+              ________      ________      ________      ________      ________
+ ARC            0.028
+ ARR            0.001         0.026
+ CONRL         -0.001        -0.001         0.025
+ CONR          -0.001         0.000         0.000         0.067
+ RONC           0.000         0.000         0.000         0.000         0.004
+ LVCON         -0.003         0.002        -0.001         0.051         0.001
+ LVRES          0.003        -0.001         0.007         0.001         0.001
+ B_PHONE        0.005        -0.003         0.000         0.012         0.000
+ B_VIDEO        0.004         0.006        -0.004        -0.010        -0.001
+ B_TEXT         0.007        -0.003         0.000        -0.013        -0.001
+ B_RESP        -0.002         0.001         0.000         0.007         0.001
+ B_CONN         0.004        -0.001         0.002        -0.006         0.001
+ B_RELAT       -0.001        -0.001         0.000         0.000        -0.001
+
+
+           Covariances
+              LVCON         LVRES         B_PHONE       B_VIDEO       B_TEXT
+              ________      ________      ________      ________      ________
+ LVCON          0.787
+ LVRES          0.171         0.426
+ B_PHONE        0.081         0.018         0.931
+ B_VIDEO        0.018         0.015        -0.047         0.566
+ B_TEXT         0.043         0.135        -0.079         0.112         0.772
+ B_RESP        -0.058        -0.123         0.012        -0.041        -0.072
+ B_CONN        -0.188        -0.103        -0.037        -0.119        -0.169
+ B_RELAT       -0.025        -0.051         0.000        -0.107        -0.027
+
+
+           Covariances
+              B_RESP        B_CONN        B_RELAT
+              ________      ________      ________
+ B_RESP         0.342
+ B_CONN         0.279         0.681
+ B_RELAT        0.049         0.089         0.181
+
+
+           Correlations
+              ARC           ARR           CONRL         CONR          RONC
+              ________      ________      ________      ________      ________
+ ARC            1.000
+ ARR            0.047         1.000
+ CONRL         -0.052        -0.026         1.000
+ CONR          -0.031        -0.012        -0.007         1.000
+ RONC           0.031        -0.030         0.015        -0.009         1.000
+ LVCON         -0.021         0.013        -0.004         0.221         0.021
+ LVRES          0.032        -0.006         0.071         0.006         0.019
+ B_PHONE        0.030        -0.017        -0.002         0.048         0.003
+ B_VIDEO        0.032         0.050        -0.032        -0.052        -0.029
+ B_TEXT         0.049        -0.022        -0.001        -0.057        -0.023
+ B_RESP        -0.017         0.008         0.002         0.048         0.024
+ B_CONN         0.027        -0.010         0.017        -0.027         0.010
+ B_RELAT       -0.017        -0.022         0.005         0.000        -0.024
+
+
+           Correlations
+              LVCON         LVRES         B_PHONE       B_VIDEO       B_TEXT
+              ________      ________      ________      ________      ________
+ LVCON          1.000
+ LVRES          0.295         1.000
+ B_PHONE        0.095         0.028         1.000
+ B_VIDEO        0.027         0.031        -0.064         1.000
+ B_TEXT         0.056         0.236        -0.094         0.170         1.000
+ B_RESP        -0.112        -0.321         0.021        -0.093        -0.140
+ B_CONN        -0.257        -0.192        -0.047        -0.191        -0.233
+ B_RELAT       -0.065        -0.182         0.001        -0.333        -0.072
+
+
+           Correlations
+              B_RESP        B_CONN        B_RELAT
+              ________      ________      ________
+ B_RESP         1.000
+ B_CONN         0.578         1.000
+ B_RELAT        0.198         0.253         1.000
+
+
+SUMMARY OF PLAUSIBLE STANDARD DEVIATION (N = NUMBER OF OBSERVATIONS)
+
+
+     SAMPLE STATISTICS
+
+
+           Means
+              ARC_SD        ARR_SD        CONRL_SD      CONR_SD       RONC_SD
+              ________      ________      ________      ________      ________
+                0.138         0.137         0.147         0.189         0.062
+
+
+           Means
+              LVCON_SD      LVRES_SD      B_PHONE_      B_VIDEO_      B_TEXT_S
+              ________      ________      ________      ________      ________
+                0.296         0.273         0.563         0.363         0.392
+
+
+           Means
+              B_RESP_S      B_CONN_S      B_RELAT_
+              ________      ________      ________
+                0.167         0.270         0.214
+
+
+           Covariances
+              ARC_SD        ARR_SD        CONRL_SD      CONR_SD       RONC_SD
+              ________      ________      ________      ________      ________
+ ARC_SD         0.000
+ ARR_SD         0.000         0.000
+ CONRL_SD       0.000         0.000         0.001
+ CONR_SD        0.000         0.000         0.001         0.002
+ RONC_SD        0.000         0.000         0.000         0.000         0.000
+ LVCON_SD       0.001         0.001         0.001         0.001         0.000
+ LVRES_SD       0.001         0.001         0.000         0.001         0.000
+ B_PHONE_       0.001         0.000         0.000         0.001         0.000
+ B_VIDEO_       0.000         0.000         0.001         0.001         0.000
+ B_TEXT_S       0.001         0.001         0.001         0.002         0.000
+ B_RESP_S       0.000         0.000         0.000         0.000         0.000
+ B_CONN_S       0.000         0.001         0.001         0.002         0.000
+ B_RELAT_       0.000         0.000         0.000         0.001         0.000
+
+
+           Covariances
+              LVCON_SD      LVRES_SD      B_PHONE_      B_VIDEO_      B_TEXT_S
+              ________      ________      ________      ________      ________
+ LVCON_SD       0.005
+ LVRES_SD       0.003         0.004
+ B_PHONE_       0.003         0.003         0.034
+ B_VIDEO_       0.002         0.003         0.004         0.014
+ B_TEXT_S       0.003         0.004         0.002         0.007         0.025
+ B_RESP_S       0.002         0.001         0.001         0.002         0.001
+ B_CONN_S       0.002         0.002         0.000         0.003         0.002
+ B_RELAT_       0.002         0.001         0.001         0.002         0.002
+
+
+           Covariances
+              B_RESP_S      B_CONN_S      B_RELAT_
+              ________      ________      ________
+ B_RESP_S       0.003
+ B_CONN_S       0.003         0.007
+ B_RELAT_       0.001         0.001         0.001
+
+
+           Correlations
+              ARC_SD        ARR_SD        CONRL_SD      CONR_SD       RONC_SD
+              ________      ________      ________      ________      ________
+ ARC_SD         1.000
+ ARR_SD         0.390         1.000
+ CONRL_SD       0.344         0.264         1.000
+ CONR_SD        0.358         0.375         0.624         1.000
+ RONC_SD        0.077         0.025        -0.073        -0.120         1.000
+ LVCON_SD       0.442         0.394         0.349         0.369         0.151
+ LVRES_SD       0.397         0.443         0.200         0.472        -0.022
+ B_PHONE_       0.303         0.095         0.016         0.104        -0.101
+ B_VIDEO_       0.162         0.128         0.180         0.221         0.020
+ B_TEXT_S       0.253         0.215         0.238         0.364         0.000
+ B_RESP_S       0.258         0.164         0.173         0.035         0.241
+ B_CONN_S       0.255         0.309         0.434         0.478         0.022
+ B_RELAT_       0.417         0.290         0.311         0.393         0.084
+
+
+           Correlations
+              LVCON_SD      LVRES_SD      B_PHONE_      B_VIDEO_      B_TEXT_S
+              ________      ________      ________      ________      ________
+ LVCON_SD       1.000
+ LVRES_SD       0.618         1.000
+ B_PHONE_       0.257         0.214         1.000
+ B_VIDEO_       0.285         0.368         0.185         1.000
+ B_TEXT_S       0.271         0.423         0.055         0.384         1.000
+ B_RESP_S       0.492         0.232         0.093         0.246         0.098
+ B_CONN_S       0.368         0.352        -0.004         0.297         0.181
+ B_RELAT_       0.613         0.582         0.210         0.451         0.395
+
+
+           Correlations
+              B_RESP_S      B_CONN_S      B_RELAT_
+              ________      ________      ________
+ B_RESP_S       1.000
+ B_CONN_S       0.591         1.000
+ B_RELAT_       0.501         0.441         1.000
+
+
+PLOT INFORMATION
+
+The following plots are available:
+
+  Histograms (sample values, estimated factor scores)
+  Scatterplots (sample values, estimated factor scores)
+  Between-level histograms (sample values, sample/estimated means/variances, estimated factor scores)
+  Between-level scatterplots (sample values, sample/estimated means/variances, estimated factor scores)
+  Two-level cluster-specific observed and estimated values plots
+  Time series plots (sample values, ACF, PACF, estimated factor scores)
+  Histogram of subjects per time point
+  Time interval plots
+  Sample proportions
+  Bayesian posterior parameter distributions
+  Bayesian posterior parameter trace plots
+  Bayesian autocorrelation plots
+  Bayesian prior parameter distributions
+  Latent variable distribution plots
+
+     Beginning Time:  11:45:07
+        Ending Time:  15:57:50
+       Elapsed Time:  04:12:43
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2021 Muthen & Muthen
