@@ -1,0 +1,300 @@
+{
+  "first_author": "Wright",
+  "dataset": "0064",
+  "year": 2017,
+  "reference_a": "@article{wright2017,\n  title = {The effect of pathological narcissism on interpersonal and affective processes in social interactions.},\n  author = {Wright, Aidan G. C. and Stepp, Stephanie D. and Scott, Lori N. and Hallquist, Michael N. and Beeney, Joseph E. and Lazarus, Sophie A. and Pilkonis, Paul A.},\n  date = {2017-10},\n  journaltitle = {Journal of Abnormal Psychology},\n  shortjournal = {Journal of Abnormal Psychology},\n  volume = {126},\n  number = {7},\n  pages = {898--910},\n  issn = {1939-1846, 0021-843X},\n  doi = {10.1037/abn0000286}\n}",
+  "reference_b": "@article{wendt2020,\n  title = {Indicators of affect dynamics: {{Structure}}, reliability, and personality correlates},\n  shorttitle = {Indicators of affect dynamics},\n  author = {Wendt, Leon P. and Wright, Aidan G.C. and Pilkonis, Paul A. and Woods, William C. and Denissen, Jaap J.A. and Kühnel, Anja and Zimmermann, Johannes},\n  date = {2020},\n  journaltitle = {European Journal of Personality},\n  volume = {34},\n  number = {6},\n  pages = {1060--1072},\n  issn = {1099-0984},\n  doi = {10.1002/per.2277}\n}",
+  "paper_doi": "https://doi.org/10.1037/abn0000286",
+  "link_to_data": "https://osf.io/6ghcx/files/osfstorage",
+  "link_to_codebook": "-",
+  "link_to_code": "https://osf.io/6ghcx/files/osfstorage",
+  "n_participants": 222,
+  "n_time_points": 344,
+  "n_beeps_per_day": "event-contingent",
+  "passive_data_available": "no",
+  "cross_sectional_available": "yes",
+  "topics": "affect, interpersonal disorders, personality pathology, emotions, social interactions",
+  "implicit_missingness": "unclear",
+  "raw_time_stamp": "no",
+  "sampling_scheme": "event-contingent based on social interactions",
+  "participants": "outpatients screened for personality\npathology and their romantic\npartners",
+  "coding_file": "0064_wright_variables",
+  "additional_comments": "data from original study shared in more detail in Wendt et al. (2020); number of time points based on max. rows in data; variable coding partially unclear",
+  "coder_data": "Björn Siepe",
+  "coder_metadata": null,
+  "features": [
+    {
+      "name": "id",
+      "description": "Participant ID",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "day",
+      "description": "Day of study",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "beep",
+      "description": "Beep of the day",
+      "type": "other",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "pt_num",
+      "description": "Participant number",
+      "type": "numeric",
+      "coding": "slightly different than participant ID",
+      "answer_categories": ""
+    },
+    {
+      "name": "counter",
+      "description": "Counter",
+      "type": "numeric",
+      "coding": "Consecutive counter for prompt number",
+      "answer_categories": ""
+    },
+    {
+      "name": "timestamp",
+      "description": "Timestamp",
+      "type": "numeric",
+      "coding": "Timestamp used for ordering consecutive prompts, no raw time",
+      "answer_categories": ""
+    },
+    {
+      "name": "date",
+      "description": "Date",
+      "type": "numeric",
+      "coding": "unclear date type, but used for consecutive ordering of prompts",
+      "answer_categories": ""
+    },
+    {
+      "name": "dyad",
+      "description": "Dyad",
+      "type": "numeric",
+      "coding": "unclear, likely dyad ID",
+      "answer_categories": ""
+    },
+    {
+      "name": "afraid",
+      "description": "Afraid",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Afraid\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "ashamed",
+      "description": "Ashamed",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Ashamed\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "distressed",
+      "description": "Distressed",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Distressed\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "guilty",
+      "description": "Guilty",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Guilty\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "hostile",
+      "description": "Hostile",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Hostile\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "irritable",
+      "description": "Irritable",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Irritable\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "jittery",
+      "description": "Jittery",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Jittery\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "nervous",
+      "description": "Nervous",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Nervous\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "scared",
+      "description": "Scared",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Scared\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "upset",
+      "description": "Upset",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Upset\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "frightened",
+      "description": "Frightened",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Frightened\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "shaky",
+      "description": "Shaky",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Shaky\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "angry",
+      "description": "Angry",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Angry\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "scornful",
+      "description": "Scornful",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Scornful\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "disgusted",
+      "description": "Disgusted",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Disgusted\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "loathing",
+      "description": "Loathing",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Loathing\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "sad",
+      "description": "Sad",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Sad\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "blue",
+      "description": "Blue",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Blue\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "downhearted",
+      "description": "Downhearted",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Downhearted\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "alone",
+      "description": "Alone",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Alone\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "lonely",
+      "description": "Lonely",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Lonely\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "active",
+      "description": "Active",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Active\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "alert",
+      "description": "Alert",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Alert\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "attentive",
+      "description": "Attentive",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Attentive\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "determined",
+      "description": "Determined",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Determined\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "enthusiastic",
+      "description": "Enthusiastic",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Enthusiastic\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "excited",
+      "description": "Excited",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Excited\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "inspired",
+      "description": "Inspired",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Inspired\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "interested",
+      "description": "Interested",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Interested\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "proud",
+      "description": "Proud",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Proud\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    },
+    {
+      "name": "strong",
+      "description": "Strong",
+      "type": "ordinal",
+      "coding": "Rating of momentary emotions: Strong\n1 = very slightly or not at all\n5 = extremely\nTaken from PANAS-X",
+      "answer_categories": "5"
+    }
+  ]
+}
