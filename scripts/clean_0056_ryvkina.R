@@ -9,17 +9,17 @@ source(here("scripts", "functions_data.R"))
 
 # Data --------------------------------------------------------------------
 # donwload data
-if(!file.exists(here::here("data", "raw", "0056_rykvina_ts_raw.csv"))){
+if(!file.exists(here::here("data", "raw", "0056_ryvkina_ts_raw.csv"))){
   osf_retrieve_file("https://osf.io/9dtfz") |>
     osf_download(path = here("data", "raw"))
 
   # rename data
   file_name <- osf_retrieve_file("https://osf.io/9dtfz") |> pull(name)
-  file.rename(here::here("data", "raw", file_name), here::here("data", "raw", "0056_rykvina_ts_raw.csv"))
+  file.rename(here::here("data", "raw", file_name), here::here("data", "raw", "0056_ryvkina_ts_raw.csv"))
 }
 
 # read data
-df_raw <- read.csv(here("data", "raw", "0056_rykvina_ts_raw.csv"))
+df_raw <- read.csv(here("data", "raw", "0056_ryvkina_ts_raw.csv"))
 
 
 # Cleaning ----------------------------------------------------------------
@@ -46,7 +46,6 @@ df <- df |>
 df_demographics <- df |>
   group_by(id) |>
   select(c(
-    id,
     contains("ial"),
     contains("narq"),
     contains("hsns"),
@@ -69,7 +68,7 @@ df_demographics <- df |>
   ))  |>
   distinct()
 
-saveRDS(df_demographics, here("data", "clean", "0056_rykvina_static.rds"))
+write_tsv(df_demographics, here("data", "clean", "0056_ryvkina_static.tsv"))
 
 
 # remove demographic columns
@@ -133,7 +132,7 @@ check_results <- check_data(df)
 # if it returns "Data are clean.", save the data
 # Enter data set ID here
 if(check_results == "Data are clean."){
-  write_tsv(df, here("data", "clean", "0056_rykvina_ts.tsv"))
+  write_tsv(df, here("data", "clean", "0056_ryvkina_ts.tsv"))
 }
 
 
@@ -144,12 +143,12 @@ meta_data <- read_sheet(metadata_url)
 
 # Enter dataset ID here
 sheet_url <- meta_data |>
-  filter(id == "000X") |>
+  filter(id == "0056") |>
   pull("Coding File URL")
 
 variable_data <- read_sheet(sheet_url)
 
-meta_json <- create_metadata_json("000X") |>
+meta_json <- create_metadata_json("0056") |>
   toJSON(pretty = TRUE, auto_unbox = TRUE)
 
-write(meta_json, here("data", "metadata", "000X_NAME_metadata.json"))
+write(meta_json, here("data", "metadata", "0056_ryvkina_metadata.json"))
