@@ -1,0 +1,125 @@
+{
+  "first_author": "Tammilehto",
+  "dataset": "0054",
+  "year": 2022,
+  "reference_a": "@article{tammilehto2022,\n  title = {Dynamics of attachment and emotion regulation in daily life: {{Uni-}} and bidirectional associations},\n  shorttitle = {Dynamics of attachment and emotion regulation in daily life},\n  author = {Tammilehto, Jaakko and {Bosmans ,Guy} and {Kuppens ,Peter} and {Flykt ,Marjo} and {Peltonen ,Kirsi} and {Kerns ,Kathryn A.} and Lindblom, Jallu},\n  date = {2022-08-18},\n  journaltitle = {Cognition and Emotion},\n  volume = {36},\n  number = {6},\n  eprint = {35674671},\n  eprinttype = {pubmed},\n  pages = {1109--1131},\n  publisher = {Routledge},\n  issn = {0269-9931},\n  doi = {10.1080/02699931.2022.2081534}\n}",
+  "reference_b": null,
+  "paper_doi": "https://doi.org/10.1080/02699931.2022.2081534",
+  "link_to_data": "https://osf.io/e8423/files/osfstorage",
+  "link_to_codebook": "https://osf.io/u59nd/files/",
+  "link_to_code": "https://osf.io/u59nd/files/",
+  "n_participants": 122,
+  "n_time_points": 49,
+  "n_beeps_per_day": "7",
+  "passive_data_available": "no",
+  "cross_sectional_available": "yes",
+  "topics": "emotion regulation, attachment, neuroticism",
+  "implicit_missingness": "no",
+  "raw_time_stamp": "yes",
+  "sampling_scheme": "7x/day semi-random intervals, scheduled in blocks",
+  "participants": "undergraduate students",
+  "coding_file": "0054_tammilehto_variables",
+  "additional_comments": "no day and beep information available",
+  "coder_data": "Björn Siepe",
+  "coder_metadata": "Björn Siepe",
+  "features": [
+    {
+      "name": "id",
+      "description": "Participant ID",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "day",
+      "description": "Day of study",
+      "type": "other",
+      "coding": "not available",
+      "answer_categories": ""
+    },
+    {
+      "name": "beep",
+      "description": "Beep of the day",
+      "type": "other",
+      "coding": "not available",
+      "answer_categories": ""
+    },
+    {
+      "name": "discrete_time",
+      "description": "Discrete time since study beginning",
+      "type": "numeric",
+      "coding": "Discrete time (1 hour and 43 min blocks 1= first block to 92 =\nlast block)",
+      "answer_categories": "92"
+    },
+    {
+      "name": "time_elapsed",
+      "description": "Time elapsed",
+      "type": "numeric",
+      "coding": "Time of receiving EMA questionnaires in hours from the\nbeginning of the study",
+      "answer_categories": ""
+    },
+    {
+      "name": "reappraisal",
+      "description": "Reappraisal",
+      "type": "ordinal",
+      "coding": "I thought about the situation in a more positive way\n1 = not at all\n5 = very much",
+      "answer_categories": "5"
+    },
+    {
+      "name": "rumination",
+      "description": "Rumination",
+      "type": "ordinal",
+      "coding": "I thought over and over again about the negative situation and\nfeelings\n1 = not at all\n5 = very much",
+      "answer_categories": "5"
+    },
+    {
+      "name": "suppression",
+      "description": "Suppression",
+      "type": "ordinal",
+      "coding": "I avoided showing my situation-elicited negative feelings\n1 = not at all\n5 = very much",
+      "answer_categories": "5"
+    },
+    {
+      "name": "feel_loved",
+      "description": "Feeling loved",
+      "type": "Likert",
+      "coding": "I feel loved\n1 = strongly disagree\n7 = strongly agree\nPart of attachment security",
+      "answer_categories": "7"
+    },
+    {
+      "name": "rely_on",
+      "description": "Rely on someone",
+      "type": "Likert",
+      "coding": "I feel like I have someone to rely on\n1 = strongly disagree\n7 = strongly agree\nPart of attachment security",
+      "answer_categories": "7"
+    },
+    {
+      "name": "need_love",
+      "description": "Need for love",
+      "type": "Likert",
+      "coding": "I feel a strong need to be unconditionally loved right now\n1 = strongly disagree\n7 = strongly agree\nPart of attachment anxiety",
+      "answer_categories": "7"
+    },
+    {
+      "name": "share_feelings",
+      "description": "Wanting to share feelings",
+      "type": "Likert",
+      "coding": "I want to share my feelings with someone\n1 = strongly disagree\n7 = strongly agree\nPart of attachment anxiety",
+      "answer_categories": "7"
+    },
+    {
+      "name": "keep_distance",
+      "description": "Keeping distance",
+      "type": "Likert",
+      "coding": "If someone tried to get close to me, I would try to keep my\ndistance\n1 = strongly disagree\n7 = strongly agree\nPart of attachment avoidance",
+      "answer_categories": "7"
+    },
+    {
+      "name": "closeness_nervous",
+      "description": "Emotional closeness makes nervous",
+      "type": "Likert",
+      "coding": "The idea of being emotionally close to someone makes me\nnervous\n1 = strongly disagree\n7 = strongly agree\nPart of attachment avoidance",
+      "answer_categories": "7"
+    }
+  ]
+}
