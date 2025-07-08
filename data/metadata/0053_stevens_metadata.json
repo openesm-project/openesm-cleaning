@@ -1,0 +1,195 @@
+{
+  "first_author": "Stevens",
+  "dataset": "0053",
+  "year": 2020,
+  "reference_a": "@article{stevens2020,\n  title = {Body {{Positivity}} (\\#{{BoPo}}) in everyday life: {{An}} ecological momentary assessment study showing potential benefits to individuals’ body image and emotional wellbeing},\n  shorttitle = {Body {{Positivity}} (\\#{{BoPo}}) in everyday life},\n  author = {Stevens, Alicia and Griffiths, Scott},\n  date = {2020-12-01},\n  journaltitle = {Body Image},\n  volume = {35},\n  pages = {181--191},\n  issn = {1740-1445},\n  doi = {10.1016/j.bodyim.2020.09.003}\n}",
+  "reference_b": null,
+  "paper_doi": "https://doi.org/10.1016/j.bodyim.2020.09.003",
+  "link_to_data": "https://osf.io/qy9uj/files/",
+  "link_to_codebook": null,
+  "link_to_code": "https://osf.io/qy9uj/files/",
+  "n_participants": 133,
+  "n_time_points": 42,
+  "n_beeps_per_day": "6",
+  "passive_data_available": "no",
+  "cross_sectional_available": "yes",
+  "topics": "body positivity, social media, affect, body satisfaction, fitspiration",
+  "implicit_missingness": "no",
+  "raw_time_stamp": "yes",
+  "sampling_scheme": "6x/day semi-random intervals with anchor times and 40 minute period around them",
+  "participants": "undergraduate students",
+  "coding_file": "0053_stevens_variables",
+  "additional_comments": "no day and beep information available, some variable coding unclear",
+  "coder_data": "Björn Siepe",
+  "coder_metadata": "Björn Siepe",
+  "features": [
+    {
+      "name": "id",
+      "description": "Participant ID",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "day",
+      "description": "Day of study",
+      "type": "other",
+      "coding": "not available",
+      "answer_categories": ""
+    },
+    {
+      "name": "beep",
+      "description": "Beep of the day",
+      "type": "other",
+      "coding": "not available",
+      "answer_categories": ""
+    },
+    {
+      "name": "counter",
+      "description": "Counter",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "hour",
+      "description": "Hour of the day",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "weekend",
+      "description": "Weekend",
+      "type": "binary",
+      "coding": "0 = no\n1 = yes",
+      "answer_categories": "2"
+    },
+    {
+      "name": "response_lag",
+      "description": "Response lag",
+      "type": "numeric",
+      "coding": "Survey response time (in minutes, max. 45 minutes)",
+      "answer_categories": ""
+    },
+    {
+      "name": "response_time",
+      "description": "Survey completion time",
+      "type": "numeric",
+      "coding": "Survey completion time (in minutes)",
+      "answer_categories": ""
+    },
+    {
+      "name": "responded_fixed",
+      "description": "Responded",
+      "type": "binary",
+      "coding": "Meaning not fully clear, either whether participants completed the survey at all or whether they experienced some of the content stated below\n0 = no\n1 = yes",
+      "answer_categories": "2"
+    },
+    {
+      "name": "thins_exposure",
+      "description": "Unique exposure to thinspiration",
+      "type": "binary",
+      "coding": "Have you seen thinspiration since the last questionnaire? Recoded by the authors to indicate unique exposure\n0 = No exposure\n1 = Thinspiration exposure only",
+      "answer_categories": "2"
+    },
+    {
+      "name": "fits_exposure",
+      "description": "Unique exposure to fitspiration",
+      "type": "binary",
+      "coding": "Have you seen fitspiration since the last questionnaire? Recoded by the authors to indicate unique exposure\n0 = No exposure\n1 = Fitspiration exposure only",
+      "answer_categories": "2"
+    },
+    {
+      "name": "bo_po_exposure",
+      "description": "Unique exposure to body positivity",
+      "type": "binary",
+      "coding": "Have you seen body positivity since the last questionnaire? Recoded by the authors to indicate unique exposure\n0 = No exposure\n1 = Body positivity exposure only",
+      "answer_categories": "2"
+    },
+    {
+      "name": "dual_thin_fits",
+      "description": "Dual exposure to thinspiration and fitspiration",
+      "type": "binary",
+      "coding": "Have you seen thinspiration/fitspiration since the last questionnaire? Recoded by the authors to indicate double exposure\n0 = No exposure\n1 = Thinspiration and fitspiration exposure",
+      "answer_categories": "2"
+    },
+    {
+      "name": "dual_thin_bo_po",
+      "description": "Dual exposure to thinspiration and body positivity",
+      "type": "binary",
+      "coding": "Have you seen thinspiration/body positivity since the last questionnaire? Recoded by the authors to indicate double exposure\n0 = No exposure\n1 = Thinspiration and body positivity exposure",
+      "answer_categories": "2"
+    },
+    {
+      "name": "triple_exposure",
+      "description": "Triple exposure to thinspiration, fitspiration, and body positivity",
+      "type": "binary",
+      "coding": "Have you seen thinspiration/fitspiration/body positivity since the last questionnaire? Recoded by the authors to indicate double exposure\n0 = No exposure\n1 = Thinspiration, fitspiration, and body positivity exposure",
+      "answer_categories": "2"
+    },
+    {
+      "name": "weight_satisfaction",
+      "description": "Weight satisfaction",
+      "type": "VAS",
+      "coding": "How satisfied with your weight are you right now?\nState body satisfaction\n0 = extremely dissatisfied\n100 = extremely satisfied",
+      "answer_categories": "101"
+    },
+    {
+      "name": "appearance_satisfaction",
+      "description": "Appearance satisfaction",
+      "type": "VAS",
+      "coding": "How satisfied with your appearance are you right now?\nState body satisfaction\n0 = extremely dissatisfied\n100 = extremely satisfied",
+      "answer_categories": "101"
+    },
+    {
+      "name": "shape_satisfaction",
+      "description": "Shape satisfaction",
+      "type": "VAS",
+      "coding": "How satisfied with your shape are you right now?\nState body satisfaction\n0 = extremely dissatisfied\n100 = extremely satisfied",
+      "answer_categories": "101"
+    },
+    {
+      "name": "anxious",
+      "description": "Anxious",
+      "type": "VAS",
+      "coding": "How anxious are you right now?\nState negative affect\n0 = not at all\n100 = extremely",
+      "answer_categories": "101"
+    },
+    {
+      "name": "guilty",
+      "description": "Guilty",
+      "type": "VAS",
+      "coding": "How guilty are you right now?\nState negative affect\n0 = not at all\n100 = extremely",
+      "answer_categories": "101"
+    },
+    {
+      "name": "depressed",
+      "description": "Depressed",
+      "type": "VAS",
+      "coding": "How depressed are you right now? Wording not fully clear here, as the article states \"upset\" instead of depressed\nState negative affect\n0 = not at all\n100 = extremely",
+      "answer_categories": "101"
+    },
+    {
+      "name": "confident",
+      "description": "Confident",
+      "type": "VAS",
+      "coding": "How confident are you right now?\nState positive affect\n0 = not at all\n100 = extremely",
+      "answer_categories": "101"
+    },
+    {
+      "name": "happy",
+      "description": "Happy",
+      "type": "VAS",
+      "coding": "How happy are you right now?\nState positive affect\n0 = not at all\n100 = extremely",
+      "answer_categories": "101"
+    },
+    {
+      "name": "inspired",
+      "description": "Inspired",
+      "type": "VAS",
+      "coding": "How inspired are you right now?\nState positive affect\n0 = not at all\n100 = extremely",
+      "answer_categories": "101"
+    }
+  ]
+}
