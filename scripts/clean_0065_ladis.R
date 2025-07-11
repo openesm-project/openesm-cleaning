@@ -7,31 +7,25 @@ library(osfr)
 source(here("scripts", "functions_data.R"))
 
 
-# This is Study1 from Contextual Factors Surrounding Emotion Regulation: Replication Study
+# This is Study2 from Contextual Factors Surrounding Emotion Regulation: Replication Study
 # https://osf.io/h7kzb/?view_only=
 
 
 # Data --------------------------------------------------------------------
-if(!file.exists(here("data", "raw", "0009_ladis_ts_raw.csv"))){
-  osf_retrieve_file("https://osf.io/sx4k6") |>
+if(!file.exists(here("data", "raw", "0065_ladis_ts_raw.csv"))){
+  osf_retrieve_file("https://osf.io/f82q3") |>
     osf_download(path = here("data", "raw"))
 
 
   # rename data
-  file_name <- osf_retrieve_file("https://osf.io/sx4k6") |> pull(name)
-  file.rename(here("data", "raw", file_name), here("data", "raw", "0009_ladis_ts_raw.csv"))
+  file_name <- osf_retrieve_file("https://osf.io/f82q3") |> pull(name)
+  file.rename(here("data", "raw", file_name), here("data", "raw", "0065_ladis_ts_raw.csv"))
 }
 
-df <- read.csv(here("data", "raw", "0009_ladis_ts_raw.csv"))
-
-
+df <- read.csv(here("data", "raw", "0065_ladis_ts_raw.csv"))
 
 
 # Cleaning ----------------------------------------------------------------
-
-# remove row numbers
-df <- df |>
-  select(-X)
 
 df <- df |>
   janitor::clean_names()
@@ -42,25 +36,24 @@ names(df)
 
 # check for ema variables by counts for unique values
 counts <- df |>
-  group_by(pid) |>
+  group_by(subject) |>
   summarise(across(everything(), ~ n_distinct(.))) |>
   # compute mean for every variable across subjects
-  summarise(across(where(is.numeric), ~ max(.))) |>
+  summarise(across(everything(), ~ max(.))) |>
   pivot_longer(cols = everything(),
                names_to = "variable",
                values_to = "n_unique")
 counts
 
 # ema variables
-ema_vars <-
-  c("pid", counts |>
-      filter(n_unique > 1) |>
-      pull(variable))
+ema_vars <- counts |>
+  filter(n_unique > 1) |>
+  pull(variable)
 
 ema_vars
 
 # static variables
-static_vars <- c("pid", names(df)[!names(df) %in% ema_vars])
+static_vars <- c("subject", names(df)[!names(df) %in% ema_vars])
 static_vars
 
 
@@ -73,14 +66,15 @@ df_demographics <- df |>
 
 
 # save demographic data
-write_tsv(df_demographics, here("data", "clean", "0009_ladis_static.tsv"))
+write_tsv(df_demographics, here("data", "clean", "0065_ladis_static.tsv"))
 
 
 #* Column Names -----------------------------------------------------------
 df <- df |>
   # remove demographic columns from main data
   select(ema_vars) |>
-
+  select(-ends_with("centered"),
+         -total_e_rbins) |>
   # rename columns
   dplyr::rename(
     id = subject,
