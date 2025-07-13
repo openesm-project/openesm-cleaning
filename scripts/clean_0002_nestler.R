@@ -25,7 +25,12 @@ df <- read.table(here("data", "raw", "0002_nestler_ts_raw.txt"), header = TRUE)
 # Cleaning ----------------------------------------------------------------
 #* Column names ------------------------------------------------------------
 df <- df |>
-  janitor::clean_names()
+  janitor::clean_names() |>
+  # remove all "gm_"
+  rename_with(~ str_remove(., "^gm_")) |>
+  rename(
+    self_esteem = se
+  )
 
 #* Misc --------------------------------------------------------------------
 # add beep column (although irrelevant here)
