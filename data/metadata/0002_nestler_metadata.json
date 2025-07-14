@@ -5,6 +5,7 @@
   "reference_a": "@article{nestler2022,\n  title = {A lasso and a regression tree mixed-effect model with random effects for the level, the residual variance, and the autocorrelation},\n  author = {Nestler, Steffen and Humberg, Sarah},\n  date = {2022-06-01},\n  journaltitle = {Psychometrika},\n  shortjournal = {Psychometrika},\n  volume = {87},\n  number = {2},\n  pages = {506--532},\n  doi = {10.1007/s11336-021-09787-w}\n}",
   "reference_b": null,
   "paper_doi": "https://doi.org/10.1007/s11336-021-09787-w",
+  "link_to_zenodo": null,
   "link_to_data": "https://osf.io/gmz7e",
   "link_to_codebook": "https://osf.io/wjysp/?view_only=cb2bf9adeef14eb488d228ffe2141699",
   "link_to_code": "https://osf.io/53scf/",
@@ -130,9 +131,9 @@
       "wording": "Today I was satisfied with myself",
       "labels": "1 = not at all\n6 = extremely",
       "transformation": "grand-mean centered",
-      "source": "",
+      "source": "Rosenberg Self-Esteem Scale",
       "assessment_type": "Daily",
-      "construct": "Rosenberg Self-Esteem Scale",
+      "construct": "",
       "comments": ""
     },
     {
