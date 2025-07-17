@@ -5,14 +5,13 @@
   "reference_a": "@article{wright2019,\n  title = {Focusing personality assessment on the person: {{Modeling}} general, shared, and person specific processes in personality and psychopathology},\n  shorttitle = {Focusing personality assessment on the person},\n  author = {Wright, Aidan G. C. and Gates, Kathleen M. and Arizmendi, Cara and Lane, Stephanie T. and Woods, William C. and Edershile, Elizabeth A.},\n  date = {2019},\n  journaltitle = {Psychological Assessment},\n  volume = {31},\n  number = {4},\n  pages = {502--515},\n  publisher = {American Psychological Association},\n  location = {US},\n  doi = {10.1037/pas0000617}\n}",
   "reference_b": "@article{wright2015,\n  title = {Daily interpersonal and affective dynamics in personality disorder},\n  author = {Wright, Aidan G. C. and Hopwood, Christopher J. and Simms, Leonard J.},\n  date = {2015-08},\n  journaltitle = {Journal of Personality Disorders},\n  volume = {29},\n  number = {4},\n  pages = {503--525},\n  publisher = {Guilford Publications Inc.},\n  doi = {10.1521/pedi.2015.29.4.503}\n}",
   "paper_doi": "https://doi.org/10.1037/pas0000617",
+  "link_to_zenodo": null,
   "link_to_data": "https://osf.io/5x8rv",
   "link_to_codebook": "-",
   "link_to_code": "-",
   "n_participants": 94,
   "n_time_points": 100,
-  "n_beeps_per_day": [
-    1
-  ],
+  "n_beeps_per_day": "1",
   "passive_data_available": "no",
   "cross_sectional_available": "no",
   "topics": "personality disorder, interpersonal behavior, stress, affect, functioning",
