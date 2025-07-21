@@ -18,7 +18,33 @@ df_raw <- read_excel(here::here("data", "raw", "0008_westhoff_ts_raw.xlsx"),
 #* Column Names -----------------------------------------------------------
 df <- df_raw |>
   janitor::clean_names() |>
-  rename(id = name)
+  rename(id = name,
+         depressed = stopd_1,
+         anxious = stopd_2,
+         stressed = stopd_3,
+         angry = stopd_4,
+         lacking_support = stopd_5,
+         affect_valence = core_affect_valence,
+         affect_arousal = core_affect_arousal,
+         negative_affect_behavior = pbat_1,
+         positive_affect_behavior = pbat_2,
+         negative_cognition_behavior = pbat_3,
+         positive_cognition_behavior = pbat_4,
+         negative_attention_behavior = pbat_5,
+         positive_attention_behavior = pbat_6,
+         negative_social_connection_behavior = pbat_7,
+         positive_social_connection_behavior = pbat_8,
+         negative_motivation_behavior = pbat_9,
+         positive_motivation_behavior = pbat_10,
+         negative_overt_behavior = pbat_11,
+         positive_overt_behavior = pbat_12,
+         negative_physical_health_behavior = pbat_13,
+         positive_physical_health_behavior = pbat_14,
+         negative_change_behavior = pbat_15,
+         positive_change_behavior = pbat_16,
+         negative_behavior_retention = pbat_17,
+         positive_behavior_retention = pbat_18,
+         sleep_duration = sleep_hour)
 
 
 #* Misc -------------------------------------------------------------------
@@ -31,14 +57,19 @@ df <- df |>
 
 # correct day and beep columns
 df <- df |>
-  mutate(beep = as.numeric(session),
-         counter = as.numeric(session_id)) |>
-  select(-c(session, session_id))
+  mutate(beep = as.double(session),
+         counter = as.double(session_id)) |>
+  select(-c(session, session_id)) |>
+  mutate(day = as.double(day))
 
 # split demographic data to separate file
 df_demographics <- df |>
   select(id, gender, age, relationship, livingstatus, degree, occupation) |>
   distinct()
+
+# remove irrelevant id column
+df <- df |>
+  select(-vid)
 
 # remove demographic columns from main data
 df <- df |>
