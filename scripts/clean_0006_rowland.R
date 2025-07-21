@@ -42,7 +42,17 @@ df <- df |>
 
 
 #* Misc -------------------------------------------------------------------
+# split off group variable
+df_demographics <- df |>
+  select(id, group) |>
+  distinct()
 
+# remove group variable from main data frame
+df <- df |>
+  select(-group)
+
+# save demographics data frame
+write_tsv(df_demographics, here("data", "clean", "0006_rowland_static.tsv"))
 
 # Check requirements ------------------------------------------------------
 # if check_data runs without messages, the data are clean

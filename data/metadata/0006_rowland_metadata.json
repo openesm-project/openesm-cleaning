@@ -5,12 +5,13 @@
   "reference_a": "@article{rowland2020,\n  title = {Mindfulness and affect-network density: does mindfulness facilitate disengagement from affective experiences in daily life?},\n  shorttitle = {Mindfulness and affect-network density},\n  author = {Rowland, Zarah and Wenzel, Mario},\n  date = {2020-05-01},\n  journaltitle = {Mindfulness},\n  volume = {11},\n  number = {5},\n  pages = {1253--1266},\n  doi = {10.1007/s12671-020-01335-4}\n}",
   "reference_b": null,
   "paper_doi": "https://doi.org/10.1007/s12671-020-01335-4",
+  "link_to_zenodo": null,
   "link_to_data": "https://osf.io/jmz2n/",
   "link_to_codebook": "https://osf.io/5t4yg",
   "link_to_code": "https://osf.io/jmz2n/",
   "n_participants": 125,
   "n_time_points": 240,
-  "n_beeps_per_day": 6,
+  "n_beeps_per_day": "6",
   "passive_data_available": "no",
   "cross_sectional_available": "yes",
   "topics": "mindfulness, affect, network",
@@ -26,86 +27,156 @@
     {
       "name": "id",
       "description": "Participant ID",
-      "type": "categorical",
+      "variable_type": "categorical",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "wording": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "day",
       "description": "Day of study",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "wording": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "beep",
       "description": "Beep of the day",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
-      "answer_categories": ""
-    },
-    {
-      "name": "group",
-      "description": "Condition allocation",
-      "type": "binary",
-      "coding": "0 = control, \n1 = training",
-      "answer_categories": "2"
+      "answer_categories": "",
+      "wording": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "happy",
       "description": "Happy",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "0 (not at all) to 100 (very much)",
-      "answer_categories": "101"
+      "answer_categories": "101",
+      "wording": "",
+      "labels": "0 (not at all) to 100 (very much)",
+      "transformation": "within-person centered",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "positive affect, affect",
+      "comments": "\"We assessed affect in terms of eight common emotional states (e.g., Kuppens et al. 2010), which were based on the affective circumplex model (Russell 2003).\""
     },
     {
       "name": "excited",
       "description": "Excited",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "0 (not at all) to 100 (very much)",
-      "answer_categories": "101"
+      "answer_categories": "101",
+      "wording": "",
+      "labels": "0 (not at all) to 100 (very much)",
+      "transformation": "within-person centered",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "positive affect, affect",
+      "comments": ""
     },
     {
       "name": "relaxed",
-      "description": "Relaex",
-      "type": "VAS",
+      "description": "Relaxed",
+      "variable_type": "VAS",
       "coding": "0 (not at all) to 100 (very much)",
-      "answer_categories": "101"
+      "answer_categories": "101",
+      "wording": "",
+      "labels": "0 (not at all) to 100 (very much)",
+      "transformation": "within-person centered",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "positive affect, affect",
+      "comments": ""
     },
     {
       "name": "satisfied",
       "description": "Satisfied",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "0 (not at all) to 100 (very much)",
-      "answer_categories": "101"
+      "answer_categories": "101",
+      "wording": "",
+      "labels": "0 (not at all) to 100 (very much)",
+      "transformation": "within-person centered",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "positive affect, affect",
+      "comments": ""
     },
     {
       "name": "angry",
       "description": "Angry",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "0 (not at all) to 100 (very much)",
-      "answer_categories": "101"
+      "answer_categories": "101",
+      "wording": "",
+      "labels": "0 (not at all) to 100 (very much)",
+      "transformation": "within-person centered",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "negative affect, affect",
+      "comments": ""
     },
     {
       "name": "anxious",
       "description": "Anxious",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "0 (not at all) to 100 (very much)",
-      "answer_categories": "101"
+      "answer_categories": "101",
+      "wording": "",
+      "labels": "0 (not at all) to 100 (very much)",
+      "transformation": "within-person centered",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "negative affect, affect",
+      "comments": ""
     },
     {
       "name": "depressed",
       "description": "Depressed",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "0 (not at all) to 100 (very much)",
-      "answer_categories": "101"
+      "answer_categories": "101",
+      "wording": "",
+      "labels": "0 (not at all) to 100 (very much)",
+      "transformation": "within-person centered",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "negative affect, affect, depression",
+      "comments": ""
     },
     {
       "name": "sad",
       "description": "Sad",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "0 (not at all) to 100 (very much)",
-      "answer_categories": "101"
+      "answer_categories": "101",
+      "wording": "",
+      "labels": "0 (not at all) to 100 (very much)",
+      "transformation": "within-person centered",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "negative affect, affect",
+      "comments": ""
     }
   ]
 }
