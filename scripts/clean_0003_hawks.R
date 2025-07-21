@@ -32,7 +32,7 @@ df_list$data_new <- map2(df_list$key, df_list$data, function(k, d) {
 # attach them to the longest dataframe
 df <- df_list$data_new[[4]] |>
   full_join(df_list$data_new[[3]], by = c("user_id", "study_days", "study_time"), suffix=c("",".y")) |>
-              select(-ends_with(".y")) |>
+  select(-ends_with(".y")) |>
   full_join(df_list$data_new[[2]], by = c("user_id", "study_days", "study_time"), suffix=c("",".y")) |>
   select(-ends_with(".y")) |>
   full_join(df_list$data_new[[1]], by = c("user_id", "study_days", "study_time"), suffix=c("",".y")) |>
@@ -50,7 +50,9 @@ df <- janitor::clean_names(df)
 df <- df |>
   rename(id = user_id) |>
   rename(day = study_days) |>
-  rename(interruptions = interruptions_interruptions)
+  rename(interruptions = interruptions_interruptions) |>
+  rename(sleep_duration = sleep_dur,
+         social_functioning_composite = socialfunc_comp)
 
 # remove long column prefixes
 prefixes_to_remove <- c("na_emotions_",
@@ -69,8 +71,6 @@ df <- df |>
 df <- df |>
   mutate(study_time = study_time * 24)
 
-
-
 # create a beep column
 df <- df |>
   arrange(id, day, study_time) |>
@@ -81,9 +81,9 @@ df <- df |>
 
 # split off demographic data
 cols_demo <- c("age", "education", "gender", "english_primary",
-             "wake_up_typical", "wake_up_earliest", "wake_up_latest",
-             "go_to_sleep_typical", "go_to_sleep_earliest", "go_to_sleep_latest",
-             "screen_w", "screen_h")
+               "wake_up_typical", "wake_up_earliest", "wake_up_latest",
+               "go_to_sleep_typical", "go_to_sleep_earliest", "go_to_sleep_latest",
+               "screen_w", "screen_h")
 
 df_demographics <- df |>
   group_by(id) |>
@@ -96,6 +96,12 @@ write_tsv(df_demographics, here("data", "clean", "0003_hawks_static.tsv"))
 # remove demographic data from main df
 df <- df |>
   select(-c(all_of(cols_demo)))
+
+
+# nicer order
+df <- df |>
+  select(id, day, beep, sitting_id, everything())
+
 
 # Check requirements ------------------------------------------------------
 # if check_data runs without messages, the data are clean
