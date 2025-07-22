@@ -13,19 +13,19 @@ source(here("scripts", "functions_data.R"))
 
 
 # Data --------------------------------------------------------------------
-if (!file.exists(here("data", "raw", "0010_bringmann_ts_raw.rda"))) {
+if (!file.exists(here("data", "raw", "0010_geschwind_ts_raw.rda"))) {
   df <- read.csv(textConnection(
     getURL(
-      "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pone.0060188/1/pone.0060188.s004.txt?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=wombat-sa%40plos-prod.iam.gserviceaccount.com%2F20250429%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250429T141620Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=1f3ea0660fbb6ee1fcf2c38bbd85357f2a4bcff4d5378711d82499ec246a27bc54fbd3924b5052655e5129dd661c8748dbe72b63a71928e74308ef91d3cb0f70b57a01d381795d2283134b3394fb4ab7ffe0b44b295147556e3c6c3956b831d28328ae8bdf2247323bad7e51ce4c8187c7aaf99508256cbe48cfe4c35eba192dfb9fec184ed87bc489a4579b37ab4de11be8ae1138eff7b72bae334af1de7594e843b96e9d204cb85aadb72d7169e1b73085b5b07bb0420cb939f8a168815206ddde18ae4b22cdb22ed932e39dd93cc785592b9b323b897371a2f0605b0292d2d38911b129cae874ad14857ff724dbcd53a1089d2f847367af6518f77cea60ec"
+      "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pone.0060188/1/pone.0060188.s004.txt?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=wombat-sa%40plos-prod.iam.gserviceaccount.com%2F20250722%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250722T074654Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=a12cb1738aa1871e104338be40f38cd6d2972cc4cf86c7d529ee2f43791c63412cbc25761dcd4922447afb029b1025c74e1b2ef7b36cce7cf6d6110f0e57deb9878f811dd506d020dcfb03cda287015bcbddce216d5305bb5c544dda6d7117a75f88e28752b80a1170a93664fbf134fe856db6e5327c77e2f31549889daf6b2cb710a883356a433d426deb0ee6ae2624e563e3cf5a3beef84dae0ac0b8a504c2819365e3961954f077586976f225e0af3808a44295b14456e450bbabb80692e40312a2f66785fdd0f09640e9cac6ff5de5c1e62a2b11d9ff069ac9ceac1b27b9a1fc569945a7c0cba732c1e58b7a4517dd22794f7230ce9c2cdd22d64031a642"
     )
   ))
   write.csv2(df,
-             here("data", "raw", "0010_bringmann_ts_raw.csv"),
+             here("data", "raw", "0010_geschwind_ts_raw.csv"),
              row.names = FALSE)
 }
 
 
-df <- read.csv2(here("data", "raw", "0010_bringmann_ts_raw.csv"))
+df <- read.csv2(here("data", "raw", "0010_geschwind_ts_raw.csv"))
 
 
 
@@ -43,7 +43,7 @@ df <- df |>
     # affect variables
     cheerful = opgewkt,
     pleasantness = onplplez,
-    worry = pieker,
+    worried = pieker,
     fearful = angstig,
     sad = somber,
     relaxed = ontspann,
@@ -51,7 +51,6 @@ df <- df |>
   )
 
 #* Misc -------------------------------------------------------------------
-
 # split off demographic data to separate file
 df_demographics <- df |>
   group_by(id) |>
@@ -59,7 +58,7 @@ df_demographics <- df |>
 
 # save demographic data
 write_tsv(df_demographics,
-          here("data", "clean", "0010_bringmann_static.tsv"))
+          here("data", "clean", "0010_geschwind_static.tsv"))
 
 # remove demographic columns from main data
 df <- df |>
@@ -74,7 +73,7 @@ check_results
 # if it returns "Data are clean.", save the data
 # Enter data set ID here
 if(check_results == "Data are clean."){
-  write_tsv(df, here("data", "clean", "0010_bringmann_ts.tsv"))
+  write_tsv(df, here("data", "clean", "0010_geschwind_ts.tsv"))
 }
 
 
@@ -93,4 +92,4 @@ variable_data <- read_sheet(sheet_url)
 meta_json <- create_metadata_json("0010") |>
   toJSON(pretty = TRUE, auto_unbox = TRUE)
 
-write(meta_json, here("data", "metadata", "0010_bringmann_metadata.json"))
+write(meta_json, here("data", "metadata", "0010_geschwind_metadata.json"))
