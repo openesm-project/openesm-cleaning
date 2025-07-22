@@ -11,13 +11,15 @@ source(here("scripts", "functions_data.R"))
 # Data --------------------------------------------------------------------
 df_raw <- read_sav(here::here("data", "raw", "0015_flueckiger_ts_raw.sav"))
 
-
-
-
 # Cleaning ----------------------------------------------------------------
 #* Column Names -----------------------------------------------------------
 df <- df_raw |>
-  janitor::clean_names()
+  janitor::clean_names() |>
+  rename(
+    sleep_quality = sq,
+    physical_activity = phys_act,
+    learning_goal_achievement = lga
+  )
 
 
 #* Misc -------------------------------------------------------------------
@@ -51,10 +53,6 @@ write_tsv(df_demographics, here("data", "clean", "0015_flueckiger_static.tsv"))
 df <- df |>
   select(-all_of(cols_demo))
 
-# variable coding
-df <- df |>
-  mutate(sq = as.factor(sq),
-         lga = as.factor(lga))
 
 # Check requirements ------------------------------------------------------
 # if check_data runs without messages, the data are clean
