@@ -1,26 +1,91 @@
 {
-  "first_author": [],
-  "dataset": [],
-  "year": [],
-  "reference_a": [],
-  "reference_b": [],
-  "paper_doi": [],
-  "link_to_data": [],
-  "link_to_codebook": [],
-  "link_to_code": [],
-  "n_participants": [],
-  "n_time_points": [],
-  "n_beeps_per_day": [],
-  "passive_data_available": [],
-  "cross_sectional_available": [],
-  "topics": [],
-  "implicit_missingness": [],
-  "raw_time_stamp": [],
-  "sampling_scheme": [],
-  "participants": [],
-  "coding_file": [],
-  "additional_comments": [],
-  "coder_data": [],
-  "coder_metadata": [],
-  "features": []
+  "first_author": "Dejonckheere",
+  "dataset": "0012",
+  "year": 2019,
+  "reference_a": "@article{dejonckheere2019,\n  title = {Poor emotion regulation ability mediates the link between depressive symptoms and affective bipolarity},\n  author = {Dejonckheere, Egon and Kalokerinos, Elise K. and Bastian, Brock and Kuppens, Peter},\n  date = {2019-07-04},\n  journaltitle = {Cognition and Emotion},\n  volume = {33},\n  number = {5},\n  eprint = {30270738},\n  pages = {1076--1083},\n  publisher = {Routledge},\n  doi = {10.1080/02699931.2018.1524747}\n}",
+  "reference_b": null,
+  "paper_doi": "https://doi.org/10.1080/02699931.2018.1524747",
+  "link_to_zenodo": null,
+  "link_to_data": "https://figshare.com/articles/dataset/Poor_emotion_regulation_ability_mediates_the_link_between_depressive_symptoms_and_affective_bipolarity/7150664",
+  "link_to_codebook": "https://osf.io/487eg",
+  "link_to_code": "https://www.tandfonline.com/doi/full/10.1080/02699931.2018.1524747#supplemental-material-section",
+  "n_participants": 100,
+  "n_time_points": 98,
+  "n_beeps_per_day": "7",
+  "passive_data_available": "no",
+  "cross_sectional_available": "yes",
+  "topics": "rumination, depression, emotion regulation, afect",
+  "implicit_missingness": "no",
+  "raw_time_stamp": "no",
+  "sampling_scheme": "7x/day stratified random interval scheme",
+  "participants": "community sample",
+  "coding_file": "0012_dejonckheere_variables",
+  "additional_comments": null,
+  "coder_data": "Björn Siepe",
+  "coder_metadata": "Björn Siepe",
+  "features": [
+    {
+      "name": "id",
+      "description": "Participant ID",
+      "type": "categorical",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "day",
+      "description": "Day of study",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "beep",
+      "description": "Beep of the day",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "counter",
+      "description": "Counter",
+      "type": "numeric",
+      "coding": "",
+      "answer_categories": ""
+    },
+    {
+      "name": "happy",
+      "description": "Happiness",
+      "type": "VAS",
+      "coding": "How happy do you feel at the moment?\n0 = not at all\n100 = very much",
+      "answer_categories": "101"
+    },
+    {
+      "name": "relaxed",
+      "description": "Relaxation",
+      "type": "VAS",
+      "coding": "How relaxed do you feel at the moment?\n0 = not at all\n100 = very much",
+      "answer_categories": "101"
+    },
+    {
+      "name": "sad",
+      "description": "Sadness",
+      "type": "VAS",
+      "coding": "How sad do you feel at the moment?\n0 = not at all\n100 = very much",
+      "answer_categories": "101"
+    },
+    {
+      "name": "angry",
+      "description": "Angry",
+      "type": "VAS",
+      "coding": "How angry do you feel at the moment?\n0 = not at all\n100 = very much",
+      "answer_categories": "101"
+    },
+    {
+      "name": "stressed",
+      "description": "Stress",
+      "type": "VAS",
+      "coding": "How stressed do you feel at the moment?\n0 = not at all\n100 = very much",
+      "answer_categories": "101"
+    }
+  ]
 }

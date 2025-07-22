@@ -12,8 +12,6 @@ source(here("scripts", "functions_data.R"))
 df_raw <- haven::read_sav(here::here("data", "raw", "0012_dejonckheere_ts_raw.sav"))
 
 
-
-
 # Cleaning ----------------------------------------------------------------
 
 #* Column Names -----------------------------------------------------------
@@ -22,14 +20,16 @@ df <- df_raw |>
   janitor::clean_names() |>
   rename(
     id = pid,
-    counter = beepnum
+    counter = beepnum,
+    angry = anger,
+    stressed = stress
   )
 
 # For each id, create a new beep column (7x/day) and a day column (14 days)
 df <- df |>
   arrange(id) |>
   mutate(
-    beep_new = rep(rep(1:7, times = 14), times = 100),
+    beep = rep(rep(1:7, times = 14), times = 100),
     day = rep(rep(1:14, each = 7), times = 100)
   )
 
@@ -76,7 +76,7 @@ sheet_url <- meta_data |>
 
 variable_data <- read_sheet(sheet_url)
 
-meta_json <- create_metadata_json("000X") |>
+meta_json <- create_metadata_json("0012") |>
   toJSON(pretty = TRUE, auto_unbox = TRUE)
 
 write(meta_json, here("data", "metadata", "0012_dejonckheere_metadata.json"))
