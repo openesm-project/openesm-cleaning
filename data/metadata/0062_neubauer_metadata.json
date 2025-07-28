@@ -543,7 +543,7 @@
       "comments": ""
     },
     {
-      "name": "care_takaing",
+      "name": "care_taking",
       "description": "Care-taking of children / other family members",
       "variable_type": "binary",
       "coding": "took care of children / other family members\nFALSE = not selected \nTRUE = selected",
@@ -1275,7 +1275,7 @@
       "description": "Unappreciated",
       "variable_type": "Likert",
       "coding": "...unappreciated...\n1 = completely disagree \n7 = completely agree",
-      "answer_categories": "77",
+      "answer_categories": "7",
       "wording": "",
       "labels": "",
       "transformation": "",

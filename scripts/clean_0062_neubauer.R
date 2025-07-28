@@ -94,7 +94,7 @@ df <- df |>
     # other activities
     number_other_activities = ds04,
     part_time_job = ds04_01,
-    care_takaing = ds04_02,
+    care_taking = ds04_02,
     time_with_friends = ds04_03,
     on_social_media = ds04_04,
     tv_video_games = ds04_05,
