@@ -1,4 +1,4 @@
-id	notification_time	time	beep	notification_no	day	reminder	session_instance_response_lapse	session_length	morning_sleep	morning_breakfast	morning_ok	enjoy_all	stress_all	motivated_all	angry_all	liked_all	lonely_all	alert_all	hostile_all	le_enjoy_all	le_diff_all	le_intr_all	te_str_all	te_fair_all	te_enc_all	peer_rel_all	schoolday_satisfaction
+id	notification_time	time	beep	notification_no	day	reminder	session_instance_response_lapse	session_length	morning_sleep	morning_breakfast	morning_ok	enjoy_school	stressed	motivated	angry	liked	lonely	alert	stupid	lecture_enjoy	lecture_difficult	lecture_interesting	teacher_strict	teacher_fair	teacher_encouraging	peer_relationship	schoolday_satisfaction
 17000272	2022-11-21T09:45:00Z	4	2	1	1	0	00:01:23.000000	00:01:20.000000	NA	NA	NA	3	4	2	2	3	2	1	NA	1	3	1	2	NA	3	3	NA
 17000272	2022-11-21T13:04:59Z	5	3	1	1	0	00:01:03.000000	00:03:14.000000	NA	NA	NA	3	4	2	NA	3	3	1	2	NA	2	2	4	3	2	2	NA
 17000272	2022-11-22T07:15:00Z	83	1	9	11	0	00:57:34.000000	00:00:19.000000	4	0	3	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA

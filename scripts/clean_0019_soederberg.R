@@ -12,20 +12,26 @@ source(here("scripts", "functions_data.R"))
 df_raw <- read_sav(here::here("data", "raw", "0019_soederberg_ts_raw.sav"))
 
 
-
-
 # Cleaning ----------------------------------------------------------------
 #* Column Names -----------------------------------------------------------
 df <- df_raw |>
   janitor::clean_names() |>
+  # remove _all in column names
+  rename_with(~ str_remove(., "_all$")) |>
   rename(id = id4,
-         beep = session)
+         beep = session,
+         stressed = stress,
+         enjoy_school = enjoy,
+         lecture_enjoy = le_enjoy,
+         lecture_difficult = le_diff,
+         lecture_interesting = le_intr,
+         teacher_strict = te_str,
+         teacher_fair = te_fair,
+         teacher_encouraging = te_enc,
+         peer_relationship = peer_rel)
 
 
 #* Misc -------------------------------------------------------------------
-
-
-
 # split off demographic/static data
 demo_cols <- c("gender", "edu_level", "school_enj", "school_abs")
 
@@ -62,7 +68,12 @@ df <- df |>
     TRUE ~ NA_real_
   )))
 
-# rename hostile to stupid
+# check for character NAs
+df <- df |>
+  mutate(across(where(is.character), ~ na_if(., "NA"))) |>
+  mutate(across(where(is.character), ~ na_if(., "")))
+
+# rename hostile to stupid due to swedish translation
 df <- df |>
   rename(stupid = hostile)
 
