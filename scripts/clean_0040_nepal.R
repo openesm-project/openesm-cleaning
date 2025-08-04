@@ -31,7 +31,7 @@ df <- df |>
     anhedonia = phq4_4,
     stressed = stress,
     perception_worry = sse3_1,
-    appearence_pleased = sse3_2,
+    appearance_pleased = sse3_2,
     feel_smart = sse3_3,
     feel_good = sse3_4,
     covid_concern_general = covid_1,
