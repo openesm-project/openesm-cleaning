@@ -31,7 +31,7 @@ df <- df |>
   janitor::clean_names() |>
   dplyr::rename(id = sema_id,
                 day = day_nr,
-                occasion = row_nr,
+                counter = row_nr,
                 happy = hap,
                 relaxed = rlx,
                 confident = conf,
@@ -50,7 +50,6 @@ df <- df |>
   mutate(beep = NA, .after = day)
 
 #* Misc -------------------------------------------------------------------
-
 # split off demographic data to separate file
 df_demographics <- df |>
   group_by(id) |>

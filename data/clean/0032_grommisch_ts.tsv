@@ -1,4 +1,4 @@
-id	occasion	day	beep	happy	relaxed	confident	sad	stressed	angry	situation_selection	situation_modification	reappraisal	acceptance	rumination	social_sharing	ignoring	suppression
+id	counter	day	beep	happy	relaxed	confident	sad	stressed	angry	situation_selection	situation_modification	reappraisal	acceptance	rumination	social_sharing	ignoring	suppression
 45876	1	1	NA	70	61	71	11	0	0	0	0	21	60	50	0	61	98
 45876	2	1	NA	51	70	40	11	0	0	0	2	11.5	70	0	0	22	100
 45876	3	1	NA	62	49	39	0	31	0	0	0	20	81	0	49	0	40
