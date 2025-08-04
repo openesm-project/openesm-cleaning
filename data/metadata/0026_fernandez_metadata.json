@@ -5,12 +5,13 @@
   "reference_a": "@online{elmer2023,\n  title = {Bidirectional associations between smartphone usage and momentary well-being in young adults: {{Tackling}} methodological challenges by combining experience sampling methods with passive smartphone data},\n  shorttitle = {Bidirectional associations between smartphone usage and momentary well-being in young adults},\n  author = {Elmer, Timon and Fernández, Aurelio and Stadel, Marie and Kas, Martien and Langener, Anna M.},\n  date = {2023-12-05},\n  eprinttype = {OSF},\n  doi = {10.31234/osf.io/uj6df},\n  pubstate = {prepublished}\n}",
   "reference_b": null,
   "paper_doi": "https://doi.org/10.31234/osf.io/uj6df",
+  "link_to_zenodo": null,
   "link_to_data": "https://osf.io/jvms7",
   "link_to_codebook": "https://osf.io/w3vp5",
   "link_to_code": "https://osf.io/jvms7",
   "n_participants": 225,
   "n_time_points": 50,
-  "n_beeps_per_day": 5,
+  "n_beeps_per_day": "5",
   "passive_data_available": "yes",
   "cross_sectional_available": "yes",
   "topics": "well-being, smartphone usage, social media",
@@ -28,91 +29,182 @@
       "description": "Participant ID",
       "type": "categorical",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "wording": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "day",
       "description": "Day of study",
       "type": "other",
       "coding": "NA",
-      "answer_categories": ""
+      "answer_categories": "",
+      "wording": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "beep",
       "description": "Beep of the day",
       "type": "other",
       "coding": "NA",
-      "answer_categories": ""
+      "answer_categories": "",
+      "wording": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "affect",
       "description": "Affect",
       "type": "Likert",
       "coding": "How do you feel right now?\n1 = Very bad\n7 = Very good",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "wording": "How do you feel right now?",
+      "labels": "1 = Very bad\n7 = Very good",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "affect",
+      "comments": ""
     },
     {
       "name": "loneliness",
       "description": "Loneliness",
       "type": "Likert",
       "coding": "How lonely do you feel at the moment?\n1 = Not at all\n7 = Very much",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "wording": "How lonely do you feel at the moment?",
+      "labels": "1 = Not at all\n7 = Very much",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "loneliness",
+      "comments": ""
     },
     {
-      "name": "all_pre",
+      "name": "all_smartphone_pre",
       "description": "Total smartphone use (pre)",
       "type": "numeric",
       "coding": "Minutes of total smartphone use in the hour \nprior to ESM measurement",
-      "answer_categories": ""
+      "answer_categories": "",
+      "wording": "Minutes of total smartphone use in the hour \nprior to ESM measurement",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "Passive",
+      "construct": "sensor, smartphone",
+      "comments": ""
     },
     {
-      "name": "com_pre",
+      "name": "communication_pre",
       "description": "Communication app use (pre)",
       "type": "numeric",
       "coding": "Minutes of communication app use in the \nhour prior to ESM measurement",
-      "answer_categories": ""
+      "answer_categories": "",
+      "wording": "Minutes of communication app use in the \nhour prior to ESM measurement",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "Passive",
+      "construct": "sensor, smartphone",
+      "comments": ""
     },
     {
-      "name": "sm_pre",
+      "name": "social_media_pre",
       "description": "Social media app use (pre)",
       "type": "numeric",
       "coding": "Minutes of social media app use in the hour \nprior to ESM measurement",
-      "answer_categories": ""
+      "answer_categories": "",
+      "wording": "Minutes of social media app use in the hour \nprior to ESM measurement",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "Passive",
+      "construct": "smartphone, social media, app",
+      "comments": ""
     },
     {
-      "name": "oth_pre",
+      "name": "other_pre",
       "description": "Other app use (pre)",
       "type": "numeric",
       "coding": "Minutes of other app use in the hour prior to \nESM measurement",
-      "answer_categories": ""
+      "answer_categories": "",
+      "wording": "Minutes of other app use in the hour prior to \nESM measurement",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "Passive",
+      "construct": "smartphone, app",
+      "comments": ""
     },
     {
-      "name": "all_post",
+      "name": "all_smartphone_post",
       "description": "Total smartphone use (post)",
       "type": "numeric",
       "coding": "Minutes of total smartphone use in the hour \npost ESM measurement",
-      "answer_categories": ""
+      "answer_categories": "",
+      "wording": "Minutes of total smartphone use in the hour \npost ESM measurement",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "Passive",
+      "construct": "sensor, smartphone",
+      "comments": ""
     },
     {
-      "name": "com_post",
+      "name": "communication_post",
       "description": "Communication app use (post)",
       "type": "numeric",
       "coding": "Minutes of communication app use in the \nhour post ESM measurement",
-      "answer_categories": ""
+      "answer_categories": "",
+      "wording": "Minutes of communication app use in the \nhour post ESM measurement",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "Passive",
+      "construct": "sensor, smartphone",
+      "comments": ""
     },
     {
-      "name": "sm_post",
+      "name": "social_media_post",
       "description": "Social media app use (post)",
       "type": "numeric",
       "coding": "Minutes of social media app use in the hour \npost ESM measurement",
-      "answer_categories": ""
+      "answer_categories": "",
+      "wording": "Minutes of social media app use in the hour \npost ESM measurement",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "Passive",
+      "construct": "smartphone, social media, app",
+      "comments": ""
     },
     {
-      "name": "oth_post",
+      "name": "other_post",
       "description": "Other app use (post)",
       "type": "numeric",
       "coding": "Minutes of other app use in the hour post \nESM measurement",
-      "answer_categories": ""
+      "answer_categories": "",
+      "wording": "Minutes of other app use in the hour post \nESM measurement",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "Passive",
+      "construct": "smartphone, app",
+      "comments": ""
     }
   ]
 }

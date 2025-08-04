@@ -32,7 +32,15 @@ rm(dat1)
 df <- df_raw |>
   janitor::clean_names() |>
   rename(
-    gender = woman
+    gender = woman,
+    all_smartphone_pre = all_pre,
+    communication_pre = com_pre,
+    social_media_pre = sm_pre,
+    other_pre = oth_pre,
+    all_smartphone_post = all_post,
+    communication_post = com_post,
+    social_media_post = sm_post,
+    other_post = oth_post
   )
 
 # add empty beep and day columns
