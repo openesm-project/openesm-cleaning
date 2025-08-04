@@ -8,10 +8,6 @@ library(osfr)
 source(here("scripts", "functions_data.R"))
 
 
-# This is Study1 from Contextual Factors Surrounding Emotion Regulation: Replication Study
-# https://osf.io/h7kzb/?view_only=
-
-
 # Data --------------------------------------------------------------------
 
 ## Time series
@@ -71,9 +67,29 @@ write_tsv(df_static,
 
 
 # Cleaning ----------------------------------------------------------------
-
 df <- df |>
-  janitor::clean_names()
+  janitor::clean_names() |>
+  rename(
+    chores = activ_today_1,
+    exercise = activ_today_2,
+    commute = activ_today_3,
+    school_work = activ_today_4,
+    medical_appt = activ_today_5,
+    alcohol = activ_today_6,
+    tobacco = activ_today_7,
+    drugs = activ_today_8,
+    family_friends = activ_today_9,
+    hobby = activ_today_10,
+    religious_service = activ_today_11,
+    sex = activ_today_12,
+    digital_communication = activ_today_13,
+    tv_movie = activ_today_14,
+    other_activity = activ_today_15,
+    other_activity_text = activ_today_15_text,
+    nap_rest = activ_today_16,
+    ate_meal = activ_today_18,
+    activity_prefer_not_answer = activ_today_99
+  )
 
 names(df)
 
@@ -99,11 +115,12 @@ df <- df |>
   select(-all_of(demographic_vars))
 
 
-#* Column Names -----------------------------------------------------------
 df <- df |>
-  # add beep with NAs
-  dplyr::mutate(beep = NA,
+  # add beep with 1s for daily data
+  dplyr::mutate(beep = 1,
                 .after = day)
+
+
 
 # Check requirements ------------------------------------------------------
 # if check_data runs without messages, the data are clean
