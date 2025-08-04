@@ -30,6 +30,7 @@ df_raw <- read_sav(here("data", "raw", "0028_contreras_ts_raw.sav"))
 df <- df_raw |>
   janitor::clean_names() |>
   rename(id = subject,
+         sad = sadness,
          useless = se1,
          manage_well = se2,
          no_trust = par1,

@@ -5,12 +5,13 @@
   "reference_a": "@article{contreras2020,\n  title = {A temporal network approach to paranoia: {{A}} pilot study},\n  shorttitle = {A temporal network approach to paranoia},\n  author = {Contreras, Alba and Valiente, Carmen and Heeren, Alexandre and Bentall, Richard},\n  date = {2020-09-18},\n  journaltitle = {Frontiers in Psychology},\n  shortjournal = {Front. Psychol.},\n  volume = {11},\n  publisher = {Frontiers},\n  issn = {1664-1078},\n  doi = {10.3389/fpsyg.2020.544565}\n}",
   "reference_b": null,
   "paper_doi": "https://doi.org/10.3389/fpsyg.2020.544565",
+  "link_to_zenodo": null,
   "link_to_data": "https://osf.io/7tk4b/",
   "link_to_codebook": "https://osf.io/bkn3y",
   "link_to_code": "https://osf.io/mezgw",
   "n_participants": 23,
   "n_time_points": 70,
-  "n_beeps_per_day": 10,
+  "n_beeps_per_day": "10",
   "passive_data_available": "no",
   "cross_sectional_available": "no",
   "topics": "paranoia, sadness, closeness to others, avoidance",
@@ -28,77 +29,154 @@
       "description": "Participant ID",
       "type": "categorical",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "wording": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "day",
       "description": "Day of study",
       "type": "other",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "wording": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "beep",
       "description": "Beep of the day",
       "type": "other",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "wording": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
     },
     {
-      "name": "sadness",
+      "name": "sad",
       "description": "Sadness",
       "type": "Likert",
       "coding": "At this moment, I feel sad",
-      "answer_categories": "9"
+      "answer_categories": "9",
+      "wording": "At this moment, I feel sad",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "negative affect, affect",
+      "comments": ""
     },
     {
       "name": "useless",
       "description": "Useless",
       "type": "Likert",
       "coding": "At this moment, I feel useless (Self-Esteem 1)",
-      "answer_categories": "9"
+      "answer_categories": "9",
+      "wording": "At this moment, I feel useless",
+      "labels": "",
+      "transformation": "",
+      "source": "Rosenberg Self-esteem Scale (RSES)",
+      "assessment_type": "ESM",
+      "construct": "self-esteem",
+      "comments": ""
     },
     {
       "name": "manage_well",
       "description": "Manage issues well",
       "type": "Likert",
       "coding": "At this moment, I feel I can manage issues well (Self-Esteem 1)",
-      "answer_categories": "9"
+      "answer_categories": "9",
+      "wording": "At this moment, I feel I can manage issues well",
+      "labels": "",
+      "transformation": "",
+      "source": "Rosenberg Self-esteem Scale (RSES)",
+      "assessment_type": "ESM",
+      "construct": "self-esteem",
+      "comments": ""
     },
     {
       "name": "no_trust",
       "description": "Cannot trust people",
       "type": "Likert",
       "coding": "Since the last “beep”, I have had the \nimpression that I cannot trust peopl (Paranoia 1)",
-      "answer_categories": "9"
+      "answer_categories": "9",
+      "wording": "Since the last “beep”, I have had the \nimpression that I cannot trust people",
+      "labels": "",
+      "transformation": "",
+      "source": "Persecutory Ideation Questionnaire (PIQ)",
+      "assessment_type": "ESM",
+      "construct": "paranoia",
+      "comments": ""
     },
     {
       "name": "harm",
       "description": "Perceived harm intention",
       "type": "Likert",
       "coding": "Since the last “beep”, I have had the \nimpression that people have tried to harm \nme",
-      "answer_categories": "9"
+      "answer_categories": "9",
+      "wording": "Since the last “beep”, I have had the \nimpression that people have tried to harm \nme",
+      "labels": "",
+      "transformation": "",
+      "source": "Persecutory Ideation Questionnaire (PIQ)",
+      "assessment_type": "ESM",
+      "construct": "paranoia",
+      "comments": ""
     },
     {
       "name": "criticism",
       "description": "Was criticized",
       "type": "Likert",
       "coding": "Since the last “beep”, I have had the \nimpression that people have criticized me",
-      "answer_categories": "9"
+      "answer_categories": "9",
+      "wording": "Since the last “beep”, I have had the \nimpression that people have criticized me",
+      "labels": "",
+      "transformation": "",
+      "source": "Persecutory Ideation Questionnaire (PIQ)",
+      "assessment_type": "ESM",
+      "construct": "paranoia",
+      "comments": ""
     },
     {
       "name": "others",
       "description": "Close to others",
       "type": "Likert",
       "coding": "At this moment, I feel close to others",
-      "answer_categories": "9"
+      "answer_categories": "9",
+      "wording": "At this moment, I feel close to others",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "relationship, social",
+      "comments": ""
     },
     {
       "name": "avoid",
       "description": "Experiential avoidance",
       "type": "Likert",
       "coding": "Since the last “beep”, I have tried to \navoid negative thoughts and feelings",
-      "answer_categories": "9"
+      "answer_categories": "9",
+      "wording": "Since the last “beep”, I have tried to \navoid negative thoughts and feelings",
+      "labels": "",
+      "transformation": "",
+      "source": "Acceptance and Action Questionnaire-II",
+      "assessment_type": "ESM",
+      "construct": "avoidance, emotion regulation",
+      "comments": ""
     }
   ]
 }
