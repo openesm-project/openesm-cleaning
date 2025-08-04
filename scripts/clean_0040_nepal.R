@@ -29,6 +29,7 @@ df <- df |>
     worrying = phq4_2,
     depressed = phq4_3,
     anhedonia = phq4_4,
+    stressed = stress,
     perception_worry = sse3_1,
     appearence_pleased = sse3_2,
     feel_smart = sse3_3,
