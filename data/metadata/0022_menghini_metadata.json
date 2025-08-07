@@ -5,12 +5,13 @@
   "reference_a": "@article{menghini2023,\n  title = {Workplace stress in real time},\n  author = {Menghini, Luca and Pastore, Massimiliano and Balducci, Cristian},\n  date = {2023},\n  journaltitle = {European Journal of Psychological Assessment},\n  volume = {39},\n  number = {6},\n  pages = {424--432},\n  publisher = {Hogrefe Publishing},\n  issn = {1015-5759},\n  doi = {10.1027/1015-5759/a000725}\n}",
   "reference_b": null,
   "paper_doi": "https://doi.org/10.1027/1015-5759/a000725",
+  "link_to_zenodo": null,
   "link_to_data": "https://github.com/Luca-Menghini/ESMscales-workplaceStress",
   "link_to_codebook": "https://osf.io/87a9p/files/osfstorage",
   "link_to_code": "https://github.com/Luca-Menghini/ESMscales-workplaceStress/tree/main/S3_dataAnalysis",
   "n_participants": 139,
   "n_time_points": 21,
-  "n_beeps_per_day": 7,
+  "n_beeps_per_day": "7",
   "passive_data_available": "no",
   "cross_sectional_available": "yes",
   "topics": "workplace stress, mood",
@@ -28,196 +29,392 @@
       "description": "Participant ID",
       "type": "categorical",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "day",
       "description": "Day of study",
       "type": "other",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "beep",
       "description": "Beep of the day",
       "type": "other",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "os",
       "description": "Operating system",
       "type": "categorical",
       "coding": "iOS or Android",
-      "answer_categories": "2"
+      "answer_categories": "2",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "day_of_week",
       "description": "Weekday",
       "type": "categorical",
       "coding": "1 = Monday\n3 = Wednesday\n5 = Friday",
-      "answer_categories": "3"
+      "answer_categories": "3",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "survey_type",
       "description": "Survey type",
       "type": "categorical",
       "coding": "Baseline or work",
-      "answer_categories": "2"
+      "answer_categories": "2",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "run_timestamp",
       "description": "Questionnaire initiation",
       "type": "PosixCt",
       "coding": "Initiation time of questionnair",
-      "answer_categories": ""
+      "answer_categories": "",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "submission_timestap",
       "description": "Questionnaire submission",
       "type": "PosixCt",
       "coding": "Submission time of questionnair",
-      "answer_categories": ""
+      "answer_categories": "",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "well",
       "description": "Feeling well",
       "type": "Likert",
       "coding": "How do you feel at this moment? \n1 = Very unwell\n7 = Very well",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "discontent",
       "description": "Discontent",
       "type": "Likert",
       "coding": "How do you feel at this moment? \n1 = Very content\n7 = Very discontent",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "state",
       "description": "Positive state",
       "type": "Likert",
       "coding": "How do you feel at this moment? \n1 = In a very negative\n7 = In a very positive state",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "tense",
       "description": "Tense",
       "type": "Likert",
       "coding": "How do you feel at this moment? \n1 = Very relaxed\n7 = Very tense",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "calm",
       "description": "Calm",
       "type": "Likert",
       "coding": "How do you feel at this moment? \n1 = Very agitated\n7 = Very calm",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "placid",
       "description": "Placid",
       "type": "Likert",
       "coding": "How do you feel at this moment? \n1 = Very nervous\n7 = Very placid",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "awake",
       "description": "Awake",
       "type": "Likert",
       "coding": "How do you feel at this moment? \n1 = Very tired\n7 = Very awakee",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "energyless",
       "description": "Without Energy",
       "type": "Likert",
       "coding": "How do you feel at this moment? \n1 = Very full of energy\n7 = Very without energy",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "rested",
       "description": "Rested",
       "type": "Likert",
       "coding": "How do you feel at this moment? \n1 = Very fatigued\n7 = Very rested",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "what",
       "description": "Work task",
       "type": "other",
       "coding": "Think about the main work activity performed in the last 10 minutes. What kind of activity was it?\n\n(long list of potential responses)",
-      "answer_categories": ""
+      "answer_categories": "",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "how",
       "description": "Means of work",
       "type": "other",
       "coding": "How were you doing the work activity?\nFace-to-face\nOn the computer\nVideocall (e.g., Skype)\nSmartphone/table\nOn the phone\nWith paper documents\nOther",
-      "answer_categories": ""
+      "answer_categories": "",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "whom",
       "description": "People involved in task",
       "type": "other",
       "coding": "Who was doing the activity with you?\nAnyone\nCoworkers\nSupervisors\nSubordinates\nCustomers/users\nSuppliers/external collaborators\nFamily members/friends\nOther",
-      "answer_categories": ""
+      "answer_categories": "",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "n_people",
       "description": "Number of people in task",
       "type": "numeric",
       "coding": "How many people were present, aside from you?",
-      "answer_categories": ""
+      "answer_categories": "",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "too_much",
       "description": "Too much work",
       "type": "Likert",
       "coding": "In relation with the work activity, I had to do too much\n1 = Not at all\n7 = Very much",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "work_fast",
       "description": "Work very fast",
       "type": "Likert",
       "coding": "In relation with the work activity, the activity required me to work very fast\n1 = Not at all\n7 = Very much",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "multitasking",
       "description": "Multiple things at once",
       "type": "Likert",
       "coding": "In relation with the work activity, I did multiple things at once\n1 = Not at all\n7 = Very much",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "hard_work",
       "description": "Work very hard",
       "type": "Likert",
       "coding": "In relation with the work activity, I had to work very hard\n1 = Not at all\n7 = Very much",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "change_task",
       "description": "Task change possible",
       "type": "Likert",
       "coding": "I could change task if I chose to \n1 = Not at all\n7 = Very much",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "decide_task",
       "description": "Decide how to perform task",
       "type": "Likert",
       "coding": "I could decide how to perform the task\n1 = Not at all\n7 = Very much",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     },
     {
       "name": "schedule_task",
       "description": "Schedule time of task",
       "type": "Likert",
       "coding": "I could schedule the time of the task\n1 = Not at all\n7 = Very much",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "Spalte 1": "",
+      "Spalte 3": "",
+      "Spalte 2": "",
+      "Spalte 4": "",
+      "Spalte 5": "",
+      "Spalte 6": "",
+      "Spalte 7": ""
     }
   ]
 }

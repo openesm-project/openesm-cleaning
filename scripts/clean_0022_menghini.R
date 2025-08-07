@@ -24,6 +24,15 @@ load(here("data", "raw", "0022_menghini_ts_raw.RData"))
 df_raw <- ESMdata
 rm(ESMdata)
 
+# the authors recoded some of the affect variables, such that
+# all variables correlate positively
+# https://github.com/Luca-Menghini/ESMscales-workplaceStress/blob/main/S2_dataProcessing/S2_dataProcessing_code.Rmd#L275C1-L302C91
+# we will reverse that to preserve the meaning of positive affect variables
+recode_vars <- c("v1", "v3", "t2", "t3", "f1", "f3")
+
+# reverse coding for each variable
+df_raw[ , recode_vars] <- lapply(df_raw[ , recode_vars], function(x) ifelse(!is.na(x), 8 - x, NA))
+
 # Cleaning ----------------------------------------------------------------
 #* Column Names -----------------------------------------------------------
 df <- df_raw |>
@@ -52,7 +61,13 @@ df <- df |>
   )
 
 
-
+# create a simple correlation plot of these items to double-check
+# df |>
+#   select(well:rested) |>
+#   cor(use = "pairwise.complete") |>
+#   corrplot::corrplot(method = "color", type = "lower", tl.col = "black",
+#                      tl.srt = 45, tl.cex = 0.8, addCoef.col = "black",
+#                      number.cex = 0.7, diag = FALSE)
 
 
 
