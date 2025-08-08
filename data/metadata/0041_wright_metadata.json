@@ -27,63 +27,63 @@
     {
       "name": "id",
       "description": "Participant ID",
-      "type": "categorical",
+      "variable_type": "categorical",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "day",
       "description": "Day of study",
-      "type": "other",
-      "coding": "",
+      "variable_type": "other",
+      "coding": "NA",
       "answer_categories": ""
     },
     {
       "name": "beep",
       "description": "Beep of the day",
-      "type": "other",
-      "coding": "",
+      "variable_type": "other",
+      "coding": "NA",
       "answer_categories": ""
     },
     {
       "name": "dominance",
       "description": "Interpersonal dominance score",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "Sum score of interpersonal dominance obtained after controlling for overall endorsment, followed by combinig scores based on circumplex weights. One adjective from each octant scale was provided. Rating how well the term described their past 24 hours.\n1 = Extremely inaccurate\n8 = Extremely accurate\nSubset of interpersonal adjective scale",
       "answer_categories": "8"
     },
     {
       "name": "affiliation",
       "description": "Interpersonal affiliation score",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "Sum score of interpersonal affiliation obtained after controlling for overall endorsment, followed by combinig scores based on circumplex weights. One adjective from each octant scale was provided. Rating how well the term described their past 24 hours.\n1 = Extremely inaccurate\n8 = Extremely accurate\nSubset of interpersonal adjective scale",
       "answer_categories": "8"
     },
     {
-      "name": "pos_aff",
+      "name": "pa",
       "description": "Positive affect",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Sum score of positive affect PANAS items: Active, alert, attentive, determined, inspired\n1 = Very slightly or not at all\n2 = A little\n3 = Moderately\n4 = Quite a bit\n5 = Very much",
       "answer_categories": "5"
     },
     {
-      "name": "neg_aff",
+      "name": "na",
       "description": "Negative affect",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Sum score of negative affect PANAS items: Afraid, ashamed, hostile, nervous, upset\n1 = Very slightly or not at all\n2 = A little\n3 = Moderately\n4 = Quite a bit\n5 = Very much",
       "answer_categories": "5"
     },
     {
-      "name": "stress",
+      "name": "stressed",
       "description": "Stress score",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Sum score of severity of seven potential stressul events in the last 24 hours\nEvents: 1.Having had anargument or disagreement with someone, 2.Something occurring that could have led to an argument or disagreement but it was allowed to pass, 3.A stressful event at work or school, 4.A stressful event at home, 5.Experiencing discrimination on the basis of age, sex, or race, 6.Something stressful happening to a close friend or relative, 7.Anything else that most people would consider stressful\nSeverity of endorsed events rated as:\n1 = Not at all\n2 = Not very\n3 = Somewhat\n4 = Very\n\nSelf-report version of the Daily Inventory of Stressful Events",
       "answer_categories": "4"
     },
     {
       "name": "functioning",
       "description": "General functioning",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "How much difficulty did you have in taking care of important tasks or responsibilites? (with reference to the last 24 hours)\n1 = None\n2 = Mild\n3 = Moderate\n4 = Severe\n5 = Extreme (Could not do)",
       "answer_categories": "5"
     }

@@ -30,17 +30,17 @@ check_data <- function(data){
 }
 
 # create metadata json file
-create_metadata_json <- function(dataset_id) {
+create_metadata_json <- function(dataset_id_char) {
 
   # Extract dataset-level info
   dataset_info <- meta_data |>
-    dplyr::filter(id == dataset_id)
+    dplyr::filter(dataset_id == dataset_id_char)
 
   # Extract feature-level info
   dataset_features <- variable_data |>
-    dplyr::filter(id == dataset_id) |>
+    dplyr::filter(dataset_id == dataset_id_char) |>
     dplyr::mutate_all(~ ifelse(is.na(.), "", .)) |>
-    dplyr::select(!id)
+    dplyr::select(!dataset_id)
 
   # Construct JSON structure
   list(
