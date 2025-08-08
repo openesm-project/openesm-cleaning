@@ -89,6 +89,10 @@ df <- df |>
   mutate(across(contains("time") | contains("date"),
                 ~ as.POSIXct(.x, format = "%Y-%m-%d %H:%M:%S")))
 
+# check for character NA
+df <- df |>
+  mutate(across(where(is.character), ~ na_if(.x, "NA"))) |>
+  mutate(across(where(is.character), ~ na_if(.x, "")))
 
 # create day variable
 df <- df |>
