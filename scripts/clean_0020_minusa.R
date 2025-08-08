@@ -8,51 +8,19 @@ source(here("scripts", "functions_data.R"))
 
 
 # Data --------------------------------------------------------------------
-# download dataset from GitHub
-if(!file.exists(here("data", "raw", "0005_wang_ts_raw.csv"))){
-  download.file("https://raw.githubusercontent.com/CornellPACLab/data_heterogeneity/refs/heads/main/data/crosscheck_daily_data_cleaned_w_sameday.csv",
-                destfile = here("data", "raw", "0005_wang_ts_raw.csv"))
-}
-df_raw <- read.csv(here("data", "raw", "0005_wang_ts_raw.csv"))
+
 
 
 
 
 # Cleaning ----------------------------------------------------------------
+
 #* Column Names -----------------------------------------------------------
-df <- df_raw |>
-  janitor::clean_names() |>
-  rename_with(~str_remove_all(., "ema_"), everything()) |>
-  rename(
-    id = study_id,
-    think_clearly = think
-  )
 
 
 
 #* Misc -------------------------------------------------------------------
 
-# remove unclear/irrelevant columns
-df <- df |>
-  select(!c(x, eureka_id, missing_days))
-
-# remove sum scores
-df <- df |>
-  select(!c(neg_score, pos_score, score))
-
-# clean day column
-df <- df |>
-  mutate(date = as.Date(date, format = "%Y-%m-%d")) |>
-  # personal day variable
-  group_by(id) |>
-  mutate(
-    day = as.integer(date - min(date)) + 1
-  ) |>
-  ungroup()
-
-
-# add beep
-df$beep <- 1
 
 # Check requirements ------------------------------------------------------
 # if check_data runs without messages, the data are clean
@@ -62,7 +30,7 @@ check_results <- check_data(df)
 # if it returns "Data are clean.", save the data
 # Enter data set ID here
 if(check_results == "Data are clean."){
-  write_tsv(df, here("data", "clean", "0005_wang_ts.tsv"))
+  write_tsv(df, here("data", "clean", "0020_minusa_ts.tsv"))
 }
 
 
@@ -73,12 +41,12 @@ meta_data <- read_sheet(metadata_url)
 
 # Enter dataset ID here
 sheet_url <- meta_data |>
-  filter(dataset_id == "0005") |>
+  filter(dataset_id == "0020") |>
   pull("Coding File URL")
 
 variable_data <- read_sheet(sheet_url)
 
-meta_json <- create_metadata_json("0005") |>
+meta_json <- create_metadata_json("0020") |>
   toJSON(pretty = TRUE, auto_unbox = TRUE)
 
-write(meta_json, here("data", "metadata", "0005_wang_metadata.json"))
+write(meta_json, here("data", "metadata", "0020_minusa_metadata.json"))

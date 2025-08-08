@@ -20,8 +20,11 @@ if(!file.exists(here("data", "raw", "0037_fisher_ts_raw.zip"))){
   file.rename(here("data", "raw", file_name), here("data", "raw", "0037_fisher_ts_raw.zip"))
 }
 # unzip data
-if(!file.exists(here("data", "raw", "0037_fisher_ts_raw"))){
-  unzip(here("data", "raw", "0037_fisher_ts_raw.zip"), exdir = here("data", "raw", "0037_fisher_ts_raw"))
+if(!file.exists(here("data", "raw", "0037_fisher_ts_raw"))) {
+  unzip(
+    here("data", "raw", "0037_fisher_ts_raw.zip"),
+    exdir = here("data", "raw", "0037_fisher_ts_raw")
+  )
 }
 
 # read in RData files
@@ -163,7 +166,7 @@ meta_data <- read_sheet(metadata_url)
 
 # Enter dataset ID here
 sheet_url <- meta_data |>
-  filter(id == "0037") |>
+  filter(dataset_id == "0037") |>
   pull("Coding File URL")
 
 variable_data <- read_sheet(sheet_url)

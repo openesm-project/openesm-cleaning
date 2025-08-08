@@ -27,6 +27,9 @@ df <- df_raw[, c(1, 183:222)]
 
 df_demographics <- df_raw[, c(1 : 182, 223:226)]
 
+# save demographics
+write_tsv(df_demographics, here("data", "clean", "0058_gainey_static.tsv"))
+
 # Cleaning ----------------------------------------------------------------
 #* Column Names -----------------------------------------------------------
 df <- df |>
@@ -87,7 +90,7 @@ meta_data <- read_sheet(metadata_url)
 
 # Enter dataset ID here
 sheet_url <- meta_data |>
-  filter(id == "0058") |>
+  filter(dataset_id == "0058") |>
   pull("Coding File URL")
 
 variable_data <- read_sheet(sheet_url)

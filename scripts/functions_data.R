@@ -45,7 +45,7 @@ create_metadata_json <- function(dataset_id) {
   # Construct JSON structure
   list(
     first_author = dataset_info$Author,
-    dataset = dataset_info$id,
+    dataset = dataset_info$dataset_id,
     year = dataset_info$Year,
     reference_a = dataset_info$`Reference A`,
     reference_b = dataset_info$`Reference B`,

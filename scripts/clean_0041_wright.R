@@ -35,7 +35,13 @@ df_raw <- list.files(here("data", "raw", "0041_wright_ts_raw", "Individual Level
 # Cleaning ----------------------------------------------------------------
 #* Column Names -----------------------------------------------------------
 df <- df_raw |>
-  janitor::clean_names()
+  janitor::clean_names() |>
+  dplyr::rename(
+    stressed = stress,
+    pa = pos_aff,
+    na = neg_aff
+  )
+
 
 
 #* Misc -------------------------------------------------------------------
@@ -65,7 +71,7 @@ meta_data <- read_sheet(metadata_url)
 
 # Enter dataset ID here
 sheet_url <- meta_data |>
-  filter(id == "0041") |>
+  filter(dataset_id == "0041") |>
   pull("Coding File URL")
 
 variable_data <- read_sheet(sheet_url)

@@ -70,7 +70,7 @@ metadata_url <- "https://docs.google.com/spreadsheets/d/1ALGCq_jN6I4dcjWYQ_LQe9o
 meta_data <- read_sheet(metadata_url)
 
 sheet_url <- meta_data |>
-  filter(id == "0006") |>
+  filter(dataset_id == "0006") |>
   pull("Coding File URL")
 
 variable_data <- read_sheet(sheet_url)

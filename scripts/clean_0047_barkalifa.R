@@ -43,6 +43,11 @@ df <- df_raw |>
 # add beep variable (daily-diary study)
 df$beep <- 1
 
+# check if there are any character NAs
+df <- df |>
+  mutate(across(where(is.character), ~na_if(., "NA"))) |>
+  mutate(across(where(is.character), ~na_if(., "")))
+
 
 # Check requirements ------------------------------------------------------
 # if check_data runs without messages, the data are clean
@@ -63,7 +68,7 @@ meta_data <- read_sheet(metadata_url)
 
 # Enter dataset ID here
 sheet_url <- meta_data |>
-  filter(id == "0047") |>
+  filter(dataset_id == "0047") |>
   pull("Coding File URL")
 
 variable_data <- read_sheet(sheet_url)
