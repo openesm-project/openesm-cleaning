@@ -5,7 +5,7 @@
   "reference_a": "@article{hawks2023,\n  title = {Accurate prediction of momentary cognition from intensive longitudinal data},\n  author = {Hawks, Zoë W. and Strong, Roger and Jung, Laneé and Beck, Emorie D. and Passell, Eliza J. and Grinspoon, Elizabeth and Singh, Shifali and Frumkin, Madelyn R. and Sliwinski, Martin and Germine, Laura T.},\n  date = {2023-08-01},\n  journaltitle = {Biological Psychiatry: Cognitive Neuroscience and Neuroimaging},\n  series = {Reliability of {{Neurocognitive Measures}} for {{Mental Health}}},\n  volume = {8},\n  number = {8},\n  pages = {841--851},\n  doi = {10.1016/j.bpsc.2022.12.002}\n}",
   "reference_b": null,
   "paper_doi": "https://doi.org/10.1016/j.bpsc.2022.12.002",
-  "link_to_zenodo": null,
+  "zenodo_doi": null,
   "link_to_data": "https://github.com/zwihawks/PredictingMomentaryCog",
   "link_to_codebook": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10264553/bin/NIHMS1858073-supplement-1.pdf",
   "link_to_code": "https://github.com/zwihawks/PredictingMomentaryCog",
@@ -105,7 +105,7 @@
       "transformation": "",
       "source": "PANAS Short Form",
       "assessment_type": "ESM",
-      "construct": "negative affect, affect",
+      "construct": "nervousness, negative affect, affect, neuroticism, big five",
       "comments": ""
     },
     {
@@ -119,7 +119,7 @@
       "transformation": "",
       "source": "PANAS Short Form",
       "assessment_type": "ESM",
-      "construct": "negative affect, affect",
+      "construct": "fear, negative affect, affect, neuroticism, big five",
       "comments": ""
     },
     {
@@ -133,7 +133,7 @@
       "transformation": "",
       "source": "PANAS Short Form",
       "assessment_type": "ESM",
-      "construct": "positive affect, affect",
+      "construct": "enthusiasm, positive affect, affect, extraversion, big five",
       "comments": ""
     },
     {
@@ -147,7 +147,7 @@
       "transformation": "",
       "source": "PANAS Short Form",
       "assessment_type": "ESM",
-      "construct": "negative affect, affect",
+      "construct": "distress, negative affect, affect, neuroticism, big five",
       "comments": ""
     },
     {
@@ -161,7 +161,7 @@
       "transformation": "",
       "source": "PANAS Short Form",
       "assessment_type": "ESM",
-      "construct": "positive affect, affect",
+      "construct": "excitement, positive affect, affect, extraversion, big five",
       "comments": ""
     },
     {
@@ -175,7 +175,7 @@
       "transformation": "",
       "source": "PANAS Short Form",
       "assessment_type": "ESM",
-      "construct": "negative affect, affect",
+      "construct": "fear, negative affect, affect, neuroticism, big five",
       "comments": ""
     },
     {
@@ -189,7 +189,7 @@
       "transformation": "",
       "source": "PANAS Short Form",
       "assessment_type": "ESM",
-      "construct": "negative affect, affect",
+      "construct": "upset, negative affect, affect, neuroticism, big five",
       "comments": ""
     },
     {
@@ -203,7 +203,7 @@
       "transformation": "",
       "source": "PANAS Short Form",
       "assessment_type": "ESM",
-      "construct": "positive affect, affect",
+      "construct": "alertness, positive affect, affect, etxraversion, big five",
       "comments": ""
     },
     {
@@ -217,7 +217,7 @@
       "transformation": "",
       "source": "PANAS Short Form",
       "assessment_type": "ESM",
-      "construct": "positive affect, affect",
+      "construct": "determination, positive affect, affect",
       "comments": ""
     },
     {
@@ -231,7 +231,7 @@
       "transformation": "",
       "source": "PANAS Short Form",
       "assessment_type": "ESM",
-      "construct": "positive affect, affect",
+      "construct": "inspiration, positive affect, affect",
       "comments": ""
     },
     {
@@ -245,7 +245,7 @@
       "transformation": "",
       "source": "Anxiety & Depression Scale",
       "assessment_type": "ESM",
-      "construct": "depression",
+      "construct": "depression, negative affect, affect, neuroticism, big five",
       "comments": ""
     },
     {
@@ -259,7 +259,7 @@
       "transformation": "",
       "source": "Anxiety & Depression Scale",
       "assessment_type": "ESM",
-      "construct": "anxiety",
+      "construct": "restlessness,",
       "comments": ""
     },
     {
