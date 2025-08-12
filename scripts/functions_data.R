@@ -45,7 +45,7 @@ create_metadata_json <- function(dataset_id_char) {
   # Construct JSON structure
   list(
     first_author = dataset_info$Author,
-    dataset = dataset_info$dataset_id,
+    dataset_id = dataset_info$dataset_id,
     year = dataset_info$Year,
     reference_a = dataset_info$`Reference A`,
     reference_b = dataset_info$`Reference B`,
@@ -92,7 +92,7 @@ list_variable_construct_pairs <- function(folder_path) {
 
   for (file_path in json_files) {
     metadata <- jsonlite::fromJSON(file_path, simplifyVector = FALSE)
-    dataset_id <- metadata$dataset
+    dataset_id <- metadata$dataset_id
 
     # iterate features
     if (!is.null(metadata$features) && length(metadata$features) > 0) {
