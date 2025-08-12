@@ -52,6 +52,7 @@ create_metadata_json <- function(dataset_id_char) {
     paper_doi = dataset_info$`Paper DOI`,
     zenodo_doi = dataset_info$`Zenodo DOI`,
     link_to_data = dataset_info$`Link to data`,
+    license = dataset_info$`License`,
     link_to_codebook = dataset_info$`Optional: Link to Codebook`,
     link_to_code = dataset_info$`Optional: Link to Code`,
     n_participants = dataset_info$`N Participants`,
