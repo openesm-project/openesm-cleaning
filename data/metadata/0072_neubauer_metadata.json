@@ -390,7 +390,7 @@
       "comments": ""
     },
     {
-      "name": "parenting_childe_liked",
+      "name": "parenting_child_liked",
       "description": "Child did what it liked",
       "variable_type": "Likert",
       "coding": "",
