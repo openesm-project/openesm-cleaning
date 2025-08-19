@@ -1,12 +1,13 @@
 {
   "first_author": "Flueckiger",
-  "dataset": "0015",
+  "dataset_id": "0015",
   "year": 2014,
   "reference_a": "@article{flueckiger2014,\n  title = {How health behaviors relate to academic performance via affect: {{An}} intensive longitudinal study},\n  shorttitle = {How health behaviors relate to academic performance via affect},\n  author = {Flueckiger, Lavinia and Lieb, Roselind and Meyer, Andrea H. and Mata, Jutta},\n  date = {2014-10-29},\n  journaltitle = {PLOS ONE},\n  shortjournal = {PLOS ONE},\n  volume = {9},\n  number = {10},\n  pages = {e111080},\n  publisher = {Public Library of Science},\n  doi = {10.1371/journal.pone.0111080}\n}",
   "reference_b": null,
   "paper_doi": "https://doi.org/10.1371/journal.pone.0111080",
-  "link_to_zenodo": null,
+  "zenodo_doi": null,
   "link_to_data": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/27388",
+  "license": "CC0 1.0",
   "link_to_codebook": "https://doi.org/10.7910/DVN/27388/U8IPJZ",
   "link_to_code": null,
   "n_participants": 72,
@@ -27,56 +28,56 @@
     {
       "name": "id",
       "description": "Participant ID",
-      "type": "categorical",
+      "variable_type": "categorical",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "day",
       "description": "Day of study",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "beep",
       "description": "Beep of the day",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "sleep_quality",
       "description": "Sleep quality",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "1 = very bad\n4 = very good",
       "answer_categories": "4"
     },
     {
       "name": "physical_activity",
       "description": "Physical activity",
-      "type": "numerical",
+      "variable_type": "numerical",
       "coding": "Number of minutes engaged in mild, moderate and strenuous exercise weighted by metabolic equivalents and then summed to produce a total daily leisure activity score",
       "answer_categories": ""
     },
     {
       "name": "pa",
       "description": "Positive affect",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "Mean of happy, content, cheerful\n1 = not at all\n7 = extremely",
       "answer_categories": "7"
     },
     {
       "name": "na",
       "description": "Negative affect",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "Mean of sad, downhearted, frustrated\n1 = not at all\n7 = extremely",
       "answer_categories": "7"
     },
     {
       "name": "learning_goal_achievement",
       "description": "Learning goal achievement",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Did you achieve the learning goals you set for yourself in the last 24 hours? (paraphrasd after item description in the paper)\n0 = not at all\n4 = completely",
       "answer_categories": "5"
     }

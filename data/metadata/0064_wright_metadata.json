@@ -1,11 +1,13 @@
 {
   "first_author": "Wright",
-  "dataset": "0064",
+  "dataset_id": "0064",
   "year": 2017,
   "reference_a": "@article{wright2017,\n  title = {The effect of pathological narcissism on interpersonal and affective processes in social interactions.},\n  author = {Wright, Aidan G. C. and Stepp, Stephanie D. and Scott, Lori N. and Hallquist, Michael N. and Beeney, Joseph E. and Lazarus, Sophie A. and Pilkonis, Paul A.},\n  date = {2017-10},\n  journaltitle = {Journal of Abnormal Psychology},\n  shortjournal = {Journal of Abnormal Psychology},\n  volume = {126},\n  number = {7},\n  pages = {898--910},\n  issn = {1939-1846, 0021-843X},\n  doi = {10.1037/abn0000286}\n}",
   "reference_b": "@article{wendt2020,\n  title = {Indicators of affect dynamics: {{Structure}}, reliability, and personality correlates},\n  shorttitle = {Indicators of affect dynamics},\n  author = {Wendt, Leon P. and Wright, Aidan G.C. and Pilkonis, Paul A. and Woods, William C. and Denissen, Jaap J.A. and Kühnel, Anja and Zimmermann, Johannes},\n  date = {2020},\n  journaltitle = {European Journal of Personality},\n  volume = {34},\n  number = {6},\n  pages = {1060--1072},\n  issn = {1099-0984},\n  doi = {10.1002/per.2277}\n}",
   "paper_doi": "https://doi.org/10.1037/abn0000286",
+  "zenodo_doi": null,
   "link_to_data": "https://osf.io/6ghcx/files/osfstorage",
+  "license": "CC BY-NC 4.0",
   "link_to_codebook": "-",
   "link_to_code": "https://osf.io/6ghcx/files/osfstorage",
   "n_participants": 222,
@@ -21,7 +23,7 @@
   "coding_file": "0064_wright_variables",
   "additional_comments": "data from original study shared in more detail in Wendt et al. (2020); number of time points based on max. rows in data; variable coding partially unclear",
   "coder_data": "Björn Siepe",
-  "coder_metadata": null,
+  "coder_metadata": "Björn Siepe",
   "features": [
     {
       "name": "id",

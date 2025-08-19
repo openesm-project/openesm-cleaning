@@ -148,7 +148,7 @@
       "transformation": "",
       "source": "PANAS Short Form",
       "assessment_type": "ESM",
-      "construct": "distress, negative affect, affect, neuroticism, big five",
+      "construct": "distress, negative affect, affect",
       "comments": ""
     },
     {
@@ -260,7 +260,7 @@
       "transformation": "",
       "source": "Anxiety & Depression Scale",
       "assessment_type": "ESM",
-      "construct": "restlessness,",
+      "construct": "restlessness, fidgety, anxiety, psychopathology",
       "comments": ""
     },
     {
@@ -274,7 +274,7 @@
       "transformation": "",
       "source": "Anxiety & Depression Scale",
       "assessment_type": "ESM",
-      "construct": "depression",
+      "construct": "sadness, depression, psychopathology, negative affect, affect",
       "comments": ""
     },
     {
@@ -288,7 +288,7 @@
       "transformation": "",
       "source": "Anxiety & Depression Scale",
       "assessment_type": "ESM",
-      "construct": "anxiety",
+      "construct": "worry, anxiety, psychopathology, negative affect, affect",
       "comments": ""
     },
     {
@@ -302,7 +302,7 @@
       "transformation": "",
       "source": "Anxiety & Depression Scale",
       "assessment_type": "ESM",
-      "construct": "depression",
+      "construct": "hopelessness, depression, psychopathology",
       "comments": ""
     },
     {
@@ -316,7 +316,7 @@
       "transformation": "",
       "source": "Anxiety & Depression Scale",
       "assessment_type": "ESM",
-      "construct": "anxiety",
+      "construct": "irritability, anxiety, psychopathology, negative affect, affect",
       "comments": ""
     },
     {
@@ -330,7 +330,7 @@
       "transformation": "",
       "source": "Anxiety & Depression Scale",
       "assessment_type": "ESM",
-      "construct": "depression",
+      "construct": "depression, psychopathology",
       "comments": ""
     },
     {
@@ -344,7 +344,7 @@
       "transformation": "",
       "source": "Daily Inventory of Stressful Events",
       "assessment_type": "ESM",
-      "construct": "stress, relationship",
+      "construct": "negative event, social conflict, stress, social interaction",
       "comments": ""
     },
     {
@@ -358,7 +358,7 @@
       "transformation": "",
       "source": "Daily Inventory of Stressful Events",
       "assessment_type": "ESM",
-      "construct": "stress, regulation",
+      "construct": "negative event, letting go,  stress, self-regulation",
       "comments": ""
     },
     {
@@ -372,7 +372,7 @@
       "transformation": "",
       "source": "Daily Inventory of Stressful Events",
       "assessment_type": "ESM",
-      "construct": "stress, relationship",
+      "construct": "negative event, stress,  relationship",
       "comments": ""
     },
     {
@@ -386,7 +386,7 @@
       "transformation": "",
       "source": "Daily Inventory of Stressful Events",
       "assessment_type": "ESM",
-      "construct": "stress, physical health",
+      "construct": "negative event, stress, physical health",
       "comments": ""
     },
     {
@@ -400,7 +400,7 @@
       "transformation": "",
       "source": "Daily Inventory of Stressful Events",
       "assessment_type": "ESM",
-      "construct": "stress",
+      "construct": "negative event, stress",
       "comments": ""
     },
     {
@@ -414,7 +414,7 @@
       "transformation": "",
       "source": "Daily Inventory of Stressful Events",
       "assessment_type": "ESM",
-      "construct": "stress, Covid",
+      "construct": "covid, stress, cognition",
       "comments": ""
     },
     {
@@ -428,7 +428,7 @@
       "transformation": "",
       "source": "Social Functioning Scale",
       "assessment_type": "ESM",
-      "construct": "social functioning, social, social interaction",
+      "construct": "communication, social functioning, social interaction",
       "comments": ""
     },
     {
@@ -442,7 +442,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "alertness, sleep",
+      "construct": "sleepiness, alterness, affect",
       "comments": ""
     },
     {
@@ -456,7 +456,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "context",
+      "construct": "busyiness, situational demands, context",
       "comments": ""
     },
     {
@@ -470,7 +470,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "concentration",
+      "construct": "concentration, cognitive functioning, attention",
       "comments": ""
     },
     {
@@ -484,7 +484,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "context",
+      "construct": "noisiness, context",
       "comments": ""
     },
     {
@@ -498,7 +498,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "attention",
+      "construct": "task completion, executive functioning, self-regulation",
       "comments": ""
     },
     {
@@ -512,7 +512,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "attention",
+      "construct": "organization, executive functioning",
       "comments": ""
     },
     {
@@ -526,7 +526,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "attention",
+      "construct": "mental effort avoidance, executive functioning, self-regulation",
       "comments": ""
     },
     {
@@ -540,7 +540,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "attention",
+      "construct": "forgefulness, attention, cognitive functioning",
       "comments": ""
     },
     {
@@ -554,7 +554,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "attention",
+      "construct": "fidgeting, motor control, executive functioning",
       "comments": ""
     },
     {
@@ -568,7 +568,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "attention",
+      "construct": "hyperactivity, executive functioning",
       "comments": ""
     },
     {
@@ -596,7 +596,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "sleep",
+      "construct": "sleep duration, sleep",
       "comments": ""
     },
     {
@@ -610,7 +610,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "social functioning",
+      "construct": "social functioning, social interaction",
       "comments": ""
     },
     {
@@ -624,7 +624,7 @@
       "transformation": "",
       "source": "Digit-Symbol Matching (DS)",
       "assessment_type": "ESM",
-      "construct": "cognition, processing speed",
+      "construct": "reaction time, cognitive functioning",
       "comments": ""
     },
     {
@@ -652,7 +652,7 @@
       "transformation": "",
       "source": "Choice Reaction Time (CRT)",
       "assessment_type": "ESM",
-      "construct": "cognition",
+      "construct": "reaction time, cognitive functioning",
       "comments": ""
     },
     {
@@ -666,7 +666,7 @@
       "transformation": "",
       "source": "Gradual Onset Continuous Performance Test (GCPT)",
       "assessment_type": "ESM",
-      "construct": "cognition, attention, cognitive control",
+      "construct": "cognitive functioning",
       "comments": ""
     },
     {
@@ -680,7 +680,7 @@
       "transformation": "",
       "source": "Multiple Object Tracking (MOT)",
       "assessment_type": "ESM",
-      "construct": "cognition",
+      "construct": "cognitive functioning",
       "comments": ""
     }
   ]

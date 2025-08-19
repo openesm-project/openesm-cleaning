@@ -1,11 +1,13 @@
 {
   "first_author": "Tammilehto",
-  "dataset": "0054",
+  "dataset_id": "0054",
   "year": 2022,
   "reference_a": "@article{tammilehto2022,\n  title = {Dynamics of attachment and emotion regulation in daily life: {{Uni-}} and bidirectional associations},\n  shorttitle = {Dynamics of attachment and emotion regulation in daily life},\n  author = {Tammilehto, Jaakko and {Bosmans ,Guy} and {Kuppens ,Peter} and {Flykt ,Marjo} and {Peltonen ,Kirsi} and {Kerns ,Kathryn A.} and Lindblom, Jallu},\n  date = {2022-08-18},\n  journaltitle = {Cognition and Emotion},\n  volume = {36},\n  number = {6},\n  eprint = {35674671},\n  eprinttype = {pubmed},\n  pages = {1109--1131},\n  publisher = {Routledge},\n  issn = {0269-9931},\n  doi = {10.1080/02699931.2022.2081534}\n}",
   "reference_b": null,
   "paper_doi": "https://doi.org/10.1080/02699931.2022.2081534",
+  "zenodo_doi": null,
   "link_to_data": "https://osf.io/e8423/files/osfstorage",
+  "license": "CC-By Attribution 4.0 International",
   "link_to_codebook": "https://osf.io/u59nd/files/",
   "link_to_code": "https://osf.io/u59nd/files/",
   "n_participants": 122,
@@ -83,42 +85,42 @@
       "name": "feel_loved",
       "description": "Feeling loved",
       "type": "Likert",
-      "coding": "I feel loved\n1 = strongly disagree\n7 = strongly agree\nPart of attachment security",
+      "coding": "I feel loved\n1 = strongly disagree\n7 = strongly agree\nPart of attachment security (State Adult Attachment Measure)",
       "answer_categories": "7"
     },
     {
       "name": "rely_on",
       "description": "Rely on someone",
       "type": "Likert",
-      "coding": "I feel like I have someone to rely on\n1 = strongly disagree\n7 = strongly agree\nPart of attachment security",
+      "coding": "I feel like I have someone to rely on\n1 = strongly disagree\n7 = strongly agree\nPart of attachment security (State Adult Attachment Measure)",
       "answer_categories": "7"
     },
     {
       "name": "need_love",
       "description": "Need for love",
       "type": "Likert",
-      "coding": "I feel a strong need to be unconditionally loved right now\n1 = strongly disagree\n7 = strongly agree\nPart of attachment anxiety",
+      "coding": "I feel a strong need to be unconditionally loved right now\n1 = strongly disagree\n7 = strongly agree\nPart of attachment anxiety (State Adult Attachment Measure)",
       "answer_categories": "7"
     },
     {
       "name": "share_feelings",
       "description": "Wanting to share feelings",
       "type": "Likert",
-      "coding": "I want to share my feelings with someone\n1 = strongly disagree\n7 = strongly agree\nPart of attachment anxiety",
+      "coding": "I want to share my feelings with someone\n1 = strongly disagree\n7 = strongly agree\nPart of attachment anxiety (State Adult Attachment Measure)",
       "answer_categories": "7"
     },
     {
       "name": "keep_distance",
       "description": "Keeping distance",
       "type": "Likert",
-      "coding": "If someone tried to get close to me, I would try to keep my\ndistance\n1 = strongly disagree\n7 = strongly agree\nPart of attachment avoidance",
+      "coding": "If someone tried to get close to me, I would try to keep my\ndistance\n1 = strongly disagree\n7 = strongly agree\nPart of attachment avoidance (State Adult Attachment Measure)",
       "answer_categories": "7"
     },
     {
       "name": "closeness_nervous",
       "description": "Emotional closeness makes nervous",
       "type": "Likert",
-      "coding": "The idea of being emotionally close to someone makes me\nnervous\n1 = strongly disagree\n7 = strongly agree\nPart of attachment avoidance",
+      "coding": "The idea of being emotionally close to someone makes me\nnervous\n1 = strongly disagree\n7 = strongly agree\nPart of attachment avoidance (State Adult Attachment Measure)",
       "answer_categories": "7"
     }
   ]

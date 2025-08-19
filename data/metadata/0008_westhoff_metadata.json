@@ -1,12 +1,13 @@
 {
   "first_author": "Westhoff",
-  "dataset": "0008",
+  "dataset_id": "0008",
   "year": 2024,
   "reference_a": "@article{westhoff2024,\n  title = {Psychological flexibility and cognitive-affective processes in young adults’ daily lives},\n  author = {Westhoff, Marlon and Heshmati, Saida and Siepe, Björn S. and Vogelbacher, Christoph and Ciarrochi, Joseph and Hayes, Steven C. and Hofmann, Stefan G.},\n  date = {2024-04-08},\n  journaltitle = {Scientific Reports},\n  shortjournal = {Sci Rep},\n  volume = {14},\n  number = {1},\n  pages = {8182},\n  publisher = {Nature Publishing Group},\n  doi = {10.1038/s41598-024-58598-3}\n}",
   "reference_b": null,
   "paper_doi": "https://doi.org/10.1038/s41598-024-58598-3",
-  "link_to_zenodo": null,
+  "zenodo_doi": null,
   "link_to_data": "https://doi.org/10.1038/s41598-024-58598-3",
+  "license": "CC-BY4.0",
   "link_to_codebook": "-",
   "link_to_code": "https://osf.io/ejtzs/",
   "n_participants": 114,
@@ -182,10 +183,10 @@
       "name": "finished",
       "description": "Finished survey",
       "variable_type": "binary",
-      "coding": "0 = no\n1 = yes",
+      "coding": "NA = no\n1 = yes",
       "answer_categories": "2",
       "wording": "",
-      "labels": "0 = no\n1 = yes",
+      "labels": "NA = no\n1 = yes",
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
@@ -484,7 +485,7 @@
       "source": "",
       "assessment_type": "ESM",
       "construct": "life satisfaction",
-      "comments": "Double check assessment_type"
+      "comments": ""
     },
     {
       "name": "depressed",

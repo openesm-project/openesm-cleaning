@@ -57,7 +57,7 @@ df <- df |>
   select(-neuroticism_score)
 
 # save static data
-write_tsv(df_static, here("data", "clean", "0011_bringmann_static.tsv"))
+write_tsv(df_neuroticism, here("data", "clean", "0011_bringmann_static.tsv"))
 
 # add empty day and beep variable
 df <- df |>

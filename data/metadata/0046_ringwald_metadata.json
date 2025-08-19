@@ -1,11 +1,13 @@
 {
   "first_author": "Ringwald",
-  "dataset": "0046",
+  "dataset_id": "0046",
   "year": 2024,
   "reference_a": "@online{ringwald2025,\n  title = {Do you feel what {{I}} feel? {{The}} relation between congruence of perceived affect and self-reported empathy in daily life social situations},\n  shorttitle = {Do you feel what {{I}} feel?},\n  author = {Ringwald, Whitney and Vize, Colin and Wright, Aidan},\n  date = {2025-03-09},\n  eprinttype = {PsyArXiv},\n  doi = {10.31234/osf.io/g7n4a_v3}\n  pubstate = {prepublished}\n}",
   "reference_b": null,
   "paper_doi": "https://doi.org/10.31234/osf.io/g7n4a_v3",
+  "zenodo_doi": null,
   "link_to_data": "https://osf.io/unvp8/files/osfstorage",
+  "license": "CC BY-NC 4.0",
   "link_to_codebook": null,
   "link_to_code": "https://osf.io/unvp8/files/osfstorage",
   "n_participants": 526,
@@ -19,77 +21,77 @@
   "sampling_scheme": "event-contingent based on social interactions",
   "participants": "adults (18-50)",
   "coding_file": "0046_ringwald_variables",
-  "additional_comments": "ILIADD study, randomly initiated ESM surveys not available in this dataset; number of max. time points taken as maximum of observations in data; day and beep information missing",
+  "additional_comments": "ILIADD study; randomly initiated ESM surveys not available in this dataset; number of max. time points taken as maximum of observations in data; day and beep information missing",
   "coder_data": "Björn Siepe",
   "coder_metadata": "Björn Siepe",
   "features": [
     {
       "name": "id",
       "description": "Participant ID",
-      "type": "categorical",
+      "variable_type": "categorical",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "day",
       "description": "Day of study",
-      "type": "other",
+      "variable_type": "other",
       "coding": "NA",
       "answer_categories": ""
     },
     {
       "name": "beep",
       "description": "Beep of the day",
-      "type": "other",
+      "variable_type": "other",
       "coding": "NA",
       "answer_categories": ""
     },
     {
       "name": "empathy_global",
       "description": "Global empathy",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "Mean of other two empathy categories (3 items) and additional item:\n\"When the person(s) I interacted with showed emotions, I \nfelt their emotions inside of me.\"\n0 = Neutral\n10 = Very positive\nLikely person-mean centered",
       "answer_categories": "11"
     },
     {
       "name": "empathy_cog",
       "description": "Cognitive empathy",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "Mean of two items:\n\n\"I considered what the person(s) I interacted with was \nthinking.\" and \"I considered what the person(s) I interacted with was feeling.\"\n\n0 = Neutral\n10 = Very positive\nLikely person-mean centered",
       "answer_categories": "11"
     },
     {
       "name": "empathy_aff",
       "description": "Affective empathy",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "When the person(s) I interacted with showed emotions, I \nfelt their emotions inside of me.\n0 = Neutral\n10 = Very much\nLikely person-mean centered",
       "answer_categories": "11"
     },
     {
       "name": "pa_self",
       "description": "Positive affect self",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "How positive did you feel during the interaction?\n0 = Neutral\n10 = Very positive\nLikely person-mean centered",
       "answer_categories": "11"
     },
     {
       "name": "pa_other",
       "description": "Positive affect other",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "How positive were their emotions during the interaction?\n0 = Neutral\n10 = Very positive\nLikely person-mean centered",
       "answer_categories": "11"
     },
     {
       "name": "na_self",
       "description": "Negative affect self",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "How negative did you feel during the interaction?\n0 = Neutral\n10 = Very negative\nLikely person-mean centered",
       "answer_categories": "11"
     },
     {
       "name": "na_other",
       "description": "Negative affect other",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "How negative were their emotions during the interaction?\n0 = Neutral\n10 = Very negative\nLikely person-mean centered",
       "answer_categories": "11"
     }

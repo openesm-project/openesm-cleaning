@@ -9,7 +9,7 @@ source(here("scripts", "functions_data.R"))
 
 
 # Data --------------------------------------------------------------------
-df_raw <- read_excel(here::her("data", "raw", "0029_drukker_ts_raw.xls"))
+df_raw <- read_excel(here::here("data", "raw", "0029_drukker_ts_raw.xls"))
 
 
 # Cleaning ----------------------------------------------------------------

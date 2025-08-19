@@ -67,11 +67,11 @@ n_ids <- unique(df$id) |>
   length()
 
 df <- df |>
-  complete(id, counter = 1:70) |>
+  tidyr::complete(id, counter = 1:70) |>
   # 5 beeps per day for 14 days for each participant
-  mutate(beep = rep(1:5, times = 14 * n_ids)) |>
+  dplyr::mutate(beep = rep(1:5, times = 14 * n_ids)) |>
   # repeat day id 5 times
-  mutate(day = rep(1:14, each = 5, times = n_ids))
+  dplyr::mutate(day = rep(1:14, each = 5, times = n_ids))
 
 
 

@@ -1,12 +1,13 @@
 {
   "first_author": "Grommisch",
-  "dataset": "0032",
+  "dataset_id": "0032",
   "year": 2020,
   "reference_a": "@article{grommisch2020,\n  title = {Modeling individual differences in emotion regulation repertoire in daily life with multilevel latent profile analysis.},\n  author = {Grommisch, Gloria and Koval, Peter and Hinton, Jordan D. X. and Gleeson, John and Hollenstein, Tom and Kuppens, Peter and Lischetzke, Tanja},\n  date = {2020-12},\n  journaltitle = {Emotion},\n  shortjournal = {Emotion},\n  volume = {20},\n  number = {8},\n  pages = {1462--1474},\n  issn = {1931-1516, 1528-3542},\n  doi = {10.1037/emo0000669}\n}",
   "reference_b": null,
   "paper_doi": "https://doi.org/10.1037/emo0000669",
-  "link_to_zenodo": null,
+  "zenodo_doi": null,
   "link_to_data": "https://osf.io/r7jw6/",
+  "license": "CC BY-NC 4.0",
   "link_to_codebook": "https://osf.io/b5s97",
   "link_to_code": "https://osf.io/r7jw6/",
   "n_participants": 179,
@@ -27,7 +28,7 @@
     {
       "name": "id",
       "description": "Participant ID",
-      "type": "categorical",
+      "variable_type": "categorical",
       "coding": "",
       "answer_categories": "",
       "wording": "",
@@ -41,7 +42,7 @@
     {
       "name": "day",
       "description": "Day of study",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
       "answer_categories": "",
       "wording": "",
@@ -55,7 +56,7 @@
     {
       "name": "beep",
       "description": "Beep of the day",
-      "type": "other",
+      "variable_type": "other",
       "coding": "Not available",
       "answer_categories": "",
       "wording": "Not available",
@@ -69,7 +70,7 @@
     {
       "name": "counter",
       "description": "Counter",
-      "type": "other",
+      "variable_type": "other",
       "coding": "Running number of measurement occasion per id",
       "answer_categories": "101",
       "wording": "Running number of measurement occasion per id",
@@ -83,7 +84,7 @@
     {
       "name": "happy",
       "description": "Happy",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "Feeling happy at moment of prompt\n0 = not at all\n100 = very much",
       "answer_categories": "101",
       "wording": "Feeling happy at moment of prompt",
@@ -97,7 +98,7 @@
     {
       "name": "relaxed",
       "description": "Relaxed",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "Feeling relaxed at moment of prompt\n0 = not at all\n100 = very much",
       "answer_categories": "101",
       "wording": "Feeling relaxed at moment of prompt",
@@ -111,7 +112,7 @@
     {
       "name": "confident",
       "description": "Confident",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "Feeling confident at moment of prompt\n0 = not at all\n100 = very much",
       "answer_categories": "101",
       "wording": "Feeling confident at moment of prompt",
@@ -125,7 +126,7 @@
     {
       "name": "sad",
       "description": "Sad",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "Feeling sad at moment of prompt\n0 = not at all\n100 = very much",
       "answer_categories": "101",
       "wording": "Feeling sad at moment of prompt",
@@ -139,7 +140,7 @@
     {
       "name": "stressed",
       "description": "Stressed",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "Feeling stressed at moment of prompt\n0 = not at all\n100 = very much",
       "answer_categories": "101",
       "wording": "Feeling stressed at moment of prompt",
@@ -153,7 +154,7 @@
     {
       "name": "angry",
       "description": "Angry",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "Feeling angry at moment of prompt\n0 = not at all\n100 = very much",
       "answer_categories": "101",
       "wording": "Feeling angry at moment of prompt",
@@ -167,7 +168,7 @@
     {
       "name": "situation_selection",
       "description": "Situation Selection",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "Since last survey, I chose which situation to put myself in\n0 = not at all\n100 = very much",
       "answer_categories": "101",
       "wording": "Since last survey, I chose which situation to put myself in",
@@ -181,7 +182,7 @@
     {
       "name": "situation_modification",
       "description": "Situation Modification",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "Since last survey, I actively changed something in the situation\n0 = not at all\n100 = very much",
       "answer_categories": "101",
       "wording": "Since last survey, I actively changed something in the situation",
@@ -195,7 +196,7 @@
     {
       "name": "reappraisal",
       "description": "Reappraisal",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "Since last survey, I changed the way I was thinking about the situation\nSince last survey, I took a step back and looked at things from a different perspective.\n0 = not at all\n100 = very much",
       "answer_categories": "101",
       "wording": "Mean of two items: \nSince last survey, I changed the way I was thinking about the situation\nSince last survey, I took a step back and looked at things from a different perspective.",
@@ -209,7 +210,7 @@
     {
       "name": "acceptance",
       "description": "Acceptance",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "Since last survey, I accepted my emotions as valid and important\n0 = not at all\n100 = very much",
       "answer_categories": "101",
       "wording": "Since last survey, I accepted my emotions as valid and important",
@@ -223,7 +224,7 @@
     {
       "name": "rumination",
       "description": "Rumination",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "Since last survey, I thought over and over again about my emotions\n0 = not at all\n100 = very much",
       "answer_categories": "101",
       "wording": "Since last survey, I thought over and over again about my emotions",
@@ -237,7 +238,7 @@
     {
       "name": "social_sharing",
       "description": "Social Sharing",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "Since last survey, I talked with someone about my emotions\n0 = not at all\n100 = very much",
       "answer_categories": "101",
       "wording": "Since last survey, I talked with someone about my emotions",
@@ -251,7 +252,7 @@
     {
       "name": "ignoring",
       "description": "Ignoring",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "Since last survey, I ignored my emotions\n0 = not at all\n100 = very much",
       "answer_categories": "101",
       "wording": "Since last survey, I ignored my emotions",
@@ -265,7 +266,7 @@
     {
       "name": "suppression",
       "description": "Suppression",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "Since last survey, I was careful not to express my emotions to others\n0 = not at all\n100 = very much",
       "answer_categories": "101",
       "wording": "Since last survey, I was careful not to express my emotions to others",

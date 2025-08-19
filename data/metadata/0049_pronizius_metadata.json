@@ -1,11 +1,13 @@
 {
   "first_author": "Pronizius",
-  "dataset": "0049",
+  "dataset_id": "0049",
   "year": 2024,
   "reference_a": "@article{pronizius2024,\n  title = {Everyday helping is associated with enhanced mood but greater stress when it is more effortful},\n  author = {Pronizius, Ekaterina and Forbes, Paul A. G. and Feneberg, Anja C. and Miculescu, Bianca and Nater, Urs M. and Piperno, Giulio and Silani, Giorgia and Stijovic, Ana and Lamm, Claus},\n  date = {2024-10-15},\n  journaltitle = {Scientific Reports},\n  shortjournal = {Sci Rep},\n  volume = {14},\n  number = {1},\n  pages = {24120},\n  publisher = {Nature Publishing Group},\n  issn = {2045-2322},\n  doi = {10.1038/s41598-024-75261-z}\n}",
   "reference_b": null,
   "paper_doi": "https://doi.org/10.1038/s41598-024-75261-z",
+  "zenodo_doi": null,
   "link_to_data": "https://osf.io/6n5zj/",
+  "license": "CC-By Attribution 4.0 International",
   "link_to_codebook": "https://osf.io/4tpvd",
   "link_to_code": "https://osf.io/6n5zj/files/osfstorage",
   "n_participants": 803,
@@ -19,105 +21,105 @@
   "sampling_scheme": "4x semi-random, 1 prompt user-initiated before sleep",
   "participants": "adults experiencing COVID lockdown",
   "coding_file": "0049_pronizius_variables",
-  "additional_comments": "burst 1 in the paper, more description on EMA variables: https://osf.io/kaf9e",
+  "additional_comments": "burst 1 in the paper; more description on EMA variables: https://osf.io/kaf9e and https://osf.io/4tpvd; contains a subset of data from a larger project on Covid (see for example here: https://osf.io/fdnm7/)",
   "coder_data": "Björn Siepe",
   "coder_metadata": "Björn Siepe",
   "features": [
     {
       "name": "id",
       "description": "Participant ID",
-      "type": "categorical",
+      "variable_type": "categorical",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "day",
       "description": "Day of study",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "beep",
       "description": "Beep of the day",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "counter",
       "description": "Counter",
-      "type": "numeric",
+      "variable_type": "numeric",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "helping_binary",
       "description": "Helping behavior",
-      "type": "binary",
+      "variable_type": "binary",
       "coding": "Since the last data entry, have you helped or supported someone?\n0 = no\n1 = yes",
       "answer_categories": "2"
     },
     {
       "name": "helping_effort",
       "description": "Effort for helping",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "How effortful was this helping or support?\n0 = not at all\n100 = very much",
       "answer_categories": "100"
     },
     {
       "name": "stress",
       "description": "Stress",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "At the moment, I feel stressed\n0 = not at all\n100 = very much",
       "answer_categories": "100"
     },
     {
       "name": "valence_mood",
       "description": "Mood valence",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "Mean of two bipolar items: unwell-well and dissatisfied-satisfied\n0 = not at all\n100 = very much\nAdapted multidimensional mood questionnaire",
       "answer_categories": "100"
     },
     {
       "name": "calmness_mood",
       "description": "Mood calmness",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "Mean of two bipolar items: tense-relaxed and restless-calm\n0 = not at all\n100 = very much\nAdapted multidimensional mood questionnaire",
       "answer_categories": "100"
     },
     {
       "name": "energy_mood",
       "description": "Mood energy",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "Mean of two bipolar items: weak-energetic and tired-awake\n0 = not at all\n100 = very much\nAdapted multidimensional mood questionnaire",
       "answer_categories": "100"
     },
     {
       "name": "ema_time",
       "description": "Time of EMA prompt",
-      "type": "numeric",
+      "variable_type": "numeric",
       "coding": "Time of the day in hours since midnight",
       "answer_categories": ""
     },
     {
       "name": "freetime",
       "description": "Freetime",
-      "type": "binary",
+      "variable_type": "binary",
       "coding": "0 = current data entry while working/studying\n1 = during free time",
       "answer_categories": "2"
     },
     {
       "name": "social_binary",
       "description": "Social activity binary",
-      "type": "binary",
+      "variable_type": "binary",
       "coding": "Were there any social interactions since the last data entry?\n0 = No\n1 = Yes",
       "answer_categories": "2"
     },
     {
       "name": "weekday",
       "description": "Day of the week",
-      "type": "categorical",
+      "variable_type": "categorical",
       "coding": "",
       "answer_categories": "7"
     }

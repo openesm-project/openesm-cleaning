@@ -1,11 +1,13 @@
 {
   "first_author": "Marian",
-  "dataset": "0052",
+  "dataset_id": "0052",
   "year": 2022,
   "reference_a": "@article{marian2023,\n  title = {The dynamic interplay of anxious and depressive symptoms in a sample of undergraduate students},\n  author = {Marian, Stefan and Costantini, Giulio and Macsinga, Irina and Sava, Florin Alin},\n  date = {2023-03-01},\n  journaltitle = {Journal of Psychopathology and Behavioral Assessment},\n  shortjournal = {J Psychopathol Behav Assess},\n  volume = {45},\n  number = {1},\n  pages = {150--159},\n  issn = {1573-3505},\n  doi = {10.1007/s10862-022-10014-8}\n}",
   "reference_b": null,
   "paper_doi": "https://doi.org/10.1007/s10862-022-10014-8",
+  "zenodo_doi": null,
   "link_to_data": "https://osf.io/pt9dk/files/osfstorage",
+  "license": "CC-By Attribution 4.0 International",
   "link_to_codebook": "https://osf.io/r85q6",
   "link_to_code": "https://osf.io/pt9dk/files/osfstorage",
   "n_participants": 140,
@@ -19,273 +21,273 @@
   "sampling_scheme": "4x/day 4 hour intervals based on individual wake-up time",
   "participants": "undergraduate students",
   "coding_file": "0052_marian_variables",
-  "additional_comments": "some participants pre-excluded due to compliance by authors, some collected symptoms strongly overlap and were combined in the original article, exact translation of some GAD/PHQ questions to EMA wording unclear - for example, about frequency of sleep issues",
+  "additional_comments": "some participants pre-excluded due to compliance by authors; some collected symptoms strongly overlap and were combined in the original article; exact translation of some GAD/PHQ questions to EMA wording unclear - for example; about frequency of sleep issues",
   "coder_data": "Björn Siepe",
   "coder_metadata": "Björn Siepe",
   "features": [
     {
       "name": "id",
       "description": "Participant ID",
-      "type": "categorical",
+      "variable_type": "categorical",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "day",
       "description": "Day of study",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "beep",
       "description": "Beep of the day",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "counter",
       "description": "Counter",
-      "type": "numeric",
+      "variable_type": "numeric",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "start_time",
       "description": "Prompt start",
-      "type": "PosixCt",
+      "variable_type": "PosixCt",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "end_time",
       "description": "Prompt end",
-      "type": "PosixCt",
+      "variable_type": "PosixCt",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "status",
       "description": "Prompt Status",
-      "type": "categorical",
+      "variable_type": "categorical",
       "coding": "1 = complete row, 2 = incomplete row, 99 = empty row (participants skipped/missed the beep)",
       "answer_categories": ""
     },
     {
       "name": "completion_time",
       "description": "Completion time",
-      "type": "numeric",
+      "variable_type": "numeric",
       "coding": "Completion time for prompt in seconds",
       "answer_categories": ""
     },
     {
       "name": "worry",
       "description": "Excessive worry",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Experienced excessive worry\nGAD Item 1\n1 = Never\n2 = Once\n3 = Several times\n4 = Many times",
       "answer_categories": "4"
     },
     {
       "name": "difficulty_control_worry",
       "description": "Difficulties controllingy worry",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Found difficult to control worry once it started\nGAD Item 2\n1 = Never\n2 = Once\n3 = Several times\n4 = Many times",
       "answer_categories": "4"
     },
     {
       "name": "restless",
       "description": "Restlessness",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Felt restless, keyed up or on edge\nGAD Item 3\n1 = Never\n2 = Once\n3 = Several times\n4 = Many times",
       "answer_categories": "4"
     },
     {
       "name": "fatiguability",
       "description": "Fatiguability",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Were easily fatigued\nGAD Item 4\n1 = Never\n2 = Once\n3 = Several times\n4 = Many times",
       "answer_categories": "4"
     },
     {
       "name": "difficulty_concentrating",
       "description": "Difficulty concentrating",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Had difficulties concentrating or mind going blank\nGAD Item 5\n1 = Never\n2 = Once\n3 = Several times\n4 = Many times",
       "answer_categories": "4"
     },
     {
       "name": "irritable",
       "description": "Irritable",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Were irritable\nGAD Item 6\n1 = Never\n2 = Once\n3 = Several times\n4 = Many times",
       "answer_categories": "4"
     },
     {
       "name": "muscle_tension",
       "description": "Muscle tension",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Felt muscle tension\nGAD Item 7\n1 = Never\n2 = Once\n3 = Several times\n4 = Many times",
       "answer_categories": "4"
     },
     {
       "name": "sleep_difficulty",
       "description": "Sleep difficulties",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Last night, you had trouble falling asleep or didn't feel rested after sleep.\nGAD Item 8\n1 = Never\n2 = Once\n3 = Several times\n4 = Many times",
       "answer_categories": "4"
     },
     {
       "name": "anhedonia",
       "description": "Anhedonia",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Little interest or pleasure in doing things\nPHQ Item 1\n1 = Never\n2 = Once\n3 = Several times\n4 = Many times",
       "answer_categories": "4"
     },
     {
       "name": "depressed_mood",
       "description": "Depressed mood",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Feeling down, depressed, or hopeless\nPHQ Item 2\n1 = Never\n2 = Once\n3 = Several times\n4 = Many times",
       "answer_categories": "4"
     },
     {
       "name": "sleep_problems",
       "description": "Sleep problems",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Trouble falling or staying asleep or sleeping too much.\nPHQ Item 3\n1 = Never\n2 = Once\n3 = Several times\n4 = Many times",
       "answer_categories": "4"
     },
     {
       "name": "tired",
       "description": "Tired",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Feeling tired or having little energy.\nPHQ Item 4\n1 = Never\n2 = Once\n3 = Several times\n4 = Many times",
       "answer_categories": "4"
     },
     {
       "name": "appetite_change",
       "description": "Appetite change",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Poor appetite or overeating\nPHQ Item 5\n1 = Never\n2 = Once\n3 = Several times\n4 = Many times",
       "answer_categories": "4"
     },
     {
       "name": "worthlessness",
       "description": "Feelings of worthlessness",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Negative feelings about yourself - or that you are a failure or have let yourself or your family down\nPHQ Item 6\n1 = Never\n2 = Once\n3 = Several times\n4 = Many times",
       "answer_categories": "4"
     },
     {
       "name": "concentration_trouble",
       "description": "Concentration troubles",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Trouble concentrating on things, such as reading the newspaper or watching television\nPHQ Item 7\n1 = Never\n2 = Once\n3 = Several times\n4 = Many times",
       "answer_categories": "4"
     },
     {
       "name": "psychomotor_change",
       "description": "Psychomotor changes",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Moving or speaking so slowly that other people could have noticed. Or the opposite being so fidgety or restless that you have been moving around a lot more than usual\nPHQ Item 8\n1 = Never\n2 = Once\n3 = Several times\n4 = Many times",
       "answer_categories": "4"
     },
     {
       "name": "suicidal_ideation",
       "description": "Suicidal ideation",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Thoughts that you would be better off dead or of hurting yourself\nPHQ Item 9\n1 = Never\n2 = Once\n3 = Several times\n4 = Many times",
       "answer_categories": "4"
     },
     {
       "name": "something_wrong",
       "description": "Something wrong with me",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "There's something wrong with me.\n1 = Not at all\n2 = A short time\n3 = A long time\n4 = Most of the time",
       "answer_categories": "4"
     },
     {
       "name": "cant_go_on",
       "description": "Can not go on like this",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "I don't think I can go on like this.\n1 = Not at all\n2 = A short time\n3 = A long time\n4 = Most of the time",
       "answer_categories": "4"
     },
     {
       "name": "dont_like_self",
       "description": "Do not like myself",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "I don't like myself.\n1 = Not at all\n2 = A short time\n3 = A long time\n4 = Most of the time",
       "answer_categories": "4"
     },
     {
       "name": "no_good",
       "description": "I'm no good",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "I’m no good.\n1 = Not at all\n2 = A short time\n3 = A long time\n4 = Most of the time",
       "answer_categories": "4"
     },
     {
       "name": "nobody_likes",
       "description": "Nobody likes me",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Nobody likes me.\n1 = Not at all\n2 = A short time\n3 = A long time\n4 = Most of the time",
       "answer_categories": "4"
     },
     {
       "name": "alone",
       "description": "Feeling alone",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "I am alone.\n1 = Not at all\n2 = A short time\n3 = A long time\n4 = Most of the time",
       "answer_categories": "4"
     },
     {
       "name": "fear_sickness",
       "description": "Fear of sickness",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "What if I get sick?\n1 = Not at all\n2 = A short time\n3 = A long time\n4 = Most of the time",
       "answer_categories": "4"
     },
     {
       "name": "awful_happen",
       "description": "Fear of aweful event",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Something awful is going to happen.\n1 = Not at all\n2 = A short time\n3 = A long time\n4 = Most of the time",
       "answer_categories": "4"
     },
     {
       "name": "life_not_worth",
       "description": "Life is not worth living",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Life isn’t worth living.\n1 = Not at all\n2 = A short time\n3 = A long time\n4 = Most of the time",
       "answer_categories": "4"
     },
     {
       "name": "nobody_cares",
       "description": "Nobody cares about me",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Nobody cares about me.\n1 = Not at all\n2 = A short time\n3 = A long time\n4 = Most of the time",
       "answer_categories": "4"
     },
     {
       "name": "cant_stand",
       "description": "Can not stand it anymore",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "I can't stand it anymore.\n1 = Not at all\n2 = A short time\n3 = A long time\n4 = Most of the time",
       "answer_categories": "4"
     },
     {
       "name": "never_make_it",
       "description": "I will never make it",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "I will never make it.\n1 = Not at all\n2 = A short time\n3 = A long time\n4 = Most of the time",
       "answer_categories": "4"
     },
     {
       "name": "need_change",
       "description": "Something has to change",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Something has to change.\n1 = Not at all\n2 = A short time\n3 = A long time\n4 = Most of the time",
       "answer_categories": "4"
     }

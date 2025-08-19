@@ -4,7 +4,7 @@ library(here)
 library(googlesheets4)
 library(jsonlite)
 library(osfr)
-source(here("scripts", "functions_data.R"))
+source(here::here("scripts", "functions_data.R"))
 
 
 
@@ -42,8 +42,6 @@ for(file in file_names){
   file_list[[file]] <- datx
 }
 
-# remove everything but "file_list"
-rm(list = ls()[!ls() %in% c("file_list")])
 
 # for first entry, only keep columns that are present for second entry
 # the first person seems to have somewhat different items

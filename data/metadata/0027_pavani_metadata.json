@@ -1,16 +1,18 @@
 {
   "first_author": "Pavani",
-  "dataset": "0027",
+  "dataset_id": "0027",
   "year": 2017,
   "reference_a": "@article{pavani2017,\n  title = {A network approach to affect regulation dynamics and personality trait–induced variations: {{Extraversion}} and neuroticism moderate reciprocal influences between affect and affect regulation strategies},\n  shorttitle = {A network approach to affect regulation dynamics and personality trait–induced variations},\n  author = {Pavani, Jean–Baptiste and Le Vigouroux, Sarah and Kop, Jean–Luc and Congard, Anne and Dauvier, Bruno},\n  date = {2017-07-01},\n  journaltitle = {European Journal of Personality},\n  shortjournal = {Eur J Pers},\n  volume = {31},\n  number = {4},\n  pages = {329--346},\n  publisher = {SAGE Publications Ltd},\n  doi = {10.1002/per.2109}\n}",
   "reference_b": null,
   "paper_doi": "https://doi.org/10.1002/per.2109",
+  "zenodo_doi": null,
   "link_to_data": "https://osf.io/s3chz/?view_only=",
+  "license": "CC BY-NC 4.0",
   "link_to_codebook": "https://osf.io/u95vg",
   "link_to_code": "https://osf.io/s3chz/?view_only=",
   "n_participants": 78,
   "n_time_points": 70,
-  "n_beeps_per_day": 5,
+  "n_beeps_per_day": "5",
   "passive_data_available": "no",
   "cross_sectional_available": "yes",
   "topics": "affect regulation, affect, personality",
@@ -19,100 +21,100 @@
   "sampling_scheme": "5x/day fixed-schedule with personalization",
   "participants": "non-clinical individuals",
   "coding_file": "0027_pavani_variables",
-  "additional_comments": "due to lagged variables in the dataset, it's not fully clear to which counter each value corresponds",
+  "additional_comments": "due to lagged variables in the dataset; it's not fully clear to which counter each value corresponds",
   "coder_data": "Björn Siepe",
   "coder_metadata": "Björn Siepe",
   "features": [
     {
       "name": "id",
       "description": "Participant ID",
-      "type": "categorical",
+      "variable_type": "categorical",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "day",
       "description": "Day of study",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "beep",
       "description": "Beep of the day",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "counter",
       "description": "Counter",
-      "type": "numeric",
+      "variable_type": "numeric",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "reappraisal",
       "description": "Positive reappraisal",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "I have seen what positive things a negative event can bring me.\n1 = not at all\n5 = a lot",
       "answer_categories": "5"
     },
     {
       "name": "distraction",
       "description": "Distraction",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "I have diverted my attention away from my problems.\n1 = not at all\n5 =  a lot",
       "answer_categories": "5"
     },
     {
       "name": "suppression",
       "description": "Expressive suppression",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "I have tried not to show or express my emotions.\n1 = not at all\n5 = a lot",
       "answer_categories": "5"
     },
     {
       "name": "rumination",
       "description": "Rumination",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "I have wasted time thinking of a past event again and again.\n1 = not at all\n5 = a lot",
       "answer_categories": "5"
     },
     {
       "name": "appreciation",
       "description": "Appreciation",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "I have taken time to savor a moment of the day.\n1 = not at all\n5 = a lot",
       "answer_categories": "5"
     },
     {
       "name": "sharing_affect",
       "description": "Social affect sharing",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "1 = not at all\n5 = a lot",
       "answer_categories": "5"
     },
     {
       "name": "problem_coping",
       "description": "Problem-focused coping",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "1 = not at all\n5 =  a lot",
       "answer_categories": "5"
     },
     {
       "name": "pa",
       "description": "Positive affect",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Mean score of positive affect items\n1 = not at all\n5 = a lot\n\nHighly activated positive affect: I am full of energy and spirit.\nActivated positive affect: I am feeling enthusiastic.\nNeither activated nor deactivated positive affect: I am happy.\nDeactivated positive affect: I am feeling both happy and calm.\nHighly deactivated positive affect: My whole body is relaxed.",
-      "answer_categories": ""
+      "answer_categories": "5"
     },
     {
       "name": "na",
       "description": "Negative affect",
-      "type": "ordinal",
+      "variable_type": "ordinal",
       "coding": "Mean score of negative affect items\n1 = not at all\n5 = a lot\n\nHighly activated negative affect: I can feel pressure building inside.\nActivated negative affect: I am feeling irritated.\nNeither activated nor deactivated negative affect: I am unhappy.\nDeactivated negative affect: I am feeling sad and in slow motion.\nHighly deactivated negative affect: I am so bored that everything around me looks drab.",
-      "answer_categories": ""
+      "answer_categories": "5"
     }
   ]
 }

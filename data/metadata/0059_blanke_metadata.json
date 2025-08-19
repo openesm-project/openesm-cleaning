@@ -1,12 +1,13 @@
 {
   "first_author": "Blanke",
-  "dataset": "0059",
+  "dataset_id": "0059",
   "year": 2020,
   "reference_a": "@article{blanke2020,\n  title = {Thinking mindfully: {{How}} mindfulness relates to rumination and reflection in daily life.},\n  shorttitle = {Thinking mindfully},\n  author = {Blanke, Elisabeth S. and Schmidt, Mirjam J. and Riediger, Michaela and Brose, Annette},\n  date = {2020-12-01},\n  journaltitle = {Emotion},\n  shortjournal = {Emotion},\n  volume = {20},\n  number = {8},\n  pages = {1369--1381},\n  publisher = {American Psychological Association},\n  issn = {1528-3542},\n  doi = {10.1037/emo0000659}\n}",
   "reference_b": null,
   "paper_doi": "https://doi.org/10.1037/emo0000659",
-  "link_to_zenodo": null,
+  "zenodo_doi": null,
   "link_to_data": "https://osf.io/nvt6a/",
+  "license": "CC BY-NC 4.0",
   "link_to_codebook": "https://osf.io/v2am8",
   "link_to_code": null,
   "n_participants": 70,
@@ -27,154 +28,154 @@
     {
       "name": "id",
       "description": "Participant ID",
-      "type": "categorical",
+      "variable_type": "categorical",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "day",
       "description": "Day of study",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "beep",
       "description": "Beep of the day",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "counter",
       "description": "Counter",
-      "type": "numeric",
+      "variable_type": "numeric",
       "coding": "Numeric survey counter",
       "answer_categories": ""
     },
     {
       "name": "miss_status",
       "description": "Missingness status",
-      "type": "categorical",
+      "variable_type": "categorical",
       "coding": "Missingness status of the beep\n0 = missing\n1 = partial missing\n2 = completed\n3 = skipped",
       "answer_categories": "4"
     },
     {
       "name": "time",
       "description": "Timestamp",
-      "type": "PosixCt",
+      "variable_type": "PosixCt",
       "coding": "Beep time",
       "answer_categories": "4"
     },
     {
       "name": "attention_present",
       "description": "Present-moment attentino",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "Please recall the period since the last measurement/since you woke up: How did you behave, what did you think and feel? That is what the following questions are about.\nI focused my attention on the present moment. \n0 = Does not apply at all\n6 = Applies strongly",
       "answer_categories": "7"
     },
     {
       "name": "opened_up",
       "description": "Open to what was happening",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "Please recall the period since the last measurement/since you woke up: How did you behave, what did you think and feel? That is what the following questions are about.\nI opened myself up to what was happening.\n0 = Does not apply at all\n6 = Applies strongly",
       "answer_categories": "7"
     },
     {
       "name": "concentrated_present",
       "description": "Concentred on moment",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "Please recall the period since the last measurement/since you woke up: How did you behave, what did you think and feel? That is what the following questions are about.\nI concentrated on what I was doing at that moment. \n0 = Does not apply at all\n6 = Applies strongly",
       "answer_categories": "7"
     },
     {
       "name": "nonjudgmental_feelings",
       "description": "Nonjudgmental acceptance of feelings",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "Please recall the period since the last measurement/since you woke up: How did you behave, what did you think and feel? That is what the following questions are about.\nI thought some of my thoughts/feelings were slightly off. (Reverse-coded)\n0 = Does not apply at all\n6 = Applies strongly",
       "answer_categories": "7"
     },
     {
       "name": "nonjudgmental_thoughts",
       "description": "Nonjudgmental acceptance of thoughts",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "Please recall the period since the last measurement/since you woke up: How did you behave, what did you think and feel? That is what the following questions are about.\nThings went through my mind that I should not really be engaging myself with. (Reverse-coded)\n0 = Does not apply at all\n6 = Applies strongly",
       "answer_categories": "7"
     },
     {
       "name": "nonjudgmental_behavior",
       "description": "Nondjudgmental acceptance of behahviors",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "Please recall the period since the last measurement/since you woke up: How did you behave, what did you think and feel? That is what the following questions are about.\nI thought I could have acted more appropriately at a certain time.  (Reverse-coded)\n0 = Does not apply at all\n6 = Applies strongly",
       "answer_categories": "7"
     },
     {
       "name": "happy",
       "description": "Happy",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "How did you feel since waking up/ since the last beep? Please indicate how well the following affective items describe your feelings during this time.\nHappy?\n0 = Does not apply at all\n6 = Applies strongly",
       "answer_categories": "7"
     },
     {
       "name": "content",
       "description": "Content",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "How did you feel since waking up/ since the last beep? Please indicate how well the following affective items describe your feelings during this time.\nContent?\n0 = Does not apply at all\n6 = Applies strongly",
       "answer_categories": "7"
     },
     {
       "name": "relaxed",
       "description": "Relaxed",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "How did you feel since waking up/ since the last beep? Please indicate how well the following affective items describe your feelings during this time.\nRelaxed?\n0 = Does not apply at all\n6 = Applies strongly",
       "answer_categories": "7"
     },
     {
       "name": "downhearted",
       "description": "Downhearted",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "How did you feel since waking up/ since the last beep? Please indicate how well the following affective items describe your feelings during this time.\nDownhearted?\n0 = Does not apply at all\n6 = Applies strongly",
       "answer_categories": "7"
     },
     {
       "name": "distressed",
       "description": "Distressed",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "How did you feel since waking up/ since the last beep? Please indicate how well the following affective items describe your feelings during this time.\nDistressed?\n0 = Does not apply at all\n6 = Applies strongly",
       "answer_categories": "7"
     },
     {
       "name": "nervous",
       "description": "Nervous",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "How did you feel since waking up/ since the last beep? Please indicate how well the following affective items describe your feelings during this time.\nNervous?\n0 = Does not apply at all\n6 = Applies strongly",
       "answer_categories": "7"
     },
     {
       "name": "ruminate_feelings",
       "description": "Rumination about feelings",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "How well do the following statements describe how you handled your thoughts and feelings since waking up/ since the last beep?\nI could not stop thinking about my feelings.\n0 = Does not apply at all\n6 = Applies strongly",
       "answer_categories": "7"
     },
     {
       "name": "ruminate_things",
       "description": "Rumination about things",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "How well do the following statements describe how you handled your thoughts and feelings since waking up/ since the last beep?\nI could not stop thinking about certain things.\n0 = Does not apply at all\n6 = Applies strongly",
       "answer_categories": "7"
     },
     {
       "name": "relaxed_thoughts_feelings",
       "description": "Relaxed thoughts about feelings",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "How well do the following statements describe how you handled your thoughts and feelings since waking up/ since the last beep?\nI thought about my feelings in a calm and relaxed fashion.\n0 = Does not apply at all\n6 = Applies strongly",
       "answer_categories": "7"
     },
     {
       "name": "relaxed_thoughts_things",
       "description": "Relaxed thoghts about things",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "How well do the following statements describe how you handled your thoughts and feelings since waking up/ since the last beep?\nI thought about certain things in a calm and relaxed fashion.\n0 = Does not apply at all\n6 = Applies strongly",
       "answer_categories": "7"
     }

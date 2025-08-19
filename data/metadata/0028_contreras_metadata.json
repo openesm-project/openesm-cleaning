@@ -1,12 +1,13 @@
 {
   "first_author": "Contreras",
-  "dataset": "0028",
+  "dataset_id": "0028",
   "year": 2020,
   "reference_a": "@article{contreras2020,\n  title = {A temporal network approach to paranoia: {{A}} pilot study},\n  shorttitle = {A temporal network approach to paranoia},\n  author = {Contreras, Alba and Valiente, Carmen and Heeren, Alexandre and Bentall, Richard},\n  date = {2020-09-18},\n  journaltitle = {Frontiers in Psychology},\n  shortjournal = {Front. Psychol.},\n  volume = {11},\n  publisher = {Frontiers},\n  issn = {1664-1078},\n  doi = {10.3389/fpsyg.2020.544565}\n}",
   "reference_b": null,
   "paper_doi": "https://doi.org/10.3389/fpsyg.2020.544565",
-  "link_to_zenodo": null,
+  "zenodo_doi": null,
   "link_to_data": "https://osf.io/7tk4b/",
+  "license": "CC-By Attribution 4.0 International",
   "link_to_codebook": "https://osf.io/bkn3y",
   "link_to_code": "https://osf.io/mezgw",
   "n_participants": 23,
@@ -27,7 +28,7 @@
     {
       "name": "id",
       "description": "Participant ID",
-      "type": "categorical",
+      "variable_type": "categorical",
       "coding": "",
       "answer_categories": "",
       "wording": "",
@@ -41,7 +42,7 @@
     {
       "name": "day",
       "description": "Day of study",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
       "answer_categories": "",
       "wording": "",
@@ -55,7 +56,7 @@
     {
       "name": "beep",
       "description": "Beep of the day",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
       "answer_categories": "",
       "wording": "",
@@ -69,7 +70,7 @@
     {
       "name": "sad",
       "description": "Sadness",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "At this moment, I feel sad",
       "answer_categories": "9",
       "wording": "At this moment, I feel sad",
@@ -83,7 +84,7 @@
     {
       "name": "useless",
       "description": "Useless",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "At this moment, I feel useless (Self-Esteem 1)",
       "answer_categories": "9",
       "wording": "At this moment, I feel useless",
@@ -97,7 +98,7 @@
     {
       "name": "manage_well",
       "description": "Manage issues well",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "At this moment, I feel I can manage issues well (Self-Esteem 1)",
       "answer_categories": "9",
       "wording": "At this moment, I feel I can manage issues well",
@@ -111,7 +112,7 @@
     {
       "name": "no_trust",
       "description": "Cannot trust people",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "Since the last “beep”, I have had the \nimpression that I cannot trust peopl (Paranoia 1)",
       "answer_categories": "9",
       "wording": "Since the last “beep”, I have had the \nimpression that I cannot trust people",
@@ -125,7 +126,7 @@
     {
       "name": "harm",
       "description": "Perceived harm intention",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "Since the last “beep”, I have had the \nimpression that people have tried to harm \nme",
       "answer_categories": "9",
       "wording": "Since the last “beep”, I have had the \nimpression that people have tried to harm \nme",
@@ -139,7 +140,7 @@
     {
       "name": "criticism",
       "description": "Was criticized",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "Since the last “beep”, I have had the \nimpression that people have criticized me",
       "answer_categories": "9",
       "wording": "Since the last “beep”, I have had the \nimpression that people have criticized me",
@@ -153,7 +154,7 @@
     {
       "name": "others",
       "description": "Close to others",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "At this moment, I feel close to others",
       "answer_categories": "9",
       "wording": "At this moment, I feel close to others",
@@ -167,7 +168,7 @@
     {
       "name": "avoid",
       "description": "Experiential avoidance",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "Since the last “beep”, I have tried to \navoid negative thoughts and feelings",
       "answer_categories": "9",
       "wording": "Since the last “beep”, I have tried to \navoid negative thoughts and feelings",

@@ -1,16 +1,18 @@
 {
   "first_author": "Drukker",
-  "dataset": "0029",
+  "dataset_id": "0029",
   "year": 2020,
   "reference_a": "@article{drukker2020,\n  title = {Network approach of mood and functional gastrointestinal symptom dynamics in relation to childhood trauma in patients with irritable bowel syndrome and comorbid panic disorder},\n  author = {Drukker, Marjan and Peters, Jill C. H. and Vork, Lisa and Mujagic, Zlatan and Rutten, Bart P. F. and family=Os, given=Jim, prefix=van, useprefix=true and Masclee, Ad A. M. and Kruimel, Joanna W. and Leue, Carsten},\n  date = {2020-12-01},\n  journaltitle = {Journal of Psychosomatic Research},\n  shortjournal = {Journal of Psychosomatic Research},\n  volume = {139},\n  pages = {110261},\n  issn = {0022-3999},\n  doi = {10.1016/j.jpsychores.2020.110261}\n}",
   "reference_b": null,
   "paper_doi": "https://doi.org/10.1016/j.jpsychores.2020.110261",
+  "zenodo_doi": null,
   "link_to_data": "https://www.sciencedirect.com/science/article/pii/S0022399920308230?via%3Dihub#s0125",
+  "license": "CC BY-NC 4.0",
   "link_to_codebook": "https://www.sciencedirect.com/science/article/pii/S0022399920308230?via%3Dihub#s0120",
   "link_to_code": null,
   "n_participants": 24,
   "n_time_points": 70,
-  "n_beeps_per_day": 10,
+  "n_beeps_per_day": "10",
   "passive_data_available": "no",
   "cross_sectional_available": "yes",
   "topics": "irritable bowel syndrome, panic disorder, gastrointestinal symptoms, childhood trauma",
@@ -26,77 +28,77 @@
     {
       "name": "id",
       "description": "Participant ID",
-      "type": "categorical",
+      "variable_type": "categorical",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "day",
       "description": "Day of study",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "beep",
       "description": "Beep of the day",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "enthusiastic",
       "description": "Enthusiastic",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "I feel enthusiastic\n1 = not at all\n7 = extremely",
       "answer_categories": "7"
     },
     {
       "name": "down",
       "description": "Feeling down",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "I feel down\n1 = not at all\n7 = extremely",
       "answer_categories": "7"
     },
     {
       "name": "irritated",
       "description": "Irritated",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "I feel irritated\n1 = not at all\n7 = extremely",
       "answer_categories": "7"
     },
     {
       "name": "rush",
       "description": "Rushed",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "I feel rushed\n1 = not at all\n7 = extremely",
       "answer_categories": "7"
     },
     {
       "name": "happy",
       "description": "Happy",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "I feel happy\n1 = not at all\n7 = extremely",
       "answer_categories": "7"
     },
     {
       "name": "cheerful",
       "description": "Cheerful",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "unclear",
       "answer_categories": "7"
     },
     {
       "name": "phy_bloating",
       "description": "Bloating",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "unclear",
       "answer_categories": "7"
     },
     {
       "name": "phy_abd",
       "description": "Abdominal pain",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "unclear",
       "answer_categories": "7"
     }

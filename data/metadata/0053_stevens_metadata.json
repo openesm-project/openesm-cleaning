@@ -1,11 +1,13 @@
 {
   "first_author": "Stevens",
-  "dataset": "0053",
+  "dataset_id": "0053",
   "year": 2020,
   "reference_a": "@article{stevens2020,\n  title = {Body {{Positivity}} (\\#{{BoPo}}) in everyday life: {{An}} ecological momentary assessment study showing potential benefits to individuals’ body image and emotional wellbeing},\n  shorttitle = {Body {{Positivity}} (\\#{{BoPo}}) in everyday life},\n  author = {Stevens, Alicia and Griffiths, Scott},\n  date = {2020-12-01},\n  journaltitle = {Body Image},\n  volume = {35},\n  pages = {181--191},\n  issn = {1740-1445},\n  doi = {10.1016/j.bodyim.2020.09.003}\n}",
   "reference_b": null,
   "paper_doi": "https://doi.org/10.1016/j.bodyim.2020.09.003",
+  "zenodo_doi": null,
   "link_to_data": "https://osf.io/qy9uj/files/",
+  "license": "CC BY-NC 4.0",
   "link_to_codebook": null,
   "link_to_code": "https://osf.io/qy9uj/files/",
   "n_participants": 133,
@@ -19,7 +21,7 @@
   "sampling_scheme": "6x/day semi-random intervals with anchor times and 40 minute period around them",
   "participants": "undergraduate students",
   "coding_file": "0053_stevens_variables",
-  "additional_comments": "no day and beep information available, some variable coding unclear",
+  "additional_comments": "no day and beep information available; some variable coding unclear",
   "coder_data": "Björn Siepe",
   "coder_metadata": "Björn Siepe",
   "features": [

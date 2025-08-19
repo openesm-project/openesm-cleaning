@@ -1,16 +1,18 @@
 {
   "first_author": "Gundogdu",
-  "dataset": "0021",
+  "dataset_id": "0021",
   "year": 2017,
   "reference_a": "@article{gundogdu2017,\n  title = {Investigating the association between social interactions and personality states dynamics},\n  author = {Gundogdu, Didem and Finnerty, Ailbhe N. and Staiano, Jacopo and Teso, Stefano and Passerini, Andrea and Pianesi, Fabio and Lepri, Bruno},\n  date = {2017-09-20},\n  journaltitle = {Royal Society Open Science},\n  volume = {4},\n  number = {9},\n  pages = {170194},\n  publisher = {Royal Society},\n  doi = {10.1098/rsos.170194}\n}",
   "reference_b": null,
   "paper_doi": "https://doi.org/10.1098/rsos.170194",
+  "zenodo_doi": null,
   "link_to_data": "https://doi.org/10.5061/dryad.b88c7",
+  "license": "Creative Commons Zero v1.0 Universal",
   "link_to_codebook": "https://datadryad.org/stash/dataset/doi:10.5061/dryad.b88c7#usage",
   "link_to_code": "https://github.com/didemgundogdu/RoyalOpenSciencePersonalityDynamics",
   "n_participants": 54,
   "n_time_points": 63,
-  "n_beeps_per_day": 3,
+  "n_beeps_per_day": "3",
   "passive_data_available": "yes",
   "cross_sectional_available": "yes",
   "topics": "social interactions, personality states, personality",
@@ -26,71 +28,71 @@
     {
       "name": "id",
       "description": "Participant ID",
-      "type": "categorical",
+      "variable_type": "categorical",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "day",
       "description": "Day of study",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "beep",
       "description": "Beep of the day",
-      "type": "other",
+      "variable_type": "other",
       "coding": "NA",
       "answer_categories": ""
     },
     {
       "name": "date",
       "description": "Date",
-      "type": "PosixCt",
+      "variable_type": "PosixCt",
       "coding": "With hour and seconds",
       "answer_categories": ""
     },
     {
       "name": "timestamp",
       "description": "Timestamp",
-      "type": "other",
+      "variable_type": "other",
       "coding": "Timestamp in unix time",
       "answer_categories": ""
     },
     {
       "name": "extraversion",
       "description": "Extraversion",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "Average score of the items ‘extraverted, enthusiastic’ and ‘reserved, quiet’ (reversed) (Ten-Item Personality Inventory)\nDuring the last half hour, how ... have you been? \n1 = Strongly disagree\n7 = Strongly agree",
       "answer_categories": ""
     },
     {
       "name": "agreeableness",
       "description": "Agreeableness",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "Average score of the items ‘sympathetic, warm’ and ‘critical, quarrelsome’ (reversed) (Ten-Item Personality Inventory)\nDuring the last half hour, how ... have you been? \n1 = Strongly disagree\n7 = Strongly agree",
       "answer_categories": ""
     },
     {
       "name": "conscientiousness",
       "description": "Conscientiousness",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "Average score of the items ‘dependable, self-disciplined’ and ‘disorganized, careless’ (reversed) (Ten-Item Personality Inventory)\nDuring the last half hour, how ... have you been? \n1 = Strongly disagree\n7 = Strongly agree",
       "answer_categories": ""
     },
     {
       "name": "emotional_stability",
       "description": "Emotional stability",
-      "type": "Likert",
+      "variable_type": "Likert",
       "coding": "Average score of the items ‘calm, emotionally stable’ and ‘anxious, easily upset’ (reversed) (Ten-Item Personality Inventory)\nDuring the last half hour, how ... have you been? \n1 = Strongly disagree\n7 = Strongly agree",
       "answer_categories": ""
     },
     {
       "name": "openness",
       "description": "Openness to experience",
-      "type": "Likert",
-      "coding": "\"Average score of the items ‘open to new experiences, complex’ and ‘conventional, uncreative’ (reversed) (Ten-Item Personality Inventory)\nDuring the last half hour, how ... have you been? \n1 = Strongly disagree\n7 = Strongly agree\"",
+      "variable_type": "Likert",
+      "coding": "Average score of the items ‘open to new experiences, complex’ and ‘conventional, uncreative’ (reversed) (Ten-Item Personality Inventory)\nDuring the last half hour, how ... have you been? \n1 = Strongly disagree\n7 = Strongly agree",
       "answer_categories": ""
     }
   ]

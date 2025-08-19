@@ -1,11 +1,13 @@
 {
   "first_author": "Fisher",
-  "dataset": "0037",
+  "dataset_id": "0037",
   "year": 2019,
   "reference_a": "@online{fisher2019,\n  title = {Generating accurate personalized predictions of future behavior: {{A}} smoking exemplar},\n  shorttitle = {Generating accurate personalized predictions of future behavior},\n  author = {Fisher, Aaron J. and Soyster, Peter},\n  date = {2019-03-28},\n  eprinttype = {PsyArXiv},\n  doi = {10.31234/osf.io/e24v6}\n  pubstate = {prepublished}\n}",
   "reference_b": null,
   "paper_doi": "https://doi.org/10.31234/osf.io/e24v6",
+  "zenodo_doi": null,
   "link_to_data": "https://osf.io/nkemg/",
+  "license": "CC BY-NC 4.0",
   "link_to_codebook": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0217150#sec004",
   "link_to_code": "https://osf.io/nkemg/",
   "n_participants": 70,
@@ -19,273 +21,273 @@
   "sampling_scheme": "4x/day random schedule",
   "participants": "regular smokers",
   "coding_file": "0037_fisher_variables",
-  "additional_comments": "some variables with unclear coding; some variables morning-only",
+  "additional_comments": "some variables with unclear coding; some variables morning-only; number of max. time points taken as maximum of observations in data",
   "coder_data": "Björn Siepe",
   "coder_metadata": "Björn Siepe",
   "features": [
     {
       "name": "id",
       "description": "Participant ID",
-      "type": "categorical",
+      "variable_type": "categorical",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "day",
       "description": "Day of study",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "beep",
       "description": "Beep of the day",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "start_time",
       "description": "Start time",
-      "type": "PosixCt",
+      "variable_type": "PosixCt",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "finish_time",
       "description": "Finish time",
-      "type": "PosixCt",
+      "variable_type": "PosixCt",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "cigs",
       "description": "Number of cigarettes",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "Number of cigarettes smoked since the previous survey",
       "answer_categories": ""
     },
     {
       "name": "angry",
       "description": "Angry",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "I feel angry\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "hungry",
       "description": "Hungry",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "I feel hungry\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "restless",
       "description": "Restless",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "I feel restless\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "down",
       "description": "Down",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "I feel down or depressed\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "bored",
       "description": "Bored",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "I feel bored\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "stressed",
       "description": "Stressed",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "I feel stressed\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "motivated",
       "description": "Motivated",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "I am motivated to quit smoking\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "want_quit",
       "description": "Smoking quitting intention",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "I want to quit smoking\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "impulsive",
       "description": "Impulsive",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "I feel impulsive\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "sleep_difficulty",
       "description": "unclear, but likely: Sleep difficulty",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "unclear, but likely: Difficulty falling or staying asleep (morning only)\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "sleep_hours",
       "description": "unclear, but likely: Sleep hours",
-      "type": "numeric",
+      "variable_type": "numeric",
       "coding": "unclear, but likely: How many hours did you sleep last night? (morning only)",
       "answer_categories": ""
     },
     {
       "name": "craving",
       "description": "Smoking craving",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "How strong is your urge/craving to smoke right now?\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "enjoy_last",
       "description": "Enjoyed cigarette",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "I enjoyed my last cigarette\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "trigger",
       "description": "Smoking triggers",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "People or situations are triggering me to smoke\n0 = not at all\n100 =  as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "irritable",
       "description": "Irritable",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "I feel irritable\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "concentrate",
       "description": "unclear, but likely: Difficulty concentrating",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "unclear, but likely: I am having difficulty concentrating\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "calm",
       "description": "Calm",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "I feel calm\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "happy",
       "description": "Happy",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "I feel happy\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "enthusiastic",
       "description": "Enthusiastic",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "I feel enthusiastic\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "nervous",
       "description": "Nervous",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "I feel nervous\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "tired",
       "description": "Tired",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "I feel tired\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "hurt_health",
       "description": "Smoking hurts health",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "My smoking is hurting my health\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "pos_expect",
       "description": "Positive smoking expectations",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "A cigarette would improve my mood or make me feel \nbetter\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "ashamed",
       "description": "Ashamed of smoking",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "I am embarassed/ashamed that I am a smoker\n0 = not at all \n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "agency",
       "description": "Smoking agency",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "Unclear, but likely: The amount I smoke is within my own control\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "could_quit",
       "description": "Smoking-related self efficacy",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "If I tried to quit smoking right now I would be successful\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "delay_gratification",
       "description": "Delayed gratification",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "I can delay gratification\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "health_belief",
       "description": "Smoking health belief",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "My smoking is hurting my health\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "comfortable",
       "description": "Comfortable situation",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "I feele comfortable in my current location/situation\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "frustrated",
       "description": "Frustrated",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "I feel frustrated\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "pos_social",
       "description": "Positive social interactions",
-      "type": "VAS",
+      "variable_type": "VAS",
       "coding": "I am enjoying my interactions with other people\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
       "name": "cig_predict",
       "description": "Cigarette number prediction",
-      "type": "numeric",
+      "variable_type": "numeric",
       "coding": "How many cigarettes do you think you’ll smoke today (morning only)",
       "answer_categories": ""
     }
