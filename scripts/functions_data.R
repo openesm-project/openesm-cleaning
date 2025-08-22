@@ -76,7 +76,8 @@ create_metadata_json <- function(dataset_id_char) {
 
 # Metadata analysis -------------------------------------------------------
 # List all variable-construct pairs to understand construct annotation
-list_variable_construct_pairs <- function(folder_path) {
+# list variable-construct pairs (optionally include variables without constructs)
+list_variable_construct_pairs <- function(folder_path, include_all = FALSE) {
   # list all metadata json files
   json_files <- list.files(folder_path, pattern = "\\.json$", full.names = TRUE)
 
@@ -98,11 +99,15 @@ list_variable_construct_pairs <- function(folder_path) {
     # iterate features
     if (!is.null(metadata$features) && length(metadata$features) > 0) {
       for (feature in metadata$features) {
-        if (!is.null(feature$construct) && feature$construct != "") {
-          variable_name <- feature$name
-          construct_name <- feature$construct
+        variable_name <- feature$name
+        construct_name <- if (!is.null(feature$construct) && feature$construct != "") {
+          feature$construct
+        } else {
+          NA_character_
+        }
 
-          # add to the tibble
+        # add depending on option
+        if (include_all || !is.na(construct_name)) {
           variable_construct_pairs <- variable_construct_pairs |>
             dplyr::add_row(
               dataset_id = dataset_id,
@@ -116,4 +121,5 @@ list_variable_construct_pairs <- function(folder_path) {
 
   return(variable_construct_pairs)
 }
+
 
