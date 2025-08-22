@@ -52,7 +52,9 @@ df <- df |>
   rename(day = study_days) |>
   rename(interruptions = interruptions_interruptions) |>
   rename(sleep_duration = sleep_dur,
-         social_functioning_composite = socialfunc_comp)
+         social_functioning_composite = socialfunc_comp,
+         sadness_extreme = anx_dep_emotions_so_sad_that_nothing_could_cheer_you_up,
+         effort_everything = anx_dep_emotions_that_everything_was_an_effort)
 
 # remove long column prefixes
 prefixes_to_remove <- c("na_emotions_",
