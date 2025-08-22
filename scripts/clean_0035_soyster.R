@@ -100,7 +100,7 @@ df <- df |>
       drinks_today_estimate = how_many_alcoholic_drinks_do_you_think_you_number_39_ll_consume_today,
       restless_sleep = last_night_my_sleep_was_restless_or_unsatisfying,
       sleep_difficulty = last_night_i_had_difficulty_falling_or_staying_asleep,
-      sleep_hours = how_many_hours_did_you_sleep_last_night
+      sleep_duration = how_many_hours_did_you_sleep_last_night
     )
 
 

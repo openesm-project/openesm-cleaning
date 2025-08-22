@@ -1,4 +1,4 @@
-id	start_time	finish_time	cigs	angry	hungry	restless	down	bored	stressed	motivated	want_quit	impulsive	sleep_difficulty	sleep_hours	day	craving	enjoy_last	trigger	irritable	concentrate	calm	happy	enthusiastic	nervous	tired	hurt_health	pos_expect	ashamed	agency	could_quit	delay_gratification	health_belief	comfortable	frustrated	pos_social	cig_predict	beep
+id	start_time	finish_time	cigs	angry	hungry	restless	down	bored	stressed	motivated	want_quit	impulsive	sleep_difficulty	sleep_duration	day	craving	enjoy_last	trigger	irritable	concentrate	calm	happy	enthusiastic	nervous	tired	hurt_health	pos_expect	ashamed	agency	could_quit	delay_gratification	health_belief	comfortable	frustrated	pos_social	cig_predict	beep
 002	2017-09-24T11:15:00Z	2017-09-24T11:19:00Z	0	35	58	70	60	21	63	37	62	43	62	6	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	2
 002	2017-09-24T15:14:00Z	2017-09-24T15:18:00Z	3	37	68	NA	41	33	65	53	29	65	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	3
 002	2017-09-24T19:05:00Z	2017-09-24T19:16:00Z	2	37	32	NA	66	38	62	59	41	63	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	4

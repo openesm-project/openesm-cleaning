@@ -132,14 +132,14 @@
     },
     {
       "name": "sleep_difficulty",
-      "description": "unclear, but likely: Sleep difficulty",
+      "description": "Sleep difficulty",
       "variable_type": "VAS",
       "coding": "unclear, but likely: Difficulty falling or staying asleep (morning only)\n0 = not at all\n100 = as much as possible",
       "answer_categories": "101"
     },
     {
-      "name": "sleep_hours",
-      "description": "unclear, but likely: Sleep hours",
+      "name": "sleep_duration",
+      "description": "Sleep duration in hours",
       "variable_type": "numeric",
       "coding": "unclear, but likely: How many hours did you sleep last night? (morning only)",
       "answer_categories": ""

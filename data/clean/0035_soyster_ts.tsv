@@ -1,4 +1,4 @@
-id	creation_time	completion_time	drink_number	comfortable	stressed	depressed	calm	pressure_to_drink	enthusiastic	happy	conflict	craving	impulsive	drink_feel_better	perceived_peer_drinking	want_to_drink	delay_gratification	angry	drinks_today_estimate	restless_sleep	sleep_difficulty	sleep_hours	day	beep
+id	creation_time	completion_time	drink_number	comfortable	stressed	depressed	calm	pressure_to_drink	enthusiastic	happy	conflict	craving	impulsive	drink_feel_better	perceived_peer_drinking	want_to_drink	delay_gratification	angry	drinks_today_estimate	restless_sleep	sleep_difficulty	sleep_duration	day	beep
 1	2018-02-06T13:33:00Z	2018-02-06T13:56:00Z	0	88	10	14	71	12	83	83	0	3	0	0	17	5	2	9	NA	NA	NA	NA	1	NA
 1	2018-02-06T15:20:00Z	2018-02-06T15:22:00Z	3	81	12	18	26	11	31	56	0	12	8	14	55	14	32	15	6	7	8	7	1	NA
 1	2018-02-06T17:54:00Z	2018-02-06T17:58:00Z	0	88	69	15	71	15	83	91	9	22	15	56	78	61	48	14	NA	NA	NA	NA	1	NA

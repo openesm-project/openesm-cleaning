@@ -110,7 +110,7 @@
       "answer_categories": "101"
     },
     {
-      "name": "hours_sleep",
+      "name": "sleep_duration",
       "description": "Sleep duration",
       "variable_type": "numeric",
       "coding": "Total sleep time from previous night in hours",

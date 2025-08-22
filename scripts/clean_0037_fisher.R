@@ -77,7 +77,7 @@ df <- df |>
   rename(
     start_time = start,
     finish_time = finish,
-    sleep_hours = hours,
+    sleep_duration = hours,
     sleep_difficulty = difficulty
   )
 

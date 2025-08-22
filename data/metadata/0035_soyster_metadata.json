@@ -194,8 +194,8 @@
       "answer_categories": "101"
     },
     {
-      "name": "sleep_hours",
-      "description": "Hours of sleep",
+      "name": "sleep_duration",
+      "description": "Sleep duration in hours",
       "variable_type": "numeric",
       "coding": "How many hours did you sleep last night?",
       "answer_categories": ""

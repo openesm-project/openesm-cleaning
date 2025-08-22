@@ -44,7 +44,7 @@ df <- df |>
     reliving = felt_like_you_were_reliving_a_traumatic_event,
     unpleasant_dreams = had_unpleasant_dreams_about_a_traumatic_event,
     intrusions = had_stressful_unwanted_memories_of_a_traumatic_event,
-    hours_sleep = how_many_hours_did_you_sleep_last_night,
+    sleep_duration = how_many_hours_did_you_sleep_last_night,
     restless_sleep = experienced_restless_or_unsatisfying_sleep,
     sleep_troubles = had_trouble_falling_or_staying_asleep,
     horrified = felt_horrified,
