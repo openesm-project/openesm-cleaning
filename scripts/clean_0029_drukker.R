@@ -26,7 +26,8 @@ df <- df_raw |>
     phy_abd = phyabd,
     enthusiastic = enthous,
     irritated = irritat,
-    cheerful = cheerf
+    cheerful = cheerf,
+    rushed = rush
   )
 
 

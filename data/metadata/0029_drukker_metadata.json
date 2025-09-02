@@ -68,7 +68,7 @@
       "answer_categories": "7"
     },
     {
-      "name": "rush",
+      "name": "rushed",
       "description": "Rushed",
       "variable_type": "Likert",
       "coding": "I feel rushed\n1 = not at all\n7 = extremely",
