@@ -48,7 +48,8 @@ df <- df_raw |>
     concentrated_activity_alone = conflict_filler,
     concentration_extent = conflict_extent,
     social_pressure_phone = social_pressure,
-    scheduled_time = extracted_scheduled_times
+    scheduled_time = extracted_scheduled_times,
+    stressed = stress
   ) |>
   # use prompt instead of probe
   rename_with(~ str_replace(., "probe", "prompt"))

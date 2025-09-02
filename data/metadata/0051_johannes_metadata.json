@@ -215,7 +215,7 @@
       "answer_categories": "7"
     },
     {
-      "name": "stress",
+      "name": "stressed",
       "description": "Stress",
       "variable_type": "Likert",
       "coding": "How much stress are you experiencing right now?\n1 = Not at all\n7 = Very stressed",
