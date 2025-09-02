@@ -68,34 +68,6 @@
       "comments": ""
     },
     {
-      "name": "positive_affect",
-      "description": "Positive affect mean score",
-      "variable_typ": "VAS",
-      "coding": "Positive affect, average of \"happy\" and \"relaxed\"\n0 = not at all\n100 = very much",
-      "answer_categories": "",
-      "details": "",
-      "labels": "",
-      "transformation": "",
-      "source": "",
-      "assessment_type": "",
-      "construct": "",
-      "comments": ""
-    },
-    {
-      "name": "negative_affect",
-      "description": "Negative affect mean score",
-      "variable_typ": "VAS",
-      "coding": "Negative affect, average of \"sad\" and \"angry\", and \"stress\"\n0 = not at all\n100 = very much",
-      "answer_categories": "",
-      "details": "",
-      "labels": "",
-      "transformation": "",
-      "source": "",
-      "assessment_type": "",
-      "construct": "",
-      "comments": ""
-    },
-    {
       "name": "happy",
       "description": "Happy",
       "variable_typ": "VAS",
@@ -152,7 +124,7 @@
       "comments": ""
     },
     {
-      "name": "stress",
+      "name": "stressed",
       "description": "Stress",
       "variable_typ": "VAS",
       "coding": "Felt stress\n0 = not at all\n100 = very much",

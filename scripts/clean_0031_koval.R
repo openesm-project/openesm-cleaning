@@ -32,7 +32,8 @@ df <- df |>
   janitor::clean_names() |>
   dplyr::rename(id = pid,
                 day = unit,
-                beep = occasion)
+                beep = occasion,
+                stressed = stress)
 
 #* Misc -------------------------------------------------------------------
 # remove aggregate scores
