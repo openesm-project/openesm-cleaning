@@ -211,6 +211,10 @@ df <- df |>
     last_update = as.POSIXct(last_update, format = "%Y-%m-%d %H:%M:%S", tz = "UTC")
   )
 
+# check for character NA
+df <- df |>
+  mutate(across(where(is.character), ~ na_if(., "NA")))
+
 # recode stressor columns from 2, 1 to 1, 0
 df <- df |>
   mutate(across(starts_with("stressor_"), ~ ifelse(!is.na(.), . - 1, .)))
