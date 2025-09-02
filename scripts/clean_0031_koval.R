@@ -32,13 +32,12 @@ df <- df |>
   janitor::clean_names() |>
   dplyr::rename(id = pid,
                 day = unit,
-                beep = occasion,
-                positive_affect = pa,
-                negative_affect = na)
+                beep = occasion)
 
 #* Misc -------------------------------------------------------------------
-
-
+# remove aggregate scores
+df <- df |>
+  dplyr::select(!c(pa, na))
 
 
 # Check requirements ------------------------------------------------------
