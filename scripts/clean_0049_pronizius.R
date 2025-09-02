@@ -33,7 +33,8 @@ df <- df_raw |>
     counter = count,
     helping_binary = helping_bin,
     social_binary = soc_bin,
-    weekday = wdwe
+    weekday = wdwe,
+    stressed = stress
   )
 
 
