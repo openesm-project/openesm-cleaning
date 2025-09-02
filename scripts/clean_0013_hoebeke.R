@@ -155,7 +155,24 @@ df <- df |>
   select(-time_interval)
 
 
+#* Combine starting date with demographics --------------------------------
+# read in demographics data
+df_demographics <- read.csv(here("data", "raw", "0013_hoebeke_demographics_raw.csv"))
 
+id_start_date <- df |>
+  distinct(id, start_date_study)
+
+# join demographics data with starting date
+df_demographics <- df_demographics |>
+  rename(id = session) |>
+  left_join(id_start_date, by = c("id"))
+
+# save
+write_tsv(df_demographics, here("data", "clean", "0013_hoebeke_static.tsv"))
+
+# remove from time series df
+df <- df |>
+  select(!c(start_date_study))
 
 # Check requirements ------------------------------------------------------
 # if check_data runs without messages, the data are clean
