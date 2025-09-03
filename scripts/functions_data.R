@@ -30,7 +30,8 @@ check_data <- function(data){
 }
 
 # create metadata json file
-create_metadata_json <- function(dataset_id_char) {
+create_metadata_json <- function(dataset_id_char,
+                                 recode_variable_type = TRUE) {
 
   # Extract dataset-level info
   dataset_info <- meta_data |>
@@ -41,6 +42,17 @@ create_metadata_json <- function(dataset_id_char) {
     dplyr::filter(dataset_id == dataset_id_char) |>
     dplyr::mutate_all(~ ifelse(is.na(.), "", .)) |>
     dplyr::select(!dataset_id)
+
+  # recode variable type to simplify
+  if(recode_variable_type) {
+    dataset_features <- dataset_features |>
+      dplyr::mutate(
+        variable_type = dplyr::case_when(
+          variable_type %in% c("Likert", "ordinal", "VAS") ~ "rating_scale",
+          TRUE ~ variable_type
+        )
+      )
+  }
 
   # Construct JSON structure
   list(
