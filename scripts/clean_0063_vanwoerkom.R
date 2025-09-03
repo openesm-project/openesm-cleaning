@@ -99,6 +99,15 @@ df <- df |>
   # select column that only reflects alone above
   select(!alone)
 
+# revert the reverse-transformation of some items
+df <- df |>
+  mutate(
+    tired = 8 - not_tired,
+    feels_like_obligation = 8 - not_feels_like_obligation,
+    doubt = 8 - not_doubt,
+    misunderstood = 8 - not_misunderstood
+  ) |>
+  select(!c(not_tired, not_feels_like_obligation, not_doubt))
 
 
 

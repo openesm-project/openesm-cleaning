@@ -28,182 +28,182 @@
     {
       "name": "id",
       "description": "Participant ID",
-      "type": "categorical",
+      "variable_type": "categorical",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "day",
       "description": "Day of study",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "beep",
       "description": "Beep of the day",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "counter",
       "description": "Counter",
-      "type": "numeric",
+      "variable_type": "numeric",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "weekday",
       "description": "Day of the week",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
       "answer_categories": ""
     },
     {
       "name": "cheerful",
       "description": "Cheerful",
-      "type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I feel cheerful\n1 = Not at all\n7 = Very much\nPANAS",
       "answer_categories": "7"
     },
     {
       "name": "satisfied",
       "description": "Satisfied",
-      "type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I feel satisfied\n1 = Not at all\n7 = Very much\nPANAS",
       "answer_categories": "7"
     },
     {
       "name": "happy",
       "description": "Happy",
-      "type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I feel happy\n1 = Not at all\n7 = Very much\nPANAS",
       "answer_categories": "7"
     },
     {
       "name": "insecure",
       "description": "Insecure",
-      "type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I feel insecure\n1 = Not at all\n7 = Very much\nPANAS",
       "answer_categories": "7"
     },
     {
       "name": "anxious",
       "description": "Anxious",
-      "type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I feel anxious\n1 = Not at all\n7 = Very much\nPANAS",
       "answer_categories": "7"
     },
     {
       "name": "down",
       "description": "Down",
-      "type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I feel down\n1 = Not at all\n7 = Very much\nPANAS",
       "answer_categories": "7"
     },
     {
-      "name": "not_tired",
-      "description": "Not tired",
-      "type": "Likert",
-      "coding": "I feel tired (reverse-coded)\n1 = Not at all\n7 = Very much\nPhysical Feeling State Questionnaire",
+      "name": "tired",
+      "description": "Tired",
+      "variable_type": "rating_scale",
+      "coding": "I feel tired (reverse-coded by the authors, but backtransformed by us)\n1 = Not at all\n7 = Very much\nPhysical Feeling State Questionnaire",
       "answer_categories": "7"
     },
     {
       "name": "energetic",
       "description": "Energetic",
-      "type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I feel energetic\n1 = Not at all\n7 = Very much\nPhysical Feeling State Questionnaire",
       "answer_categories": "7"
     },
     {
       "name": "satisfied_self",
       "description": "Satisfied with self",
-      "type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I am satisfied with myself\n1 = Not at all\n7 = Very much\nPsychological Well-being Scales",
       "answer_categories": "7"
     },
     {
       "name": "inspired",
       "description": "Inspired",
-      "type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I feel inspired\n1 = Not at all\n7 = Very much\nPsychological Well-being Scales",
       "answer_categories": "7"
     },
     {
       "name": "goal_pursuit",
       "description": "Goal pursuit",
-      "type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I pursue my goals\n1 = Not at all\n7 = Very much\nPsychological Well-being Scales",
       "answer_categories": "7"
     },
     {
-      "name": "not_feels_like_obligation",
-      "description": "Does not feel like obligation",
-      "type": "Likert",
-      "coding": "This feels like an obligation (reverse-coded)\n1 = Not at all\n7 = Very much\nBasic Psychological Need Satisfaction and Frustration Scale",
+      "name": "feels_like_obligation",
+      "description": "Feels like an obligation",
+      "variable_type": "rating_scale",
+      "coding": "This feels like an obligation (reverse-coded by the authors, but back-transformed by us)\n1 = Not at all\n7 = Very much\nBasic Psychological Need Satisfaction and Frustration Scale",
       "answer_categories": "7"
     },
     {
       "name": "chose_doing",
       "description": "Choose doing this",
-      "type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I choose to do this myself\n1 = Not at all\n7 = Very much\nBasic Psychological Need Satisfaction and Frustration Scale",
       "answer_categories": "7"
     },
     {
       "name": "good_at_this",
       "description": "Good at this",
-      "type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I am good at this\n1 = Not at all\n7 = Very much\nBasic Psychological Need Satisfaction and Frustration Scale",
       "answer_categories": "7"
     },
     {
-      "name": "not_doubt",
-      "description": "Not doubting if able to do this",
-      "type": "Likert",
-      "coding": "I doubt that I can do this (reverse-coded)\n1 = Not at all\n7 = Very much\nBasic Psychological Need Satisfaction and Frustration Scale",
+      "name": "doubt",
+      "description": "Doubting if able to do this",
+      "variable_type": "rating_scale",
+      "coding": "I doubt that I can do this (reverse-coded by the authors, but backtransformed by us)\n1 = Not at all\n7 = Very much\nBasic Psychological Need Satisfaction and Frustration Scale",
       "answer_categories": "7"
     },
     {
       "name": "appreciated",
       "description": "Appreciated",
-      "type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I feel appreciated\n1 = Not at all\n7 = Very much\nBasic Psychological Need Satisfaction and Frustration Scale\nOnly asked when not alone",
       "answer_categories": "7"
     },
     {
       "name": "part_of_company",
       "description": "Feeling part of the company",
-      "type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I feel part of this company\n1 = Not at all\n7 = Very much\nBasic Psychological Need Satisfaction and Frustration Scale\nOnly asked when not alone",
       "answer_categories": "7"
     },
     {
-      "name": "not_misunderstood",
-      "description": "Not misunderstood",
-      "type": "Likert",
-      "coding": "I feel misunderstood (reverse-coded)\n1 = Not at all\n7 = Very much\nBasic Psychological Need Satisfaction and Frustration Scale\nOnly asked when not alone",
+      "name": "misunderstood",
+      "description": "Misunderstood",
+      "variable_type": "rating_scale",
+      "coding": "I feel misunderstood (reverse-coded by the authors, but backtransformed by us)\n1 = Not at all\n7 = Very much\nBasic Psychological Need Satisfaction and Frustration Scale\nOnly asked when not alone",
       "answer_categories": "7"
     },
     {
       "name": "social_company",
       "description": "Social company",
-      "type": "categorical",
+      "variable_type": "categorical",
       "coding": "With whom am I?\nPartner\nChildren\nParents\nBrother/Sister\nOther family (not living in the same place)\nFriends\nColleagues\nFellow students\nAcquaintances\nStrangers/Others\nNo one - I am alone",
       "answer_categories": "11"
     },
     {
       "name": "missing_beep",
       "description": "Beep missingness status",
-      "type": "binary",
+      "variable_type": "binary",
       "coding": "0 = Not missing\n1 =  Missing",
       "answer_categories": "2"
     },
     {
       "name": "datetime",
       "description": "Timestamp",
-      "type": "PosixCt",
+      "variable_type": "PosixCt",
       "coding": "",
       "answer_categories": ""
     }
