@@ -7,14 +7,10 @@ library(arrow)
 source(here("scripts", "functions_data.R"))
 
 
-
 # Data --------------------------------------------------------------------
 # read in merged data (https://zenodo.org/records/14190139/files/merged_df.feather)
 # data were merged here: https://github.com/DigitalHealthcareLab/24PanicPrediction/blob/master/src/3_data_merge/data_merge.py
 df_raw <- arrow::read_feather(here("data", "raw", "0017_jang_ts_raw.feather"))
-
-
-
 
 # Cleaning ----------------------------------------------------------------
 #* Column Names -----------------------------------------------------------
@@ -23,7 +19,19 @@ df <- df_raw |>
   rename(
     negative_feeling = negative,
     positive_energy = positive_e,
-    negative_energy = negative_e
+    negative_energy = negative_e,
+    anxiety_control = acq,
+    agoraphobia = appq_1,
+    social_phobia = appq_2,
+    interoceptive_fear = appq_3,
+    body_shape = bsq,
+    fear_negative_evaluation = bfne,
+    depression_ces = ces_d,
+    generalized_anxiety = gad_7,
+    occupational_stress = kosssf,
+    depression_phq = phq_9,
+    social_avoidance_distress = sads,
+    state_anxiety = stai_x1
   )
 
 

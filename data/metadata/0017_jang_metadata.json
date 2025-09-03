@@ -30,315 +30,630 @@
       "description": "Participant ID",
       "variable_type": "categorical",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "day",
       "description": "Day of study",
       "variable_type": "other",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "beep",
       "description": "Beep of the day",
       "variable_type": "other",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "date",
       "description": "Date",
       "variable_type": "Date",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "hr_var",
       "description": "Heart rate variance",
       "variable_type": "numeric",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "hr_max",
       "description": "Heart rate maximum",
       "variable_type": "numeric",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "hr_mean",
       "description": "Heart rate mean",
       "variable_type": "numeric",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "hr_hvar_mean",
       "description": "Daily average of the variance of\nthe heart rate calculated every hour",
       "variable_type": "numeric",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "alcohol",
       "description": "Alcohol consumption",
       "variable_type": "binary",
       "coding": "Wording unclear",
-      "answer_categories": "2"
+      "answer_categories": "2",
+      "details": "Wording unclear",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
-      "name": "cofffee",
+      "name": "coffee",
       "description": "Coffee consumption",
       "variable_type": "binary",
       "coding": "Wording unclear",
-      "answer_categories": "2"
+      "answer_categories": "2",
+      "details": "Wording unclear",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "smoking",
       "description": "Smoking",
       "variable_type": "binary",
       "coding": "Wording unclear",
-      "answer_categories": "2"
+      "answer_categories": "2",
+      "details": "Wording unclear",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "menstruation",
       "description": "Menstruation",
       "variable_type": "binary",
       "coding": "Wording unclear",
-      "answer_categories": "2"
+      "answer_categories": "2",
+      "details": "Wording unclear",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "exercise",
       "description": "Exercise",
       "variable_type": "binary",
       "coding": "Wording unclear",
-      "answer_categories": "2"
+      "answer_categories": "2",
+      "details": "Wording unclear",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "panic",
       "description": "Panic",
       "variable_type": "binary",
       "coding": "Wording unclear",
-      "answer_categories": "2"
+      "answer_categories": "2",
+      "details": "Wording unclear",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "positive_feeling",
       "description": "Positive feeling",
-      "variable_type": "ordinal",
+      "variable_type": "rating_scale",
       "coding": "Wording and answer categories unclear",
-      "answer_categories": "4"
+      "answer_categories": "4",
+      "details": "Wording and answer categories unclear",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "negative_feeling",
       "description": "Negative feeling",
-      "variable_type": "ordinal",
+      "variable_type": "rating_scale",
       "coding": "Wording and answer categories unclear",
-      "answer_categories": "4"
+      "answer_categories": "4",
+      "details": "Wording and answer categories unclear",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "positive_energy",
       "description": "Positive energy",
-      "variable_type": "ordinal",
+      "variable_type": "rating_scale",
       "coding": "Wording and answer categories unclear",
-      "answer_categories": "4"
+      "answer_categories": "4",
+      "details": "Wording and answer categories unclear",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "negative_energy",
       "description": "Negative energy",
-      "variable_type": "ordinal",
+      "variable_type": "rating_scale",
       "coding": "Wording and answer categories unclear",
-      "answer_categories": "4"
+      "answer_categories": "4",
+      "details": "Wording and answer categories unclear",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "anxiety",
       "description": "Anxiety",
-      "variable_type": "ordinal",
+      "variable_type": "rating_scale",
       "coding": "Wording and answer categories unclear",
-      "answer_categories": "4"
+      "answer_categories": "4",
+      "details": "Wording and answer categories unclear",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "annoying",
       "description": "Annoying",
-      "variable_type": "ordinal",
+      "variable_type": "rating_scale",
       "coding": "Wording and answer categories unclear",
-      "answer_categories": "4"
+      "answer_categories": "4",
+      "details": "Wording and answer categories unclear",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "acq",
       "description": "Anxiety control questionnaire",
       "variable_type": "numeric",
       "coding": "Irregular time interval\nSum score",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "Sum score",
+      "source": "Anxiety control questionnaire",
+      "assessment_type": "",
+      "construct": "",
+      "comments": "Irregular time interval"
     },
     {
-      "name": "appq_1",
+      "name": "agoraphobia",
       "description": "Agoraphobia",
       "variable_type": "numeric",
       "coding": "Albany Panic and Phobia\nQuestionnaire score – Agoraphobia\nsection\nIrregular time interval\nSum score",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
-      "name": "appq_2",
+      "name": "social_phobia",
       "description": "Social phobia",
       "variable_type": "numeric",
       "coding": "Albany Panic and Phobia\nQuestionnaire score – Social Phobia\nsection\nIrregular time interval\nSum score",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
-      "name": "appq_3",
+      "name": "interoceptive_fear",
       "description": "Interoceptive fear",
       "variable_type": "numeric",
       "coding": "Albany Panic and Phobia\nQuestionnaire score – Interoceptive\nFear section\nIrregular time interval\nSum score",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
-      "name": "bsq",
+      "name": "body_shape",
       "description": "Body shape questionnaire",
       "variable_type": "numeric",
       "coding": "Irregular time interval\nSum score",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
-      "name": "bfne",
+      "name": "fear_negative_evaluation",
       "description": "Fear of negative evaluation",
       "variable_type": "numeric",
       "coding": "Brief Fear of Negative Evaluation\nIrregular time interval\nSum score",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
-      "name": "ces_d",
+      "name": "depression_ces",
       "description": "CES-Depression",
       "variable_type": "numeric",
       "coding": "Center for Epidemiologic Studies\nDepression Scale\nIrregular time interval\nSum score",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
-      "name": "gad_7",
+      "name": "generalized_anxiety",
       "description": "Generalixed anxiety",
       "variable_type": "numeric",
       "coding": "Generalized Anxiety Disorder-7 scale\nIrregular time interval\nSum score",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
-      "name": "kosssf",
+      "name": "occupational_stress",
       "description": "Occupational stress",
       "variable_type": "numeric",
       "coding": "Korean Occupational Stress Scale-\nShort Form scale\nIrregular time interval\nSum score",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
-      "name": "phq_9",
+      "name": "depression_phq",
       "description": "PHQ-Depression",
       "variable_type": "numeric",
       "coding": "Patient Health Questionnaire-9 Scale\nIrregular time interval\nSum score",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
-      "name": "sads",
+      "name": "social_avoidance_distress",
       "description": "Social avoidance and distress",
       "variable_type": "numeric",
       "coding": "Social Avoidance and Distress Scale\nIrregular time interval\nSum score",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
-      "name": "stai_x1",
+      "name": "state_anxiety",
       "description": "State anxiety",
       "variable_type": "numeric",
       "coding": "State-Trait Anxiety Inventory score\n– State Anxiety section\n\nIrregular time interval",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "steps_maximum",
       "description": "Maximum steps per minute",
       "variable_type": "numeric",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "steps_mean",
       "description": "Mean steps per minute",
       "variable_type": "numeric",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "steps_hvar_mean",
       "description": "Daily average of step count variance calculated every hour",
       "variable_type": "numeric",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "hr_acrophase",
       "description": "Heart rate acrophase",
       "variable_type": "numeric",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "hr_amplitude",
       "description": "Heart rate amplitude",
       "variable_type": "numeric",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "hr_mesor",
       "description": "Heart rate mesor",
       "variable_type": "numeric",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "bandpower_0_001_0_0005hz",
       "description": "Heart rate bandpower of 0.001-\n0.0005Hz",
       "variable_type": "numeric",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "bandpower_0_0005_0_0001hz",
       "description": "Heart rate bandpower of 0.0005-\n0.0001Hz",
       "variable_type": "numeric",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "bandpower_0_0001_0_00005hz",
       "description": "Heart rate bandpower of 0.0001-\n0.00005Hz",
       "variable_type": "numeric",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "bandpower_0_00005_0_00001hz",
       "description": "Heart rate bandpower of 0.00005-\n0.00001Hz",
       "variable_type": "numeric",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "sleep_duration",
       "description": "Sleep duration",
       "variable_type": "numeric",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "sleep_onset_time",
       "description": "Sleep onset time",
       "variable_type": "numeric",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "sleep_out_time",
       "description": "Sleep out time",
       "variable_type": "numeric",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "",
+      "construct": "",
+      "comments": ""
     }
   ]
 }
