@@ -148,7 +148,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "nervousness, anxiety, negative affect, affect, neuroticism, big five, psychopathology",
+      "construct": "nervousness, negative affect, affect, neuroticism, big five",
       "comments": ""
     },
     {
@@ -232,7 +232,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "anger, negative affect, affect, psychopathology",
+      "construct": "anger, negative affect, affect",
       "comments": ""
     },
     {
