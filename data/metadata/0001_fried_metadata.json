@@ -96,7 +96,7 @@
       "comments": ""
     },
     {
-      "name": "relax",
+      "name": "difficulties_relaxing",
       "description": "Difficulties relaxing",
       "variable_type": "rating_scale",
       "coding": "I found it difficult to relax.\n1 = Not at all \n2 = Slightly\n3 = Moderately\n4 = Very\n5 = Extremly",
@@ -152,7 +152,7 @@
       "comments": ""
     },
     {
-      "name": "future",
+      "name": "nothing_look_forward",
       "description": "Nothing to look forward to",
       "variable_type": "rating_scale",
       "coding": "I felt that I had nothing to look forward\n1 = Not at all \n2 = Slightly\n3 = Moderately\n4 = Very\n5 = Extremly",
@@ -264,7 +264,7 @@
       "comments": ""
     },
     {
-      "name": "music",
+      "name": "time_music",
       "description": "Time spent listening to music",
       "variable_type": "rating_scale",
       "coding": "I spent __ minutes listening to music\n1 = 0 minutes\n2 = 5-15 min\n3 = 15-60 min\n4 = 1-2 hours\n5 = > 2h",
@@ -278,7 +278,7 @@
       "comments": ""
     },
     {
-      "name": "procrastinate",
+      "name": "procrastinated",
       "description": "Procastination",
       "variable_type": "rating_scale",
       "coding": "To what degree did you postpone working on a task?\n\n1 = Not at all \n2 = Slightly\n3 = Moderately\n4 = Very\n5 = Extremly",
@@ -292,7 +292,7 @@
       "comments": ""
     },
     {
-      "name": "outdoors",
+      "name": "time_outdoors",
       "description": "Time spent outdoors",
       "variable_type": "rating_scale",
       "coding": "I spent __ minutes outside (outdoors)?\n\n1 = 0 minutes\n2 = 5-15 min\n3 = 15-60 min\n4 = 1-2 hours\n5 = > 2h",
@@ -306,7 +306,7 @@
       "comments": ""
     },
     {
-      "name": "c19_occupied",
+      "name": "covid_occupied",
       "description": "Occupied with COVID",
       "variable_type": "rating_scale",
       "coding": "I spent __ occupied with the coronavirus (e.g. watching news thinking about it talking to friends about it)\n\n1 = 0 minutes\n2 = 5-15 min\n3 = 15-60 min\n4 = 1-2 hours\n5 = > 2h",
@@ -320,7 +320,7 @@
       "comments": ""
     },
     {
-      "name": "c19_worry",
+      "name": "covid_worry",
       "description": "Worried about COVID",
       "variable_type": "rating_scale",
       "coding": "I spent __ thinking about my own health or that of my close friends and family members regarding the coronavirus\n\n1 = 0 minutes\n2 = 5-15 min\n3 = 15-60 min\n4 = 1-2 hours\n5 = > 2h",
@@ -334,7 +334,7 @@
       "comments": ""
     },
     {
-      "name": "home",
+      "name": "time_home",
       "description": "Time spent at home",
       "variable_type": "rating_scale",
       "coding": "I spent __ at home (including the home of parents/partner)\n\n1 = 0 minutes\n2 = 5-15 min\n3 = 15-60 min\n4 = 1-2 hours\n5 = > 2h",

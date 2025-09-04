@@ -50,7 +50,17 @@ colnames(df) <- ifelse(colnames(df) %in% names(new_names), new_names[colnames(df
 
 # clean names
 df <- df |>
-  janitor::clean_names()
+  janitor::clean_names() |>
+  dplyr::rename(
+    difficulties_relaxing = relax,
+    covid_occupied = c19_occupied,
+    covid_worry = c19_worry,
+    procrastinated = procrastinate,
+    time_outdoors = outdoors,
+    nothing_look_forward = future,
+    time_music = music,
+    time_home = home
+  )
 
 
 
