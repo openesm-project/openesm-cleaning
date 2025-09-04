@@ -87,7 +87,18 @@ df <- df |>
     other_activity_text = activ_today_15_text,
     nap_rest = activ_today_16,
     ate_meal = activ_today_18,
-    activity_prefer_not_answer = activ_today_99
+    activity_prefer_not_answer = activ_today_99,
+    # better names
+    amount_stool = amt_stool,
+    amount_urine = amt_urine,
+    anxious_stool = anx_stool,
+    anxious_stool_possibility = anx_stool_poss,
+    anxious_urine = anx_urine,
+    anxious_urine_possibility = anx_urine_poss,
+    prevent_activity_stool = noact_stool,
+    prevent_activity_urine = noact_urine,
+    stress_stool_possibility = stress_stool_poss,
+    stress_urine_possibility = stress_urine_poss
   )
 
 names(df)
@@ -103,7 +114,7 @@ counts <- df |>
   tidyr::pivot_longer(cols = everything(),
                names_to = "variable",
                values_to = "n_unique")
-counts
+
 
 # demographic variables: date of birth, is already present in the enrollment data
 demographic_vars <- c("dob")
@@ -119,6 +130,7 @@ df <- df |>
                 .after = day)
 
 
+# remove
 
 # Check requirements ------------------------------------------------------
 # if check_data runs without messages, the data are clean
