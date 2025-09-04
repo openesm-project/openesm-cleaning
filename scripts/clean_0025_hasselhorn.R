@@ -78,6 +78,29 @@ df <- df_raw |>
 df <- df |>
   select(!c(treatment, treatment_short0_long1, bel))
 
+# recode all reverse-coded variables
+df <- df |>
+  mutate(
+    quiet = 6 - not_quiet,
+    bashful = 6 - not_bashful,
+    withdrawn = 6 - not_withdrawn,
+    careless = 6 - not_careless,
+    disorganized = 6 - not_disorganized,
+    inefficient = 6 - not_inefficient,
+    sloppy = 6 - not_sloppy,
+    unsympathetic = 6 - not_unsympathetic,
+    harsh = 6 - not_harsh,
+    relaxed_personality = 6 - not_relaxed,
+    rude = 6 - not_rude,
+    uncreative = 6 - not_uncreative,
+    unintellectual = 6 - not_unintellectual,
+    cold = 6 - not_cold
+  ) |>
+  # remove original reverse-coded variables
+  select(!c(not_quiet, not_bashful, not_withdrawn, not_careless, not_disorganized,
+            not_inefficient, not_sloppy, not_unsympathetic, not_harsh, not_relaxed,
+            not_rude, not_uncreative, not_unintellectual, not_cold))
+
 # change all NAN to NA
 df[df == "NaN"] <- NA
 
