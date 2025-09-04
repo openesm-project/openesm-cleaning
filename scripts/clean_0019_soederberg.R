@@ -28,7 +28,8 @@ df <- df_raw |>
          teacher_strict = te_str,
          teacher_fair = te_fair,
          teacher_encouraging = te_enc,
-         peer_relationship = peer_rel)
+         peer_relationship = peer_rel,
+         sleep_quality = morning_sleep)
 
 
 #* Misc -------------------------------------------------------------------
