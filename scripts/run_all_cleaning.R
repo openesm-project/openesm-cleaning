@@ -19,7 +19,7 @@ included_ids <- meta_data |>
 included_scripts <- scripts[grepl(paste(included_ids, collapse = "|"), scripts)]
 rm(meta_data)
 # run each script
-for (script in included_scripts[-c(1:57)]) {
+for (script in included_scripts[c(1:14)]) {
   message("Running script: ", script)
   source(script)
 }
