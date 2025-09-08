@@ -4,13 +4,13 @@ library(here)
 library(googlesheets4)
 library(jsonlite)
 library(readxl)
-source(here("scripts", "functions_data.R"))
+source(here::here("scripts", "functions_data.R"))
 
 # Data --------------------------------------------------------------------
 # .zip data is very large: https://osf.io/hsrfg
 # downloaded manually and then extracted the ESM and questionnaire data
 # sensor data taken from "EDA/signal_data.csv"
-df_raw <- read_xlsx(here("data", "raw", "0070_vanhalem_ts_raw.xlsx"))
+df_raw <- read_xlsx(here::here("data", "raw", "0070_vanhalem_ts_raw.xlsx"))
 
 
 #- take some cleaning code from their code -------------
@@ -39,7 +39,7 @@ df_raw <- df_raw[df_raw$id > 1010 ,]
 #* Column Names -----------------------------------------------------------
 df <- df_raw |>
   janitor::clean_names() |>
-  rename(
+  dplyr::rename(
     counter = trigger_counter,
     enthusiastic = enthousiast,
     relaxed = ontspannen,
@@ -81,35 +81,35 @@ df <- df_raw |>
 #* Misc -------------------------------------------------------------------
 # remove irrelevant and unclear column and columns that are always NA
 df <- df |>
-  select(c(-x1, participant_mov)) |>
-  select(-c(disconnected, battery))
+  dplyr::select(c(-x1, participant_mov)) |>
+  dplyr::select(-c(disconnected, battery))
 
 # convert time columns to PosixCt
 df <- df |>
-  mutate(across(contains("time") | contains("date"),
+  dplyr::mutate(dplyr::across(tidyselect::contains("time") | tidyselect::contains("date"),
                 ~ as.POSIXct(.x, format = "%Y-%m-%d %H:%M:%S")))
 
 # check for character NA
 df <- df |>
-  mutate(across(where(is.character), ~ na_if(.x, "NA"))) |>
-  mutate(across(where(is.character), ~ na_if(.x, "")))
+  dplyr::mutate(dplyr::across(where(is.character), ~ dplyr::na_if(.x, "NA"))) |>
+  dplyr::mutate(dplyr::across(where(is.character), ~ dplyr::na_if(.x, "")))
 
 # create day variable
 df <- df |>
-  mutate(date = as.Date(trigger_date)) |>
+  dplyr::mutate(date = as.Date(trigger_date)) |>
   # add day number
-  group_by(id) |>
-  mutate(
+  dplyr::group_by(id) |>
+  dplyr::mutate(
     day = as.integer(date - min(date, na.rm = TRUE)) + 1
   ) |>
-  ungroup() |>
-  select(!date)
+  dplyr::ungroup() |>
+  dplyr::select(!date)
 
 # create beep variable
 df <- df |>
-  group_by(id, day) |>
-  mutate(beep = row_number()) |>
-  ungroup()
+  dplyr::group_by(id, day) |>
+  dplyr::mutate(beep = dplyr::row_number()) |>
+  dplyr::ungroup()
 
 # Check requirements ------------------------------------------------------
 # if check_data runs without messages, the data are clean
@@ -119,7 +119,7 @@ check_results <- check_data(df)
 # if it returns "Data are clean.", save the data
 # Enter data set ID here
 if(check_results == "Data are clean."){
-  write_tsv(df, here("data", "clean", "0070_vanhalem_ts.tsv"))
+  write_tsv(df, here::here("data", "clean", "0070_vanhalem_ts.tsv"))
 }
 
 
@@ -130,12 +130,12 @@ meta_data <- read_sheet(metadata_url)
 
 # Enter dataset ID here
 sheet_url <- meta_data |>
-  filter(dataset_id == "0070") |>
-  pull("Coding File URL")
+  dplyr::filter(dataset_id == "0070") |>
+  dplyr::pull("Coding File URL")
 
 variable_data <- read_sheet(sheet_url)
 
 meta_json <- create_metadata_json("0070") |>
   toJSON(pretty = TRUE, auto_unbox = TRUE)
 
-write(meta_json, here("data", "metadata", "0070_vanhalem_metadata.json"))
+write(meta_json, here::here("data", "metadata", "0070_vanhalem_metadata.json"))
