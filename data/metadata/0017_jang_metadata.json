@@ -35,7 +35,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Daily",
       "construct": "",
       "comments": ""
     },
@@ -49,7 +49,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Daily",
       "construct": "",
       "comments": ""
     },
@@ -63,7 +63,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Daily",
       "construct": "",
       "comments": ""
     },
@@ -77,7 +77,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Daily",
       "construct": "",
       "comments": ""
     },
@@ -91,7 +91,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Passive",
       "construct": "",
       "comments": ""
     },
@@ -105,7 +105,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Passive",
       "construct": "",
       "comments": ""
     },
@@ -119,7 +119,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Passive",
       "construct": "",
       "comments": ""
     },
@@ -133,7 +133,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Passive",
       "construct": "",
       "comments": ""
     },
@@ -147,7 +147,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Daily",
       "construct": "",
       "comments": ""
     },
@@ -161,7 +161,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Daily",
       "construct": "",
       "comments": ""
     },
@@ -175,7 +175,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Daily",
       "construct": "",
       "comments": ""
     },
@@ -189,7 +189,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Daily",
       "construct": "",
       "comments": ""
     },
@@ -203,7 +203,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Daily",
       "construct": "",
       "comments": ""
     },
@@ -217,7 +217,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Daily",
       "construct": "",
       "comments": ""
     },
@@ -231,7 +231,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Daily",
       "construct": "",
       "comments": ""
     },
@@ -245,7 +245,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Daily",
       "construct": "",
       "comments": ""
     },
@@ -259,7 +259,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Daily",
       "construct": "",
       "comments": ""
     },
@@ -273,7 +273,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Daily",
       "construct": "",
       "comments": ""
     },
@@ -287,7 +287,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Daily",
       "construct": "",
       "comments": ""
     },
@@ -301,12 +301,12 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Daily",
       "construct": "",
       "comments": ""
     },
     {
-      "name": "acq",
+      "name": "anxiety_control",
       "description": "Anxiety control questionnaire",
       "variable_type": "numeric",
       "coding": "Irregular time interval\nSum score",
@@ -315,7 +315,7 @@
       "labels": "",
       "transformation": "Sum score",
       "source": "Anxiety control questionnaire",
-      "assessment_type": "",
+      "assessment_type": "Daily",
       "construct": "",
       "comments": "Irregular time interval"
     },
@@ -327,11 +327,11 @@
       "answer_categories": "",
       "details": "",
       "labels": "",
-      "transformation": "",
-      "source": "",
-      "assessment_type": "",
+      "transformation": "Sum score",
+      "source": "Albany Panic and Phobia Questionnaire - Agoraphobia section",
+      "assessment_type": "Daily",
       "construct": "",
-      "comments": ""
+      "comments": "Irregular time interval"
     },
     {
       "name": "social_phobia",
@@ -341,11 +341,11 @@
       "answer_categories": "",
       "details": "",
       "labels": "",
-      "transformation": "",
-      "source": "",
-      "assessment_type": "",
+      "transformation": "Sum score",
+      "source": "Albany Panic and Phobia Questionnaire - Social Phobia section",
+      "assessment_type": "Daily",
       "construct": "",
-      "comments": ""
+      "comments": "Irregular time interval"
     },
     {
       "name": "interoceptive_fear",
@@ -355,25 +355,25 @@
       "answer_categories": "",
       "details": "",
       "labels": "",
-      "transformation": "",
-      "source": "",
-      "assessment_type": "",
+      "transformation": "Sum score",
+      "source": "Albany Panic and Phobia Questionnaire - Interoceptive fear section",
+      "assessment_type": "Daily",
       "construct": "",
-      "comments": ""
+      "comments": "Irregular time interval"
     },
     {
       "name": "body_shape",
-      "description": "Body shape questionnaire",
+      "description": "Body shape",
       "variable_type": "numeric",
       "coding": "Irregular time interval\nSum score",
       "answer_categories": "",
       "details": "",
       "labels": "",
-      "transformation": "",
-      "source": "",
-      "assessment_type": "",
+      "transformation": "Sum score",
+      "source": "Body shape questionnaire",
+      "assessment_type": "Daily",
       "construct": "",
-      "comments": ""
+      "comments": "Irregular time interval"
     },
     {
       "name": "fear_negative_evaluation",
@@ -383,11 +383,11 @@
       "answer_categories": "",
       "details": "",
       "labels": "",
-      "transformation": "",
-      "source": "",
-      "assessment_type": "",
+      "transformation": "Sum score",
+      "source": "Brief Fear of Negative Evaluation",
+      "assessment_type": "Daily",
       "construct": "",
-      "comments": ""
+      "comments": "Irregular time interval"
     },
     {
       "name": "depression_ces",
@@ -397,11 +397,11 @@
       "answer_categories": "",
       "details": "",
       "labels": "",
-      "transformation": "",
-      "source": "",
-      "assessment_type": "",
+      "transformation": "Sum score",
+      "source": "Center for Epidemiologic Studies\nDepression Scale",
+      "assessment_type": "Daily",
       "construct": "",
-      "comments": ""
+      "comments": "Irregular time interval"
     },
     {
       "name": "generalized_anxiety",
@@ -411,11 +411,11 @@
       "answer_categories": "",
       "details": "",
       "labels": "",
-      "transformation": "",
-      "source": "",
-      "assessment_type": "",
+      "transformation": "Sum score",
+      "source": "Generalized Anxiety Disorder-7 scale",
+      "assessment_type": "Daily",
       "construct": "",
-      "comments": ""
+      "comments": "Irregular time interval"
     },
     {
       "name": "occupational_stress",
@@ -425,11 +425,11 @@
       "answer_categories": "",
       "details": "",
       "labels": "",
-      "transformation": "",
-      "source": "",
-      "assessment_type": "",
+      "transformation": "Sum score",
+      "source": "Korean Occupational Stress Scale-\nShort Form scale",
+      "assessment_type": "Daily",
       "construct": "",
-      "comments": ""
+      "comments": "Irregular time interval"
     },
     {
       "name": "depression_phq",
@@ -439,11 +439,11 @@
       "answer_categories": "",
       "details": "",
       "labels": "",
-      "transformation": "",
-      "source": "",
-      "assessment_type": "",
+      "transformation": "Sum score",
+      "source": "Patient Health Questionnaire-9 Scale",
+      "assessment_type": "Daily",
       "construct": "",
-      "comments": ""
+      "comments": "Irregular time interval"
     },
     {
       "name": "social_avoidance_distress",
@@ -453,11 +453,11 @@
       "answer_categories": "",
       "details": "",
       "labels": "",
-      "transformation": "",
-      "source": "",
-      "assessment_type": "",
+      "transformation": "Sum score",
+      "source": "Social Avoidance and Distress Scale",
+      "assessment_type": "Daily",
       "construct": "",
-      "comments": ""
+      "comments": "Irregular time interval"
     },
     {
       "name": "state_anxiety",
@@ -467,11 +467,11 @@
       "answer_categories": "",
       "details": "",
       "labels": "",
-      "transformation": "",
-      "source": "",
-      "assessment_type": "",
+      "transformation": "Sum score",
+      "source": "State-Trait Anxiety Inventory\n– State Anxiety section",
+      "assessment_type": "Daily",
       "construct": "",
-      "comments": ""
+      "comments": "Irregular time interval"
     },
     {
       "name": "steps_maximum",
@@ -483,7 +483,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Passive",
       "construct": "",
       "comments": ""
     },
@@ -497,7 +497,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Passive",
       "construct": "",
       "comments": ""
     },
@@ -511,7 +511,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Passive",
       "construct": "",
       "comments": ""
     },
@@ -525,7 +525,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Passive",
       "construct": "",
       "comments": ""
     },
@@ -539,7 +539,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Passive",
       "construct": "",
       "comments": ""
     },
@@ -553,7 +553,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Passive",
       "construct": "",
       "comments": ""
     },
@@ -567,7 +567,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Passive",
       "construct": "",
       "comments": ""
     },
@@ -581,7 +581,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Passive",
       "construct": "",
       "comments": ""
     },
@@ -595,7 +595,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Passive",
       "construct": "",
       "comments": ""
     },
@@ -609,7 +609,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "Passive",
       "construct": "",
       "comments": ""
     },
@@ -623,8 +623,8 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
-      "construct": "",
+      "assessment_type": "Passive",
+      "construct": "sleep duration, sleep",
       "comments": ""
     },
     {
@@ -637,8 +637,8 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
-      "construct": "",
+      "assessment_type": "Passive",
+      "construct": "sleep start, sleep",
       "comments": ""
     },
     {
@@ -651,8 +651,8 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
-      "construct": "",
+      "assessment_type": "Passive",
+      "construct": "sleep end, sleep",
       "comments": ""
     }
   ]

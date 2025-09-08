@@ -30,56 +30,112 @@
       "description": "Participant ID",
       "variable_type": "categorical",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "Daily",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "day",
       "description": "Day of study",
       "variable_type": "other",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "Daily",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "beep",
       "description": "Beep of the day",
       "variable_type": "other",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "Daily",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "sleep_quality",
       "description": "Sleep quality",
-      "variable_type": "ordinal",
+      "variable_type": "rating_scale",
       "coding": "1 = very bad\n4 = very good",
-      "answer_categories": "4"
+      "answer_categories": "4",
+      "details": "",
+      "labels": "1 = very bad\n4 = very good",
+      "transformation": "",
+      "source": "Pittsburgh Sleep Quality Index (German version)",
+      "assessment_type": "Daily",
+      "construct": "sleep quality, sleep",
+      "comments": ""
     },
     {
       "name": "physical_activity",
       "description": "Physical activity",
       "variable_type": "numerical",
       "coding": "Number of minutes engaged in mild, moderate and strenuous exercise weighted by metabolic equivalents and then summed to produce a total daily leisure activity score",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "Number of minutes engaged in mild, moderate and strenuous exercise weighted by metabolic equivalents and then summed to produce a total daily leisure activity score",
+      "labels": "",
+      "transformation": "",
+      "source": "Godin Leisure-Time Exercise Questionnaire",
+      "assessment_type": "Daily",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "pa",
       "description": "Positive affect",
-      "variable_type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "Mean of happy, content, cheerful\n1 = not at all\n7 = extremely",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "details": "Happy, content, cheerful",
+      "labels": "1 = not at all\n7 = extremely",
+      "transformation": "mean-scored",
+      "source": "Pleasentness scale (German version)",
+      "assessment_type": "Daily",
+      "construct": "positive affect, affect",
+      "comments": ""
     },
     {
       "name": "na",
       "description": "Negative affect",
-      "variable_type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "Mean of sad, downhearted, frustrated\n1 = not at all\n7 = extremely",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "details": "Sad, downhearted, frustrated",
+      "labels": "1 = not at all\n7 = extremely",
+      "transformation": "mean-scored",
+      "source": "Pleasentness scale (German version)",
+      "assessment_type": "Daily",
+      "construct": "negative affect, affect",
+      "comments": ""
     },
     {
       "name": "learning_goal_achievement",
       "description": "Learning goal achievement",
-      "variable_type": "ordinal",
+      "variable_type": "rating_scale",
       "coding": "Did you achieve the learning goals you set for yourself in the last 24 hours? (paraphrasd after item description in the paper)\n0 = not at all\n4 = completely",
-      "answer_categories": "5"
+      "answer_categories": "5",
+      "details": "Did you achieve the learning goals you set for yourself in the last 24 hours? (paraphrasd after item description in the paper)",
+      "labels": "0 = not at all\n4 = completely",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "Daily",
+      "construct": "",
+      "comments": ""
     }
   ]
 }

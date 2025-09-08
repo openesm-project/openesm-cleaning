@@ -288,7 +288,7 @@
       "transformation": "",
       "source": "Anxiety & Depression Scale",
       "assessment_type": "ESM",
-      "construct": "worry, anxiety, psychopathology, negative affect, affect",
+      "construct": "worry, anxiety, psychopathology, negative affect, affect, neuroticism, big five",
       "comments": ""
     },
     {
@@ -442,7 +442,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "sleepiness, alterness, affect",
+      "construct": "sleepiness, alterness, negative affect, affect",
       "comments": ""
     },
     {
