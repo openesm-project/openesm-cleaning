@@ -50,7 +50,9 @@ df <- df_raw |>
     day = day_number,
     relationship_level = relat,
     cared_for = caredfor,
-    connected = conn
+    connected = conn,
+    first_prompt = t0,
+    time_since_first = t_cen
   )
 
 
