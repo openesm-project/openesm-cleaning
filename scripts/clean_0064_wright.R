@@ -27,9 +27,9 @@ dat <- read_delim(here::here("data", "raw", "0064_wright_ts_raw.csv"),
 library(summarytools)
 library(psych)
 library(plyr)
-library(dplyr)
 library(data.table)
 library(Hmisc)
+library(dplyr)
 
 dummy2 <- data.frame(ddply( dat, .(UsrID), function(x) length(x$UsrID) ))
 

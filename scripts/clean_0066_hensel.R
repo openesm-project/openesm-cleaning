@@ -56,7 +56,7 @@ if (!file.exists(here::here("data", "raw", "0066_hensel_static_exit_raw.sav"))) 
 df_exit <- haven::read_sav(here::here("data", "raw", "0066_hensel_static_exit_raw.sav"))
 
 # Join static data
-df_static <- full_join(df_enrollment, df_exit) |>
+df_static <- dplyr::full_join(df_enrollment, df_exit) |>
   dplyr::rename(id = ID)
 
 # save static data
