@@ -45,7 +45,12 @@ df_raw <- df_list |>
 
 #* Column Names -----------------------------------------------------------
 df <- df_raw |>
-  janitor::clean_names()
+  janitor::clean_names() |>
+  dplyr::rename(
+    rumination = ruminate,
+    avoid_activity = avoid_act,
+    procrastination = procrast
+    )
 
 
 #* Misc -------------------------------------------------------------------
@@ -71,7 +76,6 @@ df <- df |>
 # create empty beep column as we cannot create it
 # from the data
 df$beep <- NA
-
 
 
 # Check requirements ------------------------------------------------------
