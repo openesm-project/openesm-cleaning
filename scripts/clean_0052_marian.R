@@ -47,7 +47,7 @@ df <- df_raw |>
 
     # depression questions (PHQ)
     anhedonia = phq1,
-    depressed_mood = phq2,
+    depressed = phq2,
     sleep_problems = phq3,
     tired = phq4,
     appetite_change = phq5,
