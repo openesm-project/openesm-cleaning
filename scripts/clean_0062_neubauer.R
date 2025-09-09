@@ -62,7 +62,7 @@ df <- df |>
     # location/context
     location = um01,
     number_of_company = um02,
-    alone = um02_01,
+    no_company = um02_01,
     with_partner = um02_02,
     with_parents = um02_03,
     with_relatives = um02_04,
