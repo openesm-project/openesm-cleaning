@@ -78,7 +78,10 @@ df <- df |>
     start_time = start,
     finish_time = finish,
     sleep_duration = hours,
-    sleep_difficulty = difficulty
+    sleep_difficulty = difficulty,
+    ashamed_smoking = ashamed,
+    motivated_quit_smoking = motivated,
+    craving_smoking = craving
   )
 
 #* Misc -------------------------------------------------------------------

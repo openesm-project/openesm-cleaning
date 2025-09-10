@@ -25,7 +25,10 @@ df_raw <- read_csv(here("data", "raw", "0013_hoebeke_ts_raw.csv"))
 
 #* Column Names -----------------------------------------------------------
 df <- df_raw |>
-  janitor::clean_names()
+  janitor::clean_names() |>
+  dplyr::rename(
+    self_criticism = criticism
+  )
 
 
 
