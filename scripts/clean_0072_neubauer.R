@@ -10,44 +10,44 @@ source(here("scripts", "functions_data.R"))
 
 # Data --------------------------------------------------------------------
 # daily data
-if(!file.exists(here("data", "raw", "0072_neubauer_ts_raw.csv"))){
+if(!file.exists(here::here("data", "raw", "0072_neubauer_ts_raw.csv"))){
   osf_retrieve_file("https://osf.io/unkfc") |>
-    osf_download(path = here("data", "raw"))
+    osf_download(path = here::here("data", "raw"))
 
   # rename data
   file_name <- osf_retrieve_file("https://osf.io/unkfc") |> pull(name)
-  file.rename(here("data", "raw", file_name), here("data", "raw", "0072_neubauer_ts_raw.csv"))
+  file.rename(here::here("data", "raw", file_name), here::here("data", "raw", "0072_neubauer_ts_raw.csv"))
 }
-df_raw <- read_csv(here("data", "raw", "0072_neubauer_ts_raw.csv"))
+df_raw <- read_csv(here::here("data", "raw", "0072_neubauer_ts_raw.csv"))
 
 # download static data
-if(!file.exists(here("data", "raw", "0072_neubauer_static_raw.csv"))){
+if(!file.exists(here::here("data", "raw", "0072_neubauer_static_raw.csv"))){
   osf_retrieve_file("https://osf.io/39jgh") |>
-    osf_download(path = here("data", "raw"))
+    osf_download(path = here::here("data", "raw"))
 
   # rename data
   file_name <- osf_retrieve_file("https://osf.io/39jgh") |> pull(name)
-  file.rename(here("data", "raw", file_name), here("data", "raw", "0072_neubauer_static_raw.csv"))
+  file.rename(here::here("data", "raw", file_name), here::here("data", "raw", "0072_neubauer_static_raw.csv"))
 }
 
 # download followup data
 if(!file.exists(here("data", "raw", "0072_neubauer_followup_raw.csv"))){
   osf_retrieve_file("https://osf.io/m7qyr") |>
-    osf_download(path = here("data", "raw"))
+    osf_download(path = here::here("data", "raw"))
 
   # rename data
   file_name <- osf_retrieve_file("https://osf.io/m7qyr") |> pull(name)
-  file.rename(here("data", "raw", file_name), here("data", "raw", "0072_neubauer_followup_raw.csv"))
+  file.rename(here("data", "raw", file_name), here::here("data", "raw", "0072_neubauer_followup_raw.csv"))
 }
 
 # download post data
 if(!file.exists(here("data", "raw", "0072_neubauer_post_raw.csv"))){
   osf_retrieve_file("https://osf.io/wsfmz") |>
-    osf_download(path = here("data", "raw"))
+    osf_download(path = here::here("data", "raw"))
 
   # rename data
   file_name <- osf_retrieve_file("https://osf.io/wsfmz") |> pull(name)
-  file.rename(here("data", "raw", file_name), here("data", "raw", "0072_neubauer_post_raw.csv"))
+  file.rename(here::here("data", "raw", file_name), here::here("data", "raw", "0072_neubauer_post_raw.csv"))
 }
 
 # Cleaning ----------------------------------------------------------------
@@ -230,7 +230,7 @@ check_results <- check_data(df)
 # if it returns "Data are clean.", save the data
 # Enter data set ID here
 if(check_results == "Data are clean."){
-  write_tsv(df, here("data", "clean", "0072_neubauer_ts.tsv"))
+  write_tsv(df, here::here("data", "clean", "0072_neubauer_ts.tsv"))
 }
 
 
@@ -249,4 +249,4 @@ variable_data <- read_sheet(sheet_url)
 meta_json <- create_metadata_json("0072") |>
   toJSON(pretty = TRUE, auto_unbox = TRUE)
 
-write(meta_json, here("data", "metadata", "0072_neubauer_metadata.json"))
+write(meta_json, here::here("data", "metadata", "0072_neubauer_metadata.json"))
