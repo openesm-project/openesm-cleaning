@@ -10,9 +10,9 @@ source(here("scripts", "functions_data.R"))
 
 # Data --------------------------------------------------------------------
 # downloaded zip from https://osf.io/q7upd/
-# unzip data
-unzip(here("data", "raw", "0035_soyster_ts_raw.zip"),
-      exdir = here("data", "raw", "0035_soyster_ts_raw"))
+# unzip data - only needs to be done once
+# unzip(here("data", "raw", "0035_soyster_ts_raw.zip"),
+#       exdir = here("data", "raw", "0035_soyster_ts_raw"))
 
 # load all csv files in the folder and combine
 # into one data frame
