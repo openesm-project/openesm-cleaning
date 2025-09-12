@@ -133,7 +133,7 @@ df <- df |>
     # daily
     # need fulfillment
     contact_with_people = pn05_01,
-    excluded = pn05_02,
+    excluded_ostracized = pn05_02,
     failure = pn05_03,
     own_way = pn05_04,
     completed_difficult_project = pn05_05,
@@ -142,9 +142,9 @@ df <- df |>
     mastered_challenges = pn05_08,
     intimacy = pn05_09,
     pressure = pn06_01,
-    tell_what_to_do = pn06_02,
+    told_what_to_do = pn06_02,
     unappreciated = pn06_03,
-    disagreements = pn06_04,
+    disagreements_conflicts = pn06_04,
     even_hard_things = pn06_05,
     against_own_will = pn06_06,
     did_stupid = pn06_07,
