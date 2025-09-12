@@ -28,25 +28,25 @@ df_raw <- read.csv(here::here("data", "raw", "0057_ryvkina_ts_raw.csv"))
 #* Column Names -----------------------------------------------------------
 df <- df_raw |>
   janitor::clean_names() |>
-  rename(
+  dplyr::rename(
     id = id_for_merging
   ) |>
   # reorder some columns more logically
-  select(id, wave, dataset, created_esm, ended_esm, everything())
+  dplyr::select(id, wave, dataset, created_esm, ended_esm, dplyr::everything())
 
 
 #* Misc -------------------------------------------------------------------
 # split off demographic data
 # remove irrelevant columns
 df <- df |>
-  select(!c(id_not_for_merging,
+  dplyr::select(!c(id_not_for_merging,
             consent))
 
 
 # split of demographic columns
 df_demographics <- df |>
-  group_by(id) |>
-  select(c(
+  dplyr::group_by(id) |>
+  dplyr::select(c(
     contains("bfi"),
     contains("uls"),
     contains("policy"),
@@ -77,13 +77,13 @@ df_demographics <- df |>
     completion_time_t1,
     completion_time_t2
   ))  |>
-  distinct()
+  dplyr::distinct()
 
 write_tsv(df_demographics, here("data", "clean", "0057_ryvkina_static.tsv"))
 
 # remove demographic columns
 df <- df |>
-  select(!c(
+  dplyr::select(!c(
     contains("bfi"),
     contains("uls"),
     contains("policy"),
@@ -117,7 +117,7 @@ df <- df |>
 
 # remove careless responding indicators
 df <- df |>
-  select(!c(
+  dplyr::select(!c(
     contains("irv"),
     contains("outlier"),
     contains("longstring"),
@@ -126,27 +126,27 @@ df <- df |>
 
 # convert time columns to Posixct
 df <- df |>
-  mutate(created_esm = as.POSIXct(created_esm, format = "%Y-%m-%d %H:%M:%S", tz = "UTC"),
+  dplyr::mutate(created_esm = as.POSIXct(created_esm, format = "%Y-%m-%d %H:%M:%S", tz = "UTC"),
          ended_esm = as.POSIXct(ended_esm, format = "%Y-%m-%d %H:%M:%S", tz = "UTC"))
 
 
 # create day variable
 # add day number
 df <- df |>
-  mutate(date = as.Date(created_esm)) |>
-  group_by(id) |>
-  mutate(
+  dplyr::mutate(date = as.Date(created_esm)) |>
+  dplyr::group_by(id) |>
+  dplyr::mutate(
     day = as.integer(date - min(date)) + 1
   ) |>
-  ungroup() |>
-  select(!date)
+  dplyr::ungroup() |>
+  dplyr::select(!date)
 
 
 df$beep <- NA
 
 # reorder columns
 df <- df |>
-  select(id, day, beep, everything())
+  dplyr::select(id, day, beep, everything())
 
 
 # Check requirements ------------------------------------------------------
@@ -157,7 +157,7 @@ check_results <- check_data(df)
 # if it returns "Data are clean.", save the data
 # Enter data set ID here
 if(check_results == "Data are clean."){
-  write_tsv(df, here("data", "clean", "0057_ryvkina_ts.tsv"))
+  write_tsv(df, here::here("data", "clean", "0057_ryvkina_ts.tsv"))
 }
 
 
@@ -168,12 +168,12 @@ meta_data <- read_sheet(metadata_url)
 
 # Enter dataset ID here
 sheet_url <- meta_data |>
-  filter(dataset_id == "0057") |>
-  pull("Coding File URL")
+  dplyr::filter(dataset_id == "0057") |>
+  dplyr::pull("Coding File URL")
 
 variable_data <- read_sheet(sheet_url)
 
 meta_json <- create_metadata_json("0057") |>
   toJSON(pretty = TRUE, auto_unbox = TRUE)
 
-write(meta_json, here("data", "metadata", "0057_ryvkina_metadata.json"))
+write(meta_json, here::here("data", "metadata", "0057_ryvkina_metadata.json"))
