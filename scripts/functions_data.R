@@ -69,6 +69,7 @@ create_metadata_json <- function(dataset_id_char,
     link_to_code = dataset_info$`Optional: Link to Code`,
     n_participants = dataset_info$`N Participants`,
     n_time_points = dataset_info$`N Time Points`,
+    n_days = dataset_info$`N Days`,
     n_beeps_per_day = dataset_info$`N Beeps/Day`,
     passive_data_available = dataset_info$`Passive data available?`,
     cross_sectional_available = dataset_info$`Cross sectional available?`,
@@ -153,7 +154,7 @@ annotate_constructs <- function(to_be_named,
 
   # get unique datasets that need updates
   datasets_to_update <- to_be_named |>
-    dplyr::filter(!is.na(construct_name_recode)) |>
+    dplyr::filter(!is.na(construct_recode)) |>
     dplyr::distinct(dataset_id) |>
     dplyr::pull(dataset_id)
 
@@ -176,7 +177,7 @@ annotate_constructs <- function(to_be_named,
 
     # get variables to update for this dataset
     dataset_updates <- to_be_named |>
-      dplyr::filter(dataset_id == dataset, !is.na(construct_name_recode))
+      dplyr::filter(dataset_id == dataset, !is.na(construct_recode))
 
     if (nrow(dataset_updates) == 0) {
       cat("  No variables to update for dataset", dataset, "\n")
@@ -206,7 +207,7 @@ annotate_constructs <- function(to_be_named,
       # apply updates row by row
       for (i in 1:nrow(dataset_updates)) {
         var_name <- dataset_updates$variable_name[i]
-        new_construct <- dataset_updates$construct_name_recode[i]
+        new_construct <- dataset_updates$construct_recode[i]
 
         # find matching rows
         # careful: in the metadata, this is only called "name"
