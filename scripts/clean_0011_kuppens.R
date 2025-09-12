@@ -10,15 +10,11 @@ source(here("scripts", "functions_data.R"))
 
 # Data --------------------------------------------------------------------
 # Read in data
-df_raw <- read_delim(here("data", "raw", "0011_bringmann_ts_raw.csv"),
+df_raw <- read_delim(here("data", "raw", "0011_kuppens_ts_raw.csv"),
                   delim = ";",
                   col_names = TRUE,
                   trim_ws = TRUE,
                   na = c("9998", "9999"))
-
-
-
-
 
 # Cleaning ----------------------------------------------------------------
 #* Column Names -----------------------------------------------------------
@@ -57,7 +53,7 @@ df <- df |>
   select(-neuroticism_score)
 
 # save static data
-write_tsv(df_neuroticism, here("data", "clean", "0011_bringmann_static.tsv"))
+write_tsv(df_neuroticism, here("data", "clean", "0011_kuppens_static.tsv"))
 
 # add empty day and beep variable
 df <- df |>
@@ -75,7 +71,7 @@ check_results <- check_data(df)
 # if it returns "Data are clean.", save the data
 # Enter data set ID here
 if(check_results == "Data are clean."){
-  write_tsv(df, here("data", "clean", "0011_bringmann_ts.tsv"))
+  write_tsv(df, here("data", "clean", "0011_kuppens_ts.tsv"))
 }
 
 
@@ -94,4 +90,4 @@ variable_data <- read_sheet(sheet_url)
 meta_json <- create_metadata_json("0011") |>
   toJSON(pretty = TRUE, auto_unbox = TRUE)
 
-write(meta_json, here("data", "metadata", "0011_bringmann_metadata.json"))
+write(meta_json, here("data", "metadata", "0011_kuppens_metadata.json"))
