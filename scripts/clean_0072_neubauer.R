@@ -54,7 +54,7 @@ if(!file.exists(here("data", "raw", "0072_neubauer_post_raw.csv"))){
 #* Column Names -----------------------------------------------------------
 df <- df_raw |>
   janitor::clean_names() |>
-  rename(
+  dplyr::rename(
     # basic stuff
     id = serial,
     questionnaire_type = questnnr,
@@ -198,26 +198,26 @@ df <- df_raw |>
 #* Misc -------------------------------------------------------------------
 # remove composite columns
 df <- df |>
-  select(-aut_sat_d, -com_sat_d, -rel_sat_d, -aut_dis_d, -com_dis_d, -rel_dis_d)
+  dplyr::select(-aut_sat_d, -com_sat_d, -rel_sat_d, -aut_dis_d, -com_dis_d, -rel_dis_d)
 
 # remove redundant column
 df <- df |>
-  select(-questionnaire_type)
+  dplyr::select(-questionnaire_type)
 
 # convert time columns to POSIXct
 df <- df |>
-  mutate(
+  dplyr::mutate(
     start_time = as.POSIXct(start_time, format = "%Y-%m-%d %H:%M:%S", tz = "UTC"),
     last_update = as.POSIXct(last_update, format = "%Y-%m-%d %H:%M:%S", tz = "UTC")
   )
 
 # check for character NA
 df <- df |>
-  mutate(across(where(is.character), ~ na_if(., "NA")))
+  dplyr::mutate(dplyr::across(where(is.character), ~ na_if(., "NA")))
 
 # recode stressor columns from 2, 1 to 1, 0
 df <- df |>
-  mutate(across(starts_with("stressor_"), ~ ifelse(!is.na(.), . - 1, .)))
+  dplyr::mutate(dplyr::across(starts_with("stressor_"), ~ ifelse(!is.na(.), . - 1, .)))
 
 # add beep
 df$beep <- 1
@@ -241,8 +241,8 @@ meta_data <- read_sheet(metadata_url)
 
 # Enter dataset ID here
 sheet_url <- meta_data |>
-  filter(dataset_id == "0072") |>
-  pull("Coding File URL")
+  dplyr::filter(dataset_id == "0072") |>
+  dplyr::pull("Coding File URL")
 
 variable_data <- read_sheet(sheet_url)
 

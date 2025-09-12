@@ -165,6 +165,12 @@ colnames(dat) <- c("day", "beep", "trial", "tmstmp1", "id", "PTNUM", "Dyad","Dat
 
 df <- dat
 
+unloadNamespace("summarytools")
+unloadNamespace("rapportools")
+unloadNamespace("reshape2")
+unloadNamespace("plyr")
+unloadNamespace("Hmisc")
+
 # Cleaning ----------------------------------------------------------------
 #* Column Names -----------------------------------------------------------
 df <- dat |>
@@ -175,14 +181,12 @@ df <- dat |>
     timestamp = tmstmp1,
   ) |>
   # some reordering
-  select(id, pt_num, day, beep, counter, timestamp, date, everything())
+  dplyr::select(id, pt_num, day, beep, counter, timestamp, date, dplyr::everything())
 
 
 #* Misc -------------------------------------------------------------------
 # double check if there is a character NA somewhere
 sapply(df, function(col) any(col == "NA", na.rm = TRUE))
-
-
 
 
 # Check requirements ------------------------------------------------------
@@ -204,8 +208,8 @@ meta_data <- read_sheet(metadata_url)
 
 # Enter dataset ID here
 sheet_url <- meta_data |>
-  filter(dataset_id == "0064") |>
-  pull("Coding File URL")
+  dplyr::filter(dataset_id == "0064") |>
+  dplyr::pull("Coding File URL")
 
 variable_data <- read_sheet(sheet_url)
 
