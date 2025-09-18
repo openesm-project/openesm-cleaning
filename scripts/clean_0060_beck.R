@@ -42,11 +42,22 @@ df <- df_all |>
 # answers. However, these duplicates were identical, as we can see in the following
 df |>
   select(-c(facet, trait, type)) |>
-  group_by(trial_index, category, reverse_code, df, sid, date, hour, minute, start_date, day, hour_block_1, hour_block, orig_itemname) |>
-  summarise(
-    n = n(),
-    n_distinct_responses = n_distinct(responses2)
+  group_by(
+    trial_index,
+    category,
+    reverse_code,
+    df,
+    sid,
+    date,
+    hour,
+    minute,
+    start_date,
+    day,
+    hour_block_1,
+    hour_block,
+    orig_itemname
   ) |>
+  summarise(n = n(), n_distinct_responses = n_distinct(responses2)) |>
   ungroup() |>
   filter(n > 1L) |>
   filter(n_distinct_responses > 1L)
@@ -67,78 +78,78 @@ df_wide <- df_wide |>
     # Extraversion - Sociability
     outgoing = E1,
     talkative = E2,
-    not_quiet = E3,
-    not_shy = E4,
+    quiet = E3,
+    shy = E4,
     # Extraversion - Assertiveness
     assertive = E5,
     dominant = E6,
-    not_influence_hard = E7,
-    not_others_charge = E8,
+    influence_hard = E7,
+    others_charge = E8,
     # Extraversion - Energy Level
     energetic = E9,
     enthusiastic = E10,
-    not_rarely_excited = E11,
-    not_less_active = E12,
+    rarely_excited = E11,
+    less_active = E12,
     # Agreeableness - Compassion
     compassionate = A1,
     helpful = A2,
-    not_little_sympathy = A3,
-    not_cold = A4,
+    little_sympathy = A3,
+    cold = A4,
     # Agreeableness - Respectfulness
     respectful = A5,
     polite = A6,
-    not_starts_arguments = A7,
-    not_rude = A8,
+    starts_arguments = A7,
+    rude = A8,
     # Agreeableness - Trust
     forgiving = A9,
     assumes_best = A10,
-    not_finds_fault = A11,
-    not_suspicious = A12,
+    finds_fault = A11,
+    suspicious = A12,
     # Conscientiousness - Organization
     systematic = C1,
     neat_tidy = C2,
-    not_disorganized = C3,
-    not_messy = C4,
+    disorganized = C3,
+    messy = C4,
     # Conscientiousness - Productiveness
     efficient = C5,
     persistent = C6,
-    not_lazy = C7,
-    not_difficulty_starting = C8,
+    lazy = C7,
+    difficulty_starting = C8,
     # Conscientiousness - Responsibility
     dependable = C9,
     reliable = C10,
-    not_careless = C11,
-    not_irresponsible = C12,
+    careless = C11,
+    irresponsible = C12,
     # Negative Emotionality - Anxiety
     tense = N1,
     worries = N2,
-    not_relaxed = N3,
-    not_rarely_anxious = N4,
+    relaxed = N3,
+    rarely_anxious = N4,
     # Negative Emotionality - Depression
     sad = N5,
     depressed = N6,
-    not_optimistic_setback = N7,
-    not_secure_comfortable = N8,
+    optimistic_setback = N7,
+    secure_comfortable = N8,
     # Negative Emotionality - Emotional Volatility
     moody = N9,
     temperamental = N10,
-    not_emotionally_stable = N11,
-    not_controls_emotions = N12,
+    emotionally_stable = N11,
+    controls_emotions = N12,
     # Open-Mindedness - Intellectual Curiosity
     curious = O1,
     deep_thinker = O2,
-    not_avoids_intellectual = O3,
-    not_little_abstract = O4,
+    avoids_intellectual = O3,
+    little_abstract = O4,
     # Open-Mindedness - Aesthetic Sensitivity
     fascinated_art = O5,
     values_beauty = O6,
-    not_few_artistic = O7, # very likely reverse coded as well, makes no sense otherwise
-    not_poetry_boring = O8,
+    few_artistic = O7,
+    poetry_boring = O8,
     # Open-Mindedness - Creative Imagination
     inventive = O9,
     original = O10,
-    not_little_creativity = O11,
-    not_difficulty_imagining = O12,
+    little_creativity = O11,
+    difficulty_imagining = O12,
     # Additional D items
     duty = D1,
     intellect = D2,
@@ -173,7 +184,7 @@ df_wide <- df_wide |>
 
 
 # we double-check the reverse coding of item O7
-cor(as.numeric(df_wide$not_few_artistic), as.numeric(df_wide$not_poetry_boring), use = "pairwise.complete.obs")
+cor(as.numeric(df_wide$quiet), as.numeric(df_wide$outgoing), use = "pairwise.complete.obs")
 
 #* Misc -------------------------------------------------------------------
 # remove weird text from "minute" field
