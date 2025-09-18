@@ -92,14 +92,31 @@ df <- df |>
     harsh = 6 - not_harsh,
     relaxed_personality = 6 - not_relaxed,
     rude = 6 - not_rude,
+    shy = 6 - not_shy,
     uncreative = 6 - not_uncreative,
     unintellectual = 6 - not_unintellectual,
     cold = 6 - not_cold
   ) |>
   # remove original reverse-coded variables
-  select(!c(not_quiet, not_bashful, not_withdrawn, not_careless, not_disorganized,
-            not_inefficient, not_sloppy, not_unsympathetic, not_harsh, not_relaxed,
-            not_rude, not_uncreative, not_unintellectual, not_cold))
+  select(
+    !c(
+      not_quiet,
+      not_bashful,
+      not_withdrawn,
+      not_careless,
+      not_disorganized,
+      not_inefficient,
+      not_sloppy,
+      not_unsympathetic,
+      not_harsh,
+      not_relaxed,
+      not_rude,
+      not_uncreative,
+      not_unintellectual,
+      not_cold,
+      not_shy
+    )
+  )
 
 # change all NAN to NA
 df[df == "NaN"] <- NA

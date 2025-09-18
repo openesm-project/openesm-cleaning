@@ -12,6 +12,7 @@
   "link_to_code": "https://osf.io/vw3gf/?view_only=b6f9f08a6b5941eb9c17a4951d1d0cd2;",
   "n_participants": 282,
   "n_time_points": 42,
+  "n_days": "14",
   "n_beeps_per_day": "3",
   "passive_data_available": "no",
   "cross_sectional_available": "yes",
@@ -92,7 +93,7 @@
       "transformation": "",
       "source": "Mehrdimensionaler Befindlichkeitsfragebogen (MDBF)",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "positive affect, affect",
       "comments": ""
     },
     {
@@ -106,7 +107,7 @@
       "transformation": "",
       "source": "Mehrdimensionaler Befindlichkeitsfragebogen (MDBF)",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "alertness, energy, positive affect, affect",
       "comments": ""
     },
     {
@@ -120,7 +121,7 @@
       "transformation": "",
       "source": "Mehrdimensionaler Befindlichkeitsfragebogen (MDBF)",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "relaxation, positive affect, affect, neuroticism, big five",
       "comments": ""
     },
     {
@@ -134,7 +135,7 @@
       "transformation": "",
       "source": "Mehrdimensionaler Befindlichkeitsfragebogen (MDBF)",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "pleased, positive affect, affect",
       "comments": ""
     },
     {
@@ -148,7 +149,7 @@
       "transformation": "",
       "source": "Mini-Markers for Big Five",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "boldness, assertiveness, social behavior, extraversion, big five",
       "comments": ""
     },
     {
@@ -162,7 +163,7 @@
       "transformation": "",
       "source": "Mini-Markers for Big Five",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "energy, positive affect, affect, big five, extraversion",
       "comments": ""
     },
     {
@@ -176,7 +177,7 @@
       "transformation": "",
       "source": "Mini-Markers for Big Five",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "social behavior, extraversion, big five",
       "comments": ""
     },
     {
@@ -190,7 +191,7 @@
       "transformation": "",
       "source": "Mini-Markers for Big Five",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "talkativeness, social behavior,  extraversion, big five",
       "comments": ""
     },
     {
@@ -204,7 +205,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "study burden, participant burden",
       "comments": ""
     },
     {
@@ -218,7 +219,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "study burden, participant burden",
       "comments": ""
     },
     {
@@ -232,7 +233,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "study burden, participant burden",
       "comments": ""
     },
     {
@@ -260,7 +261,7 @@
       "transformation": "reverse-coded by the authors",
       "source": "Mehrdimensionaler Befindlichkeitsfragebogen (MDBF)",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "positive affect, affect",
       "comments": ""
     },
     {
@@ -274,7 +275,7 @@
       "transformation": "reverse-coded by the authors",
       "source": "Mehrdimensionaler Befindlichkeitsfragebogen (MDBF)",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "calmness, positive affect, affect, neuroticism, big five",
       "comments": ""
     },
     {
@@ -288,7 +289,7 @@
       "transformation": "reverse-coded by the authors",
       "source": "Mehrdimensionaler Befindlichkeitsfragebogen (MDBF)",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "feeling rested, fatigue, positive affect, affect",
       "comments": ""
     },
     {
@@ -302,7 +303,7 @@
       "transformation": "reverse-coded by the authors",
       "source": "Mehrdimensionaler Befindlichkeitsfragebogen (MDBF)",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "happiness, positive affect, affect",
       "comments": ""
     },
     {
@@ -316,7 +317,7 @@
       "transformation": "",
       "source": "Mini-Markers for Big Five",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "social anxiety, social behavior, extraversion, big five",
       "comments": ""
     },
     {
@@ -330,7 +331,7 @@
       "transformation": "reverse-coded by the authors, backtransformed by us",
       "source": "Mini-Markers for Big Five",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "social behavior, extraversion, big five",
       "comments": ""
     },
     {
@@ -344,7 +345,7 @@
       "transformation": "reverse-coded by the authors, backtransformed by us",
       "source": "Mini-Markers for Big Five",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "shyness, social behavior, extraversion, big five",
       "comments": ""
     },
     {
@@ -358,7 +359,7 @@
       "transformation": "reverse-coded by the authors, backtransformed by us",
       "source": "Mini-Markers for Big Five",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "social withdrawal, social behavior, extraversion, big five",
       "comments": ""
     },
     {
@@ -372,7 +373,7 @@
       "transformation": "reverse-coded by the authors, backtransformed by us",
       "source": "Mini-Markers for Big Five",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "carelessness, self-regulation, conscientiousness, big five",
       "comments": ""
     },
     {
@@ -386,7 +387,7 @@
       "transformation": "reverse-coded by the authors, backtransformed by us",
       "source": "Mini-Markers for Big Five",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "conscientiousness, big five",
       "comments": ""
     },
     {
@@ -400,7 +401,7 @@
       "transformation": "reverse-coded by the authors, backtransformed by us",
       "source": "Mini-Markers for Big Five",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "efficiency, self-regulation, conscientiousness, big five",
       "comments": ""
     },
     {
@@ -414,7 +415,7 @@
       "transformation": "reverse-coded by the authors, backtransformed by us",
       "source": "Mini-Markers for Big Five",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "sloppiness, self-regulation, conscientiousness, big five",
       "comments": ""
     },
     {
@@ -428,7 +429,7 @@
       "transformation": "reverse-coded by the authors, backtransformed by us",
       "source": "Mini-Markers for Big Five",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "creativity, intellectual, openness, big five",
       "comments": ""
     },
     {
@@ -442,7 +443,7 @@
       "transformation": "reverse-coded by the authors, backtransformed by us",
       "source": "Mini-Markers for Big Five",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "intellectual, openness, big five",
       "comments": ""
     },
     {
@@ -456,12 +457,12 @@
       "transformation": "reverse-coded by the authors, backtransformed by us",
       "source": "Mini-Markers for Big Five",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "envy, negative affect, affect, big five, agreeableness",
       "comments": ""
     },
     {
-      "name": "relaxed",
-      "description": "Relaxed",
+      "name": "relaxation",
+      "description": "Relaxation",
       "variable_type": "rating_scale",
       "coding": "How accurate does each adjective describe your behavior in the last half hour? Relaxed\n1 = extremely inaccurate\n5 = extremely accurate\n(originally reverse coded)\nBased on Mini-Markers for Big-Five",
       "answer_categories": "5",
@@ -470,8 +471,8 @@
       "transformation": "reverse-coded by the authors, backtransformed by us",
       "source": "Mini-Markers for Big Five",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "relaxation, positive affect, affect, neuroticism, big five",
+      "comments": "named it \"relaxation\" to avoid duplication of \"relaxed\" column name"
     },
     {
       "name": "unsympathetic",
@@ -484,7 +485,7 @@
       "transformation": "reverse-coded by the authors, backtransformed by us",
       "source": "Mini-Markers for Big Five",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "empathy, social behavior, agreeableness, big five",
       "comments": ""
     },
     {
@@ -498,7 +499,7 @@
       "transformation": "reverse-coded by the authors, backtransformed by us",
       "source": "Mini-Markers for Big Five",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "harshness, social behavior, agreeableness, big five",
       "comments": ""
     },
     {
@@ -512,7 +513,7 @@
       "transformation": "reverse-coded by the authors, backtransformed by us",
       "source": "Mini-Markers for Big Five",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "rudeness, social behavior, agreeableness, big five",
       "comments": ""
     },
     {
@@ -526,7 +527,7 @@
       "transformation": "reverse-coded by the authors, backtransformed by us",
       "source": "Mini-Markers for Big Five",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "social behavior, agreeableness, big five",
       "comments": ""
     },
     {
