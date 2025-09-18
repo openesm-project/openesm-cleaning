@@ -88,7 +88,7 @@ df <- df |>
 # contains one duplicate for 12268 due to waking_hours
 # don't remove that for now
 df_demographics <- df |>
-  select(
+  dplyr::select(
     c(
       id,
       sex,
@@ -101,16 +101,16 @@ df_demographics <- df |>
       waking_hour
     )
   ) |>
-  group_by(id) |>
-  distinct() |>
-  ungroup()
+  dplyr::group_by(id) |>
+  dplyr::distinct() |>
+  dplyr::ungroup()
 
 # save
 write_tsv(df_demographics, file = here::here("data", "clean", "0052_marian_static.tsv"))
 
 # remove from main dataframe
 df <- df |>
-  select(!c(
+  dplyr::select(!c(
     sex,
     age,
     education,
@@ -124,7 +124,7 @@ df <- df |>
 
 # format time columns
 df <- df |>
-  mutate(
+  dplyr::mutate(
     start_time = as.POSIXct(start_time, format = "%Y-%m-%dT%H:%M:%S%z", tz = "Europe/Bucharest"),
     end_time = as.POSIXct(end_time, format = "%Y-%m-%dT%H:%M:%S%z", tz = "Europe/Bucharest")
   )
@@ -132,7 +132,7 @@ df <- df |>
 
 # better order
 df <- df |>
-  select(id, day, beep, counter, start_time, end_time, everything())
+  dplyr::select(id, day, beep, counter, start_time, end_time, everything())
 
 
 # Check requirements ------------------------------------------------------
@@ -148,7 +148,7 @@ if(check_results == "Data are clean."){
 
 # nicer order
 df <- df |>
-  select(id, day, beep, counter, everything())
+  dplyr::select(id, day, beep, counter, everything())
 
 # Create metadata ---------------------------------------------------------
 metadata_url <- "https://docs.google.com/spreadsheets/d/1ALGCq_jN6I4dcjWYQ_LQe9o52DGJItwdu9fCkwOh6fg/edit?pli=1&gid=0#gid=0"
@@ -157,12 +157,12 @@ meta_data <- read_sheet(metadata_url)
 
 # Enter dataset ID here
 sheet_url <- meta_data |>
-  filter(dataset_id == "0052") |>
-  pull("Coding File URL")
+  dplyr::filter(dataset_id == "0052") |>
+  dplyr::pull("Coding File URL")
 
 variable_data <- read_sheet(sheet_url)
 
 meta_json <- create_metadata_json("0052") |>
   toJSON(pretty = TRUE, auto_unbox = TRUE)
 
-write(meta_json, here("data", "metadata", "0052_marian_metadata.json"))
+write(meta_json, here::here("data", "metadata", "0052_marian_metadata.json"))

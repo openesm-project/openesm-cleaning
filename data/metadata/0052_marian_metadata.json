@@ -12,6 +12,7 @@
   "link_to_code": "https://osf.io/pt9dk/files/osfstorage",
   "n_participants": 140,
   "n_time_points": 63,
+  "n_days": "21",
   "n_beeps_per_day": "3",
   "passive_data_available": "no",
   "cross_sectional_available": "yes",
@@ -162,7 +163,7 @@
       "transformation": "",
       "source": "Generalised Anxiety Disorder Questionnaire-IV",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "worry, control,  negative affect, affect, neuroticism, big five, psychopathology",
       "comments": ""
     },
     {
@@ -176,7 +177,7 @@
       "transformation": "",
       "source": "Generalised Anxiety Disorder Questionnaire-IV",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "restlessness, fidgety, anxiety, negative affect, affect, psychopathology",
       "comments": ""
     },
     {
@@ -190,7 +191,7 @@
       "transformation": "",
       "source": "Generalised Anxiety Disorder Questionnaire-IV",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "fatigue, negative affect, affect, psychopathology",
       "comments": ""
     },
     {
@@ -204,7 +205,7 @@
       "transformation": "",
       "source": "Generalised Anxiety Disorder Questionnaire-IV",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "concentration, executive functioning, attention, psychopathology",
       "comments": ""
     },
     {
@@ -232,7 +233,7 @@
       "transformation": "",
       "source": "Generalised Anxiety Disorder Questionnaire-IV",
       "assessment_type": "ESM",
-      "construct": "tensioned muscles, motor symptoms, parkinson disease",
+      "construct": "tensioned muscles, motor symptoms, parkinson disease, psychopathology",
       "comments": ""
     },
     {
@@ -246,7 +247,7 @@
       "transformation": "",
       "source": "Generalised Anxiety Disorder Questionnaire-IV",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "sleep difficulty, sleep quality, sleep",
       "comments": ""
     },
     {
@@ -288,7 +289,7 @@
       "transformation": "",
       "source": "Patient Health Questionnaire (PHQ-9)",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "sleep continuity, sleep quality, sleep, depression, psychopathology",
       "comments": ""
     },
     {
@@ -302,7 +303,7 @@
       "transformation": "",
       "source": "Patient Health Questionnaire (PHQ-9)",
       "assessment_type": "ESM",
-      "construct": "tiredness, negative affect, affect, biological, psychopathology",
+      "construct": "tiredness, negative affect, affect, biological, depression psychopathology",
       "comments": ""
     },
     {
@@ -330,7 +331,7 @@
       "transformation": "",
       "source": "Patient Health Questionnaire (PHQ-9)",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "negative self-evaluation, self-worth, self-esteem, depression, psychopathology",
       "comments": ""
     },
     {
@@ -344,7 +345,7 @@
       "transformation": "",
       "source": "Patient Health Questionnaire (PHQ-9)",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "concentration, executive functionng, attention, depression, psychopathology",
       "comments": ""
     },
     {
@@ -358,7 +359,7 @@
       "transformation": "",
       "source": "Patient Health Questionnaire (PHQ-9)",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "speech ability, moving ability, general motor function, depression, psychopathology",
       "comments": ""
     },
     {
@@ -372,7 +373,7 @@
       "transformation": "",
       "source": "Patient Health Questionnaire (PHQ-9)",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "suicidal ideation, self-harm, depression, psychopathology",
       "comments": ""
     },
     {
@@ -386,7 +387,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "self-worth, self-esteem",
       "comments": ""
     },
     {
@@ -400,7 +401,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "emotional distress, suicidal ideation, self-harm, psychopathology",
       "comments": ""
     },
     {
@@ -414,7 +415,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "negative self-evaluation, self-worth, self-esteem, depression, psychopathology",
       "comments": ""
     },
     {
@@ -428,7 +429,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "negative self-evaluation, self-worth, self-esteem, depression, psychopathology",
       "comments": ""
     },
     {
@@ -442,7 +443,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "negative self-evaluation, self-worth, self-esteem, social functioning, depression, psychopathology",
       "comments": ""
     },
     {
@@ -456,7 +457,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "loneliness, social functioning",
+      "construct": "loneliness, social functioning, negative affect, affect",
       "comments": ""
     },
     {
@@ -470,7 +471,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "fear of sickness, worry, health anxiety",
       "comments": ""
     },
     {
@@ -484,7 +485,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "catastrophic thinking, worry, anxiety, psychopathology",
       "comments": ""
     },
     {
@@ -498,7 +499,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "hopelessness, depression, suicidality, psychopathology",
       "comments": ""
     },
     {
@@ -512,7 +513,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "perceived isolation, loneliness, psychopathology",
       "comments": ""
     },
     {
@@ -526,7 +527,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "distress, hopelessness, suicidality, psychopathology",
       "comments": ""
     },
     {
@@ -540,7 +541,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "hopelessness, depression, suicidality, psychopathology",
       "comments": ""
     },
     {
@@ -554,7 +555,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "coping",
       "comments": ""
     }
   ]
