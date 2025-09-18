@@ -1,4 +1,4 @@
-id	timestamp	counter	day	has_data	t0	t_cen	relationship_level	cared_for	respected	supported	connected	time	interaction_type	beep
+id	timestamp	counter	day	has_data	first_prompt	time_since_first	relationship_level	cared_for	respected	supported	connected	time	interaction_type	beep
 19182	1588009498	1	1	TRUE	1588009498	0	NA	NA	NA	NA	6	2020-04-27T17:44:58Z	0	1
 19182	1588014111	2	1	TRUE	1588009498	4613	7	4	4	4	6	2020-04-27T19:01:51Z	interact	2
 19182	1588021663	3	1	TRUE	1588009498	12165	7	4	4	4	6	2020-04-27T21:07:43Z	interact	3

@@ -1,4 +1,4 @@
-id	start	finish	energetic	enthusiastic	content	irritable	restless	worried	guilty	afraid	anhedonia	angry	hopeless	down	positive	fatigue	tension	concentrate	accepted	threatened	rumination	avoid_activity	reassure	procrastination	hours	difficult	unsatisfy	avoid_people	day	beep
+id	start	finish	energetic	enthusiastic	content	irritable	restless	worried	guilty	afraid	anhedonia	angry	hopeless	down	positive	fatigue	muscle_tension	difficulty_concentrating	accepted	threatened	rumination	avoid_activity	reassure	procrastination	hours	difficult	unsatisfy	avoid_people	day	beep
 P001	2014-10-21T15:55:00Z	2014-10-21T15:58:00Z	19	23	33	74	89	87	72	70	74	64	78	85	44	94	17	84	16	75	100	72	88	83	8	63	69	75	1	NA
 P001	2014-10-21T19:20:00Z	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA
 P001	2014-10-22T11:38:00Z	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	2	NA

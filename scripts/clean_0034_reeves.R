@@ -64,7 +64,7 @@ df <- df |>
     difficulty_positive = had_difficulty_feeling_positive,
     reckless = acted_reckless_or_self_destructive,
     startled = felt_jumpy_or_easily_startled,
-    difficulty_concent = had_difficulty_concentrating,
+    difficulty_concentrating = had_difficulty_concentrating,
     sleepy = felt_sleepy,
     happy = felt_happy,
     positive = felt_positive,

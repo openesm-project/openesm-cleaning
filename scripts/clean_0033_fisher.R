@@ -48,6 +48,8 @@ df <- df_raw |>
   janitor::clean_names() |>
   dplyr::rename(
     rumination = ruminate,
+    difficulty_concentrating = concentrate,
+    muscle_tension = tension,
     avoid_activity = avoid_act,
     procrastination = procrast
     )
