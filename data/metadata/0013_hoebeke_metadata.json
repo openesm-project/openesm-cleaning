@@ -12,6 +12,7 @@
   "link_to_code": "https://osf.io/dngyk/",
   "n_participants": 40,
   "n_time_points": 56,
+  "n_days": "14",
   "n_beeps_per_day": "4",
   "passive_data_available": "no",
   "cross_sectional_available": "yes",
@@ -171,7 +172,7 @@
       "variable_type": "rating_scale",
       "coding": "To what extent were \nyour thoughts \nnegative? \n0 = Not at all\n100 = Extremely",
       "answer_categories": "101",
-      "details": "To what extent were \nyour thoughts negative?",
+      "details": "To what extent were your thoughts negative?",
       "labels": "0 = Not at all\n100 = Extremely",
       "transformation": "",
       "source": "",
@@ -180,12 +181,12 @@
       "comments": ""
     },
     {
-      "name": "criticism",
-      "description": "Criticism",
+      "name": "self_criticism",
+      "description": "Self-criticism",
       "variable_type": "rating_scale",
       "coding": "\"To what \nextent were \nyour thoughts self\n-critical?\"\n0 = Not at all\n100 = Extremely",
       "answer_categories": "101",
-      "details": "To what extent were\nyour thoughts self\n-critical?",
+      "details": "To what extent were your thoughts self-critical?",
       "labels": "0 = Not at all\n100 = Extremely",
       "transformation": "",
       "source": "",
@@ -199,12 +200,12 @@
       "variable_type": "rating_scale",
       "coding": "How much did you \nthink about the \ncauses and \nconsequences of \nemotional \nexperiences? \n0 = Not at all\n100 = Absolutely",
       "answer_categories": "101",
-      "details": "How much did you think about the \ncauses and consequences of \nemotional experiences?",
+      "details": "How much did you think about the causes and consequences of \nemotional experiences?",
       "labels": "0 = Not at all\n100 = Absolutely",
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "emotion-focused reflection",
+      "construct": "rumination, emotion-focused reflection",
       "comments": ""
     },
     {
@@ -213,7 +214,7 @@
       "variable_type": "rating_scale",
       "coding": "To what extent have you mentally replayed emotional \nexperiences that you’ve had?\n0 = Not at all\n100 = Absolutely",
       "answer_categories": "101",
-      "details": "To what extent have you mentally \nreplayed emotional experiences that \nyou’ve had?",
+      "details": "To what extent have you mentally replayed emotional experiences that \nyou’ve had?",
       "labels": "0 = Not at all\n100 = Absolutely",
       "transformation": "",
       "source": "",
@@ -232,7 +233,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "executive control",
       "comments": ""
     }
   ]

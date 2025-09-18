@@ -12,6 +12,7 @@
   "link_to_code": "https://github.com/zwihawks/PredictingMomentaryCog",
   "n_participants": 122,
   "n_time_points": 30,
+  "n_days": "10",
   "n_beeps_per_day": "3",
   "passive_data_available": "no",
   "cross_sectional_available": "unclear",
@@ -260,7 +261,7 @@
       "transformation": "",
       "source": "Anxiety & Depression Scale",
       "assessment_type": "ESM",
-      "construct": "restlessness, fidgety, anxiety, psychopathology",
+      "construct": "restlessness, fidgety, anxiety, negative affect, affect, psychopathology",
       "comments": ""
     },
     {
@@ -442,7 +443,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "sleepiness, alterness, negative affect, affect",
+      "construct": "sleepiness, alertness, negative affect, affect",
       "comments": ""
     },
     {
@@ -470,7 +471,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "concentration, executive functionng, attention",
+      "construct": "concentration, executive functioning, attention",
       "comments": ""
     },
     {

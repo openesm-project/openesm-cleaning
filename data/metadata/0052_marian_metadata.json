@@ -233,7 +233,7 @@
       "transformation": "",
       "source": "Generalised Anxiety Disorder Questionnaire-IV",
       "assessment_type": "ESM",
-      "construct": "tensioned muscles, motor symptoms, parkinson disease, psychopathology",
+      "construct": "tensioned muscles, motor symptoms, anxiety, psychopathology",
       "comments": ""
     },
     {
@@ -303,7 +303,7 @@
       "transformation": "",
       "source": "Patient Health Questionnaire (PHQ-9)",
       "assessment_type": "ESM",
-      "construct": "tiredness, negative affect, affect, biological, depression psychopathology",
+      "construct": "tiredness, negative affect, affect, biological, depression, psychopathology",
       "comments": ""
     },
     {

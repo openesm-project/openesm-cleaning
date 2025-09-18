@@ -12,6 +12,7 @@
   "link_to_code": "https://github.com/CornellPACLab/data_heterogeneity",
   "n_participants": 62,
   "n_time_points": 165,
+  "n_days": "165",
   "n_beeps_per_day": "1",
   "passive_data_available": "yes",
   "cross_sectional_available": "no",
@@ -120,7 +121,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Daily",
-      "construct": "paranoia, schizophrenia, psychopathology",
+      "construct": "paranoia, social cognition, schizophrenia, psychopathology",
       "comments": "used as symptom of schizophrenia by authors"
     },
     {

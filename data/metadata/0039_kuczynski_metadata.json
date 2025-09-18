@@ -12,6 +12,7 @@
   "link_to_code": "https://osf.io/wtbx8/",
   "n_participants": 515,
   "n_time_points": 75,
+  "n_days": "75",
   "n_beeps_per_day": "1",
   "passive_data_available": "no",
   "cross_sectional_available": "yes",
@@ -30,84 +31,168 @@
       "description": "Participant ID",
       "variable_type": "categorical",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "Daily",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "day",
       "description": "Day of study",
       "variable_type": "other",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "Daily",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "beep",
       "description": "Beep of the day",
       "variable_type": "other",
       "coding": "only 1 beep ber day",
-      "answer_categories": "1"
+      "answer_categories": "1",
+      "details": "only 1 beep ber day",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "Daily",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "date",
       "description": "Date",
       "variable_type": "Date",
       "coding": "Date of data collection",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "Date of data collection",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "Daily",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "depressed",
       "description": "Depressed",
-      "variable_type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I felt down, depressed, or hopeless today\n0 = None of the time\n10 = All of the time",
-      "answer_categories": "11"
+      "answer_categories": "11",
+      "details": "I felt down, depressed, or hopeless today",
+      "labels": "0 = None of the time\n10 = All of the time",
+      "transformation": "",
+      "source": "Patient Health Questionnaire (PHQ-2)",
+      "assessment_type": "Daily",
+      "construct": "depression, negative affect, affect, neuroticism, big five, psychopathology",
+      "comments": ""
     },
     {
       "name": "anhedonia",
       "description": "Anhedonia",
-      "variable_type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I had little interest or pleasure in doing things today\n0 = None of the time\n10 = All of the time",
-      "answer_categories": "11"
+      "answer_categories": "11",
+      "details": "I had little interest or pleasure in doing things today",
+      "labels": "0 = None of the time\n10 = All of the time",
+      "transformation": "",
+      "source": "Patient Health Questionnaire (PHQ-2)",
+      "assessment_type": "Daily",
+      "construct": "anhedonia, depression, psychopathology",
+      "comments": ""
     },
     {
       "name": "loneliness",
-      "description": "Feeling  lonely",
-      "variable_type": "Likert",
+      "description": "Feeling lonely",
+      "variable_type": "rating_scale",
       "coding": "I felt lonely today\n0 = Not at all\n10 = Extremely",
-      "answer_categories": "11"
+      "answer_categories": "11",
+      "details": "I felt lonely today",
+      "labels": "0 = Not at all\n10 = Extremely",
+      "transformation": "",
+      "source": "UCLA Loneliness Scale",
+      "assessment_type": "Daily",
+      "construct": "loneliness, social functioning, negative affect, affect",
+      "comments": ""
     },
     {
       "name": "left_out",
       "description": "Feeling left out",
-      "variable_type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I felt left out today\n0 = Not at all\n10 = Extremely",
-      "answer_categories": "11"
+      "answer_categories": "11",
+      "details": "I felt left out today",
+      "labels": "0 = Not at all\n10 = Extremely",
+      "transformation": "",
+      "source": "UCLA Loneliness Scale",
+      "assessment_type": "Daily",
+      "construct": "loneliness, social functioning, social exclusion",
+      "comments": ""
     },
     {
       "name": "social_interaction",
       "description": "Social interaction quantity",
-      "variable_type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "How much social interaction did you have today?\n0 = None at all\n10 = A lot",
-      "answer_categories": "11"
+      "answer_categories": "11",
+      "details": "How much social interaction did you have today?",
+      "labels": "0 = None at all\n10 = A lot",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "Daily",
+      "construct": "social interaction",
+      "comments": ""
     },
     {
       "name": "vulnerability",
       "description": "Vulnerable self-disclosure",
-      "variable_type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I expressed my true feelings to others today\n0 = Not at all\n5 = A moderate amount\n10 = Very much so",
-      "answer_categories": "11"
+      "answer_categories": "11",
+      "details": "I expressed my true feelings to others today",
+      "labels": "0 = Not at all\n5 = A moderate amount\n10 = Very much so",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "Daily",
+      "construct": "emotional expression, emotion regulation, social behavior",
+      "comments": ""
     },
     {
       "name": "perceived_responsiveness",
       "description": "Peceived peer responsiveness",
-      "variable_type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I felt understood/cared for by others today\n0 = Not at all\n10 = Extremely",
-      "answer_categories": "11"
+      "answer_categories": "11",
+      "details": "I felt understood/cared for by others today",
+      "labels": "0 = Not at all\n10 = Extremely",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "Daily",
+      "construct": "responsiveness, social support, social connectedness",
+      "comments": ""
     },
     {
       "name": "covid_anxiety",
       "description": "Covid anxiety",
-      "variable_type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "unclear",
-      "answer_categories": "11"
+      "answer_categories": "11",
+      "details": "unclear",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "Daily",
+      "construct": "Covid, anxiety",
+      "comments": ""
     }
   ]
 }

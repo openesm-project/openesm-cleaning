@@ -12,6 +12,7 @@
   "link_to_code": null,
   "n_participants": 24,
   "n_time_points": 70,
+  "n_days": "7",
   "n_beeps_per_day": "10",
   "passive_data_available": "no",
   "cross_sectional_available": "yes",
@@ -30,77 +31,154 @@
       "description": "Participant ID",
       "variable_type": "categorical",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "day",
       "description": "Day of study",
       "variable_type": "other",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "beep",
       "description": "Beep of the day",
       "variable_type": "other",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "enthusiastic",
       "description": "Enthusiastic",
-      "variable_type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I feel enthusiastic\n1 = not at all\n7 = extremely",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "details": "I feel enthusiastic",
+      "labels": "1 = not at all\n7 = extremely",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "enthusiasm, positive affect, affect, extraversion, big five",
+      "comments": ""
     },
     {
       "name": "down",
       "description": "Feeling down",
-      "variable_type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I feel down\n1 = not at all\n7 = extremely",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "details": "I feel down",
+      "labels": "1 = not at all\n7 = extremely",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "negative affect, affect",
+      "comments": ""
     },
     {
       "name": "irritated",
       "description": "Irritated",
-      "variable_type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I feel irritated\n1 = not at all\n7 = extremely",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "details": "I feel irritated",
+      "labels": "1 = not at all\n7 = extremely",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "irritability, anxiety, psychopathology, negative affect, affect",
+      "comments": ""
     },
     {
       "name": "rushed",
       "description": "Rushed",
-      "variable_type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I feel rushed\n1 = not at all\n7 = extremely",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "details": "I feel rushed",
+      "labels": "1 = not at all\n7 = extremely",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "negative affect, affect",
+      "comments": ""
     },
     {
       "name": "happy",
       "description": "Happy",
-      "variable_type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "I feel happy\n1 = not at all\n7 = extremely",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "details": "I feel happy",
+      "labels": "1 = not at all\n7 = extremely",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "happiness, positive affect, affect",
+      "comments": ""
     },
     {
       "name": "cheerful",
       "description": "Cheerful",
-      "variable_type": "Likert",
-      "coding": "unclear",
-      "answer_categories": "7"
+      "variable_type": "rating_scale",
+      "coding": "I feel cheerful\n1 = not at all\n7 = extremely",
+      "answer_categories": "7",
+      "details": "I feel cheerful",
+      "labels": "1 = not at all\n7 = extremely",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "cheerfulness, positive affect, affect",
+      "comments": ""
     },
     {
       "name": "phy_bloating",
       "description": "Bloating",
-      "variable_type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "unclear",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "details": "",
+      "labels": "unclear",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "gastrointestinal, physical health, physical symptom",
+      "comments": ""
     },
     {
       "name": "phy_abd",
       "description": "Abdominal pain",
-      "variable_type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "unclear",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "details": "",
+      "labels": "unclear",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "gastrointestinal, physical health, physical symptom",
+      "comments": ""
     }
   ]
 }

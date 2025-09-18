@@ -12,6 +12,7 @@
   "link_to_code": "https://osf.io/mvdpe/",
   "n_participants": 80,
   "n_time_points": 56,
+  "n_days": "14",
   "n_beeps_per_day": "4",
   "passive_data_available": "no",
   "cross_sectional_available": "yes",
@@ -218,7 +219,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "loneliness, social functioning",
+      "construct": "loneliness, social functioning, negative affect, affect",
       "comments": ""
     },
     {

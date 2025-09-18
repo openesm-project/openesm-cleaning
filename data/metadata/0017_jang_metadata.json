@@ -12,6 +12,7 @@
   "link_to_code": "https://github.com/DigitalHealthcareLab/24PanicPrediction",
   "n_participants": 43,
   "n_time_points": 402,
+  "n_days": "402",
   "n_beeps_per_day": "1",
   "passive_data_available": "yes",
   "cross_sectional_available": "yes",
@@ -92,7 +93,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Passive",
-      "construct": "",
+      "construct": "heart rate, physiological measure",
       "comments": ""
     },
     {
@@ -106,7 +107,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Passive",
-      "construct": "",
+      "construct": "heart rate, physiological measure",
       "comments": ""
     },
     {
@@ -120,7 +121,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Passive",
-      "construct": "",
+      "construct": "heart rate, physiological measure",
       "comments": ""
     },
     {
@@ -134,7 +135,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Passive",
-      "construct": "",
+      "construct": "heart rate, physiological measure",
       "comments": ""
     },
     {
@@ -148,7 +149,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "alcohol, substance use",
       "comments": ""
     },
     {
@@ -162,7 +163,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "caffeine, substance use",
       "comments": ""
     },
     {
@@ -176,7 +177,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "smoking, nicotine, substance use",
       "comments": ""
     },
     {
@@ -190,7 +191,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "menstruation",
       "comments": ""
     },
     {
@@ -204,7 +205,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "exercise, physical activity, activity, context",
       "comments": ""
     },
     {
@@ -218,7 +219,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "panic, anxiety, neuroticism, big five, psychopathology",
       "comments": ""
     },
     {
@@ -232,7 +233,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "positive affect, affect",
       "comments": ""
     },
     {
@@ -246,7 +247,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "negative affect, affect",
       "comments": ""
     },
     {
@@ -260,7 +261,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "energy, positive affect, affect",
       "comments": ""
     },
     {
@@ -274,7 +275,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "negative affect, affect",
       "comments": ""
     },
     {
@@ -288,7 +289,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "anxiety, negative affect, affect, neuroticism, big five",
       "comments": ""
     },
     {
@@ -302,7 +303,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "negative affect, affect",
       "comments": ""
     },
     {
@@ -316,7 +317,7 @@
       "transformation": "Sum score",
       "source": "Anxiety control questionnaire",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "anxiety control, anxiety, neuroticism, big five",
       "comments": "Irregular time interval"
     },
     {
@@ -330,7 +331,7 @@
       "transformation": "Sum score",
       "source": "Albany Panic and Phobia Questionnaire - Agoraphobia section",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "agoraphobia, anxiety, neuroticism, big five, psychopathology",
       "comments": "Irregular time interval"
     },
     {
@@ -344,7 +345,7 @@
       "transformation": "Sum score",
       "source": "Albany Panic and Phobia Questionnaire - Social Phobia section",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "social phobia, neuroticism, big five, psychopathology",
       "comments": "Irregular time interval"
     },
     {
@@ -358,7 +359,7 @@
       "transformation": "Sum score",
       "source": "Albany Panic and Phobia Questionnaire - Interoceptive fear section",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "interoceptive fear, neuroticism, big five, psychopathology",
       "comments": "Irregular time interval"
     },
     {
@@ -372,7 +373,7 @@
       "transformation": "Sum score",
       "source": "Body shape questionnaire",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "body satisfaction, body image, self-concept",
       "comments": "Irregular time interval"
     },
     {
@@ -386,7 +387,7 @@
       "transformation": "Sum score",
       "source": "Brief Fear of Negative Evaluation",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "fear, social anxiety, neuroticism, big five",
       "comments": "Irregular time interval"
     },
     {
@@ -400,7 +401,7 @@
       "transformation": "Sum score",
       "source": "Center for Epidemiologic Studies\nDepression Scale",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "depression, neuroticism, big five, psychopathology",
       "comments": "Irregular time interval"
     },
     {
@@ -414,7 +415,7 @@
       "transformation": "Sum score",
       "source": "Generalized Anxiety Disorder-7 scale",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "anxiety, neuroticism, big five, psychopathology",
       "comments": "Irregular time interval"
     },
     {
@@ -428,7 +429,7 @@
       "transformation": "Sum score",
       "source": "Korean Occupational Stress Scale-\nShort Form scale",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "occupational stress, work stress, stress",
       "comments": "Irregular time interval"
     },
     {
@@ -442,7 +443,7 @@
       "transformation": "Sum score",
       "source": "Patient Health Questionnaire-9 Scale",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "depression, neuroticism, big five, psychopathology",
       "comments": "Irregular time interval"
     },
     {
@@ -456,7 +457,7 @@
       "transformation": "Sum score",
       "source": "Social Avoidance and Distress Scale",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "social avoidance, social anxiety, anxiety, neuroticism, big five",
       "comments": "Irregular time interval"
     },
     {
@@ -470,7 +471,7 @@
       "transformation": "Sum score",
       "source": "State-Trait Anxiety Inventory\n– State Anxiety section",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "anxiety, neuroticism, big five, psychopathology",
       "comments": "Irregular time interval"
     },
     {
@@ -484,7 +485,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Passive",
-      "construct": "",
+      "construct": "step count, physical activity, activity",
       "comments": ""
     },
     {
@@ -498,7 +499,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Passive",
-      "construct": "",
+      "construct": "step count, physical activity, activity",
       "comments": ""
     },
     {
@@ -512,7 +513,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Passive",
-      "construct": "",
+      "construct": "step count, physical activity, activity",
       "comments": ""
     },
     {
@@ -526,7 +527,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Passive",
-      "construct": "",
+      "construct": "heart rate, circadian rhythm, physiological measure",
       "comments": ""
     },
     {
@@ -540,7 +541,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Passive",
-      "construct": "",
+      "construct": "heart rate, circadian rhythm, physiological measure",
       "comments": ""
     },
     {
@@ -554,7 +555,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Passive",
-      "construct": "",
+      "construct": "heart rate, circadian rhythm, physiological measure",
       "comments": ""
     },
     {
@@ -568,7 +569,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Passive",
-      "construct": "",
+      "construct": "heart rate variability, heart rate, physiological measure",
       "comments": ""
     },
     {
@@ -582,7 +583,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Passive",
-      "construct": "",
+      "construct": "heart rate variability, heart rate, physiological measure",
       "comments": ""
     },
     {
@@ -596,7 +597,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Passive",
-      "construct": "",
+      "construct": "heart rate variability, heart rate, physiological measure",
       "comments": ""
     },
     {
@@ -610,7 +611,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Passive",
-      "construct": "",
+      "construct": "heart rate variability, heart rate, physiological measure",
       "comments": ""
     },
     {

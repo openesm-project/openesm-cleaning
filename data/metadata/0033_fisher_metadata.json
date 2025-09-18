@@ -12,6 +12,7 @@
   "link_to_code": "https://osf.io/m63ks",
   "n_participants": 40,
   "n_time_points": 212,
+  "n_days": "55",
   "n_beeps_per_day": "4",
   "passive_data_available": "no",
   "cross_sectional_available": "no",
@@ -21,7 +22,7 @@
   "sampling_scheme": "4x/day fixed schedule",
   "participants": "participants with a diagnosis of MDD and/or GAD",
   "coding_file": "0033_fisher_variables",
-  "additional_comments": "item order was randomized; partially implicit missingness; no beep information; number of max. time points taken as maximum of observations in data",
+  "additional_comments": "item order was randomized; partially implicit missingness; no beep information; number of max. time points and max. days taken as maximum of observations in data",
   "coder_data": "Björn Siepe",
   "coder_metadata": "Björn Siepe",
   "features": [
@@ -106,7 +107,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "energy, positive affect, affect, big five, extraversion",
       "comments": ""
     },
     {
@@ -134,7 +135,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "content, positive affect, affect",
       "comments": ""
     },
     {
@@ -162,7 +163,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "restlessness, fidgety, anxiety, negative affect, affect, psychopathology",
       "comments": ""
     },
     {
@@ -190,7 +191,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "guilt, negative affect, affect",
       "comments": ""
     },
     {
@@ -274,7 +275,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "positive affect, affect",
       "comments": ""
     },
     {
@@ -288,11 +289,11 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "fatigue, negative affect, affect",
       "comments": ""
     },
     {
-      "name": "tension",
+      "name": "muscle_tension",
       "description": "Muscle tension",
       "variable_type": "rating_scale",
       "coding": "To what degree have you experienced muscle tension?\n0 = none at all\n100 = as much as possible",
@@ -302,11 +303,11 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "tensioned muscles, anxiety",
       "comments": ""
     },
     {
-      "name": "concentrate",
+      "name": "difficulty_concentrating",
       "description": "Concentration problems",
       "variable_type": "rating_scale",
       "coding": "To what degree did you have difficulty concentrating?\n0 = none at all\n100 = as much as possible",
@@ -316,7 +317,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "concentration, cognitive functioning, nonmotor symptoms, parkinson disease,",
+      "construct": "concentration, executive functioning, attention",
       "comments": ""
     },
     {
@@ -330,7 +331,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "acceptance, social belonging, social functioning",
       "comments": ""
     },
     {
@@ -344,7 +345,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "threat perception, social cognition",
       "comments": ""
     },
     {
@@ -358,7 +359,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "rumination, emotion regulation",
       "comments": ""
     },
     {
@@ -372,7 +373,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "activity avoidance, avoidance",
       "comments": ""
     },
     {
@@ -386,7 +387,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "coping, social support, emotion regulation, social behavior",
       "comments": ""
     },
     {
@@ -400,7 +401,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "procrastination, activity",
       "comments": ""
     },
     {
@@ -456,7 +457,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "avoidance",
       "comments": ""
     }
   ]

@@ -12,6 +12,7 @@
   "link_to_code": "https://osf.io/ejtzs/",
   "n_participants": 114,
   "n_time_points": 105,
+  "n_days": "21",
   "n_beeps_per_day": "5",
   "passive_data_available": "yes",
   "cross_sectional_available": "yes",
@@ -428,7 +429,7 @@
       "transformation": "",
       "source": "Process-Based Assessment Tool (PBAT)",
       "assessment_type": "ESM",
-      "construct": "behavior persistance, self-regulation",
+      "construct": "behavior persistence, self-regulation",
       "comments": ""
     },
     {
@@ -442,7 +443,7 @@
       "transformation": "",
       "source": "Process-Based Assessment Tool (PBAT)",
       "assessment_type": "ESM",
-      "construct": "behavior persistance, self-regulation",
+      "construct": "behavior persistence, self-regulation",
       "comments": ""
     },
     {
@@ -470,7 +471,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "physical activity",
+      "construct": "physical activity, arousal",
       "comments": ""
     },
     {

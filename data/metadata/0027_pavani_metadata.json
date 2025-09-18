@@ -12,6 +12,7 @@
   "link_to_code": "https://osf.io/s3chz/?view_only=",
   "n_participants": 78,
   "n_time_points": 70,
+  "n_days": "14",
   "n_beeps_per_day": "5",
   "passive_data_available": "no",
   "cross_sectional_available": "yes",
@@ -30,91 +31,182 @@
       "description": "Participant ID",
       "variable_type": "categorical",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "day",
       "description": "Day of study",
       "variable_type": "other",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "beep",
       "description": "Beep of the day",
       "variable_type": "other",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "counter",
       "description": "Counter",
       "variable_type": "numeric",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "reappraisal",
       "description": "Positive reappraisal",
-      "variable_type": "ordinal",
+      "variable_type": "rating_scale",
       "coding": "I have seen what positive things a negative event can bring me.\n1 = not at all\n5 = a lot",
-      "answer_categories": "5"
+      "answer_categories": "5",
+      "details": "I have seen what positive things a negative event can bring me.",
+      "labels": "1 = not at all\n5 = a lot",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "reappraisal, emotion regulation",
+      "comments": ""
     },
     {
       "name": "distraction",
       "description": "Distraction",
-      "variable_type": "ordinal",
+      "variable_type": "rating_scale",
       "coding": "I have diverted my attention away from my problems.\n1 = not at all\n5 =  a lot",
-      "answer_categories": "5"
+      "answer_categories": "5",
+      "details": "I have diverted my attention away from my problems.",
+      "labels": "1 = not at all\n5 = a lot",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "distraction, emotion regulation",
+      "comments": ""
     },
     {
       "name": "suppression",
       "description": "Expressive suppression",
-      "variable_type": "ordinal",
+      "variable_type": "rating_scale",
       "coding": "I have tried not to show or express my emotions.\n1 = not at all\n5 = a lot",
-      "answer_categories": "5"
+      "answer_categories": "5",
+      "details": "I have tried not to show or express my emotions.",
+      "labels": "1 = not at all\n5 = a lot",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "suppression, emotion regulation",
+      "comments": ""
     },
     {
       "name": "rumination",
       "description": "Rumination",
-      "variable_type": "ordinal",
+      "variable_type": "rating_scale",
       "coding": "I have wasted time thinking of a past event again and again.\n1 = not at all\n5 = a lot",
-      "answer_categories": "5"
+      "answer_categories": "5",
+      "details": "I have wasted time thinking of a past event again and again.",
+      "labels": "1 = not at all\n5 = a lot",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "rumination, emotion regulation",
+      "comments": ""
     },
     {
       "name": "appreciation",
       "description": "Appreciation",
-      "variable_type": "ordinal",
+      "variable_type": "rating_scale",
       "coding": "I have taken time to savor a moment of the day.\n1 = not at all\n5 = a lot",
-      "answer_categories": "5"
+      "answer_categories": "5",
+      "details": "I have taken time to savor a moment of the day.",
+      "labels": "1 = not at all\n5 = a lot",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "savoring, mindfulness, well-being",
+      "comments": ""
     },
     {
       "name": "sharing_affect",
       "description": "Social affect sharing",
-      "variable_type": "ordinal",
+      "variable_type": "rating_scale",
       "coding": "1 = not at all\n5 = a lot",
-      "answer_categories": "5"
+      "answer_categories": "5",
+      "details": "",
+      "labels": "1 = not at all\n5 = a lot",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "coping, social support, emotion regulation, social behavior",
+      "comments": ""
     },
     {
       "name": "problem_coping",
       "description": "Problem-focused coping",
-      "variable_type": "ordinal",
+      "variable_type": "rating_scale",
       "coding": "1 = not at all\n5 =  a lot",
-      "answer_categories": "5"
+      "answer_categories": "5",
+      "details": "",
+      "labels": "1 = not at all\n5 = a lot",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "coping, emotion regulation",
+      "comments": ""
     },
     {
       "name": "pa",
       "description": "Positive affect",
-      "variable_type": "ordinal",
+      "variable_type": "rating_scale",
       "coding": "Mean score of positive affect items\n1 = not at all\n5 = a lot\n\nHighly activated positive affect: I am full of energy and spirit.\nActivated positive affect: I am feeling enthusiastic.\nNeither activated nor deactivated positive affect: I am happy.\nDeactivated positive affect: I am feeling both happy and calm.\nHighly deactivated positive affect: My whole body is relaxed.",
-      "answer_categories": "5"
+      "answer_categories": "5",
+      "details": "Highly activated positive affect: I am full of energy and spirit.\nActivated positive affect: I am feeling enthusiastic.\nNeither activated nor deactivated positive affect: I am happy.\nDeactivated positive affect: I am feeling both happy and calm.\nHighly deactivated positive affect: My whole body is relaxed.",
+      "labels": "1 = not at all\n5 = a lot",
+      "transformation": "mean-scored",
+      "source": "12-point affect circumplex model",
+      "assessment_type": "ESM",
+      "construct": "positive affect, affect",
+      "comments": ""
     },
     {
       "name": "na",
       "description": "Negative affect",
-      "variable_type": "ordinal",
+      "variable_type": "rating_scale",
       "coding": "Mean score of negative affect items\n1 = not at all\n5 = a lot\n\nHighly activated negative affect: I can feel pressure building inside.\nActivated negative affect: I am feeling irritated.\nNeither activated nor deactivated negative affect: I am unhappy.\nDeactivated negative affect: I am feeling sad and in slow motion.\nHighly deactivated negative affect: I am so bored that everything around me looks drab.",
-      "answer_categories": "5"
+      "answer_categories": "5",
+      "details": "Highly activated negative affect: I can feel pressure building inside.\nActivated negative affect: I am feeling irritated.\nNeither activated nor deactivated negative affect: I am unhappy.\nDeactivated negative affect: I am feeling sad and in slow motion.\nHighly deactivated negative affect: I am so bored that everything around me looks drab.",
+      "labels": "1 = not at all\n5 = a lot",
+      "transformation": "mean-scored",
+      "source": "12-point affect circumplex model",
+      "assessment_type": "ESM",
+      "construct": "negative affect, affect",
+      "comments": ""
     }
   ]
 }

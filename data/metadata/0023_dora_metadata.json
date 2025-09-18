@@ -12,6 +12,7 @@
   "link_to_code": "https://osf.io/zy639",
   "n_participants": 213,
   "n_time_points": 63,
+  "n_days": "22",
   "n_beeps_per_day": "3 or 5",
   "passive_data_available": "no",
   "cross_sectional_available": "yes",
@@ -28,114 +29,226 @@
     {
       "name": "id",
       "description": "Participant ID",
-      "type": "categorical",
+      "variable_type": "categorical",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "day",
       "description": "Day of study",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "beep",
       "description": "Beep of the day",
-      "type": "other",
+      "variable_type": "other",
       "coding": "",
-      "answer_categories": ""
+      "answer_categories": "",
+      "details": "",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "study",
       "description": "Study number",
-      "type": "categorical",
+      "variable_type": "categorical",
       "coding": "Study 1 = King, \nStudy 2 = Witkiewitz",
-      "answer_categories": "2"
+      "answer_categories": "2",
+      "details": "Study 1 = King, \nStudy 2 = Witkiewitz",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "hour",
       "description": "Hour of the day",
-      "type": "numeric",
+      "variable_type": "numeric",
       "coding": "Hour during which EMA survey was completed (rounded down)",
-      "answer_categories": "24"
+      "answer_categories": "24",
+      "details": "Hour of the day during which EMA survey was completed (rounded down)",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
     },
     {
       "name": "control_fixmood",
       "description": "Self-control mood",
-      "type": "VAS",
+      "variable_type": "rating_scale",
       "coding": "Have you needed to control/fix your mood?\n0 =  Not at all\n100 = Very much",
-      "answer_categories": "101"
+      "answer_categories": "101",
+      "details": "Have you needed to control/fix your mood?",
+      "labels": "0 =  Not at all\n100 = Very much",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "emotion regulation, self-regulation",
+      "comments": ""
     },
     {
       "name": "control_fixthought",
       "description": "Self-control thought",
-      "type": "VAS",
+      "variable_type": "rating_scale",
       "coding": "Have you needed to control/fix your thoughts?\n0 =  Not at all\n100 = Very much",
-      "answer_categories": "101"
+      "answer_categories": "101",
+      "details": "Have you needed to control/fix your thoughts?",
+      "labels": "0 =  Not at all\n100 = Very much",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "cognitive control, self-regulation",
+      "comments": ""
     },
     {
       "name": "dealt_stress",
       "description": "Dealt with stress",
-      "type": "VAS",
+      "variable_type": "rating_scale",
       "coding": "Have you dealt with anything stressful?\n0 =  Not at all\n100 = Very much",
-      "answer_categories": "101"
+      "answer_categories": "101",
+      "details": "Have you dealt with anything stressful?",
+      "labels": "0 =  Not at all\n100 = Very much",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "stress, negative affect, affect",
+      "comments": ""
     },
     {
       "name": "felt_overwhelm",
       "description": "Felt overwhelmed",
-      "type": "VAS",
+      "variable_type": "rating_scale",
       "coding": "Have you felt overwhelmed?\n0 =  Not at all\n100 = Very much",
-      "answer_categories": "101"
+      "answer_categories": "101",
+      "details": "Have you felt overwhelmed?",
+      "labels": "0 =  Not at all\n100 = Very much",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "negative affect, affect",
+      "comments": ""
     },
     {
       "name": "alc_drinks",
       "description": "Number of standard drinks",
-      "type": "numeric",
+      "variable_type": "numeric",
       "coding": "How many alcoholic drinks did you have yesterday? Please remember that a drink refers to a “standard” drink size: 12 oz. beer, 8-9 oz. malt liquor, 5 oz. wine, 1.5 oz. hard liquor. (0-30 or more)",
-      "answer_categories": "31"
+      "answer_categories": "31",
+      "details": "How many alcoholic drinks did you have yesterday? Please remember that a drink refers to a “standard” drink size: 12 oz. beer, 8-9 oz. malt liquor, 5 oz. wine, 1.5 oz. hard liquor. (0-30 or more)",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "alcohol, substance use",
+      "comments": ""
     },
     {
       "name": "alc_intox",
       "description": "How drunk",
-      "type": "Likert",
+      "variable_type": "rating_scale",
       "coding": "If you drank alcohol yesterday, how drunk or intoxicated did you get?\n0 = Not at all\n6 = Very much",
-      "answer_categories": "7"
+      "answer_categories": "7",
+      "details": "If you drank alcohol yesterday, how drunk or intoxicated did you get?",
+      "labels": "0 = Not at all\n6 = Very much",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "intoxication, alcohol, substance use",
+      "comments": ""
     },
     {
       "name": "alc_hangover",
       "description": "Had hangover",
-      "type": "binary",
+      "variable_type": "binary",
       "coding": "I had a hangover\n0 = No\n1 = Yes",
-      "answer_categories": "2"
+      "answer_categories": "2",
+      "details": "I had a hangover",
+      "labels": "0 = No\n1 = Yes",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "intoxication, alcohol, substance use",
+      "comments": ""
     },
     {
       "name": "alc_vomit",
       "description": "Did vomit",
-      "type": "binary",
+      "variable_type": "binary",
       "coding": "I felt nauseated or vomited\n0 = No\n1 = Yes",
-      "answer_categories": "2"
+      "answer_categories": "2",
+      "details": "I felt nauseated or vomited",
+      "labels": "0 = No\n1 = Yes",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "intoxication, alcohol, substance use",
+      "comments": ""
     },
     {
       "name": "alc_blackout",
       "description": "Had blackout",
-      "type": "binary",
+      "variable_type": "binary",
       "coding": "I couldn’t remember what I did while drinking\n0 = No\n1 = Yes",
-      "answer_categories": "2"
+      "answer_categories": "2",
+      "details": "I couldn’t remember what I did while drinking",
+      "labels": "0 = No\n1 = Yes",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "intoxication, alcohol, substance use",
+      "comments": ""
     },
     {
       "name": "alc_hurt",
       "description": "Did injure self",
-      "type": "binary",
+      "variable_type": "binary",
       "coding": "I hurt or injured myself by accident\n0 = No\n1 = Yes",
-      "answer_categories": "2"
+      "answer_categories": "2",
+      "details": "I hurt or injured myself by accident",
+      "labels": "0 = No\n1 = Yes",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "intoxication, alcohol, substance use",
+      "comments": ""
     },
     {
       "name": "alc_onset",
       "description": "Onset of drinking",
-      "type": "numeric",
+      "variable_type": "numeric",
       "coding": "About what time did you begin drinking? (Corresponding to beep)",
-      "answer_categories": "24"
+      "answer_categories": "24",
+      "details": "About what time did you begin drinking? (Corresponding to beep)",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "alcohol, substance use",
+      "comments": ""
     }
   ]
 }

@@ -12,6 +12,7 @@
   "link_to_code": null,
   "n_participants": 72,
   "n_time_points": 32,
+  "n_days": "32",
   "n_beeps_per_day": "1",
   "passive_data_available": "no",
   "cross_sectional_available": "yes",
@@ -92,7 +93,7 @@
       "transformation": "",
       "source": "Godin Leisure-Time Exercise Questionnaire",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "exercise, physical activity, activity",
       "comments": ""
     },
     {
@@ -134,7 +135,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Daily",
-      "construct": "",
+      "construct": "learning, academic",
       "comments": ""
     }
   ]

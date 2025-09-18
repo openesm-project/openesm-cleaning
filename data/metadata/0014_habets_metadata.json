@@ -12,6 +12,7 @@
   "link_to_code": "https://github.com/jgvhabets/sensor_EMA_PD_monitoring",
   "n_participants": 20,
   "n_time_points": 98,
+  "n_days": "14",
   "n_beeps_per_day": "7",
   "passive_data_available": "yes",
   "cross_sectional_available": "yes",

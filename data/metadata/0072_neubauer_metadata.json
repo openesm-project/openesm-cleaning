@@ -541,7 +541,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Daily",
-      "construct": "worry, anxiety, psychopathology, negative affect, affect, neuroticism, big five, child, external rating",
+      "construct": "worry, anxiety, negative affect, affect, neuroticism, big five, child, external rating",
       "comments": ""
     },
     {
@@ -1451,7 +1451,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "Daily",
-      "construct": "worry, anxiety, psychopathology, negative affect, affect, neuroticism, big five, child, external rating",
+      "construct": "worry, anxiety, negative affect, affect, neuroticism, big five, child, external rating",
       "comments": ""
     },
     {
@@ -1507,7 +1507,7 @@
       "transformation": "",
       "source": "Ambulatory Worry Scale",
       "assessment_type": "Daily",
-      "construct": "worry, negative affect, affect, neuroticism, big five, psychopathology",
+      "construct": "worry, negative affect, affect, neuroticism, big five",
       "comments": ""
     },
     {
@@ -1521,7 +1521,7 @@
       "transformation": "",
       "source": "Ambulatory Worry Scale",
       "assessment_type": "Daily",
-      "construct": "worry, negative affect, affect, neuroticism, big five, psychopathology",
+      "construct": "worry, negative affect, affect, neuroticism, big five",
       "comments": ""
     },
     {
@@ -1535,7 +1535,7 @@
       "transformation": "",
       "source": "Ambulatory Worry Scale",
       "assessment_type": "Daily",
-      "construct": "worry, negative affect, affect, neuroticism, big five, psychopathology",
+      "construct": "worry, negative affect, affect, neuroticism, big five",
       "comments": ""
     },
     {
@@ -1549,7 +1549,7 @@
       "transformation": "",
       "source": "Ambulatory Worry Scale",
       "assessment_type": "Daily",
-      "construct": "worry, rumination, negative affect, affect, neuroticism, big five, psychopathology",
+      "construct": "worry, rumination, negative affect, affect, neuroticism, big five",
       "comments": ""
     },
     {
@@ -1563,7 +1563,7 @@
       "transformation": "",
       "source": "Ambulatory Worry Scale",
       "assessment_type": "Daily",
-      "construct": "worry, rumination, negative affect, affect, neuroticism, big five, psychopathology",
+      "construct": "worry, rumination, negative affect, affect, neuroticism, big five",
       "comments": ""
     },
     {
