@@ -69,7 +69,7 @@ df_demographics <- df |>
   group_by(id) |>
   distinct()
 
-write_tsv(df_demographics, here("data", "clean", "0054_tammilehto_demographics.tsv"))
+write_tsv(df_demographics, here("data", "clean", "0054_tammilehto_static.tsv"))
 
 # remove demographics from main data frame
 df <- df |>

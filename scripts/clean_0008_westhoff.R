@@ -67,6 +67,9 @@ df_demographics <- df |>
   select(id, gender, age, relationship, livingstatus, degree, occupation) |>
   distinct()
 
+# save as static dataframe
+write_tsv(df_demographics, here("data", "clean", "0008_westhoff_static.tsv"))
+
 # remove irrelevant id column
 df <- df |>
   select(-vid)

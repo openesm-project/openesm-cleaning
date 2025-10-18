@@ -69,7 +69,7 @@ df_demographics <- df |>
   distinct()
 
 # save demographics data
-saveRDS(df_demographics, here("data", "clean", "0044_mostajabi_statics.rds"))
+saveRDS(df_demographics, here("data", "clean", "0044_mostajabi_static.csv"))
 
 # remove demographics data from main data frame
 df <- df |>
