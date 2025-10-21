@@ -67,6 +67,13 @@ all_variables |>
   mutate(perc = n / sum(n) * 100)
 
 
+# search for number of variables that contain constructs related to
+# smartphone or social media use
+all_variables |>
+  filter(grepl("smartphone|social media|app use",
+               tolower(construct))) |>
+  count(dataset_id)
+
 # Automatic annotation ----------------------------------------------------
 # We now create a function that takes all expert-annotated variables and inserts
 # the construct name into all other datasets that have the same variable name
