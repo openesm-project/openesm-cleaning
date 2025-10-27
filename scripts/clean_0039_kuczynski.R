@@ -10,7 +10,7 @@ source(here::here("scripts", "functions_data.R"))
 
 # Data --------------------------------------------------------------------
 # download data
-if(!file.exists(here("data", "raw", "0038_kuczynski_ts_raw.csv"))){
+if(!file.exists(here("data", "raw", "0039_kuczynski_ts_raw.csv"))){
   osf_retrieve_file("https://osf.io/huz67") |>
     osf_download(path = here("data", "raw"))
 
