@@ -327,3 +327,119 @@ annotate_constructs <- function(to_be_named,
 
   return(updates_summary)
 }
+
+
+# Construct Vocabulary ----------------------------------------------------
+# Parse all construct fields across metadata JSONs and return a frequency table.
+# Constructs are comma-separated strings; each term is counted separately.
+extract_construct_vocabulary <- function(folder_path) {
+  json_files <- list.files(folder_path, pattern = "\\.json$",
+                           full.names = TRUE, recursive = FALSE)
+
+  # exclude schema or other non-metadata files
+  json_files <- json_files[!grepl("schema", basename(json_files))]
+
+  if (length(json_files) == 0) {
+    stop("No metadata JSON files found in: ", folder_path)
+  }
+
+  constructs <- character(0)
+
+  for (file_path in json_files) {
+    metadata <- jsonlite::fromJSON(file_path, simplifyVector = FALSE)
+    if (!is.null(metadata$features) && length(metadata$features) > 0) {
+      for (feature in metadata$features) {
+        raw <- feature$construct
+        if (!is.null(raw) && nzchar(trimws(raw))) {
+          terms <- stringr::str_split(raw, ",")[[1]] |>
+            stringr::str_trim() |>
+            tolower()
+          terms <- terms[nzchar(terms)]
+          constructs <- c(constructs, terms)
+        }
+      }
+    }
+  }
+
+  tibble::tibble(construct = constructs) |>
+    dplyr::count(construct, sort = TRUE, name = "n_occurrences")
+}
+
+
+# Metadata Validation -----------------------------------------------------
+# Validate a single metadata JSON against the openESM schema.
+# Returns TRUE invisibly on success; emits a warning listing issues on failure.
+validate_metadata_json <- function(path) {
+  if (!file.exists(path)) {
+    warning("File not found: ", path)
+    return(invisible(FALSE))
+  }
+
+  metadata <- jsonlite::fromJSON(path, simplifyVector = FALSE)
+  issues <- character(0)
+
+  # --- dataset-level required fields ---
+  required_fields <- c("first_author", "dataset_id", "year",
+                       "paper_doi", "n_participants", "n_time_points",
+                       "features")
+  missing <- required_fields[!required_fields %in% names(metadata)]
+  if (length(missing) > 0) {
+    issues <- c(issues,
+                paste("Missing required fields:", paste(missing, collapse = ", ")))
+  }
+
+  # --- dataset_id format ---
+  if (!is.null(metadata$dataset_id) &&
+      !grepl("^\\d{4}$", metadata$dataset_id)) {
+    issues <- c(issues,
+                paste0("dataset_id '", metadata$dataset_id,
+                       "' is not a four-digit string"))
+  }
+
+  # --- features ---
+  valid_variable_types <- c("rating_scale", "numeric", "categorical",
+                             "PosixCt", "character", "logical",
+                             "date", "time", "")
+  valid_assessment_types <- c("ESM", "baseline", "follow-up", "")
+
+  if (!is.null(metadata$features) && length(metadata$features) > 0) {
+    for (i in seq_along(metadata$features)) {
+      feat <- metadata$features[[i]]
+      feat_label <- if (!is.null(feat$name) && nzchar(feat$name)) {
+        paste0("'", feat$name, "'")
+      } else {
+        paste0("[feature ", i, "]")
+      }
+
+      if (is.null(feat$name) || !nzchar(feat$name)) {
+        issues <- c(issues, paste("Feature", i, "has an empty 'name'"))
+      }
+
+      if (!is.null(feat$variable_type) &&
+          !feat$variable_type %in% valid_variable_types) {
+        issues <- c(issues,
+                    paste0("Variable ", feat_label,
+                           ": unknown variable_type '", feat$variable_type, "'"))
+      }
+
+      if (!is.null(feat$assessment_type) &&
+          !feat$assessment_type %in% valid_assessment_types) {
+        issues <- c(issues,
+                    paste0("Variable ", feat_label,
+                           ": unknown assessment_type '", feat$assessment_type, "'"))
+      }
+    }
+  }
+
+  if (length(issues) == 0) {
+    message("Validation passed: ", basename(path))
+    return(invisible(TRUE))
+  } else {
+    warning(
+      "Validation issues in ", basename(path), ":\n",
+      paste(" -", issues, collapse = "\n"),
+      call. = FALSE
+    )
+    return(invisible(FALSE))
+  }
+}

@@ -1,6 +1,9 @@
 library(here)
 library(googlesheets4)
 library(tidyverse)
+library(jsonlite)
+
+source(here::here("scripts", "functions_data.R"))
 
 # initialize google sheets once
 metadata_url <- "https://docs.google.com/spreadsheets/d/1ALGCq_jN6I4dcjWYQ_LQe9o52DGJItwdu9fCkwOh6fg/edit?pli=1&gid=0#gid=0"
@@ -15,13 +18,25 @@ included_ids <- meta_data |>
   filter(done == "1") |>
   pull(dataset_id)
 
-# check with grepl wheter script matches included id
+# check with grepl whether script matches included id
 included_scripts <- scripts[grepl(paste(included_ids, collapse = "|"), scripts)]
 rm(meta_data)
-# run each script
-for (script in included_scripts[c(1:14)]) {
+
+# run each script and validate the resulting metadata JSON
+for (script in included_scripts[c(31:length(included_scripts))]) {
   message("Running script: ", script)
   source(script)
+
+  # validate the metadata JSON produced by this script
+  dataset_id_str <- stringr::str_extract(basename(script), "\\d{4}")
+  json_candidates <- list.files(
+    here::here("data", "metadata"),
+    pattern = paste0("^", dataset_id_str, "_.*\\.json$"),
+    full.names = TRUE
+  )
+  if (length(json_candidates) > 0) {
+    validate_metadata_json(json_candidates[[1]])
+  }
 }
 
 

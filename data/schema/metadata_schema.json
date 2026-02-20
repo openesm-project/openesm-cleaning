@@ -1,0 +1,205 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "openesm-metadata-schema",
+  "title": "openESM Dataset Metadata Schema",
+  "description": "Schema for openESM dataset metadata JSON files. Reflects current usage as of 2026-02.",
+  "type": "object",
+  "required": [
+    "first_author",
+    "dataset_id",
+    "year",
+    "paper_doi",
+    "n_participants",
+    "n_time_points",
+    "features"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "first_author": {
+      "type": "string",
+      "description": "Last name of the first author of the primary paper"
+    },
+    "dataset_id": {
+      "type": "string",
+      "description": "Four-digit zero-padded dataset identifier, e.g. '0012'",
+      "pattern": "^\\d{4}$"
+    },
+    "year": {
+      "type": "integer",
+      "description": "Publication year of the primary paper"
+    },
+    "reference_a": {
+      "type": ["string", "null"],
+      "description": "BibTeX reference for the primary paper"
+    },
+    "reference_b": {
+      "type": ["string", "null"],
+      "description": "BibTeX reference for a secondary paper, if applicable"
+    },
+    "paper_doi": {
+      "type": ["string", "null"],
+      "description": "DOI URL of the primary paper"
+    },
+    "zenodo_doi": {
+      "type": ["string", "null"],
+      "description": "Zenodo DOI for the harmonized dataset archive"
+    },
+    "link_to_data": {
+      "type": ["string", "null"],
+      "description": "URL to the original (raw) data repository"
+    },
+    "license": {
+      "type": ["string", "null"],
+      "description": "License under which the raw data are distributed"
+    },
+    "link_to_codebook": {
+      "type": ["string", "null"],
+      "description": "URL to the original codebook, if available"
+    },
+    "link_to_code": {
+      "type": ["string", "null"],
+      "description": "URL to the original analysis code, if available"
+    },
+    "n_participants": {
+      "type": ["integer", "null"],
+      "description": "Number of participants in the dataset"
+    },
+    "n_time_points": {
+      "type": ["integer", "string", "null"],
+      "description": "Maximum or typical number of ESM observations per participant"
+    },
+    "n_days": {
+      "type": ["string", "null"],
+      "description": "Number of study days (stored as string to allow ranges like '14-21')"
+    },
+    "n_beeps_per_day": {
+      "type": ["string", "null"],
+      "description": "Number of beeps per day (stored as string to allow ranges)"
+    },
+    "passive_data_available": {
+      "type": ["string", "null"],
+      "enum": ["yes", "no", null],
+      "description": "Whether passive sensing data are available alongside ESM"
+    },
+    "cross_sectional_available": {
+      "type": ["string", "null"],
+      "enum": ["yes", "no", null],
+      "description": "Whether a cross-sectional (static) file is available"
+    },
+    "topics": {
+      "type": ["string", "null"],
+      "description": "Comma-separated list of topics/keywords for the dataset"
+    },
+    "implicit_missingness": {
+      "type": ["string", "null"],
+      "enum": ["yes", "no", null],
+      "description": "Whether missingness is implicit (rows omitted) rather than explicit (NA)"
+    },
+    "raw_time_stamp": {
+      "type": ["string", "null"],
+      "enum": ["yes", "no", null],
+      "description": "Whether a raw timestamp column is present in the cleaned data"
+    },
+    "sampling_scheme": {
+      "type": ["string", "null"],
+      "description": "Free-text description of the ESM sampling scheme"
+    },
+    "participants": {
+      "type": ["string", "null"],
+      "description": "Description of the participant sample (e.g. 'student sample', 'clinical sample')"
+    },
+    "coding_file": {
+      "type": ["string", "null"],
+      "description": "Name of the Google Sheet coding file (without URL)"
+    },
+    "additional_comments": {
+      "type": ["string", "null"],
+      "description": "Any additional notes about the dataset or cleaning decisions"
+    },
+    "coder_data": {
+      "type": ["string", "null"],
+      "description": "Name of the person who cleaned the data"
+    },
+    "coder_metadata": {
+      "type": ["string", "null"],
+      "description": "Name of the person who coded the metadata"
+    },
+    "features": {
+      "type": "array",
+      "description": "Array of variable-level metadata objects",
+      "items": {
+        "$ref": "#/definitions/feature"
+      }
+    }
+  },
+  "definitions": {
+    "feature": {
+      "type": "object",
+      "required": ["name"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Column name in the cleaned data file (snake_case)",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description of the variable"
+        },
+        "variable_type": {
+          "type": "string",
+          "description": "Data type of the variable after cleaning",
+          "enum": [
+            "rating_scale",
+            "numeric",
+            "categorical",
+            "PosixCt",
+            "character",
+            "logical",
+            "date",
+            "time",
+            ""
+          ]
+        },
+        "coding": {
+          "type": "string",
+          "description": "Original item wording or coding instructions from the codebook"
+        },
+        "answer_categories": {
+          "type": "string",
+          "description": "Number of answer categories or range (e.g. '7', '0-100', '101')"
+        },
+        "details": {
+          "type": "string",
+          "description": "Additional details about the item or response scale"
+        },
+        "labels": {
+          "type": "string",
+          "description": "Anchor labels for the response scale"
+        },
+        "transformation": {
+          "type": "string",
+          "description": "Any transformations applied to the variable during cleaning"
+        },
+        "source": {
+          "type": "string",
+          "description": "Source questionnaire or instrument from which the item originates"
+        },
+        "assessment_type": {
+          "type": "string",
+          "description": "Assessment context: 'ESM' for momentary, 'baseline' for pre/post measures",
+          "enum": ["ESM", "baseline", "follow-up", ""]
+        },
+        "construct": {
+          "type": "string",
+          "description": "Comma-separated list of constructs this variable relates to"
+        },
+        "comments": {
+          "type": "string",
+          "description": "Free-text comments about this variable"
+        }
+      }
+    }
+  }
+}
