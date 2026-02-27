@@ -61,7 +61,7 @@ df_demo <- df |>
   distinct(id, age, gender, prompts_crt)
 
 # save demographics as a separate .tsv file
-write_tsv(df_demo, here("data", "clean", "0063_van_woerkom_static.tsv"))
+write_tsv(df_demo, here("data", "clean", "0063_vanwoerkom_static.tsv"))
 
 # remove demographics from main data frame
 df <- df |>
@@ -119,7 +119,7 @@ check_results <- check_data(df)
 # if it returns "Data are clean.", save the data
 # Enter data set ID here
 if(check_results == "Data are clean."){
-  write_tsv(df, here("data", "clean", "0063_van_woerkom_ts.tsv"))
+  write_tsv(df, here("data", "clean", "0063_vanwoerkom_ts.tsv"))
 }
 
 
