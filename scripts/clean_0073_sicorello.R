@@ -113,6 +113,14 @@ df <- df |>
 df <- df |>
   dplyr::select(id, day, beep, date, everything())
 
+# convert time variables to standard format
+# first need to set locale to English to ensure that month names are correctly parsed
+Sys.setlocale("LC_TIME", "C")
+
+
+df <- df |>
+  dplyr::mutate(across(c(created, scheduled, uploaded), ~ lubridate::dmy_hm(.)))
+
 
 
 
