@@ -1,6 +1,7 @@
 # openESM Database Cleaning Code
 
-This repository contains the cleaning scripts and metadata for the [openESM Database](https://openesmdata.org), a collection of harmonized Experience Sampling Method (ESM) datasets. Due to data sharing restrictions, raw and cleaned data files are not included; only scripts and metadata are published here.
+This repository contains the cleaning scripts and metadata for the [openESM Database](https://openesmdata.org), a collection of harmonized Experience Sampling Method (ESM) datasets. Due to data sharing restrictions, raw and cleaned data files are not included; only scripts and metadata are published here. The CC-BY-4.0 license applies to the cleaning scripts, utility functions, and metadata files created by the openESM project. Individual datasets are subject to their original licenses, documented in each dataset's metadata JSON under the license field.
+
 
 ## Repository structure
 
