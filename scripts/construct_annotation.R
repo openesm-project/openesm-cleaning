@@ -147,3 +147,16 @@ print(affect_check)
 print(misaligned)
 
 
+
+
+# --- Automatic annotation of constructs
+source(here::here("scripts", "functions_annotation.R"))
+
+generate_annotation_prompt(
+  df = df,
+  dataset_id = "0075",
+  codebook_path = "data/raw/0075_ballou_codebook.xlsx",
+  script_path = "scripts/clean_0075_ballou.R",
+  codebook_sheet = "Diary",
+  codebook_maxrows = 60
+)
