@@ -46,7 +46,7 @@ df <- df |>
 
 # rename columns
 df <- df |>
-  rename( # general columns
+  dplyr::rename( # general columns
          id = participant_id,
          day = day_ind,
          beep = occ_ind,
@@ -117,11 +117,17 @@ df <- df |>
 # first need to set locale to English to ensure that month names are correctly parsed
 Sys.setlocale("LC_TIME", "C")
 
-
 df <- df |>
   dplyr::mutate(across(c(created, scheduled, uploaded), ~ lubridate::dmy_hm(.)))
 
 
+# check all character columns to convert NA character to proper NA
+df <- df |>
+  dplyr::mutate(across(where(is.character), ~ na_if(., "NA")))
+
+# also convert NaN to NA
+df <- df |>
+  dplyr::mutate(across(where(is.numeric), ~ na_if(., NaN)))
 
 
 # Check requirements ------------------------------------------------------
