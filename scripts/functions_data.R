@@ -54,10 +54,34 @@ create_metadata_json <- function(dataset_id_char,
       )
   }
 
+  # preserve existing changelog if JSON already exists
+  existing_json_path <- here::here(
+    "data", "metadata",
+    paste0(dataset_id_char, "_", tolower(dataset_info$Author), "_metadata.json")
+  )
+
+  existing <- if (file.exists(existing_json_path)) {
+    jsonlite::read_json(existing_json_path)
+  } else {
+    NULL
+  }
+  existing_changelog <- if (is.null(existing$changelog)) list() else existing$changelog
+  dataset_version <- if (!is.null(dataset_info$dataset_version) &&
+                         !is.na(dataset_info$dataset_version) &&
+                         nzchar(dataset_info$dataset_version)) {
+    dataset_info$dataset_version
+  } else if (!is.null(existing$dataset_version)) {
+    existing$dataset_version
+  } else {
+    "1.0.0"
+  }
+
+
   # Construct JSON structure
   list(
     first_author = dataset_info$Author,
     dataset_id = dataset_info$dataset_id,
+    dataset_version = dataset_version,
     year = dataset_info$Year,
     reference_a = dataset_info$`Reference A`,
     reference_b = dataset_info$`Reference B`,
@@ -82,6 +106,7 @@ create_metadata_json <- function(dataset_id_char,
     additional_comments = dataset_info$`additional comments`,
     coder_data = dataset_info$`Coder Data`,
     coder_metadata = dataset_info$`Coder Metadata`,
+    changelog = existing$changelog,
     features = dataset_features
   )
 }
