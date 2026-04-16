@@ -20,7 +20,7 @@
   "implicit_missingness": "yes",
   "raw_time_stamp": "yes",
   "sampling_scheme": "6x/day semi-randomized prompts within 30-minute intervals with 75 minutes between intervals and a 45-minute expiration time for each prompt",
-  "participants": null,
+  "participants": "adults between 18-65",
   "coding_file": "0073_sicorello_variables",
   "additional_comments": "did not convert timestamps to time columns as there is additional timezone information available; items originally in German",
   "coder_data": "Björn Siepe",
@@ -113,7 +113,7 @@
     {
       "name": "created",
       "description": "Creation time beep",
-      "variable_type": "",
+      "variable_type": "PosixCt",
       "coding": "",
       "answer_categories": "",
       "details": "",
@@ -127,7 +127,7 @@
     {
       "name": "scheduled",
       "description": "Scheduled time beep",
-      "variable_type": "",
+      "variable_type": "PosixCt",
       "coding": "",
       "answer_categories": "",
       "details": "",
@@ -141,7 +141,7 @@
     {
       "name": "started",
       "description": "Start time beep",
-      "variable_type": "",
+      "variable_type": "PosixCt",
       "coding": "",
       "answer_categories": "",
       "details": "",
@@ -155,7 +155,7 @@
     {
       "name": "completed",
       "description": "Completion time beep",
-      "variable_type": "",
+      "variable_type": "PosixCt",
       "coding": "",
       "answer_categories": "",
       "details": "",
@@ -169,7 +169,7 @@
     {
       "name": "expired",
       "description": "Expired",
-      "variable_type": "",
+      "variable_type": "PosixCt",
       "coding": "",
       "answer_categories": "",
       "details": "",
@@ -183,7 +183,7 @@
     {
       "name": "uploaded",
       "description": "Uploaded",
-      "variable_type": "",
+      "variable_type": "PosixCt",
       "coding": "",
       "answer_categories": "",
       "details": "",
@@ -200,13 +200,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
+      "details": "I feel guilty for feeling this way.",
       "labels": "1 = not at all\n2 = somewhat\n3 = partly\n4 = very much\n5 = completely",
       "transformation": "",
-      "source": "",
+      "source": "S-DERS",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "guilt, emotion dysregulation, emotion regulation",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "out_of_control",
@@ -214,13 +214,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
+      "details": "I feel out of control.",
       "labels": "1 = not at all\n2 = somewhat\n3 = partly\n4 = very much\n5 = completely",
       "transformation": "",
-      "source": "",
+      "source": "S-DERS",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "control loss, emotion dysregulation, emotion regulation",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "embarrassed_emotion",
@@ -228,13 +228,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
+      "details": "I am embarrassed for feeling this way.",
       "labels": "1 = not at all\n2 = somewhat\n3 = partly\n4 = very much\n5 = completely",
       "transformation": "",
-      "source": "",
+      "source": "S-DERS",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "embarrassment, emotion dysregulation, emotion regulation",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "negative_self_thoughts",
@@ -242,13 +242,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
+      "details": "I am feeling very bad about myself.",
       "labels": "1 = not at all\n2 = somewhat\n3 = partly\n4 = very much\n5 = completely",
       "transformation": "",
-      "source": "",
+      "source": "S-DERS",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "negative self-perception, self-perception, self-concept",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "emotion_confusion",
@@ -256,13 +256,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
+      "details": "I have no idea how I am feeling.",
       "labels": "1 = not at all\n2 = somewhat\n3 = partly\n4 = very much\n5 = completely",
       "transformation": "",
-      "source": "",
+      "source": "S-DERS",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "emotion clarity, emotion dysregulation, emotion regulation",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "ashamed_emotion",
@@ -270,13 +270,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
+      "details": "I feel ashamed with myself for feeling this way.",
       "labels": "1 = not at all\n2 = somewhat\n3 = partly\n4 = very much\n5 = completely",
       "transformation": "",
-      "source": "",
+      "source": "S-DERS",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "shame, emotion dysregulation, emotion regulation",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "task_difficulty",
@@ -284,13 +284,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
+      "details": "I am having difficulty doing the things I need to do right now.",
       "labels": "1 = not at all\n2 = somewhat\n3 = partly\n4 = very much\n5 = completely",
       "transformation": "",
-      "source": "",
+      "source": "S-DERS",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "task interference, goal pursuit, self-regulation",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "prolonged_emotion_expectation",
@@ -298,13 +298,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
+      "details": "I believe that I will continue feeling this way for a long time.",
       "labels": "1 = not at all\n2 = somewhat\n3 = partly\n4 = very much\n5 = completely",
       "transformation": "",
-      "source": "",
+      "source": "S-DERS",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "emotion persistence belief, emotion dysregulation, emotion regulation",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "annoyed_at_self",
@@ -312,13 +312,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
+      "details": "I am angry with myself for feeling this way.",
       "labels": "1 = not at all\n2 = somewhat\n3 = partly\n4 = very much\n5 = completely",
       "transformation": "",
-      "source": "",
+      "source": "S-DERS",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "anger, emotion disregulation, emotion regulation, affect, negative affect",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "behavior_control_difficulty",
@@ -326,13 +326,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
+      "details": "I am having difficulty controlling my behaviors.",
       "labels": "1 = not at all\n2 = somewhat\n3 = partly\n4 = very much\n5 = completely",
       "transformation": "",
-      "source": "",
+      "source": "S-DERS",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "impulse control, self-control, self-regulation, big five, conscientiousness",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "confused_emotions",
@@ -340,13 +340,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
+      "details": "I am confused about how I feel.",
       "labels": "1 = not at all\n2 = somewhat\n3 = partly\n4 = very much\n5 = completely",
       "transformation": "",
-      "source": "",
+      "source": "S-DERS",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "emotion clarity, emotion dysregulation, emotion regulation",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "down_expectation",
@@ -354,13 +354,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
+      "details": "I believe that I am going to end up feeling very depressed.",
       "labels": "1 = not at all\n2 = somewhat\n3 = partly\n4 = very much\n5 = completely",
       "transformation": "",
-      "source": "",
+      "source": "S-DERS",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "expectation, emotion dysregulation, emotion regulation",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "emotions_out_of_control",
@@ -368,13 +368,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
+      "details": "My emotions feel out of control.",
       "labels": "1 = not at all\n2 = somewhat\n3 = partly\n4 = very much\n5 = completely",
       "transformation": "",
-      "source": "",
+      "source": "S-DERS",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "control loss, emotion dysregulation, emotion regulation",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "annoyed_at_self_emotion",
@@ -382,13 +382,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
+      "details": "I am irritated with myself for feeling this way.",
       "labels": "1 = not at all\n2 = somewhat\n3 = partly\n4 = very much\n5 = completely",
       "transformation": "",
-      "source": "",
+      "source": "S-DERS",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "irritated, negative affect, affect, emotion dysregulation, emotion regulation",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "weak_emotion",
@@ -396,13 +396,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
+      "details": "I feel like I'm a weak person for feeling this way.",
       "labels": "1 = not at all\n2 = somewhat\n3 = partly\n4 = very much\n5 = completely",
       "transformation": "",
-      "source": "",
+      "source": "S-DERS",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "self-perception, emotion dysregulation, emotion regulation",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "overwhelming_emotions",
@@ -410,13 +410,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
+      "details": "My emotions feel overwhelming.",
       "labels": "1 = not at all\n2 = somewhat\n3 = partly\n4 = very much\n5 = completely",
       "transformation": "",
-      "source": "",
+      "source": "S-DERS",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "negative affect, affect, emotion dysregulation, emotion regulation",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "affect_grid_x",
@@ -429,7 +429,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "valence, affect",
       "comments": ""
     },
     {
@@ -443,7 +443,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
+      "construct": "arousal, affect",
       "comments": ""
     },
     {
@@ -452,13 +452,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
-      "labels": "",
+      "details": "...had contact with people/ were with people to increase your positive feelings?",
+      "labels": "1 = Does not apply at all,\n2 = Applies somewhat,\n3 = Applies fairly well,\n4 = Applies quite well,\n5 = Applies completely",
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "social emotion regulation, emotion regulation, social behavior, social interaction",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "others_perspective_giving",
@@ -466,13 +466,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
-      "labels": "",
+      "details": "...experienced that other people tried to remind you to worry less or that other people are worse off?",
+      "labels": "1 = Does not apply at all,\n2 = Applies somewhat,\n3 = Applies fairly well,\n4 = Applies quite well,\n5 = Applies completely",
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "social emotion regulation, emotion regulation, social behavior, social interaction",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "received_comfort",
@@ -480,13 +480,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
-      "labels": "",
+      "details": "...experienced that other people tried to calm you down or to comfort you?",
+      "labels": "1 = Does not apply at all,\n2 = Applies somewhat,\n3 = Applies fairly well,\n4 = Applies quite well,\n5 = Applies completely",
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "social emotion regulation, emotion regulation, social interaction",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "received_coping_examples",
@@ -494,13 +494,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
-      "labels": "",
+      "details": "...learned from other people how they have dealt with an emotional situation in the past or how they would behave in your place?",
+      "labels": "1 = Does not apply at all,\n2 = Applies somewhat,\n3 = Applies fairly well,\n4 = Applies quite well,\n5 = Applies completely",
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "coping, social emotion regulation, emotion regulation, social interaction",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "negative_event",
@@ -508,13 +508,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "7",
-      "details": "",
+      "details": "Have you had one or more bad experiences since the last survey? How bad was your worst experience?",
       "labels": "",
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "negative events, life events",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "positive_event",
@@ -522,13 +522,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "7",
-      "details": "",
+      "details": "Have you had one or more good experiences since the last survey? How good was your best experience?",
       "labels": "",
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "positive events, life events",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "impulse_contact_emotion_regulation",
@@ -536,13 +536,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "7",
-      "details": "",
+      "details": "Do you currently feel the urge to seek out another person for support in regulating your emotions?",
       "labels": "",
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "regulation impulse, emotion regulation",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "impulse_self_regulation",
@@ -550,13 +550,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "7",
-      "details": "",
+      "details": "Do you currently feel the urge to regulate your emotions on your own?",
       "labels": "",
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "regulation impulse, emotion regulation",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "quest_duration",
@@ -575,7 +575,7 @@
     {
       "name": "time",
       "description": "Time",
-      "variable_type": "",
+      "variable_type": "numeric",
       "coding": "",
       "answer_categories": "",
       "details": "",
@@ -592,13 +592,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
-      "labels": "",
-      "transformation": "",
-      "source": "",
+      "details": "I am paying attention to how I feel.",
+      "labels": "1 = not at all\n2 = somewhat\n3 = partly\n4 = very much\n5 = completely",
+      "transformation": "reverse coding",
+      "source": "S-DERS",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "emotion awareness, emotion regulation",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "acknowledge_emotions",
@@ -606,13 +606,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
-      "labels": "",
-      "transformation": "",
-      "source": "",
+      "details": "I am acknowledging my emotions.",
+      "labels": "1 = not at all\n2 = somewhat\n3 = partly\n4 = very much\n5 = completely",
+      "transformation": "reverse coding",
+      "source": "S-DERS",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "emotion acceptance, emotion regulation",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "care_about_emotions",
@@ -620,13 +620,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
-      "labels": "",
-      "transformation": "",
-      "source": "",
+      "details": "I care about what I am feeling.",
+      "labels": "1 = not at all\n2 = somewhat\n3 = partly\n4 = very much\n5 = completely",
+      "transformation": "reverse coding",
+      "source": "S-DERS",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "emotion regulation",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "emotion_exploration",
@@ -634,13 +634,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
-      "labels": "",
-      "transformation": "",
-      "source": "",
+      "details": "I am taking time to figure out what I am really feeling.",
+      "labels": "1 = not at all\n2 = somewhat\n3 = partly\n4 = very much\n5 = completely",
+      "transformation": "reverse coding",
+      "source": "S-DERS",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "emotion regulation",
+      "comments": "Item wording originally in German"
     },
     {
       "name": "emotions_valid",
@@ -648,13 +648,13 @@
       "variable_type": "rating_scale",
       "coding": "",
       "answer_categories": "5",
-      "details": "",
-      "labels": "",
-      "transformation": "",
-      "source": "",
+      "details": "I believe that my feelings are valid and important.",
+      "labels": "1 = not at all\n2 = somewhat\n3 = partly\n4 = very much\n5 = completely",
+      "transformation": "reverse coding",
+      "source": "S-DERS",
       "assessment_type": "ESM",
-      "construct": "",
-      "comments": ""
+      "construct": "emotion regulation",
+      "comments": "Item wording originally in German"
     }
   ]
 }
