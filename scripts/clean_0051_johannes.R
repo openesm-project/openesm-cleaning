@@ -79,8 +79,8 @@ df <- df |>
 
 # recode binary to numbers
 df <- df |>
-  mutate(survey_taken = if_else(survey_taken == "Yes", 1, 0)) |>
-  mutate(concentrated_activity_binary = if_else(concentrated_activity_binary == "Yes", 1, 0))
+  mutate(survey_taken = if_else(survey_taken == "Yes", 1, 0, missing = NA_integer_)) |>
+  mutate(concentrated_activity_binary = if_else(concentrated_activity_binary == 1, 1, 0, missing = NA_integer_))
 
 # recode IDs to numeric factors instead of emails
 df <- df |>

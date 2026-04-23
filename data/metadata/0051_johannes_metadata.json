@@ -1,6 +1,7 @@
 {
   "first_author": "Johannes",
   "dataset_id": "0051",
+  "dataset_version": "1.0.0",
   "year": 2021,
   "reference_a": "@article{johannes2021,\n  title = {The relationship between online vigilance and affective well-being in everyday life: {{Combining}} smartphone logging with experience sampling},\n  shorttitle = {The relationship between online vigilance and affective well-being in everyday life},\n  author = {Johannes, Niklas and Meier, Adrian and Reinecke, Leonard and Ehlert, Saara and Setiawan, Dinda Nuranissa and Walasek, Nicole and Dienlin, Tobias and Buijzen, Moniek and Veling, Harm},\n  date = {2021-09-03},\n  journaltitle = {Media Psychology},\n  volume = {24},\n  number = {5},\n  pages = {581--605},\n  publisher = {Routledge},\n  issn = {1521-3269},\n  doi = {10.1080/15213269.2020.1768122}\n}",
   "reference_b": null,
@@ -25,6 +26,7 @@
   "additional_comments": "some participants pre-excluded due to compliance by authors",
   "coder_data": "Björn Siepe",
   "coder_metadata": "Björn Siepe",
+  "changelog": {},
   "features": [
     {
       "name": "id",
