@@ -14,3 +14,4 @@
 !/data/raw/.gitkeep
 /data/clean/*
 !/data/clean/.gitkeep
+.positai
