@@ -1,6 +1,7 @@
 {
   "first_author": "Nestler",
   "dataset_id": "0002",
+  "dataset_version": "1.0.0",
   "year": 2022,
   "reference_a": "@article{nestler2022,\n  title = {A lasso and a regression tree mixed-effect model with random effects for the level, the residual variance, and the autocorrelation},\n  author = {Nestler, Steffen and Humberg, Sarah},\n  date = {2022-06-01},\n  journaltitle = {Psychometrika},\n  shortjournal = {Psychometrika},\n  volume = {87},\n  number = {2},\n  pages = {506--532},\n  doi = {10.1007/s11336-021-09787-w}\n}",
   "reference_b": null,
@@ -25,6 +26,7 @@
   "additional_comments": "part of the FLIP study",
   "coder_data": "Björn Siepe",
   "coder_metadata": "Björn Siepe",
+  "changelog": {},
   "features": [
     {
       "name": "id",
@@ -71,7 +73,7 @@
     {
       "name": "sociable",
       "description": "Sociable",
-      "variable_type": "numeric",
+      "variable_type": "rating_scale",
       "coding": "Today I was sociable\n\n1 (not at all) to 6 (extremely)\n (grand-mean centered)",
       "answer_categories": "6",
       "details": "Today I was sociable",
@@ -85,7 +87,7 @@
     {
       "name": "creative",
       "description": "Creative",
-      "variable_type": "numeric",
+      "variable_type": "rating_scale",
       "coding": "Today I was creative\n\n1 (not at all) to 6 (extremely)\n (grand-mean centered)",
       "answer_categories": "6",
       "details": "Today I was creative",
@@ -99,7 +101,7 @@
     {
       "name": "friendly",
       "description": "Friendly",
-      "variable_type": "numeric",
+      "variable_type": "rating_scale",
       "coding": "Today I was friendly\n\n1 (not at all) to 6 (extremely)\n (grand-mean centered)",
       "answer_categories": "6",
       "details": "Today I was friendly",
@@ -113,7 +115,7 @@
     {
       "name": "organised",
       "description": "Organised",
-      "variable_type": "numeric",
+      "variable_type": "rating_scale",
       "coding": "Today I was organised\n\n1 (not at all) to 6 (extremely)\n(grand-mean centered)",
       "answer_categories": "6",
       "details": "Today I was organised",
@@ -127,7 +129,7 @@
     {
       "name": "self_esteem",
       "description": "Satisfied with myself",
-      "variable_type": "numeric",
+      "variable_type": "rating_scale",
       "coding": "Today I was satisfied with myself\n\n1 (not at all) to 6 (extremely)\n(self-esteem, grand-mean centered)",
       "answer_categories": "6",
       "details": "Today I was satisfied with myself",
