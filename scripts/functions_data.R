@@ -81,12 +81,13 @@ create_metadata_json <- function(dataset_id_char,
   list(
     first_author = dataset_info$Author,
     dataset_id = dataset_info$dataset_id,
-    dataset_version = dataset_version,
     year = dataset_info$Year,
     reference_a = dataset_info$`Reference A`,
     reference_b = dataset_info$`Reference B`,
     paper_doi = dataset_info$`Paper DOI`,
     zenodo_doi = dataset_info$`Zenodo DOI`,
+    dataset_version = dataset_version,
+    changelog = existing$changelog,
     link_to_data = dataset_info$`Link to data`,
     license = dataset_info$`License`,
     link_to_codebook = dataset_info$`Optional: Link to Codebook`,
@@ -106,7 +107,6 @@ create_metadata_json <- function(dataset_id_char,
     additional_comments = dataset_info$`additional comments`,
     coder_data = dataset_info$`Coder Data`,
     coder_metadata = dataset_info$`Coder Metadata`,
-    changelog = existing$changelog,
     features = dataset_features
   )
 }
