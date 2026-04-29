@@ -6,6 +6,15 @@
   "reference_b": null,
   "paper_doi": "https://doi.org/10.31234/osf.io/8mzvu",
   "zenodo_doi": null,
+  "dataset_version": "1.0.0",
+  "changelog": {
+    {
+      "date": "2026-04-29",
+      "description": "Initial release.",
+      "type": "data",
+      "dataset_version": "1.0.0"
+    }
+  },
   "link_to_data": "https://github.com/MaurizioSicorello/SDERSvalid_Analysis/blob/main/data/SDERSvalid_DailyLife_data_preprocessed.csv",
   "license": "CC BY-NC 4.0",
   "link_to_codebook": "https://github.com/MaurizioSicorello/SDERSvalid_Analysis/blob/main/data/SDERSvalid_Codebook.xlsx",
@@ -25,6 +34,7 @@
   "additional_comments": "did not convert timestamps to time columns as there is additional timezone information available; items originally in German",
   "coder_data": "Björn Siepe",
   "coder_metadata": "Björn Siepe",
+
   "features": [
     {
       "name": "id",
