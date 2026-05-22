@@ -52,29 +52,48 @@ jobs:
           [ -f scripts/generate_descriptives_index.js ] && node scripts/generate_descriptives_index.js || echo "generate_descriptives_index.js not found, skipping"
           [ -f scripts/generate_dataset_pages.js ] && node scripts/generate_dataset_pages.js || echo "generate_dataset_pages.js not found, skipping"
 
-      - name: Create pull request on openesm website
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.OPENESM_WEBSITE_PAT }}
-          path: _website
-          commit-message: 'chore: update descriptives data'
-          title: 'chore: update descriptives data [automated]'
-          body: |
-            ## Automated descriptives update
+      - name: Commit and push to website branch
+        working-directory: _website
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B descriptives-data-update
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes — skipping PR"
+            exit 0
+          fi
+          git commit -m "chore: update descriptives data"
+          git push --force-with-lease origin descriptives-data-update
+        env:
+          GITHUB_TOKEN: ${{ secrets.OPENESM_WEBSITE_PAT }}
 
-            | Field | Value |
-            |---|---|
-            | Run | [#${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) |
-            | Source commit | [${{ github.sha }}](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}) |
+      - name: Create or update pull request
+        run: |
+          BODY="## Automated descriptives update
 
-            JSON files were copied from `descriptives/output/` in openesm-cleaning.
-            The website index and dataset pages were regenerated automatically.
+          | Field | Value |
+          |---|---|
+          | Run | [#${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) |
+          | Source commit | [${{ github.sha }}](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}) |
 
-            **Please review the diff before merging.**
+          JSON files were copied from \`descriptives/output/\` in openesm-cleaning.
 
-            ---
-            *Triggered manually via workflow_dispatch.*
-          branch: descriptives-data-update
-          base: main
-          delete-branch: true
-          labels: 'automated,descriptives'
+          **Please review the diff before merging.**"
+
+          PR=$(gh pr list --repo bsiepe/openesm \
+                 --head descriptives-data-update --base main \
+                 --json number --jq '.[0].number // empty')
+          if [ -n "$PR" ]; then
+            echo "Updating existing PR #$PR"
+            gh pr edit "$PR" --repo bsiepe/openesm --body "$BODY"
+          else
+            gh pr create \
+              --repo bsiepe/openesm \
+              --head descriptives-data-update \
+              --base main \
+              --title "chore: update descriptives data [automated]" \
+              --body "$BODY"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.OPENESM_WEBSITE_PAT }}
