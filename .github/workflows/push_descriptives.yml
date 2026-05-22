@@ -49,8 +49,8 @@ jobs:
       - name: Regenerate website index and dataset pages
         working-directory: _website
         run: |
-          node scripts/generate_descriptives_index.js
-          node scripts/generate_dataset_pages.js
+          [ -f scripts/generate_descriptives_index.js ] && node scripts/generate_descriptives_index.js || echo "generate_descriptives_index.js not found, skipping"
+          [ -f scripts/generate_dataset_pages.js ] && node scripts/generate_dataset_pages.js || echo "generate_dataset_pages.js not found, skipping"
 
       - name: Create pull request on openesm website
         uses: peter-evans/create-pull-request@v6
