@@ -6,11 +6,14 @@ This repository contains the cleaning scripts and metadata for the [openESM Data
 ## Repository structure
 
 ```
-scripts/          Cleaning scripts (one per dataset) + shared utility functions
-data/metadata/    Harmonized metadata as JSON (one file per dataset)
-data/schema/      JSON Schema for metadata validation
-data/clean/       Cleaned data files (not in repo)
-data/raw/         Raw data files (not in repo, but links are available in metadata)
+scripts/              Cleaning scripts (one per dataset) + shared utility functions
+data/metadata/        Harmonized metadata as JSON (one file per dataset)
+data/schema/          JSON Schema for metadata validation
+data/clean/           Cleaned data files (not in repo)
+data/raw/             Raw data files (not in repo, but links are available in metadata)
+descriptives/         Per-participant descriptive statistics pipeline
+  compute_descriptives.R   Computes stats and writes one JSON per dataset to output/
+  output/                  Generated JSON files (committed; pushed to website via CI)
 ```
 
 ## Workflow
@@ -37,6 +40,20 @@ Each dataset goes through the following steps:
 ## Experimental: AI-assisted annotation (`scripts/functions_annotation.R`)
 
 `generate_annotation_prompt()` assembles a structured prompt from the cleaned data frame, an optional codebook (PDF or XLSX), the cleaning script, and the existing construct vocabulary. The prompt can be passed to an LLM to pre-fill variable metadata, which is then reviewed and converted to an xlsx coding sheet via `annotation_json_to_xlsx()`.
+
+## Descriptives pipeline
+
+Per-participant summary statistics (mean, SD, skewness, kurtosis, ICC, multimodality, etc.) are computed for every rating-scale ESM item and written to `descriptives/output/` as one JSON file per dataset.
+
+```bash
+# All datasets
+Rscript descriptives/compute_descriptives.R
+
+# Specific datasets only
+Rscript descriptives/compute_descriptives.R 0001 0042
+```
+
+After running, commit the output files and trigger the **Push descriptives to openesm website** workflow manually from the Actions tab. This opens a PR on the website repo with the updated files.
 
 ## For further questions
 

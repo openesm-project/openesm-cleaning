@@ -1,0 +1,80 @@
+name: Push descriptives to openesm website
+
+# Manual trigger only. Run compute_descriptives.R locally first, commit the
+# output files, then trigger this workflow to open a PR on the website repo.
+#
+# Required secret: OPENESM_WEBSITE_PAT — PAT with `repo` scope on bsiepe/openesm
+# (Settings → Secrets and variables → Actions → New repository secret)
+on:
+  workflow_dispatch:
+
+jobs:
+  push-descriptives:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout openesm-cleaning
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Checkout openesm website
+        uses: actions/checkout@v4
+        with:
+          repository: bsiepe/openesm
+          token: ${{ secrets.OPENESM_WEBSITE_PAT }}
+          path: _website
+
+      - name: Install website dependencies
+        working-directory: _website
+        run: |
+          if [ -f package.json ]; then
+            npm install --no-save
+          fi
+
+      # Copy dataset JSON files; exclude the local index (website regenerates its own).
+      - name: Copy descriptives to website
+        run: |
+          mkdir -p _website/website/static/data/descriptives
+          for f in descriptives/output/*.json; do
+            [[ "$(basename "$f")" == "descriptives_index.json" ]] && continue
+            cp "$f" _website/website/static/data/descriptives/
+          done
+
+      - name: Regenerate website index and dataset pages
+        working-directory: _website
+        run: |
+          node scripts/generate_descriptives_index.js
+          node scripts/generate_dataset_pages.js
+
+      - name: Create pull request on openesm website
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.OPENESM_WEBSITE_PAT }}
+          path: _website
+          commit-message: 'chore: update descriptives data'
+          title: 'chore: update descriptives data [automated]'
+          body: |
+            ## Automated descriptives update
+
+            | Field | Value |
+            |---|---|
+            | Run | [#${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) |
+            | Source commit | [${{ github.sha }}](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}) |
+
+            JSON files were copied from `descriptives/output/` in openesm-cleaning.
+            The website index and dataset pages were regenerated automatically.
+
+            **Please review the diff before merging.**
+
+            ---
+            *Triggered manually via workflow_dispatch.*
+          branch: descriptives-data-update
+          base: main
+          delete-branch: true
+          labels: 'automated,descriptives'
