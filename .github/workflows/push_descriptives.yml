@@ -64,7 +64,7 @@ jobs:
             exit 0
           fi
           git commit -m "chore: update descriptives data"
-          git push --force-with-lease origin descriptives-data-update
+          git push --force origin descriptives-data-update
         env:
           GITHUB_TOKEN: ${{ secrets.OPENESM_WEBSITE_PAT }}
 
