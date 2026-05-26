@@ -30,6 +30,20 @@ jobs:
           token: ${{ secrets.OPENESM_WEBSITE_PAT }}
           path: _website
 
+      # Switch to (or create) the PR branch BEFORE copying any files,
+      # so git does not refuse the checkout due to working-tree changes.
+      - name: Set up website branch
+        working-directory: _website
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin descriptives-data-update 2>/dev/null || true
+          if git rev-parse --verify origin/descriptives-data-update &>/dev/null; then
+            git checkout -b descriptives-data-update origin/descriptives-data-update
+          else
+            git checkout -b descriptives-data-update
+          fi
+
       - name: Install website dependencies
         working-directory: _website
         run: |
@@ -52,18 +66,9 @@ jobs:
           [ -f scripts/generate_descriptives_index.js ] && node scripts/generate_descriptives_index.js || echo "generate_descriptives_index.js not found, skipping"
           [ -f scripts/generate_dataset_pages.js ] && node scripts/generate_dataset_pages.js || echo "generate_dataset_pages.js not found, skipping"
 
-      - name: Commit and push to website branch
+      - name: Commit and push
         working-directory: _website
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Build on top of the existing remote branch if it exists (avoids force-push).
-          git fetch origin descriptives-data-update 2>/dev/null || true
-          if git rev-parse --verify origin/descriptives-data-update &>/dev/null; then
-            git checkout -b descriptives-data-update origin/descriptives-data-update
-          else
-            git checkout -b descriptives-data-update
-          fi
           git add -A
           if git diff --staged --quiet; then
             echo "No changes — skipping PR"
