@@ -1,10 +1,5 @@
 name: Push descriptives to openesm website
 
-# Manual trigger only. Run compute_descriptives.R locally first, commit the
-# output files, then trigger this workflow to open a PR on the website repo.
-#
-# Required secret: OPENESM_WEBSITE_PAT — PAT with `repo` scope on openesm-project/openesm
-# (Settings → Secrets and variables → Actions → New repository secret)
 on:
   workflow_dispatch:
 
@@ -30,31 +25,32 @@ jobs:
           token: ${{ secrets.OPENESM_WEBSITE_PAT }}
           path: _website
 
-      # Switch to (or create) the PR branch BEFORE copying any files,
-      # so git does not refuse the checkout due to working-tree changes.
-      - name: Set up website branch
+      - name: Switch website repo to update branch
         working-directory: _website
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin descriptives-data-update 2>/dev/null || true
           if git rev-parse --verify origin/descriptives-data-update &>/dev/null; then
-            git checkout -b descriptives-data-update origin/descriptives-data-update
+            git checkout -B descriptives-data-update origin/descriptives-data-update
           else
-            git checkout -b descriptives-data-update
+            git checkout -B descriptives-data-update
           fi
 
       - name: Install website dependencies
         working-directory: _website
         run: |
-          if [ -f package.json ]; then
-            npm install --no-save
+          if [ -f package-lock.json ]; then
+            npm ci
+          elif [ -f package.json ]; then
+            npm install
           fi
+          npm install --no-save @citation-js/core
 
-      # Copy dataset JSON files; exclude the local index (website regenerates its own).
       - name: Copy descriptives to website
         run: |
           mkdir -p _website/website/static/data/descriptives
+          find _website/website/static/data/descriptives -type f -name '*.json' -delete
           for f in descriptives/output/*.json; do
             [[ "$(basename "$f")" == "descriptives_index.json" ]] && continue
             cp "$f" _website/website/static/data/descriptives/
@@ -66,7 +62,7 @@ jobs:
           [ -f scripts/generate_descriptives_index.js ] && node scripts/generate_descriptives_index.js || echo "generate_descriptives_index.js not found, skipping"
           [ -f scripts/generate_dataset_pages.js ] && node scripts/generate_dataset_pages.js || echo "generate_dataset_pages.js not found, skipping"
 
-      - name: Commit and push
+      - name: Commit and push to website branch
         working-directory: _website
         run: |
           git add -A
