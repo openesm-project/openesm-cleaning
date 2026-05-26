@@ -3,7 +3,7 @@ name: Push descriptives to openesm website
 # Manual trigger only. Run compute_descriptives.R locally first, commit the
 # output files, then trigger this workflow to open a PR on the website repo.
 #
-# Required secret: OPENESM_WEBSITE_PAT — PAT with `repo` scope on bsiepe/openesm
+# Required secret: OPENESM_WEBSITE_PAT — PAT with `repo` scope on openesm-project/openesm
 # (Settings → Secrets and variables → Actions → New repository secret)
 on:
   workflow_dispatch:
@@ -26,7 +26,7 @@ jobs:
       - name: Checkout openesm website
         uses: actions/checkout@v4
         with:
-          repository: bsiepe/openesm
+          repository: openesm-project/openesm
           token: ${{ secrets.OPENESM_WEBSITE_PAT }}
           path: _website
 
@@ -57,39 +57,62 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -B descriptives-data-update
+          # Build on top of the existing remote branch if it exists (avoids force-push).
+          git fetch origin descriptives-data-update 2>/dev/null || true
+          if git rev-parse --verify origin/descriptives-data-update &>/dev/null; then
+            git checkout -b descriptives-data-update origin/descriptives-data-update
+          else
+            git checkout -b descriptives-data-update
+          fi
           git add -A
           if git diff --staged --quiet; then
             echo "No changes — skipping PR"
             exit 0
           fi
           git commit -m "chore: update descriptives data"
-          git push --force origin descriptives-data-update
+          git push origin descriptives-data-update
         env:
           GITHUB_TOKEN: ${{ secrets.OPENESM_WEBSITE_PAT }}
 
       - name: Create or update pull request
         run: |
-          BODY="## Automated descriptives update
+          BODY="## Automated descriptives update — Schema v1.0
 
           | Field | Value |
           |---|---|
+          | Schema version | **1.0** (breaking change — see below) |
           | Run | [#${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) |
           | Source commit | [${{ github.sha }}](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}) |
 
-          JSON files were copied from \`descriptives/output/\` in openesm-cleaning.
+          ### Breaking schema changes from previous version
+          The per-person row format has been replaced with fully precomputed aggregates.
+          The frontend must be updated before merging.
 
-          **Please review the diff before merging.**"
+          **New top-level fields per item:** \`n_included\`, \`n_excluded\`, \`excluded_reasons\`, \`empirical_scale_range\`, \`mode_counts\`
 
-          PR=$(gh pr list --repo bsiepe/openesm \
+          **New \`stats\` object** (replaces per-person rows): one entry per statistic
+          (\`mean\`, \`sd\`, \`skewness\`, \`prop_floor\`, \`prop_ceil\`), each containing
+          \`median\`, \`iqr\`, and \`kde\` (100 {x,y} points).
+
+          **New \`person_dots\`** (optional, only when n_included ≤ 150): raw per-participant
+          values for individual-dot overlay on density plots.
+
+          **Removed:** per-person \`person_stats\` array, \`kurtosis\`, \`dip_p\`.
+
+          Statistical details are documented in the header of
+          [compute_descriptives.R](https://github.com/${{ github.repository }}/blob/main/descriptives/compute_descriptives.R).
+
+          **Please review the diff and confirm frontend compatibility before merging.**"
+
+          PR=$(gh pr list --repo openesm-project/openesm \
                  --head descriptives-data-update --base main \
                  --json number --jq '.[0].number // empty')
           if [ -n "$PR" ]; then
             echo "Updating existing PR #$PR"
-            gh pr edit "$PR" --repo bsiepe/openesm --body "$BODY"
+            gh pr edit "$PR" --repo openesm-project/openesm --body "$BODY"
           else
             gh pr create \
-              --repo bsiepe/openesm \
+              --repo openesm-project/openesm \
               --head descriptives-data-update \
               --base main \
               --title "chore: update descriptives data [automated]" \
