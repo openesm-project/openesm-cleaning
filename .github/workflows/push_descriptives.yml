@@ -52,7 +52,10 @@ jobs:
           mkdir -p _website/website/static/data/descriptives
           find _website/website/static/data/descriptives -type f -name '*.json' -delete
           for f in descriptives/output/*.json; do
-            [[ "$(basename "$f")" == "descriptives_index.json" ]] && continue
+            name="$(basename "$f")"
+            [[ "$name" == "descriptives_index.json" ]] && continue
+            [[ "$name" == "landing_stats.json" ]] && \
+              cp "$f" _website/website/static/data/landing_stats.json && continue
             cp "$f" _website/website/static/data/descriptives/
           done
 
