@@ -52,6 +52,14 @@ FALLBACK_EXCL <- c(       # dropped when no metadata JSON exists (heuristic)
   "duration", "time", "date", "time_ms", "sent", "expired"
 )
 
+# variable_type values that represent substantive observations (not admin/timestamps).
+# Includes passive sensing (numeric) and binary yes/no items.
+# Excludes "other" (mostly day/beep/duration — always non-NA) and PosixCt/Date.
+# NOTE: datasets 0022/0070/0066 have a few ESM items mis-typed as "other"; these
+# will be missed in the landing stats count — acceptable imprecision for a headline figure.
+LANDING_TYPES <- c("rating_scale", "numeric", "numerical",
+                   "binary", "categorical", "freetext")
+
 dir.create(OUTPUT_DIR, showWarnings = FALSE, recursive = TRUE)
 
 
@@ -168,6 +176,65 @@ get_items <- function(dataset_id, author, data_cols) {
     excl_rx <- paste0("^(", paste(FALLBACK_EXCL, collapse = "|"), ")$")
     data_cols[!grepl(excl_rx, data_cols)]
   }
+}
+
+
+# Resolve EMA variable names for landing stats (broader than rating_scale only).
+# Uses LANDING_TYPES to include passive sensing, binary, categorical, etc.
+# Falls back to FALLBACK_EXCL heuristic when no metadata exists.
+get_ema_vars <- function(dataset_id, author, data_cols) {
+  meta_path <- file.path(META_DIR,
+                         paste0(dataset_id, "_", author, "_metadata.json"))
+  if (file.exists(meta_path)) {
+    meta <- jsonlite::read_json(meta_path)
+    vars <- vapply(meta$features, function(f) {
+      if (f$variable_type %in% LANDING_TYPES) f$name else NA_character_
+    }, character(1L))
+    intersect(vars[!is.na(vars)], data_cols)
+  } else {
+    excl_rx <- paste0("^(", paste(FALLBACK_EXCL, collapse = "|"), ")$")
+    data_cols[!grepl(excl_rx, data_cols)]
+  }
+}
+
+# Compute landing page aggregate stats across ALL cleaned datasets.
+# A beep is "valid" if at least one EMA variable is non-NA — mirrors the
+# calc_observations() logic from openesm-paper/scripts/00_functions.R.
+# Always scans all _ts.tsv files so the totals are never partial.
+compute_landing_stats <- function() {
+  all_ts <- list.files(CLEAN_DIR, pattern = "_ts\\.tsv$", full.names = TRUE)
+
+  n_datasets     <- 0L
+  n_participants <- 0L
+  n_timepoints   <- 0L
+
+  for (ts_file in all_ts) {
+    stem       <- sub("_ts$", "", tools::file_path_sans_ext(basename(ts_file)))
+    parts      <- strsplit(stem, "_")[[1L]]
+    dataset_id <- parts[1L]
+    author     <- parts[2L]
+
+    data <- suppressMessages(readr::read_tsv(ts_file, show_col_types = FALSE))
+    if (!"id" %in% colnames(data)) next
+    data <- data[!is.na(data$id), ]
+
+    ema_vars <- get_ema_vars(dataset_id, author, colnames(data))
+    ema_vars <- intersect(ema_vars, colnames(data))
+    if (length(ema_vars) == 0L) next
+
+    n_datasets     <- n_datasets + 1L
+    n_participants <- n_participants + length(unique(data$id))
+    # valid beep = at least one EMA column is non-NA
+    n_timepoints   <- n_timepoints +
+      sum(rowSums(!is.na(data[, ema_vars, drop = FALSE])) > 0L)
+  }
+
+  list(
+    n_datasets     = as.integer(n_datasets),
+    n_participants = as.integer(n_participants),
+    n_timepoints   = as.integer(n_timepoints),
+    generated      = format(Sys.Date(), "%Y-%m-%d")
+  )
 }
 
 
@@ -354,3 +421,15 @@ writeLines(
   file.path(OUTPUT_DIR, "descriptives_index.json")
 )
 message("\nDone. Index rebuilt from ", length(out_files), " file(s).")
+
+# Landing page aggregate stats (always recomputed from all datasets)
+message("\nComputing landing page stats...")
+landing <- compute_landing_stats()
+writeLines(
+  jsonlite::toJSON(landing, auto_unbox = TRUE, pretty = FALSE),
+  file.path(OUTPUT_DIR, "landing_stats.json")
+)
+message("landing_stats.json: ",
+        landing$n_datasets, " datasets | ",
+        landing$n_participants, " participants | ",
+        landing$n_timepoints, " timepoints")
