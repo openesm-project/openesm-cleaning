@@ -1,32 +1,134 @@
-check_data <- function(data){
+# URL of the master metadata Google Sheet
+METADATA_URL <- "https://docs.google.com/spreadsheets/d/1ALGCq_jN6I4dcjWYQ_LQe9o52DGJItwdu9fCkwOh6fg/edit?pli=1&gid=0#gid=0"
 
-  # Check if the data is a dataframe
+# Validate a cleaned data frame.
+# Hard requirements (structure) abort with an error; everything else is a
+# warning so a legitimate discrepancy does not block saving. Pass dataset_info
+# (the metadata row) and variable_data (the coding sheet) to enable the
+# data-vs-metadata cross-checks.
+check_data <- function(data, dataset_info = NULL, variable_data = NULL){
+
+  # --- hard requirements (error) ---
   if(!is.data.frame(data)){
     stop("Data is not a dataframe")
   }
-
-  # Check if the data has an "id" column
-  if(!"id" %in% colnames(data)){
-    stop("Data does not have an 'id' column")
+  for (col in c("id", "day", "beep")) {
+    if (!col %in% colnames(data)) {
+      stop("Data does not have a '", col, "' column")
+    }
   }
-
-  # Check if the data has a "day" column
-  if(!"day" %in% colnames(data)){
-    stop("Data does not have a 'day' column")
-  }
-
-  # Check if the data has a "beep" column
-  if(!"beep" %in% colnames(data)){
-    stop("Data does not have a 'beep' column")
-  }
-
-  # Check if the column names are in snake case
   if(!all(colnames(janitor::clean_names(data)) == colnames(data))){
     stop("Column names are not in snake case. Use janitor::clean_names().")
   }
 
+  # --- soft checks (warning) ---
+  # string sentinels that should have been converted to real NA
+  sentinels <- c("NA", "NaN", "NULL", "", ".", "-99", "-999")
+  char_cols <- names(data)[vapply(data, is.character, logical(1))]
+  flagged <- char_cols[vapply(char_cols, function(col)
+    any(data[[col]] %in% sentinels, na.rm = TRUE), logical(1))]
+  if (length(flagged) > 0) {
+    warning("Possible unconverted missing values in: ",
+            paste(flagged, collapse = ", "),
+            ". Run recode_missing().", call. = FALSE)
+  }
+
+  # columns that are entirely NA (often a botched rename or select)
+  all_na <- names(data)[vapply(data, function(x) all(is.na(x)), logical(1))]
+  if (length(all_na) > 0) {
+    warning("Columns that are entirely NA: ",
+            paste(all_na, collapse = ", "), call. = FALSE)
+  }
+
+  # duplicate id-day-beep keys (only checked where day and beep are present)
+  keys <- data[!is.na(data$day) & !is.na(data$beep), c("id", "day", "beep")]
+  if (nrow(keys) > 0 && anyDuplicated(keys) > 0) {
+    warning(sum(duplicated(keys)),
+            " duplicated id-day-beep combination(s)", call. = FALSE)
+  }
+
+  # --- metadata cross-checks (warning) ---
+  if (!is.null(dataset_info)) {
+    n_data <- dplyr::n_distinct(data$id)
+    n_meta <- suppressWarnings(as.numeric(dataset_info$`N Participants`))
+    if (!is.na(n_meta) && n_data != n_meta) {
+      warning("Participant count mismatch: ", n_data, " unique ids in data vs ",
+              n_meta, " in metadata", call. = FALSE)
+    }
+  }
+
+  if (!is.null(variable_data) && "name" %in% names(variable_data)) {
+    meta_vars <- variable_data$name[!is.na(variable_data$name)]
+    structural <- c("id", "day", "beep", "counter")
+    only_data <- setdiff(setdiff(colnames(data), meta_vars), structural)
+    only_meta <- setdiff(meta_vars, colnames(data))
+    if (length(only_data) > 0) {
+      warning("Columns in data but not annotated in metadata: ",
+              paste(only_data, collapse = ", "), call. = FALSE)
+    }
+    if (length(only_meta) > 0) {
+      warning("Variables in metadata but not in data: ",
+              paste(only_meta, collapse = ", "), call. = FALSE)
+    }
+  }
+
   return("Data are clean.")
 
+}
+
+# Convert common string sentinels and numeric NaN to real NA.
+recode_missing <- function(data) {
+  data |>
+    dplyr::mutate(dplyr::across(where(is.character),
+                                ~ dplyr::na_if(., "NA"))) |>
+    dplyr::mutate(dplyr::across(where(is.character),
+                                ~ dplyr::na_if(., "NaN"))) |>
+    dplyr::mutate(dplyr::across(where(is.character),
+                                ~ dplyr::na_if(., ""))) |>
+    dplyr::mutate(dplyr::across(where(is.numeric),
+                                ~ ifelse(is.nan(.), NA, .)))
+}
+
+# Download a file from a direct URL unless it already exists.
+download_if_missing <- function(url, dest) {
+  if (!file.exists(dest)) {
+    utils::download.file(url, dest, mode = "wb")
+  }
+  invisible(dest)
+}
+
+# Retrieve a file from OSF unless it already exists, renaming it to dest.
+osf_download_if_missing <- function(osf_url, dest) {
+  if (!file.exists(dest)) {
+    f <- osfr::osf_retrieve_file(osf_url)
+    osfr::osf_download(f, path = dirname(dest))
+    file.rename(file.path(dirname(dest), f$name), dest)
+  }
+  invisible(dest)
+}
+
+# Read the coding sheet, build the metadata JSON and write it to data/metadata.
+# Reuses meta_data / variable_data if already loaded to avoid re-reading sheets.
+write_metadata <- function(dataset_id, author = NULL,
+                           meta_data = NULL, variable_data = NULL) {
+  did <- dataset_id
+  if (is.null(meta_data)) meta_data <- googlesheets4::read_sheet(METADATA_URL)
+  dataset_info <- dplyr::filter(meta_data, dataset_id == did)
+  if (is.null(variable_data)) {
+    variable_data <- googlesheets4::read_sheet(
+      dplyr::pull(dataset_info, "Coding File URL"))
+  }
+  # create_metadata_json() reads these from the global environment
+  meta_data <<- meta_data
+  variable_data <<- variable_data
+  if (is.null(author)) author <- tolower(dataset_info$Author)
+
+  meta_json <- create_metadata_json(did) |>
+    jsonlite::toJSON(pretty = TRUE, auto_unbox = TRUE)
+  path <- here::here("data", "metadata",
+                     paste0(did, "_", author, "_metadata.json"))
+  write(meta_json, path)
+  invisible(path)
 }
 
 # create metadata json file
