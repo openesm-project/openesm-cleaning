@@ -50,7 +50,7 @@ if(check_results == "Data are clean."){
 }
 
 # export column names
-write_csv(tibble(colnames(df)), here("0075_bayer_column_names.csv"), col_names = FALSE)
+write_csv(tibble(colnames(df)), here("data", "column_names", "0076_bayer_column_names.csv"), col_names = FALSE)
 
 
 # Create metadata ---------------------------------------------------------

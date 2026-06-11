@@ -4,7 +4,7 @@ library(here)
 library(googlesheets4)
 library(jsonlite)
 library(osfr)
-source(here("scripts", "functions_data.R"))
+source(here::here("scripts", "functions_data.R"))
 
 
 
