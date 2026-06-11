@@ -14,4 +14,6 @@
 !/data/raw/.gitkeep
 /data/clean/*
 !/data/clean/.gitkeep
+/data/column_names/*
+!/data/column_names/.gitkeep
 .positai
