@@ -54,8 +54,8 @@ jobs:
           for f in descriptives/output/*.json; do
             name="$(basename "$f")"
             [[ "$name" == "descriptives_index.json" ]] && continue
-            [[ "$name" == "landing_stats.json" ]] && \
-              cp "$f" _website/website/static/data/landing_stats.json && continue
+            # landing_stats.json is skipped until all descriptives datasets are live on the website
+            [[ "$name" == "landing_stats.json" ]] && continue
             cp "$f" _website/website/static/data/descriptives/
           done
 
