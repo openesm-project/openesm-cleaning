@@ -1,5 +1,5 @@
 # =============================================================================
-# descriptives/compute_descriptives.R   —   Schema version: 1.0
+# descriptives/compute_descriptives.R 
 #
 # Computes fully precomputed descriptive statistics for each rating-scale ESM
 # item and writes one JSON per dataset to descriptives/output/.
@@ -9,7 +9,7 @@
 #   Rscript descriptives/compute_descriptives.R 0001 0042  # specific datasets
 #
 # Statistical contract (shared with openesm-project/openesm frontend):
-#   Skewness    : e1071::skewness(type = 2) — bias-corrected (Excel-style SKEW)
+#   Skewness    : e1071::skewness(type = 2) — bias-corrected 
 #   Exclusion   : n_obs < 5  → "too_few_obs"
 #                 sd == 0    → "insufficient_variance"  (first match wins)
 #   ICC         : one-way ANOVA formulation, algebraically identical to the
@@ -26,7 +26,7 @@
 #                 minimum across all included participants for that item.
 #   prop_ceil   : same, using global item maximum.
 #   person_dots : raw per-participant values; only included when n_included ≤ 150.
-# =============================================================================
+
 
 suppressPackageStartupMessages({
   library(dplyr)
@@ -37,9 +37,9 @@ suppressPackageStartupMessages({
 })
 
 # --- Paths (edit here if directory structure changes) ------------------------
-CLEAN_DIR  <- here("data", "clean")
-META_DIR   <- here("data", "metadata")
-OUTPUT_DIR <- here("descriptives", "output")
+CLEAN_DIR  <- here::here("data", "clean")
+META_DIR   <- here::here("data", "metadata")
+OUTPUT_DIR <- here::here("descriptives", "output")
 
 # --- Constants ---------------------------------------------------------------
 MIN_OBS          <- 5L    # minimum non-missing obs per participant to be included
@@ -197,7 +197,10 @@ get_ema_vars <- function(dataset_id, author, data_cols) {
   }
 }
 
-# Compute landing page aggregate stats across ALL cleaned datasets.
+# Compute landing page aggregate stats across published datasets only.
+# A dataset is considered published if its metadata file contains a non-empty
+# zenodo_doi field. Datasets without metadata or with an empty zenodo_doi are
+# excluded so the landing page figures reflect only live data.
 # A beep is "valid" if at least one EMA variable is non-NA — mirrors the
 # calc_observations() logic from openesm-paper/scripts/00_functions.R.
 # Always scans all _ts.tsv files so the totals are never partial.
@@ -213,6 +216,14 @@ compute_landing_stats <- function() {
     parts      <- strsplit(stem, "_")[[1L]]
     dataset_id <- parts[1L]
     author     <- parts[2L]
+
+    # Only count datasets with a published Zenodo DOI
+    meta_path <- file.path(META_DIR,
+                           paste0(dataset_id, "_", author, "_metadata.json"))
+    if (!file.exists(meta_path)) next
+    meta <- jsonlite::read_json(meta_path)
+    zenodo_doi <- meta$zenodo_doi
+    if (is.null(zenodo_doi) || !nzchar(trimws(zenodo_doi))) next
 
     data <- suppressMessages(readr::read_tsv(ts_file, show_col_types = FALSE))
     if (!"id" %in% colnames(data)) next
@@ -433,3 +444,4 @@ message("landing_stats.json: ",
         landing$n_datasets, " datasets | ",
         landing$n_participants, " participants | ",
         landing$n_timepoints, " timepoints")
+ 
