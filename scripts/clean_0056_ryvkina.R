@@ -4,14 +4,14 @@ library(here)
 library(googlesheets4)
 library(jsonlite)
 library(osfr)
-source(here("scripts", "functions_data.R"))
+source(here::here("scripts", "functions_data.R"))
 
 
 # Data --------------------------------------------------------------------
 # donwload data
 if(!file.exists(here::here("data", "raw", "0056_ryvkina_ts_raw.csv"))){
   osf_retrieve_file("https://osf.io/9dtfz") |>
-    osf_download(path = here("data", "raw"))
+    osf_download(path = here::here("data", "raw"))
 
   # rename data
   file_name <- osf_retrieve_file("https://osf.io/9dtfz") |> pull(name)
@@ -19,7 +19,7 @@ if(!file.exists(here::here("data", "raw", "0056_ryvkina_ts_raw.csv"))){
 }
 
 # read data
-df_raw <- read.csv(here("data", "raw", "0056_ryvkina_ts_raw.csv"))
+df_raw <- read.csv(here::here("data", "raw", "0056_ryvkina_ts_raw.csv"))
 
 
 # Cleaning ----------------------------------------------------------------
