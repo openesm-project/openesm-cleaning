@@ -3,7 +3,7 @@ library(tidyverse)
 library(here)
 library(googlesheets4)
 library(jsonlite)
-source(here("scripts", "functions_data.R"))
+source(here::here("scripts", "functions_data.R"))
 
 
 
