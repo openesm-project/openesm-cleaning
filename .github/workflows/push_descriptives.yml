@@ -60,6 +60,11 @@ jobs:
             cp "$f" _website/website/static/data/descriptives/
           done
 
+      - name: Copy similarity data to website
+        run: |
+          mkdir -p _website/website/static/data/similarity
+          cp data/similarity/similar_items.json _website/website/static/data/similarity/similar_items.json
+
       - name: Regenerate website index and dataset pages
         working-directory: _website
         run: |
