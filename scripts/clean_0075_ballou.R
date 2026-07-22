@@ -81,7 +81,7 @@ variable_data <- read_sheet(pull(dataset_info, "Coding File URL"))
 
 # Check requirements ------------------------------------------------------
 # errors abort; warnings flag likely problems but still allow saving
-check_results <- check_data(df, dataset_info, variable_data)
+check_results <- check_data(df, dataset_info, variable_data, verbose = TRUE)
 
 # if it returns "Data are clean.", save the data
 if(check_results == "Data are clean."){

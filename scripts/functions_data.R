@@ -6,7 +6,11 @@ METADATA_URL <- "https://docs.google.com/spreadsheets/d/1ALGCq_jN6I4dcjWYQ_LQe9o
 # warning so a legitimate discrepancy does not block saving. Pass dataset_info
 # (the metadata row) and variable_data (the coding sheet) to enable the
 # data-vs-metadata cross-checks.
-check_data <- function(data, dataset_info = NULL, variable_data = NULL){
+# verbose = TRUE returns a data frame summarising the answer_categories check
+# for all rating_scale items (columns: item, n_cats_meta, n_distinct,
+# range_min, range_max, status).
+check_data <- function(data, dataset_info = NULL, variable_data = NULL,
+                       verbose = FALSE){
 
   # --- hard requirements (error) ---
   if(!is.data.frame(data)){
@@ -73,12 +77,14 @@ check_data <- function(data, dataset_info = NULL, variable_data = NULL){
 
     # check answer_categories against empirical data for rating_scale items
     if (all(c("variable_type", "answer_categories") %in% names(variable_data))) {
+      rating_scale_types <- c("rating_scale", "Likert", "ordinal", "VAS")
       rs_rows <- variable_data[
         !is.na(variable_data$variable_type) &
-        variable_data$variable_type == "rating_scale" &
+        variable_data$variable_type %in% rating_scale_types &
         !is.na(variable_data$answer_categories) &
         nzchar(trimws(as.character(variable_data$answer_categories))),
       ]
+      check_summary <- vector("list", nrow(rs_rows))
       for (i in seq_len(nrow(rs_rows))) {
         col_name <- rs_rows$name[i]
         n_cats_meta <- suppressWarnings(as.numeric(rs_rows$answer_categories[i]))
@@ -87,25 +93,43 @@ check_data <- function(data, dataset_info = NULL, variable_data = NULL){
         if (length(col_vals) == 0) next
 
         n_unique <- dplyr::n_distinct(col_vals)
-        if (n_unique > n_cats_meta) {
+        col_num <- if (is.numeric(col_vals)) col_vals else
+          suppressWarnings(as.numeric(col_vals))
+        is_integer_like <- !anyNA(col_num) && all(col_num == floor(col_num))
+        range_min <- if (is_integer_like) min(col_num) else NA_real_
+        range_max <- if (is_integer_like) max(col_num) else NA_real_
+        emp_range  <- if (is_integer_like) range_max - range_min + 1 else NA_real_
+
+        status <- if (n_unique > n_cats_meta) {
           warning("Column '", col_name, "': ", n_unique,
                   " distinct values in data but answer_categories = ", n_cats_meta,
                   " in metadata", call. = FALSE)
+          "n_distinct_mismatch"
+        } else if (is_integer_like && emp_range > n_cats_meta) {
+          warning("Column '", col_name, "': empirical range ",
+                  range_min, "-", range_max,
+                  " (", emp_range, " levels) exceeds answer_categories = ",
+                  n_cats_meta, " in metadata", call. = FALSE)
+          "range_mismatch"
         } else {
-          # also check empirical range for integer-like scales;
-          # coerce to numeric safely so character-coded columns are not silently skipped
-          col_num <- if (is.numeric(col_vals)) col_vals else
-            suppressWarnings(as.numeric(col_vals))
-          if (!anyNA(col_num) && all(col_num == floor(col_num))) {
-            emp_range <- max(col_num) - min(col_num) + 1
-            if (emp_range > n_cats_meta) {
-              warning("Column '", col_name, "': empirical range ",
-                      min(col_num), "-", max(col_num),
-                      " (", emp_range, " levels) exceeds answer_categories = ",
-                      n_cats_meta, " in metadata", call. = FALSE)
-            }
-          }
+          "ok"
         }
+
+        if (verbose) {
+          check_summary[[i]] <- data.frame(
+            item         = col_name,
+            n_cats_meta  = n_cats_meta,
+            n_distinct   = n_unique,
+            range_min    = range_min,
+            range_max    = range_max,
+            status       = status,
+            stringsAsFactors = FALSE
+          )
+        }
+      }
+
+      if (verbose) {
+        return(do.call(rbind, Filter(Negate(is.null), check_summary)))
       }
     }
   }
