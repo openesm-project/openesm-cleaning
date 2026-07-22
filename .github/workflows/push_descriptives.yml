@@ -45,7 +45,7 @@ jobs:
           elif [ -f package.json ]; then
             npm install
           fi
-          npm install --no-save @citation-js/core
+          npm install --no-save @citation-js/core @citation-js/plugin-bibtex @citation-js/plugin-csl
 
       - name: Copy descriptives to website
         run: |
@@ -54,9 +54,8 @@ jobs:
           for f in descriptives/output/*.json; do
             name="$(basename "$f")"
             [[ "$name" == "descriptives_index.json" ]] && continue
-            # landing_stats.json goes to static/data/ (not descriptives/); only includes published datasets
-            [[ "$name" == "landing_stats.json" ]] && \
-              cp "$f" _website/website/static/data/landing_stats.json && continue
+            # landing_stats.json skipped until all descriptives datasets are live on the website
+            [[ "$name" == "landing_stats.json" ]] && continue
             cp "$f" _website/website/static/data/descriptives/
           done
 
