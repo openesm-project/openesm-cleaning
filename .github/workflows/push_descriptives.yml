@@ -71,19 +71,27 @@ jobs:
           [ -f scripts/generate_dataset_pages.js ] && node scripts/generate_dataset_pages.js || echo "generate_dataset_pages.js not found, skipping"
 
       - name: Commit and push to website branch
+        id: commit
         working-directory: _website
         run: |
           git add -A
+          echo "=== git status ==="
+          git status
+          echo "=== staged diff stat ==="
+          git diff --staged --stat || true
           if git diff --staged --quiet; then
-            echo "No changes — skipping PR"
-            exit 0
+            echo "No changes to commit — skipping PR"
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "chore: update descriptives data"
+            git push origin descriptives-data-update
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
           fi
-          git commit -m "chore: update descriptives data"
-          git push origin descriptives-data-update
         env:
           GITHUB_TOKEN: ${{ secrets.OPENESM_WEBSITE_PAT }}
 
       - name: Create or update pull request
+        if: steps.commit.outputs.has_changes == 'true'
         run: |
           BODY="## Automated descriptives update — Schema v1.0
 
