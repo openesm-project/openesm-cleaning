@@ -25,6 +25,7 @@ data_raw <- readr::read_tsv(here::here("data", "raw", "0075_ballou_ts_raw.tsv"))
 
 #* Column Names -----------------------------------------------------------
 df <- data_raw |>
+  janitor::clean_names() |>
   dplyr::rename(
     id = pid,
     day = wave,
@@ -65,6 +66,82 @@ df <- data_raw |>
 # recode any "NA" to proper NA
 df <- recode_missing(df)
 
+
+
+# recode numeric variables to show integer responses
+# sleep
+df <- df |>
+  mutate(sleep_quality = case_match(
+    sleep_quality,
+    "Very poor" ~ 1,
+    "Poor" ~ 2,
+    "Fair" ~ 3,
+    "Good" ~ 4,
+    "Very good" ~ 5,
+    .default = NA
+  ))
+
+
+# stressful
+# 1 = not at all
+# 2 = not very
+# 3 = somewhat
+# 4 = very
+df <- df |>
+  mutate(
+    across(
+      starts_with("how_stressful"),
+      ~ case_match(
+        .x,
+        "Not at all" ~ 1,
+        "Not very" ~ 2,
+        "Somewhat" ~ 3,
+        "Very" ~ 4,
+        .default = NA
+      )
+    )
+  )
+
+# double check if this recoding was successful by looking
+# at the same columns in the uncleaned data
+# and counting the counts of each response
+counts_raw <- data_raw |>
+  select(starts_with("how_stressful")) |>
+  # create df of counts per response
+  pivot_longer(cols = everything(), names_to = "question", values_to = "response") |>
+  group_by(question, response) |>
+  summarise(count = n(), .groups = "drop") |>
+  arrange(question, response)
+
+counts_df <- df |>
+  select(starts_with("how_stressful")) |>
+  # create df of counts per response
+  pivot_longer(cols = everything(), names_to = "question", values_to = "response") |>
+  group_by(question, response) |>
+  summarise(count = n(), .groups = "drop") |>
+  arrange(question, response) |>
+  mutate(response = as.character(response))
+
+# add the original labels to counts_df for merging
+counts_df <- counts_df |>
+  mutate(response_old = case_match(
+    response,
+    "1" ~ "Not at all",
+    "2" ~ "Not very",
+    "3" ~ "Somewhat",
+    "4" ~ "Very",
+    .default = NA_character_
+  ))
+
+
+# merge and compare
+counts_raw |>
+  left_join(counts_df, by = c("question" = "question", "response" = "response_old"), suffix = c("_raw", "_cleaned")) |>
+  mutate(diff = count_cleaned - count_raw) |>
+  arrange(question, response)
+
+
+
 # add beep (always 1 per day)
 df <- df |>
   dplyr::mutate(beep = 1)
@@ -81,7 +158,7 @@ variable_data <- read_sheet(pull(dataset_info, "Coding File URL"))
 
 # Check requirements ------------------------------------------------------
 # errors abort; warnings flag likely problems but still allow saving
-check_results <- check_data(df, dataset_info, variable_data, verbose = TRUE)
+check_results <- check_data(df, dataset_info, variable_data)
 
 # if it returns "Data are clean.", save the data
 if(check_results == "Data are clean."){
