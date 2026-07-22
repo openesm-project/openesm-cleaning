@@ -3,7 +3,7 @@ library(tidyverse)
 library(here)
 library(googlesheets4)
 library(jsonlite)
-source(here("scripts", "functions_data.R"))
+source(here::here("scripts", "functions_data.R"))
 
 
 
@@ -72,7 +72,7 @@ df <- df |>
 
 # Read metadata -----------------------------------------------------------
 # loaded before checking so check_data() can cross-check data against metadata
-# Enter dataset ID here
+# Enter dataset ID here below
 meta_data <- read_sheet(METADATA_URL)
 dataset_info <- meta_data |>
   filter(dataset_id == "0075")
