@@ -420,7 +420,7 @@ for (ts_file in ts_to_run) compute_dataset(ts_file)
 # Rebuild the flat index from ALL output files (not just this run's).
 out_files <- setdiff(
   list.files(OUTPUT_DIR, pattern = "\\.json$", full.names = TRUE),
-  file.path(OUTPUT_DIR, "descriptives_index.json")
+  file.path(OUTPUT_DIR, c("descriptives_index.json", "landing_stats.json"))
 )
 index_rows <- unlist(lapply(out_files, function(f) {
   d <- jsonlite::fromJSON(f, simplifyVector = FALSE)
