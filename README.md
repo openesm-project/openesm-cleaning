@@ -22,8 +22,8 @@ Each dataset goes through the following steps:
 
 1. **Download** raw data from its original source (OSF, GitHub, figshare, etc.)
 2. **Clean** the data in a dedicated `scripts/clean_XXXX_name.R` script — renaming columns to a standard scheme, adding required columns (`id`, `day`, `beep`), and removing or transforming variables as needed
-3. **Validate** the cleaned data with `check_data()`, which enforces structural requirements and flags likely problems
-4. **Annotate variables** by filling a Google Sheets coding file with variable-level metadata (description, construct, response scale, etc.)
+3. **Annotate variables** by filling a Google Sheets coding file with variable-level metadata (description, construct, response scale, etc.)
+4. **Validate** the cleaned data with `check_data()`, which enforces structural requirements and flags likely problems
 5. **Generate metadata** with `create_metadata_json()`, which combines the Google Sheets annotations with dataset-level information into a standardized JSON file
 
 ## Key functions (`scripts/functions_data.R`)
@@ -40,15 +40,6 @@ Each dataset goes through the following steps:
 | `extract_construct_vocabulary(folder)` | Returns a frequency table of all constructs used across datasets |
 | `validate_metadata_json(path)` | Checks a metadata JSON against the openESM schema |
 
-### What `check_data()` validates
-
-Hard requirements abort with an error; everything else is a warning, so a legitimate discrepancy still lets the data be saved.
-
-- **Errors:** input is a data frame, `id`/`day`/`beep` columns exist, all column names are snake_case.
-- **Warnings:** leftover string sentinels that should be `NA`, columns that are entirely `NA`, duplicated `id`-`day`-`beep` rows.
-- **Warnings (when `dataset_info` and `variable_data` are passed):** number of unique `id`s differs from `N Participants` in the metadata; columns present in the data but not annotated in the coding sheet, or vice versa.
-
-Pass `dataset_info` (the metadata row) and `variable_data` (the coding sheet) to enable the cross-checks; calling `check_data(df)` alone runs the structural and within-data checks only.
 
 ## Experimental: AI-assisted annotation (`scripts/functions_annotation.R`)
 
