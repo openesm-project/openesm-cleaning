@@ -70,6 +70,44 @@ check_data <- function(data, dataset_info = NULL, variable_data = NULL){
       warning("Variables in metadata but not in data: ",
               paste(only_meta, collapse = ", "), call. = FALSE)
     }
+
+    # check answer_categories against empirical data for rating_scale items
+    if (all(c("variable_type", "answer_categories") %in% names(variable_data))) {
+      rs_rows <- variable_data[
+        !is.na(variable_data$variable_type) &
+        variable_data$variable_type == "rating_scale" &
+        !is.na(variable_data$answer_categories) &
+        nzchar(trimws(as.character(variable_data$answer_categories))),
+      ]
+      for (i in seq_len(nrow(rs_rows))) {
+        col_name <- rs_rows$name[i]
+        n_cats_meta <- suppressWarnings(as.numeric(rs_rows$answer_categories[i]))
+        if (is.na(n_cats_meta) || !col_name %in% colnames(data)) next
+        col_vals <- na.omit(data[[col_name]])
+        if (length(col_vals) == 0) next
+
+        n_unique <- dplyr::n_distinct(col_vals)
+        if (n_unique > n_cats_meta) {
+          warning("Column '", col_name, "': ", n_unique,
+                  " distinct values in data but answer_categories = ", n_cats_meta,
+                  " in metadata", call. = FALSE)
+        } else {
+          # also check empirical range for integer-like scales;
+          # coerce to numeric safely so character-coded columns are not silently skipped
+          col_num <- if (is.numeric(col_vals)) col_vals else
+            suppressWarnings(as.numeric(col_vals))
+          if (!anyNA(col_num) && all(col_num == floor(col_num))) {
+            emp_range <- max(col_num) - min(col_num) + 1
+            if (emp_range > n_cats_meta) {
+              warning("Column '", col_name, "': empirical range ",
+                      min(col_num), "-", max(col_num),
+                      " (", emp_range, " levels) exceeds answer_categories = ",
+                      n_cats_meta, " in metadata", call. = FALSE)
+            }
+          }
+        }
+      }
+    }
   }
 
   return("Data are clean.")
