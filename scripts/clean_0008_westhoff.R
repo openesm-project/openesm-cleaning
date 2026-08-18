@@ -86,6 +86,10 @@ df <- df |>
 df <- df |>
   mutate(across(c(scheduled_time, response_time, start_date, end_date), ~as.POSIXct(., format = "%Y-%m-%d %H:%M:%S")))
 
+# remove location and latitude
+df <- df |>
+  select(-c(location_latitude, location_longitude))
+
 # Check requirements ------------------------------------------------------
 # if check_data runs without messages, the data are clean
 # and should be saved as a .tsv file
