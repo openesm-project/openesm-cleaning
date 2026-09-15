@@ -81,7 +81,7 @@ df <- df_raw |>
 #* Misc -------------------------------------------------------------------
 # remove irrelevant and unclear column and columns that are always NA
 df <- df |>
-  dplyr::select(c(-x1, participant_mov)) |>
+  dplyr::select(-c(x1)) |>
   dplyr::select(-c(disconnected, battery))
 
 # convert time columns to PosixCt

@@ -87,6 +87,11 @@ df <- df |>
   rename(beep = beepvar)
 
 
+# remove redundant "time" column
+df <- df |>
+  select(!time)
+
+
 # Read metadata -----------------------------------------------------------
 # loaded before checking so check_data() can cross-check data against metadata
 # Enter dataset ID here

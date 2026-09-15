@@ -51,6 +51,20 @@ df <- df |>
 # add empty beep variable
 df$beep <- NA
 
+# check redundancy of date column
+df |>
+  mutate(day_answer = as.Date(timestamp_answer)) |>
+  mutate(date = as.Date(date)) |>
+  select(day_answer, date) |>
+  mutate(same_date = day_answer == date) |>
+  filter(!same_date)
+
+# remove
+df <- df |>
+  select(!date)
+
+
+
 
 # Read metadata -----------------------------------------------------------
 # loaded before checking so check_data() can cross-check data against metadata

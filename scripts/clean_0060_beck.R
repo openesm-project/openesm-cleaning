@@ -73,7 +73,7 @@ df_wide <- df |>
 df_wide <- df_wide |>
   rename(
     id = sid,
-    beep = hour_block,
+    # beep = hour_block, -> not fully accurate
     first_beep = hour_block_1,
     # Extraversion - Sociability
     outgoing = E1,
@@ -195,9 +195,14 @@ df_wide <- df_wide |>
 df_wide <- df_wide |>
   mutate(across(where(is.character), ~ na_if(., "NA")))
 
+
+# add NA beep
+df_wide$beep <- NA
+
 # better order of columns
 df_wide <- df_wide |>
   select(id, day, beep, everything())
+
 
 df <- df_wide
 

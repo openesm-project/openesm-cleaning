@@ -107,7 +107,7 @@ df <- df |>
     doubt = 8 - not_doubt,
     misunderstood = 8 - not_misunderstood
   ) |>
-  select(!c(not_tired, not_feels_like_obligation, not_doubt))
+  select(!c(not_tired, not_feels_like_obligation, not_doubt, not_misunderstood))
 
 
 
