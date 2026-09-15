@@ -7,7 +7,20 @@
   "paper_doi": "https://doi.org/10.1177/09567976221093307",
   "zenodo_doi": "10.5281/zenodo.17361673",
   "dataset_version": "2.0.0",
-  "changelog": {},
+  "changelog": [
+    {
+      "date": "2026-15-09",
+      "description": "Set beep column to NA and retained original hour_block column; removed uncleaned static data pending internal review.",
+      "type": "data",
+      "dataset_version": "2.0.0"
+    },
+    {
+      "date": "2025-10-15",
+      "description": "Initial release.",
+      "type": "data",
+      "dataset_version": "1.0.0"
+    }
+  ],
   "link_to_data": "https://osf.io/8ebyx/",
   "license": "CC BY-NC 4.0",
   "link_to_codebook": "https://github.com/emoriebeck/behavior-prediction/tree/main/01-codebooks",
@@ -1528,3 +1541,4 @@
     }
   ]
 }
+

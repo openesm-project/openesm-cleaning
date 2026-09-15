@@ -7,7 +7,14 @@
   "paper_doi": "https://doi.org/10.5334/jopd.83",
   "zenodo_doi": "10.5281/zenodo.17386600",
   "dataset_version": "1.0.0",
-  "changelog": {},
+  "changelog": [
+    {
+      "date": "2025-10-18",
+      "description": "Initial release.",
+      "type": "data",
+      "dataset_version": "1.0.0"
+    }
+  ],
   "link_to_data": "https://osf.io/6kzx3/",
   "license": "CC-BY 4.0",
   "link_to_codebook": "https://osf.io/6kzx3/",
@@ -1136,3 +1143,4 @@
     }
   ]
 }
+

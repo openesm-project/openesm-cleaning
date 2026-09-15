@@ -7,7 +7,26 @@
   "paper_doi": "https://doi.org/10.1002/per.2252",
   "zenodo_doi": "10.5281/zenodo.17348032",
   "dataset_version": "2.0.0",
-  "changelog": {},
+  "changelog": [
+    {
+      "date": "2026-09-15",
+      "description": "Add metadata for participant_mov.",
+      "type": "metadata",
+      "dataset_version": "2.0.0"
+    }, 
+    {
+      "date": "2026-09-03",
+      "description": "Remove some open text data.",
+      "type": "data",
+      "dataset_version": "2.0.0"
+    },    
+    {
+      "date": "2025-10-14",
+      "description": "Initial release.",
+      "type": "data",
+      "dataset_version": "1.0.0"
+    }
+  ],
   "link_to_data": "https://osf.io/v4qh9/",
   "license": "CC BY-NC 4.0",
   "link_to_codebook": "https://osf.io/v8sa7",

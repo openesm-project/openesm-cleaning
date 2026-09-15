@@ -6,11 +6,26 @@
   "reference_b": null,
   "paper_doi": "https://doi.org/10.3758/s13428-021-01683-6",
   "zenodo_doi": "10.5281/zenodo.17347856",
+  "dataset_version": "1.0.0",
+  "changelog": [
+    {
+      "date": "2026-09-09",
+      "description": "Fix information about number of participants.",
+      "type": "metadata",
+      "dataset_version": "1.0.0"
+    },
+    {
+      "date": "2025-10-14",
+      "description": "Initial release.",
+      "type": "data",
+      "dataset_version": "1.0.0"
+    }
+  ],
   "link_to_data": "https://osf.io/vw3gf/?view_only=b6f9f08a6b5941eb9c17a4951d1d0cd2;",
   "license": "CC BY-NC 4.0",
   "link_to_codebook": "https://osf.io/ze9wn",
   "link_to_code": "https://osf.io/vw3gf/?view_only=b6f9f08a6b5941eb9c17a4951d1d0cd2;",
-  "n_participants": 313,
+  "n_participants": 316,
   "n_time_points": 84,
   "n_days": "14",
   "n_beeps_per_day": "3 or 9",
