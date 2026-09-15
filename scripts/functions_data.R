@@ -181,6 +181,19 @@ osf_download_if_missing <- function(osf_url, dest) {
   invisible(dest)
 }
 
+# Normalize an author name for use in filenames.
+# Lowercases, converts German umlauts to digraphs, strips remaining diacritics,
+# and removes spaces.
+normalize_author_name <- function(author) {
+  author <- tolower(author)
+  author <- gsub("\u00e4", "ae", author)
+  author <- gsub("\u00f6", "oe", author)
+  author <- gsub("\u00fc", "ue", author)
+  author <- stringi::stri_trans_general(author, "Latin-ASCII")
+  author <- gsub(" ", "", author)
+  author
+}
+
 # Read the coding sheet, build the metadata JSON and write it to data/metadata.
 # Reuses meta_data / variable_data if already loaded to avoid re-reading sheets.
 write_metadata <- function(dataset_id, author = NULL,
@@ -196,26 +209,23 @@ write_metadata <- function(dataset_id, author = NULL,
   meta_data <<- meta_data
   variable_data <<- variable_data
   if (is.null(author)) {
-    author <- tolower(dataset_info$Author)
-    # German umlauts to digraphs, then strip remaining diacritics
-    author <- gsub("\u00e4", "ae", author)
-    author <- gsub("\u00f6", "oe", author)
-    author <- gsub("\u00fc", "ue", author)
-    author <- stringi::stri_trans_general(author, "Latin-ASCII")
-    author <- gsub(" ", "", author)
+    author <- normalize_author_name(dataset_info$Author)
   }
 
-  meta_json <- create_metadata_json(did) |>
-    jsonlite::toJSON(pretty = TRUE, auto_unbox = TRUE)
   path <- here::here("data", "metadata",
                      paste0(did, "_", author, "_metadata.json"))
+  meta_json <- create_metadata_json(did, existing_path = path) |>
+    jsonlite::toJSON(pretty = TRUE, auto_unbox = TRUE)
   write(meta_json, path)
   invisible(path)
 }
 
-# create metadata json file
+# Create metadata JSON structure from Google Sheets data.
+# existing_path: path to existing JSON for changelog/version preservation.
+#   If NULL, computed via normalize_author_name().
 create_metadata_json <- function(dataset_id_char,
-                                 recode_variable_type = TRUE) {
+                                 recode_variable_type = TRUE,
+                                 existing_path = NULL) {
 
   # Extract dataset-level info
   dataset_info <- meta_data |>
@@ -238,18 +248,29 @@ create_metadata_json <- function(dataset_id_char,
       )
   }
 
-  # preserve existing changelog if JSON already exists
-  existing_json_path <- here::here(
-    "data", "metadata",
-    paste0(dataset_id_char, "_", tolower(dataset_info$Author), "_metadata.json")
-  )
+  # Preserve existing changelog/version if JSON already exists
+  if (is.null(existing_path)) {
+    existing_path <- here::here(
+      "data", "metadata",
+      paste0(dataset_id_char, "_",
+             normalize_author_name(dataset_info$Author),
+             "_metadata.json")
+    )
+  }
 
-  existing <- if (file.exists(existing_json_path)) {
-    jsonlite::read_json(existing_json_path)
+  existing <- if (file.exists(existing_path)) {
+    jsonlite::read_json(existing_path)
   } else {
     NULL
   }
-  existing_changelog <- if (is.null(existing$changelog)) list() else existing$changelog
+
+  # Normalize changelog to a plain list (handles NULL, {}, and absent)
+  existing_changelog <- existing$changelog
+  if (is.null(existing_changelog) ||
+      (is.list(existing_changelog) && length(existing_changelog) == 0)) {
+    existing_changelog <- list()
+  }
+
   dataset_version <- if (!is.null(dataset_info$dataset_version) &&
                          !is.na(dataset_info$dataset_version) &&
                          nzchar(dataset_info$dataset_version)) {
@@ -271,7 +292,7 @@ create_metadata_json <- function(dataset_id_char,
     paper_doi = dataset_info$`Paper DOI`,
     zenodo_doi = dataset_info$`Zenodo DOI`,
     dataset_version = dataset_version,
-    changelog = existing$changelog,
+    changelog = existing_changelog,
     link_to_data = dataset_info$`Link to data`,
     license = dataset_info$`License`,
     link_to_codebook = dataset_info$`Optional: Link to Codebook`,
