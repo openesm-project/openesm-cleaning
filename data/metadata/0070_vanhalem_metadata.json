@@ -85,6 +85,20 @@
       "comments": ""
     },
     {
+      "name": "participant_mov",
+      "description": "Participant MOV",
+      "variable_type": "numeric",
+      "coding": "",
+      "answer_categories": "",
+      "details": "Unclear integer indicator",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
+    },
+    {
       "name": "trigger",
       "description": "Survey trigger type",
       "variable_type": "other",

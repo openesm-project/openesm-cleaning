@@ -6,6 +6,8 @@
   "reference_b": null,
   "paper_doi": "https://doi.org/10.31234/osf.io/g7n4a_v3",
   "zenodo_doi": "10.5281/zenodo.17348284",
+  "dataset_version": "1.0.0",
+  "changelog": {},
   "link_to_data": "https://osf.io/unvp8",
   "license": "CC BY-NC 4.0",
   "link_to_codebook": null,
@@ -165,6 +167,34 @@
       "assessment_type": "ESM",
       "construct": "negative affect, affect, external rating",
       "comments": ""
+    },
+    {
+      "name": "pa_selfother",
+      "description": "Positive affect product term",
+      "variable_type": "rating_scale",
+      "coding": "",
+      "answer_categories": "",
+      "details": "Likely the product term of pa_self and pa_other",
+      "labels": "",
+      "transformation": "Likely person-mean centered",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "positive affect, affect",
+      "comments": "Kept here because this product term was centered before sharing data and cannot simply be recomputed based on other columns."
+    },
+    {
+      "name": "na_selfother",
+      "description": "Negative affect product term",
+      "variable_type": "rating_scale",
+      "coding": "",
+      "answer_categories": "",
+      "details": "Likely the product term of na_self and na_other",
+      "labels": "",
+      "transformation": "Likely person-mean centered",
+      "source": "",
+      "assessment_type": "ESM",
+      "construct": "negative affect, affect",
+      "comments": "Kept here because this product term was centered before sharing data and cannot simply be recomputed based on other columns."
     }
   ]
 }

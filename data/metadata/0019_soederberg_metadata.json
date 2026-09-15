@@ -6,11 +6,13 @@
   "reference_b": null,
   "paper_doi": "https://doi.org/10.12688/f1000research.157148.1",
   "zenodo_doi": "10.5281/zenodo.17347732",
+  "dataset_version": "1.0.0",
+  "changelog": {},
   "link_to_data": "https://doi.org/10.5281/zenodo.13332148",
   "license": "CC-BY 4.0",
   "link_to_codebook": "https://zenodo.org/records/13332148",
   "link_to_code": null,
-  "n_participants": 302,
+  "n_participants": 300,
   "n_time_points": 40,
   "n_days": "10",
   "n_beeps_per_day": "4",
@@ -36,7 +38,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "ESM",
       "construct": "",
       "comments": ""
     },
@@ -50,7 +52,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "ESM",
       "construct": "",
       "comments": ""
     },
@@ -64,7 +66,21 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "ESM",
+      "construct": "",
+      "comments": ""
+    },
+    {
+      "name": "time",
+      "description": "Time counter of session",
+      "variable_type": "numeric",
+      "coding": "",
+      "answer_categories": "",
+      "details": "Time = (Day-1)*8+(Session+2)",
+      "labels": "",
+      "transformation": "",
+      "source": "",
+      "assessment_type": "ESM",
       "construct": "",
       "comments": ""
     },
@@ -78,7 +94,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "ESM",
       "construct": "",
       "comments": ""
     },
@@ -92,7 +108,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "ESM",
       "construct": "",
       "comments": ""
     },
@@ -106,7 +122,7 @@
       "labels": "0 = no\n1 = yes",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "ESM",
       "construct": "",
       "comments": ""
     },
@@ -120,7 +136,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "ESM",
       "construct": "",
       "comments": ""
     },
@@ -134,7 +150,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "",
+      "assessment_type": "ESM",
       "construct": "",
       "comments": ""
     },
@@ -275,7 +291,7 @@
       "transformation": "",
       "source": "",
       "assessment_type": "ESM",
-      "construct": "alertness, positive affect, affect, etxraversion, big five",
+      "construct": "alertness, positive affect, affect, extraversion, big five",
       "comments": ""
     },
     {

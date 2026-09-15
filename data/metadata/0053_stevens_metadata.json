@@ -6,6 +6,8 @@
   "reference_b": null,
   "paper_doi": "https://doi.org/10.1016/j.bodyim.2020.09.003",
   "zenodo_doi": "10.5281/zenodo.17347854",
+  "dataset_version": "1.0.0",
+  "changelog": {},
   "link_to_data": "https://osf.io/qy9uj/files/",
   "license": "CC BY-NC 4.0",
   "link_to_codebook": null,
@@ -220,6 +222,20 @@
       "source": "Recoded by the authors to indicate double exposure",
       "assessment_type": "ESM",
       "construct": "thinspiration, body positivity, media exposure, body image",
+      "comments": ""
+    },
+    {
+      "name": "dual_fits_bo_po",
+      "description": "Dual exposure to fitspiration and body positivity",
+      "variable_type": "binary",
+      "coding": "Have you seen thinspiration/body positivity since the last questionnaire? Recoded by the authors to indicate double exposure\n0 = No exposure\n1 = Fitspiration and body positivity exposure",
+      "answer_categories": "2",
+      "details": "Have you seen fitspiration/body positivity since the last questionnaire?",
+      "labels": "0 = No exposure\n1 = Fitspiration and body positivity exposure",
+      "transformation": "",
+      "source": "Recoded by the authors to indicate double exposure",
+      "assessment_type": "ESM",
+      "construct": "body positivity, fitspiration, media exposure, body image",
       "comments": ""
     },
     {
