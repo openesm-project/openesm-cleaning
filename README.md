@@ -9,12 +9,16 @@ This repository contains the cleaning scripts and metadata for the [openESM Data
 scripts/              Cleaning scripts (one per dataset) + shared utility functions
 data/metadata/        Harmonized metadata as JSON (one file per dataset)
 data/schema/          JSON Schema for metadata validation
-data/clean/           Cleaned data files (not in repo)
+data/clean/           Cleaned data files (not in repo, see below)
 data/raw/             Raw data files (not in repo, but links are available in metadata)
 descriptives/         Per-participant descriptive statistics pipeline
   compute_descriptives.R   Computes stats and writes one JSON per dataset to output/
   output/                  Generated JSON files (committed; pushed to website via CI)
 ```
+
+## Data change tracking
+
+Because the cleaned data files cannot be shared publicly, they are excluded from version control. To still track whether a dataset changed, `data/clean/checksums.sha256` records a SHA-256 hash for every cleaned TSV. This file is committed to git and should be updated whenever a cleaning script is re-run.
 
 ## Workflow
 
