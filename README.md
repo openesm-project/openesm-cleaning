@@ -49,6 +49,15 @@ Each dataset goes through the following steps:
 
 `generate_annotation_prompt()` assembles a structured prompt from the cleaned data frame, an optional codebook (PDF or XLSX), the cleaning script, and the existing construct vocabulary. The prompt can be passed to an LLM to pre-fill variable metadata, which is then reviewed and converted to an xlsx coding sheet via `annotation_json_to_xlsx()`.
 
+## Data quality diagnostics
+
+`scripts/diagnose_check_data.R` runs `check_data()` on every existing clean TSV file without re-running any cleaning script. It produces two CSV reports:
+
+- `data/check_data_warnings.csv`: warnings and errors per dataset (with columns for resolution status and notes)
+- `data/check_data_answer_categories.csv`: rating-scale range/count comparison between data and metadata for all items
+
+Re-running the diagnostic preserves any existing annotations (resolution, notes) in `check_data_warnings.csv`.
+
 ## Descriptives pipeline
 
 Per-participant summary statistics (mean, SD, skewness, kurtosis, ICC, multimodality, etc.) are computed for every rating-scale ESM item and written to `descriptives/output/` as one JSON file per dataset.
