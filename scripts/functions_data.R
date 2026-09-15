@@ -195,7 +195,15 @@ write_metadata <- function(dataset_id, author = NULL,
   # create_metadata_json() reads these from the global environment
   meta_data <<- meta_data
   variable_data <<- variable_data
-  if (is.null(author)) author <- tolower(dataset_info$Author)
+  if (is.null(author)) {
+    author <- tolower(dataset_info$Author)
+    # German umlauts to digraphs, then strip remaining diacritics
+    author <- gsub("\u00e4", "ae", author)
+    author <- gsub("\u00f6", "oe", author)
+    author <- gsub("\u00fc", "ue", author)
+    author <- stringi::stri_trans_general(author, "Latin-ASCII")
+    author <- gsub(" ", "", author)
+  }
 
   meta_json <- create_metadata_json(did) |>
     jsonlite::toJSON(pretty = TRUE, auto_unbox = TRUE)
