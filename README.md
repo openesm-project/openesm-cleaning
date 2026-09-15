@@ -82,6 +82,15 @@ python scripts/compute_similarity.py
 
 The output is pushed to the website alongside the descriptives files via the same GitHub Actions workflow.
 
+## Metadata sync with openesm-metadata
+
+This repository is the ground truth for all metadata JSON files. The [openesm-metadata](https://github.com/openesm-project/openesm-metadata) repo pulls from here and should not be edited directly.
+
+Typical workflow:
+1. Edit or regenerate metadata here (via cleaning scripts or manual edits to `data/metadata/`)
+2. Commit and push to `main`
+3. In the openesm-metadata repo, run `copy_metadata.R` to pull the updated files from GitHub
+
 ## For further questions
 
 Please contact the openESM team or open an issue on GitHub.
