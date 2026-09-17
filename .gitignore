@@ -18,3 +18,7 @@
 /data/column_names/*
 !/data/column_names/.gitkeep
 .positai
+.claudeignore
+
+# parts of audit (local only)
+/audit/anonymity/
