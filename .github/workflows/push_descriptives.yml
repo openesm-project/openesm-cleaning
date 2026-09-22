@@ -75,10 +75,6 @@ jobs:
         working-directory: _website
         run: |
           git add -A
-          echo "=== git status ==="
-          git status
-          echo "=== staged diff stat ==="
-          git diff --staged --stat || true
           if git diff --staged --quiet; then
             echo "No changes to commit — skipping PR"
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
@@ -93,33 +89,17 @@ jobs:
       - name: Create or update pull request
         if: steps.commit.outputs.has_changes == 'true'
         run: |
-          BODY="## Automated descriptives update — Schema v1.0
+          BODY="## Automated descriptives update
 
           | Field | Value |
           |---|---|
-          | Schema version | **1.0** (breaking change — see below) |
           | Run | [#${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) |
           | Source commit | [${{ github.sha }}](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}) |
 
-          ### Breaking schema changes from previous version
-          The per-person row format has been replaced with fully precomputed aggregates.
-          The frontend must be updated before merging.
-
-          **New top-level fields per item:** \`n_included\`, \`n_excluded\`, \`excluded_reasons\`, \`empirical_scale_range\`, \`mode_counts\`
-
-          **New \`stats\` object** (replaces per-person rows): one entry per statistic
-          (\`mean\`, \`sd\`, \`skewness\`, \`prop_floor\`, \`prop_ceil\`), each containing
-          \`median\`, \`iqr\`, and \`kde\` (100 {x,y} points).
-
-          **New \`person_dots\`** (optional, only when n_included ≤ 150): raw per-participant
-          values for individual-dot overlay on density plots.
-
-          **Removed:** per-person \`person_stats\` array, \`kurtosis\`, \`dip_p\`.
+          Automated push of updated descriptives JSON files and similarity data from [openesm-cleaning](https://github.com/${{ github.repository }}).
 
           Statistical details are documented in the header of
-          [compute_descriptives.R](https://github.com/${{ github.repository }}/blob/main/descriptives/compute_descriptives.R).
-
-          **Please review the diff and confirm frontend compatibility before merging.**"
+          [compute_descriptives.R](https://github.com/${{ github.repository }}/blob/main/descriptives/compute_descriptives.R)."
 
           PR=$(gh pr list --repo openesm-project/openesm \
                  --head descriptives-data-update --base main \
