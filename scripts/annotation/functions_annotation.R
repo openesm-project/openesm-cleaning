@@ -1,25 +1,43 @@
 # Helper: extract text from codebook file (PDF or XLSX)
-read_codebook_text <- function(codebook_path) {
+read_codebook_text <- function(codebook_path, codebook_sheet = NULL, codebook_cols = NULL, codebook_maxrows = NULL, filter_names = NULL) {
   if (is.null(codebook_path)) return(NULL)
-  
   ext <- tolower(tools::file_ext(codebook_path))
-  
   if (ext == "pdf") {
     if (!requireNamespace("pdftools", quietly = TRUE)) 
       stop("Package 'pdftools' required for PDF codebooks.")
     text <- pdftools::pdf_text(codebook_path)
     return(paste(text, collapse = "\n"))
-    
   } else if (ext %in% c("xlsx", "xls")) {
     if (!requireNamespace("readxl", quietly = TRUE))
       stop("Package 'readxl' required for XLSX codebooks.")
-    sheets <- readxl::excel_sheets(codebook_path)
-    all_text <- lapply(sheets, function(s) {
-      df <- readxl::read_excel(codebook_path, sheet = s)
-      paste(capture.output(print(df)), collapse = "\n")
-    })
-    return(paste(all_text, collapse = "\n\n"))
-    
+    if (!is.null(codebook_sheet)) {
+      df <- readxl::read_excel(codebook_path, sheet = codebook_sheet)
+      # filter to only variables in df if filter_names provided
+      if (!is.null(filter_names) && "Name" %in% names(df)) {
+        df <- df[df$Name %in% filter_names, , drop = FALSE]
+      }
+      # select columns
+      if (!is.null(codebook_cols)) {
+        keep <- intersect(codebook_cols, names(df))
+        df <- df[, keep, drop = FALSE]
+      }
+      # limit rows
+      if (!is.null(codebook_maxrows)) {
+        df <- head(df, codebook_maxrows)
+      }
+      # format as markdown table
+      if (nrow(df) == 0) return("(no matching codebook rows)")
+      md <- paste0("| ", paste(names(df), collapse = " | "), " |\n| ", paste(rep("---", ncol(df)), collapse = " | "), " |\n")
+      md <- paste0(md, paste(apply(df, 1, function(row) paste0("| ", paste(as.character(row), collapse = " | "), " |")), collapse = "\n"))
+      return(md)
+    } else {
+      sheets <- readxl::excel_sheets(codebook_path)
+      all_text <- lapply(sheets, function(s) {
+        df <- readxl::read_excel(codebook_path, sheet = s)
+        paste(capture.output(print(df)), collapse = "\n")
+      })
+      return(paste(all_text, collapse = "\n\n"))
+    }
   } else {
     stop("Unsupported codebook format. Provide a PDF or XLSX file.")
   }
@@ -34,7 +52,10 @@ generate_annotation_prompt <- function(
   dataset_id,
   codebook_path = NULL,
   script_path = NULL,
-  vocab_path = here::here("data", "metadata")
+  vocab_path = here::here("data", "metadata"),
+  codebook_sheet = NULL,
+  codebook_cols = NULL,
+  codebook_maxrows = NULL
 ) {
   
   # 1. Column names + types + basic stats
@@ -67,7 +88,13 @@ generate_annotation_prompt <- function(
   
   # 3. Codebook text (truncated to ~3000 chars to keep prompt manageable)
   codebook_block <- if (!is.null(codebook_path)) {
-    text <- read_codebook_text(codebook_path)
+    text <- read_codebook_text(
+      codebook_path,
+      codebook_sheet = codebook_sheet,
+      codebook_cols = codebook_cols,
+      codebook_maxrows = codebook_maxrows,
+      filter_names = names(df)
+    )
     if (nchar(text) > 3000) {
       paste0(substr(text, 1, 3000), "\n... [truncated]")
     } else {
