@@ -27,7 +27,7 @@ df <- data_raw |>
     start_time = start_date,
     end_time = end_date,
     response_duration = duration_in_seconds,
-    positive_affect = a1,
+    pa = a1,
     energy = a2,
     fidgety = a3,
     want_other_people = a4,
@@ -37,7 +37,7 @@ df <- data_raw |>
     stressed = d4_stress,
     self_esteem = d5_self,
     productive = d6_lazy,
-    location_simulation = l1,
+    location_stimulation = l1,
     location_overstimulation = l2,
     location_familiar = l3,
     location_interesting = l4,
@@ -47,7 +47,7 @@ df <- data_raw |>
     interaction_when = s2,
     interaction_number = s3,
     interaction_pleasant = s4,
-    interatcion_playful = s5,
+    interaction_playful = s5,
     interaction_meaningful = s6,
     interaction_frequency = s7,
     mobile_data_access = c1a,
@@ -63,7 +63,6 @@ df <- data_raw |>
     problem_progress = t5,
     time_available = t6,
     survey_error = flag
-
   )
 
 
@@ -75,6 +74,34 @@ df <- data_raw |>
 df <- recode_missing(df)
 
 # time variables were already posixct
+
+# checking for assessment frequency of some variables
+df |>
+  filter(!is.na(productive)) |>
+  count(day, id, productive, name = "n_daily_prod") |>
+  filter(n_daily_prod > 1)
+
+df |>
+  filter(!is.na(mobile_data_access)) |>
+  count(day, id, mobile_data_access, name = "n_mob") |>
+  filter(n_mob > 1)
+
+df |>
+  filter(!is.na(mobile_data_access)) |>
+  group_by(day, id) |>
+  mutate(n_daily = n_distinct(mobile_data_access)) |>
+  filter(n_daily > 1) |>
+  select(day, id, mobile_data_access, n_daily) |>
+  ungroup()
+
+df |>
+  filter(!is.na(group)) |>
+  group_by(day, id) |>
+  mutate(n_daily = n_distinct(group)) |>
+  filter(n_daily > 1) |>
+  select(day, id, group, n_daily) |>
+  ungroup()
+
 
 # export column names
 write_csv(
