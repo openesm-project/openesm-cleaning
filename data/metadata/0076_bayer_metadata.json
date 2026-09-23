@@ -5,7 +5,7 @@
   "reference_a": "@article{mao2023,\n  title = {Perceived vs. observed {{mHealth}} behavior: {{A}} naturalistic investigation of tracking apps and daily movement},\n  author = {Mao, Chang (Molly) and Bayer, Joseph B. and Ross, Morgan Q. and Rhee, Lisa and Le, Huyen T. K. and Mount, Jerry and Chang, Hsiu-Chi and Chang, Yung-Ju and Hedstrom, Alexander and Hovick, Shelly R.},\n  date = {2023-09-01},\n  journaltitle = {Mobile Media \\& Communication},\n  volume = {11},\n  number = {3},\n  pages = {526--548},\n  publisher = {SAGE Publications},\n  doi = {10.1177/20501579221149823}\n}",
   "reference_b": null,
   "paper_doi": "https://doi.org/10.1177/20501579221149823",
-  "zenodo_doi": null,
+  "zenodo_doi": "10.5281/zenodo.22911022",
   "dataset_version": "1.0.0",
   "changelog": [],
   "link_to_data": "https://osf.io/d56cx/overview",
