@@ -8,7 +8,7 @@ cross-dataset nearest neighbors to data/similarity/similar_items.json.
 Embeddings are cached so only new items are re-embedded on subsequent runs.
 
 Usage:
-    python scripts/compute_similarity.py
+    python scripts/annotation/compute_similarity.py
 """
 
 import json
@@ -19,7 +19,7 @@ from pathlib import Path
 
 import numpy as np
 
-ROOT = Path(__file__).parent.parent
+ROOT = Path(__file__).resolve().parents[2]  # scripts/annotation/ -> repo root
 METADATA_DIR = ROOT / "data" / "metadata"
 OUTPUT_DIR = ROOT / "data" / "similarity"
 SIMILAR_ITEMS_PATH = OUTPUT_DIR / "similar_items.json"
