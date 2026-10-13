@@ -44,7 +44,7 @@ The JSON files in `data/metadata/` are the source of truth and are edited direct
 | `extract_construct_vocabulary(folder)` | Returns a frequency table of all constructs used across datasets |
 | `validate_metadata_json(path)` | Checks a metadata JSON against the openESM schema |
 
-`write_metadata()`, `create_metadata_json()` and `annotate_constructs()` read from or write to the frozen Google Sheets and are deprecated.
+`write_metadata()` and `create_metadata_json()` read from the frozen Google Sheets and are deprecated. Construct propagation via Sheets (`annotate_constructs()`) is in `scripts/archive/`.
 
 
 ## Experimental: AI-assisted annotation (`scripts/functions_annotation.R`)

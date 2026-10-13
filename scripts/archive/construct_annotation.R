@@ -10,6 +10,7 @@ library(googlesheets4)
 library(googledrive)
 
 source(here::here("scripts", "functions_data.R"))
+source(here::here("scripts", "archive", "annotate_constructs.R"))
 
 # list all variable-construct pairs
 all_variables <- list_variable_construct_pairs(here::here("data", "metadata"),
