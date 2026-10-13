@@ -111,9 +111,10 @@ df <- df |>
   dplyr::mutate(beep = dplyr::row_number()) |>
   dplyr::ungroup()
 
-# remove non self-report item
+# remove non self-report itemd
 df <- df |>
-  select(!c(location, event))
+  dplyr::select(!c(location, event)) |>
+  dplyr::select(!c(event_day, event_time))
 
 # Read metadata -----------------------------------------------------------
 # loaded before checking so check_data() can cross-check data against metadata
