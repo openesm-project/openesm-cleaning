@@ -26,23 +26,25 @@ Each dataset goes through the following steps:
 
 1. **Download** raw data from its original source (OSF, GitHub, figshare, etc.)
 2. **Clean** the data in a dedicated `scripts/clean_XXXX_name.R` script — renaming columns to a standard scheme, adding required columns (`id`, `day`, `beep`), and removing or transforming variables as needed
-3. **Annotate variables** by filling a Google Sheets coding file with variable-level metadata (description, construct, response scale, etc.)
-4. **Validate** the cleaned data with `check_data()`, which enforces structural requirements and flags likely problems
-5. **Generate metadata** with `create_metadata_json()`, which combines the Google Sheets annotations with dataset-level information into a standardized JSON file
+3. **Create metadata** for a new dataset with `new_metadata_json()`, then fill the JSON directly with dataset- and variable-level metadata (description, construct, response scale, etc.)
+4. **Validate** the cleaned data with `check_data()`, which enforces structural requirements and cross-checks the data against the metadata JSON
+
+The JSON files in `data/metadata/` are the source of truth and are edited directly; no code regenerates them. (Metadata was previously maintained in Google Sheets, which are now frozen.)
 
 ## Key functions (`scripts/functions_data.R`)
 
 | Function | Purpose |
 |---|---|
-| `check_data(df, dataset_info, variable_data)` | Validates a cleaned data frame (see below) |
+| `read_metadata(dataset_id)` | Reads a dataset's metadata JSON |
+| `check_data(df, metadata)` | Validates a cleaned data frame against its metadata (see below) |
 | `recode_missing(df)` | Converts string sentinels (`"NA"`, `"NaN"`, `""`) and numeric `NaN` to real `NA` |
 | `download_if_missing(url, dest)` / `osf_download_if_missing(osf_url, dest)` | Download a raw file only if it is not already present |
-| `write_metadata(dataset_id)` | Reads the coding sheet, builds the metadata JSON and writes it |
-| `create_metadata_json(dataset_id)` | Builds the metadata JSON from Google Sheets data |
+| `new_metadata_json(dataset_id, author, df)` | Writes a skeleton metadata JSON for a new dataset (never overwrites) |
 | `list_variable_construct_pairs(folder)` | Extracts all variable–construct mappings across datasets |
-| `annotate_constructs(...)` | Propagates construct labels to unannotated datasets with matching variable names |
 | `extract_construct_vocabulary(folder)` | Returns a frequency table of all constructs used across datasets |
 | `validate_metadata_json(path)` | Checks a metadata JSON against the openESM schema |
+
+`write_metadata()`, `create_metadata_json()` and `annotate_constructs()` read from or write to the frozen Google Sheets and are deprecated.
 
 
 ## Experimental: AI-assisted annotation (`scripts/functions_annotation.R`)
@@ -87,7 +89,7 @@ The output is pushed to the website alongside the descriptives files via the sam
 This repository is the ground truth for all metadata JSON files. The [openesm-metadata](https://github.com/openesm-project/openesm-metadata) repo pulls from here and should not be edited directly.
 
 Typical workflow:
-1. Edit or regenerate metadata here (via cleaning scripts or manual edits to `data/metadata/`)
+1. Edit the metadata JSONs in `data/metadata/`
 2. Commit and push to `main`
 3. In the openesm-metadata repo, run `copy_metadata.R` to pull the updated files from GitHub
 
