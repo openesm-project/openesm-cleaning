@@ -10,19 +10,16 @@ conflict_prefer("summarise", "dplyr", quiet = TRUE)
 conflict_prefer("rename",    "dplyr", quiet = TRUE)
 conflict_prefer("count",     "dplyr", quiet = TRUE)
 
-# URL of the master metadata Google Sheet
-METADATA_URL <- "https://docs.google.com/spreadsheets/d/1ALGCq_jN6I4dcjWYQ_LQe9o52DGJItwdu9fCkwOh6fg/edit?pli=1&gid=0#gid=0"
-
 # Validate a cleaned data frame.
 # Hard requirements (structure) abort with an error; everything else is a
-# warning so a legitimate discrepancy does not block saving. Pass dataset_info
-# (the metadata row) and variable_data (the coding sheet) to enable the
-# data-vs-metadata cross-checks.
+# warning so a legitimate discrepancy does not block saving. Pass metadata
+# (from read_metadata()) to enable the data-vs-metadata cross-checks.
 # verbose = TRUE returns a data frame summarising the answer_categories check
 # for all rating_scale items (columns: item, n_cats_meta, n_distinct,
 # range_min, range_max, status).
-check_data <- function(data, dataset_info = NULL, variable_data = NULL,
-                       verbose = FALSE){
+check_data <- function(data, metadata = NULL, verbose = FALSE){
+
+  variable_data <- if (!is.null(metadata)) features_table(metadata$features)
 
   # --- hard requirements (error) ---
   if(!is.data.frame(data)){
@@ -64,9 +61,9 @@ check_data <- function(data, dataset_info = NULL, variable_data = NULL,
   }
 
   # --- metadata cross-checks (warning) ---
-  if (!is.null(dataset_info)) {
+  if (!is.null(metadata)) {
     n_data <- dplyr::n_distinct(data$id)
-    n_meta <- suppressWarnings(as.numeric(dataset_info$`N Participants`))
+    n_meta <- suppressWarnings(as.numeric(metadata$n_participants %||% NA))
     if (!is.na(n_meta) && n_data != n_meta) {
       warning("Participant count mismatch: ", n_data, " unique ids in data vs ",
               n_meta, " in metadata", call. = FALSE)
@@ -194,10 +191,97 @@ normalize_author_name <- function(author) {
   author
 }
 
-# Read the coding sheet, build the metadata JSON and write it to data/metadata.
-# Reuses meta_data / variable_data if already loaded to avoid re-reading sheets.
+# Metadata JSON -------------------------------------------------------------
+# data/metadata/*.json is the source of truth: edit the files directly.
+# Code reads them but never regenerates them.
+
+# Read the metadata JSON of one dataset.
+read_metadata <- function(dataset_id, dir = here::here("data", "metadata")) {
+  path <- list.files(dir, full.names = TRUE,
+                     pattern = paste0("^", dataset_id, "_.+_metadata\\.json$"))
+  if (length(path) != 1) {
+    stop("Expected one metadata JSON for dataset ", dataset_id, " in ", dir,
+         ", found ", length(path), call. = FALSE)
+  }
+  jsonlite::read_json(path, simplifyVector = FALSE)
+}
+
+# Flatten the features array into a data frame with the columns check_data()
+# needs. Empty strings and nulls become NA.
+features_table <- function(features) {
+  field <- function(key) vapply(features, function(f) {
+    value <- f[[key]]
+    if (is.null(value) || length(value) == 0) return(NA_character_)
+    value <- as.character(value[[1]])
+    if (nzchar(value)) value else NA_character_
+  }, character(1))
+  data.frame(name = field("name"),
+             variable_type = field("variable_type"),
+             answer_categories = field("answer_categories"),
+             stringsAsFactors = FALSE)
+}
+
+# Write a skeleton metadata JSON for a new dataset: one feature per column of
+# data, all other fields empty. Never overwrites an existing file.
+new_metadata_json <- function(dataset_id, author, data,
+                              dir = here::here("data", "metadata")) {
+  existing <- list.files(dir, pattern = paste0("^", dataset_id, "_.+_metadata\\.json$"))
+  if (length(existing) > 0) {
+    stop("Metadata JSON already exists for dataset ", dataset_id, ": ",
+         existing[1], call. = FALSE)
+  }
+  path <- file.path(dir, paste0(dataset_id, "_",
+                                normalize_author_name(author),
+                                "_metadata.json"))
+
+  dataset_keys <- c(
+    "first_author", "dataset_id", "year", "reference_a", "reference_b",
+    "paper_doi", "zenodo_doi", "dataset_version", "changelog",
+    "link_to_data", "license", "link_to_codebook", "link_to_code",
+    "n_participants", "n_time_points", "n_days", "n_beeps_per_day",
+    "passive_data_available", "cross_sectional_available", "topics",
+    "implicit_missingness", "raw_time_stamp", "sampling_scheme",
+    "participants", "additional_comments", "coder_data", "coder_metadata"
+  )
+  feature_keys <- c(
+    "name", "description", "variable_type", "answer_categories", "details",
+    "labels", "transformation", "source", "assessment_type", "construct",
+    "comments"
+  )
+
+  metadata <- setNames(as.list(rep("", length(dataset_keys))), dataset_keys)
+  metadata$first_author <- author
+  metadata$dataset_id <- dataset_id
+  metadata$dataset_version <- "1.0.0"
+  metadata$changelog <- list()
+  metadata$features <- lapply(colnames(data), function(col) {
+    feature <- setNames(as.list(rep("", length(feature_keys))), feature_keys)
+    feature$name <- col
+    feature
+  })
+
+  jsonlite::write_json(metadata, path, pretty = TRUE, auto_unbox = TRUE)
+  invisible(path)
+}
+
+
+# Legacy: Google Sheets ---------------------------------------------------------
+# DEPRECATED. The sheets are frozen and the JSON files are the source of truth.
+
+# URL of the (frozen) master metadata Google Sheet
+METADATA_URL <- "https://docs.google.com/spreadsheets/d/1ALGCq_jN6I4dcjWYQ_LQe9o52DGJItwdu9fCkwOh6fg/edit?pli=1&gid=0#gid=0"
+
+# DEPRECATED: refuses to overwrite an existing JSON. Use new_metadata_json()
+# for new datasets.
 write_metadata <- function(dataset_id, author = NULL,
                            meta_data = NULL, variable_data = NULL) {
+  .Deprecated("new_metadata_json")
+  existing <- list.files(here::here("data", "metadata"),
+                         pattern = paste0("^", dataset_id, "_.+_metadata\\.json$"))
+  if (length(existing) > 0) {
+    stop("Refusing to overwrite ", existing[1], ": edit the JSON directly.",
+         call. = FALSE)
+  }
   did <- dataset_id
   if (is.null(meta_data)) meta_data <- googlesheets4::read_sheet(METADATA_URL)
   dataset_info <- dplyr::filter(meta_data, dataset_id == did)
@@ -220,7 +304,7 @@ write_metadata <- function(dataset_id, author = NULL,
   invisible(path)
 }
 
-# Create metadata JSON structure from Google Sheets data.
+# DEPRECATED. Create metadata JSON structure from Google Sheets data.
 # existing_path: path to existing JSON for changelog/version preservation.
 #   If NULL, computed via normalize_author_name().
 create_metadata_json <- function(dataset_id_char,
@@ -368,6 +452,7 @@ list_variable_construct_pairs <- function(folder_path, include_all = FALSE) {
 
 
 # Construct Annotation ----------------------------------------------------
+# DEPRECATED: writes to the frozen Google Sheets, not to the JSON files.
 annotate_constructs <- function(to_be_named,
                                 meta_data,
                                 dry_run = FALSE,
