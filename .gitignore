@@ -22,3 +22,4 @@
 
 # parts of audit (local only)
 /audit/anonymity/
+/audit/migration/
