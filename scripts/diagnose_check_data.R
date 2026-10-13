@@ -1,6 +1,6 @@
 # diagnose_check_data.R
 #
-# Runs check_data(df, dataset_info, variable_data, verbose = TRUE) on every
+# Runs check_data(df, metadata, verbose = TRUE) on every
 # existing *_ts.tsv clean file, without re-running any cleaning script.
 # Captures all warnings and the answer_categories summary, then writes two
 # CSV reports:
@@ -12,19 +12,17 @@
 # Packages ----------------------------------------------------------------
 library(tidyverse)
 library(here)
-library(googlesheets4)
 source(here("scripts", "functions_data.R"))
 
 
-# Load metadata -----------------------------------------------------------
-cat("Reading master metadata sheet (this may take a moment)...\n")
-meta_data <- read_sheet(METADATA_URL)
-
-# Only process datasets that have both a clean _ts.tsv file and a metadata row
+# Datasets ----------------------------------------------------------------
+# Only process datasets that have both a clean _ts.tsv file and a metadata JSON
 ts_files     <- list.files(here("data", "clean"), pattern = "_ts\\.tsv$",
                            full.names = TRUE)
 ts_ids       <- substr(basename(ts_files), 1, 4)
-ids_to_check <- intersect(meta_data$dataset_id, ts_ids)
+json_ids     <- substr(list.files(here("data", "metadata"),
+                                  pattern = "_metadata\\.json$"), 1, 4)
+ids_to_check <- intersect(json_ids, ts_ids)
 
 cat(sprintf("Found %d datasets to check.\n", length(ids_to_check)))
 
@@ -37,23 +35,14 @@ for (did in ids_to_check) {
 
   cat(sprintf("\n[%s] ", did))
 
-  # Metadata row for this dataset
-  dataset_info <- filter(meta_data, dataset_id == did)
-
-  # Load coding sheet if URL is available
-  coding_url    <- dataset_info[["Coding File URL"]]
-  variable_data <- if (!is.null(coding_url) && !is.na(coding_url) && nzchar(coding_url)) {
-    tryCatch(
-      read_sheet(coding_url),
-      error = function(e) {
-        cat(sprintf("[could not read coding sheet: %s] ", conditionMessage(e)))
-        NULL
-      }
-    )
-  } else {
-    cat("[no coding URL] ")
-    NULL
-  }
+  # Metadata JSON for this dataset
+  metadata <- tryCatch(
+    read_metadata(did),
+    error = function(e) {
+      cat(sprintf("[could not read metadata: %s] ", conditionMessage(e)))
+      NULL
+    }
+  )
 
   # Load clean TSV
   tsv_path <- ts_files[startsWith(basename(ts_files), did)]
@@ -63,7 +52,7 @@ for (did in ids_to_check) {
   caught_warnings <- character(0)
   result <- tryCatch(
     withCallingHandlers(
-      check_data(df, dataset_info, variable_data, verbose = TRUE),
+      check_data(df, metadata, verbose = TRUE),
       warning = function(w) {
         caught_warnings <<- c(caught_warnings, conditionMessage(w))
         invokeRestart("muffleWarning")

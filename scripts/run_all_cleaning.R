@@ -1,26 +1,18 @@
 library(here)
-library(googlesheets4)
 library(tidyverse)
 library(jsonlite)
 
 source(here::here("scripts", "functions_data.R"))
 
-# initialize google sheets once
-metadata_url <- "https://docs.google.com/spreadsheets/d/1ALGCq_jN6I4dcjWYQ_LQe9o52DGJItwdu9fCkwOh6fg/edit?pli=1&gid=0#gid=0"
-meta_data <- read_sheet(metadata_url)
-
 # run all R scripts that start with "clean" in "/scripts"
 scripts <- list.files(path = here::here("scripts"), pattern = "^clean_.*\\.R$", full.names = TRUE)
 
-# only keep scripts that are "Done" in metadata
-included_ids <- meta_data |>
-  janitor::clean_names() |>
-  filter(done == "1") |>
-  pull(dataset_id)
+# only keep scripts of datasets that have a metadata JSON
+included_ids <- substr(list.files(here::here("data", "metadata"),
+                                  pattern = "_metadata\\.json$"), 1, 4)
 
 # check with grepl whether script matches included id
 included_scripts <- scripts[grepl(paste(included_ids, collapse = "|"), scripts)]
-rm(meta_data)
 
 # run each script and validate the resulting metadata JSON
 for (script in included_scripts[c(31:length(included_scripts))]) {
