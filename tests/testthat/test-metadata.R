@@ -58,3 +58,25 @@ test_that("new_metadata_json() never creates a second file for an existing ID", 
   expect_error(new_metadata_json("9999", "J Smith", df, dir = dir), "already exists")
   expect_length(list.files(dir), 1)
 })
+
+test_that("a new skeleton fails validation only on the missing year", {
+  # guards against skeletons that are invalid in ways a contributor can't see,
+  # while still blocking a merge until the year is filled in
+  dir <- tempfile(); dir.create(dir)
+  path <- new_metadata_json("9999", "Smith", df, dir = dir)
+  expect_warning(validate_metadata_json(path), "/year must be integer$")
+})
+
+
+# validate_metadata_json() -----------------------------------------------------
+
+test_that("invalid enum values fail validation", {
+  # guards against the validator silently accepting values outside the schema
+  dir <- tempfile(); dir.create(dir)
+  path <- new_metadata_json("9999", "Smith", df, dir = dir)
+  metadata <- jsonlite::read_json(path)
+  metadata$year <- 2020L
+  metadata$features[[1]]$variable_type <- "not_a_type"
+  jsonlite::write_json(metadata, path, auto_unbox = TRUE, null = "null")
+  expect_warning(validate_metadata_json(path), "variable_type must be equal to one of")
+})

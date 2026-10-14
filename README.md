@@ -8,7 +8,7 @@ This repository contains the cleaning scripts and metadata for the [openESM Data
 ```
 scripts/              Cleaning scripts (one per dataset) + shared utility functions
 data/metadata/        Harmonized metadata as JSON (one file per dataset)
-data/schema/          JSON Schema for metadata validation
+schema/v1/            JSON Schema for metadata validation
 data/clean/           Cleaned data files (not in repo, see below)
 data/raw/             Raw data files (not in repo, but links are available in metadata)
 descriptives/         Per-participant descriptive statistics pipeline
