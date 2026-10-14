@@ -7,7 +7,7 @@
   "paper_doi": "https://doi.org/10.31234/osf.io/nz96c_v1",
   "zenodo_doi": "10.5281/zenodo.21495793",
   "dataset_version": "1.0.0",
-  "changelog": {},
+  "changelog": [],
   "link_to_data": "https://github.com/digital-wellbeing/open-play/tree/main/data",
   "license": "CC0 1.0 - modified",
   "link_to_codebook": "https://github.com/digital-wellbeing/open-play/blob/main/codebook.xlsx",
