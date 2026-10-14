@@ -249,7 +249,8 @@ new_metadata_json <- function(dataset_id, author, data,
     "comments"
   )
 
-  metadata <- setNames(as.list(rep("", length(dataset_keys))), dataset_keys)
+  # dataset-level placeholders are null; `year` stays invalid until filled
+  metadata <- setNames(vector("list", length(dataset_keys)), dataset_keys)
   metadata$first_author <- author
   metadata$dataset_id <- dataset_id
   metadata$dataset_version <- "1.0.0"
@@ -260,7 +261,8 @@ new_metadata_json <- function(dataset_id, author, data,
     feature
   })
 
-  jsonlite::write_json(metadata, path, pretty = TRUE, auto_unbox = TRUE)
+  jsonlite::write_json(metadata, path, pretty = TRUE, auto_unbox = TRUE,
+                       null = "null")
   invisible(path)
 }
 
@@ -489,79 +491,23 @@ extract_construct_vocabulary <- function(folder_path) {
 
 
 # Metadata Validation -----------------------------------------------------
-# Validate a single metadata JSON against the openESM schema.
+# Validate a metadata JSON against the schema in schema/v1/ (the single source
+# of truth for allowed keys, types and values).
 # Returns TRUE invisibly on success; emits a warning listing issues on failure.
-validate_metadata_json <- function(path) {
-  if (!file.exists(path)) {
-    warning("File not found: ", path)
-    return(invisible(FALSE))
-  }
-
-  metadata <- jsonlite::fromJSON(path, simplifyVector = FALSE)
-  issues <- character(0)
-
-  # --- dataset-level required fields ---
-  required_fields <- c("first_author", "dataset_id", "year",
-                       "paper_doi", "n_participants", "n_time_points",
-                       "features")
-  missing <- required_fields[!required_fields %in% names(metadata)]
-  if (length(missing) > 0) {
-    issues <- c(issues,
-                paste("Missing required fields:", paste(missing, collapse = ", ")))
-  }
-
-  # --- dataset_id format ---
-  if (!is.null(metadata$dataset_id) &&
-      !grepl("^\\d{4}$", metadata$dataset_id)) {
-    issues <- c(issues,
-                paste0("dataset_id '", metadata$dataset_id,
-                       "' is not a four-digit string"))
-  }
-
-  # --- features ---
-  valid_variable_types <- c("rating_scale", "numeric", "categorical",
-                             "PosixCt", "character", "logical",
-                             "date", "time", "")
-  valid_assessment_types <- c("ESM", "baseline", "follow-up", "")
-
-  if (!is.null(metadata$features) && length(metadata$features) > 0) {
-    for (i in seq_along(metadata$features)) {
-      feat <- metadata$features[[i]]
-      feat_label <- if (!is.null(feat$name) && nzchar(feat$name)) {
-        paste0("'", feat$name, "'")
-      } else {
-        paste0("[feature ", i, "]")
-      }
-
-      if (is.null(feat$name) || !nzchar(feat$name)) {
-        issues <- c(issues, paste("Feature", i, "has an empty 'name'"))
-      }
-
-      if (!is.null(feat$variable_type) &&
-          !feat$variable_type %in% valid_variable_types) {
-        issues <- c(issues,
-                    paste0("Variable ", feat_label,
-                           ": unknown variable_type '", feat$variable_type, "'"))
-      }
-
-      if (!is.null(feat$assessment_type) &&
-          !feat$assessment_type %in% valid_assessment_types) {
-        issues <- c(issues,
-                    paste0("Variable ", feat_label,
-                           ": unknown assessment_type '", feat$assessment_type, "'"))
-      }
-    }
-  }
-
-  if (length(issues) == 0) {
+validate_metadata_json <- function(path,
+                                   schema = here::here("schema", "v1",
+                                                       "metadata_schema.json")) {
+  valid <- jsonvalidate::json_validate(path, schema, verbose = TRUE,
+                                       engine = "ajv")
+  if (valid) {
     message("Validation passed: ", basename(path))
     return(invisible(TRUE))
-  } else {
-    warning(
-      "Validation issues in ", basename(path), ":\n",
-      paste(" -", issues, collapse = "\n"),
-      call. = FALSE
-    )
-    return(invisible(FALSE))
   }
+  errors <- attr(valid, "errors")
+  warning(
+    "Validation issues in ", basename(path), ":\n",
+    paste0(" - ", errors$instancePath, " ", errors$message, collapse = "\n"),
+    call. = FALSE
+  )
+  invisible(FALSE)
 }
