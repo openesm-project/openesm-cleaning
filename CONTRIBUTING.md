@@ -3,9 +3,9 @@
 Steps 1–11 happen in `openesm-cleaning`; steps 12–15 involve `openesm-metadata` and the website.
 
 ### Terms
-- Curation sheet: central Google Sheet with one row of dataset-level metadata per dataset
-- Coding file: separate Google Sheet per dataset with one row per variable (variable-level metadata)
-- Metadata JSON: `data/metadata/XXXX_name_metadata.json`, generated from both sheets by `write_metadata()`
+- Metadata JSON: `data/metadata/XXXX_name_metadata.json`, the source of truth for dataset-level and variable-level metadata; edited directly
+- Tracker: private Google Sheet for intake status, author contact, and permissions; not read by any code
+- The former curation sheet and coding files are frozen and no longer used
 
 ### Conditional steps
 - Step 6 applies to every dataset, but is especially relevant if cross-sectional data exist
@@ -21,7 +21,8 @@ Steps 1–11 happen in `openesm-cleaning`; steps 12–15 involve `openesm-metada
 
 ### Assigning a dataset ID
 - Sequential four-digit ID (e.g., `0076`)
-- Used as prefix for all associated files: cleaning script, metadata JSON, coding file
+- Used as prefix for all associated files: cleaning script, metadata JSON
+- Add a row to the tracker
 
 ---
 
@@ -46,11 +47,11 @@ Steps 1–11 happen in `openesm-cleaning`; steps 12–15 involve `openesm-metada
 - `n_participants`: check in the actual ESM data
 - `n_time_points`, `n_days`: check in the paper and the actual ESM data
 - `zenodo_doi`: can only be filled in step 12
-- `dataset_version`: initialize with `1.0.0`; taken from the curation sheet if filled, otherwise kept from the existing JSON
-- `changelog`: edited directly in the metadata JSON, not in the curation sheet; newest entry first
+- `dataset_version`: initialize with `1.0.0`
+- `changelog`: newest entry first
 
 ### Where it lives
-- Central curation sheet → written to metadata JSON by `write_metadata()`
+- Metadata JSON, created in step 5 with `new_metadata_json()`
 
 ---
 
@@ -85,7 +86,8 @@ Steps 1–11 happen in `openesm-cleaning`; steps 12–15 involve `openesm-metada
 - Document all transformations
 
 ### Validation
-- Run `check_data(df, dataset_info, variable_data)` — errors abort saving; warnings require review
+- Once the columns are final, create the metadata JSON with `new_metadata_json("XXXX", author, df)`; it never overwrites an existing file
+- Run `check_data(df, metadata)` with `metadata <- read_metadata("XXXX")` — errors abort saving; warnings require review
 - Save cleaned data as TSV to `data/clean/XXXX_name_ts.tsv`
 
 ---
@@ -115,10 +117,9 @@ Steps 1–11 happen in `openesm-cleaning`; steps 12–15 involve `openesm-metada
 
 ## 7. Variable annotation
 
-### Creating the coding file
-- Dedicated Google Sheets coding file per dataset
-- URL recorded in curation sheet under "Coding File URL"
-- One row per variable
+### Where it lives
+- `features` array in the metadata JSON, edited directly
+- One entry per variable
 
 ### Fields
 - Field definitions: see the [data documentation](https://openesmdata.org/docs/data/)
@@ -175,7 +176,7 @@ Rscript scripts/annotation/suggest_constructs.R 0076
 ## 10. Metadata finalization
 
 - Re-run cleaning script from scratch
-- Call `write_metadata()` to generate the metadata JSON. You can call this from inside the cleaning script
+- Resolve all `check_data()` warnings about mismatches between data and metadata JSON
 
 ---
 
@@ -210,9 +211,8 @@ Rscript scripts/annotation/suggest_constructs.R 0076
 
 ### DOI
 - Publish the Zenodo record and copy the DOI
-- Enter the DOI in the curation sheet under **Zenodo DOI**
-- Re-run `write_metadata()` to regenerate the metadata JSON
-- Push the regenerated JSON to `main` (the JSON is pushed twice: before and after the DOI)
+- Enter the DOI in the metadata JSON under `zenodo_doi`
+- Push the updated JSON to `main` (the JSON is pushed twice: before and after the DOI)
 
 ---
 
@@ -259,7 +259,7 @@ python scripts/annotation/compute_similarity.py
 - Who triggers workflows and creates releases
 
 ### Infrastructure
-- Where the curation sheet will live, and who may edit it
+- Who may edit the tracker
 - Metadata validation (function and CI) is being reworked
 - Whether static and sensor files are part of the standard pipeline
 
