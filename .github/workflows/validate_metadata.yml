@@ -1,0 +1,36 @@
+name: validate metadata
+
+# runs only when metadata, schema or formatter change
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/metadata/**"
+      - "schema/**"
+      - "scripts/metadata/format_metadata.py"
+      - ".github/workflows/validate_metadata.yml"
+  pull_request:
+    paths:
+      - "data/metadata/**"
+      - "schema/**"
+      - "scripts/metadata/format_metadata.py"
+      - ".github/workflows/validate_metadata.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: install validator
+        run: pip install check-jsonschema
+
+      - name: validate metadata against schema
+        run: check-jsonschema --schemafile schema/v1/metadata_schema.json data/metadata/*_metadata.json
+
+      - name: check formatting
+        run: python scripts/metadata/format_metadata.py --check
