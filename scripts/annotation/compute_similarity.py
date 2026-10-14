@@ -5,12 +5,13 @@ Reads all data/metadata/*.json files, embeds rating_scale items using
 a state of the art transformer model, and writes pre-computed top-10
 cross-dataset nearest neighbors to data/similarity/similar_items.json.
 
-Embeddings are cached so only new items are re-embedded on subsequent runs.
+Embeddings are cached so only new or edited items are re-embedded on subsequent runs.
 
 Usage:
     python scripts/annotation/compute_similarity.py
 """
 
+import hashlib
 import json
 import os
 import sys
@@ -53,8 +54,10 @@ def load_items() -> list[dict]:
             text = build_item_text(feature)
             if not text:
                 continue
+            # text hash in the key: edited descriptions/details are re-embedded
+            text_hash = hashlib.sha1(text.encode("utf-8")).hexdigest()[:12]
             items.append({
-                "key": f"{MODEL_NAME}::{dataset_id}_{feature['name']}",
+                "key": f"{MODEL_NAME}::{dataset_id}_{feature['name']}::{text_hash}",
                 "dataset_id": dataset_id,
                 "variable_name": feature["name"],
                 "description": feature.get("description", ""),
