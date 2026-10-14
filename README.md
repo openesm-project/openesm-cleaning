@@ -47,10 +47,6 @@ The JSON files in `data/metadata/` are the source of truth and are edited direct
 `write_metadata()` and `create_metadata_json()` read from the frozen Google Sheets and are deprecated. Construct propagation via Sheets (`annotate_constructs()`) is in `scripts/archive/`.
 
 
-## Experimental: AI-assisted annotation (`scripts/functions_annotation.R`)
-
-`generate_annotation_prompt()` assembles a structured prompt from the cleaned data frame, an optional codebook (PDF or XLSX), the cleaning script, and the existing construct vocabulary. The prompt can be passed to an LLM to pre-fill variable metadata, which is then reviewed and converted to an xlsx coding sheet via `annotation_json_to_xlsx()`.
-
 ## Data quality diagnostics
 
 `scripts/diagnose_check_data.R` runs `check_data()` on every existing clean TSV file without re-running any cleaning script. It produces two CSV reports:
