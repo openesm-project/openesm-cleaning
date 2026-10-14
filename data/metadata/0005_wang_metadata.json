@@ -9,6 +9,12 @@
   "dataset_version": "1.0.0",
   "changelog": [
     {
+      "date": "2026-10-14",
+      "description": "Fix assessment type of one passive variable.",
+      "type": "metadata",
+      "dataset_version": "1.0.0"
+    },
+    {
       "date": "2026-09-09",
       "description": "Fix information about number of participants.",
       "type": "metadata",
@@ -1703,7 +1709,7 @@
       "labels": "",
       "transformation": "",
       "source": "",
-      "assessment_type": "sleep",
+      "assessment_type": "Passive",
       "construct": "distance travelled, movement pattern",
       "comments": ""
     },
