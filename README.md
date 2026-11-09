@@ -31,6 +31,19 @@ Each dataset goes through the following steps:
 
 The JSON files in `data/metadata/` are the source of truth and are edited directly; no code regenerates them. (Metadata was previously maintained in Google Sheets, which are now frozen.)
 
+### Editing metadata in a spreadsheet
+
+For larger annotation work, `scripts/metadata/metadata_xlsx.R` exports a JSON to an Excel copy and writes the edits back:
+
+```r
+source(here::here("scripts", "metadata", "metadata_xlsx.R"))
+metadata_to_xlsx("0074")   # writes metadata_edit/0074_schmitz_metadata.xlsx
+# ... edit in Excel (sheets "features" and "dataset", dropdowns for allowed values) ...
+xlsx_to_metadata("0074")   # writes the edits into the JSON, formats and validates it
+```
+
+The xlsx is a temporary copy in the gitignored `metadata_edit/` folder. You can keep editing it and import repeatedly. The import refuses if the JSON was changed in the meantime by anything else (by hand or by an LLM), so those changes are never silently overwritten; re-export in that case. Adding, removing or renaming variables and editing the changelog happen in the JSON.
+
 ## Key functions (`scripts/functions_data.R`)
 
 | Function | Purpose |

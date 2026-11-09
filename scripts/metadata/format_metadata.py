@@ -3,6 +3,7 @@
 Usage (from repo root):
   python scripts/metadata/format_metadata.py          # rewrite files in place
   python scripts/metadata/format_metadata.py --check  # exit 1 if any file would change (CI)
+  python scripts/metadata/format_metadata.py FILE...  # only the given files
 """
 import json
 import sys
@@ -15,8 +16,9 @@ def formatted(text):
 
 def main():
     check = "--check" in sys.argv
+    files = [Path(arg) for arg in sys.argv[1:] if arg != "--check"]
     changed = []
-    for path in sorted(Path("data/metadata").glob("*_metadata.json")):
+    for path in files or sorted(Path("data/metadata").glob("*_metadata.json")):
         text = path.read_bytes().decode("utf-8").replace("\r\n", "\n")
         new = formatted(text)
         if new != text:

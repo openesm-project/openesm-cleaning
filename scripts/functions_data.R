@@ -195,15 +195,20 @@ normalize_author_name <- function(author) {
 # data/metadata/*.json is the source of truth: edit the files directly.
 # Code reads them but never regenerates them.
 
-# Read the metadata JSON of one dataset.
-read_metadata <- function(dataset_id, dir = here::here("data", "metadata")) {
+# Path of the metadata JSON of one dataset.
+metadata_json_path <- function(dataset_id, dir = here::here("data", "metadata")) {
   path <- list.files(dir, full.names = TRUE,
                      pattern = paste0("^", dataset_id, "_.+_metadata\\.json$"))
   if (length(path) != 1) {
     stop("Expected one metadata JSON for dataset ", dataset_id, " in ", dir,
          ", found ", length(path), call. = FALSE)
   }
-  jsonlite::read_json(path, simplifyVector = FALSE)
+  path
+}
+
+# Read the metadata JSON of one dataset.
+read_metadata <- function(dataset_id, dir = here::here("data", "metadata")) {
+  jsonlite::read_json(metadata_json_path(dataset_id, dir), simplifyVector = FALSE)
 }
 
 # Flatten the features array into a data frame with the columns check_data()

@@ -20,6 +20,9 @@
 .positai
 .claudeignore
 
+# temporary spreadsheet copies of metadata (scripts/metadata/metadata_xlsx.R)
+/metadata_edit/
+
 # parts of audit (local only)
 /audit/anonymity/
 /audit/migration/
