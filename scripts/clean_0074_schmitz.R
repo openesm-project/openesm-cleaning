@@ -283,13 +283,23 @@ df <- datasets$final |>
     bipolar_intensity_stimulus_rescaled = intensity_bip_new,
     bipolar_intensity_stimulus_rescaled_c = intensity_bip_new_c,
     duration = durat_randomp,
-    duration_sec = durat_randomp_sec
+    duration_sec = durat_randomp_sec,
+    sex_stimulus = sex
   )
 
 
 #* Misc -------------------------------------------------------------------
 # convert string sentinels ("NA", "", ...) and NaN to real NA
 df <- recode_missing(df)
+
+# remove redundant columns (mean-centering etc.)
+df <- df |>
+  select(-c(mood_c, mood_day, mood_day_c, mood_person, mood_person_c,
+            bipolar_intensity_stimulus_rescaled_c, weekday_c, valence_c,
+            #redundancy with sex_stimulus
+            sex_male)
+  )
+
 
 
 # Create metadata ---------------------------------------------------------
